@@ -50,7 +50,7 @@ ListSemakan As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Masa Semakan'.Value
+            Text: =ThisItem.Suhu
             VerticalAlign: =VerticalAlign.Top
             Width: =418
             X: =160
@@ -109,12 +109,12 @@ ListSemakan As screen:
             ZIndex: =8
 
         Label9 As label:
-            Height: =23
+            Height: =32
             OnSelect: =Select(Parent)
             Size: =12
             Text: |-
-                ="Masa Semakan :"
-            Width: =132
+                ="Suhu                    :"
+            Width: =139
             X: =21
             Y: =69
             ZIndex: =9

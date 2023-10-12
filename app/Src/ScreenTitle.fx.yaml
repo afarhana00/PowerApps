@@ -13,7 +13,7 @@ ScreenTitle As screen:
         Text: ="Penjagaan & Penanaman"
         Width: =321
         X: =180
-        Y: =598
+        Y: =455
         ZIndex: =1
 
     Rectangle6 As rectangle:
@@ -49,24 +49,11 @@ ScreenTitle As screen:
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Size: =24
-        Text: ="Penyemaian"
+        Text: ="Penyemaian dan Tapak Semaian"
         Width: =321
         X: =180
         Y: =260
         ZIndex: =6
-
-    Button7 As button:
-        Height: =116
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =24
-        Text: ="Tapak Semaian"
-        Width: =321
-        X: =180
-        Y: =429
-        ZIndex: =7
 
     Button8 As button:
         Height: =116
@@ -77,7 +64,20 @@ ScreenTitle As screen:
         Size: =24
         Text: ="Penuaian & Pengumpulan"
         Width: =321
-        X: =179
-        Y: =764
+        X: =180
+        Y: =650
         ZIndex: =8
+
+    Button7 As button:
+        Height: =110
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="Penyelenggaraan Tangki "
+        Width: =321
+        X: =180
+        Y: =851
+        ZIndex: =9
 
