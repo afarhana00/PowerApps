@@ -178,10 +178,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].Lokasi)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.Lokasi,DataCardValue33.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Plot (Lokasi)',DataCardValue33.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -237,10 +237,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].IDPokok)
+                Items: =Choices([@'Semakan Kesihatan_2'].'ID Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.IDPokok,DataCardValue36.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'ID Pokok',DataCardValue36.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -416,10 +416,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].Kelembapan)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Kelembapan Tanah')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.Kelembapan,DataCardValue32.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Kelembapan Tanah',DataCardValue32.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -476,10 +476,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].MasaSemakan)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Masa Semakan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.MasaSemakan,DataCardValue35.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Masa Semakan',DataCardValue35.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

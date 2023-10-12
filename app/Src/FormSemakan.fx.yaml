@@ -162,10 +162,10 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].Lokasi)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.Lokasi,DataCardValue41.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Plot (Lokasi)',DataCardValue41.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -221,10 +221,10 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].IDPokok)
+                Items: =Choices([@'Semakan Kesihatan_2'].'ID Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.IDPokok,DataCardValue44.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'ID Pokok',DataCardValue44.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -400,10 +400,10 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].Kelembapan)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Kelembapan Tanah')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.Kelembapan,DataCardValue40.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Kelembapan Tanah',DataCardValue40.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -460,10 +460,10 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].MasaSemakan)
+                Items: =Choices([@'Semakan Kesihatan_2'].'Masa Semakan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.MasaSemakan,DataCardValue43.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.'Masa Semakan',DataCardValue43.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
