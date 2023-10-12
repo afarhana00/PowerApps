@@ -1,0 +1,159 @@
+ListJadualSiraman As screen:
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =721
+        Items: ='Jadual Siraman_4'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(EditJadualSiraman);EditForm(Form4);
+        TemplatePadding: =0
+        TemplateSize: =116
+        Y: =121
+        ZIndex: =1
+
+        Title4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =26
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'HST (Hari)'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =438
+            X: =132
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle4.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+            ZIndex: =1
+
+        Subtitle4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Tarikh
+            VerticalAlign: =VerticalAlign.Top
+            Width: =438
+            X: =132
+            Y: =Title4.Y + Title4.Height
+            ZIndex: =2
+
+        Body2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Masa (Sebenar)'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =439
+            X: =132
+            Y: =Subtitle4.Y + Subtitle4.Height
+            ZIndex: =3
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);Navigate(EditJadualSiraman);EditForm(Form4);
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle10 As rectangle:
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Label10 As label:
+            Height: =21
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: ="HST (Hari)"
+            Width: =97
+            X: =23
+            Y: =22
+            ZIndex: =7
+
+        Label11 As label:
+            Height: =26
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: ="Tarikh"
+            Width: =97
+            X: =23
+            Y: =43
+            ZIndex: =8
+
+        Label12 As label:
+            Height: =29
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: ="Masa"
+            Width: =58
+            X: =23
+            Y: =63
+            ZIndex: =9
+
+        Button13 As button:
+            Fill: =RGBA(255, 255, 255, 0)
+            Height: =116
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
+            OnSelect: =Select(Parent);Navigate(EditJadualSiraman);EditForm(Form4);
+            Size: =24
+            Text: ="Button"
+            Width: =636
+            X: =4
+            ZIndex: =10
+
+    Rectangle7 As rectangle:
+        Fill: =RGBA(17, 240, 191, 1)
+        Height: =108
+        Width: =640
+        ZIndex: =2
+
+    Label7 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =103
+        Size: =30
+        Text: ="Senarai Jadual Siraman"
+        Width: =498
+        X: =125
+        Y: =5
+        ZIndex: =5
+
+    Icon5 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =61
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(FormJadualSiraman);NewForm(Form4);
+        Width: =74
+        X: =34
+        Y: =21
+        ZIndex: =6
+

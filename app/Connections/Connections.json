@@ -1,0 +1,122 @@
+{
+  "25541e0b-2206-4599-ba9d-83d051a8a2ef": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1658/1.0.1658.3452/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "me,b%2521-sU7XIaniE270r68UogV1L5NCxTQUmtEmcDTKQYXDMBI0SVREajFTK7HVOTarA47,01LCCT2XH35OUXQHUSRJAKKCB4YUUAW4KM": {
+        "dataSources": {
+          "Table_query": {
+            "tableName": "{00000000-000C-0000-FFFF-FFFF00000000}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table_query"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "25541e0b-2206-4599-ba9d-83d051a8a2ef"
+  },
+  "2cc09cac-f63c-4066-a0d6-c8412f4c53a7": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3429/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://tdmb-my.sharepoint.com/personal/zati_sufia_tdmberhad_com_my": {
+        "dataSources": {
+          "Checkup Chili": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Checkup Chili_1": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Checkup Chili_2": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Checkup Chili_3": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Jadual Siraman": {
+            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
+          },
+          "Jadual Siraman_1": {
+            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
+          },
+          "Jadual Siraman_2": {
+            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
+          },
+          "Jadual Siraman_3": {
+            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
+          },
+          "Jadual Siraman_4": {
+            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
+          },
+          "Semakan Kesihatan": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Kesihatan_1": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Kesihatan_2": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Siraman": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Siraman_1": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Siraman_2": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "Semakan Siraman_3": {
+            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
+          },
+          "SOP Chili Production": {
+            "tableName": "fd63fec4-dfb5-493f-93b3-f8ece22cab37"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Checkup Chili",
+      "Checkup Chili_1",
+      "Checkup Chili_2",
+      "SOP Chili Production",
+      "Checkup Chili_3",
+      "Semakan Siraman",
+      "Jadual Siraman",
+      "Semakan Siraman_1",
+      "Semakan Siraman_2",
+      "Semakan Siraman_3",
+      "Semakan Kesihatan",
+      "Jadual Siraman_1",
+      "Semakan Kesihatan_1",
+      "Jadual Siraman_2",
+      "Jadual Siraman_3",
+      "Jadual Siraman_4",
+      "Semakan Kesihatan_2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2cc09cac-f63c-4066-a0d6-c8412f4c53a7"
+  }
+}
