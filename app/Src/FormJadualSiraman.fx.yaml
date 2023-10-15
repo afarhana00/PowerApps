@@ -133,7 +133,7 @@ FormJadualSiraman As screen:
         "'Kepekatan Baja AB(EC)_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="KepekatanBajaAB_x0028_EC_x0029_"
-            Default: =ThisItem.'Kepekatan Baja AB(EC)'
+            Default: =ThisItem.'Kepekatan Baja (Kg/L)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman_4'],DataSourceInfo.DisplayName,"KepekatanBajaAB_x0028_EC_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -339,7 +339,7 @@ FormJadualSiraman As screen:
         "'ID Pokok_DataCard3' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="IDPokok"
-            Default: =ThisItem.'ID Pokok'
+            Default: =ThisItem.IDPokok
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman_4'],DataSourceInfo.DisplayName,"IDPokok")
             Fill: =RGBA(0, 0, 0, 0)
@@ -368,10 +368,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman_4'].'ID Pokok')
+                Items: =Choices([@'Jadual Siraman_4'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'ID Pokok',DataCardValue10.SearchText)
+                SearchItems: =Choices('Jadual Siraman_4'.IDPokok,DataCardValue10.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
