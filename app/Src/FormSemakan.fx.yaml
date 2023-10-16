@@ -192,7 +192,7 @@ FormSemakan As screen:
         "'ID Pokok_DataCard5' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="IDPokok"
-            Default: =ThisItem.'ID Pokok'
+            Default: =ThisItem.IDPokok
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan_2'],DataSourceInfo.DisplayName,"IDPokok")
             Fill: =RGBA(0, 0, 0, 0)
@@ -221,10 +221,10 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].'ID Pokok')
+                Items: =Choices([@'Semakan Kesihatan_2'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.'ID Pokok',DataCardValue44.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan_2'.IDPokok,DataCardValue44.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -371,7 +371,7 @@ FormSemakan As screen:
         "'Kelembapan Tanah_DataCard3' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kelembapan"
-            Default: =ThisItem.'Kelembapan Tanah'
+            Default: =ThisItem.Kelembapan
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan_2'],DataSourceInfo.DisplayName,"Kelembapan")
             Fill: =RGBA(0, 0, 0, 0)
@@ -400,10 +400,11 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].'Kelembapan Tanah')
+                IsSearchable: =false
+                Items: =Choices([@'Semakan Kesihatan_2'].Kelembapan)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.'Kelembapan Tanah',DataCardValue40.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

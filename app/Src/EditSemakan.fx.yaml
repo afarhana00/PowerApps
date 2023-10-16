@@ -208,7 +208,7 @@ EditSemakan As screen:
         "'ID Pokok_DataCard2' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="IDPokok"
-            Default: =ThisItem.'ID Pokok'
+            Default: =ThisItem.IDPokok
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan_2'],DataSourceInfo.DisplayName,"IDPokok")
             Fill: =RGBA(0, 0, 0, 0)
@@ -237,10 +237,11 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan_2'].'ID Pokok')
+                IsSearchable: =false
+                Items: =Choices([@'Semakan Kesihatan_2'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan_2'.'ID Pokok',DataCardValue36.SearchText)
+                SearchItems: =[]
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -387,7 +388,7 @@ EditSemakan As screen:
         "'Kelembapan Tanah_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kelembapan"
-            Default: =ThisItem.'Kelembapan Tanah'
+            Default: =ThisItem.Kelembapan
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan_2'],DataSourceInfo.DisplayName,"Kelembapan")
             Fill: =RGBA(0, 0, 0, 0)
@@ -417,7 +418,7 @@ EditSemakan As screen:
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 IsSearchable: =false
-                Items: =Choices([@'Semakan Kesihatan_2'].'Kelembapan Tanah')
+                Items: =Choices([@'Semakan Kesihatan_2'].Kelembapan)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: =[]
