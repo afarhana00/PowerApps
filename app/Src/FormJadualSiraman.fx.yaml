@@ -129,17 +129,6 @@ FormJadualSiraman As screen:
                 Y: =DataCardValue54.Y + DataCardValue54.Height
                 ZIndex: =3
 
-            StarVisible37 As label:
-                Align: =Align.Center
-                Height: =DataCardKey54.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey54.Y
-                ZIndex: =4
-
         "'Tahap Pokok_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="StagePokok"
@@ -488,17 +477,6 @@ FormJadualSiraman As screen:
                 Y: =DataCardValue46.Y + DataCardValue46.Height
                 ZIndex: =3
 
-            StarVisible29 As label:
-                Align: =Align.Center
-                Height: =DataCardKey46.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey46.Y
-                ZIndex: =4
-
         "'Berhenti Air/Baja_DataCard1' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="BerhentiAir_x002f_Baja"
@@ -627,17 +605,6 @@ FormJadualSiraman As screen:
                 X: =30
                 Y: =DataCardValue47.Y + DataCardValue47.Height
                 ZIndex: =3
-
-            StarVisible30 As label:
-                Align: =Align.Center
-                Height: =DataCardKey47.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey47.Y
-                ZIndex: =4
 
         "'Jenis Siraman_DataCard1' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -768,17 +735,6 @@ FormJadualSiraman As screen:
                 X: =30
                 Y: =DataCardValue51.Y + DataCardValue51.Height
                 ZIndex: =3
-
-            StarVisible34 As label:
-                Align: =Align.Center
-                Height: =DataCardKey51.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey51.Y
-                ZIndex: =4
 
         "'Masa (Sebenar)_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid

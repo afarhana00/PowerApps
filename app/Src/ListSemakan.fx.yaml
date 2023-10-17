@@ -126,7 +126,9 @@ ListSemakan As screen:
             Fill: =RGBA(255, 255, 255, 0.01)
             Height: =116
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
-            OnSelect: =Select(Parent);Navigate(EditSemakan);EditForm(Form2);
+            OnSelect: |
+                =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });
+                Select(Parent);Navigate(EditSemakan);NewForm(Form3);
             Size: =24
             Text: =""
             Width: =636

@@ -271,17 +271,6 @@ FormSemakan As screen:
                 Y: =DataCardValue42.Y + DataCardValue42.Height
                 ZIndex: =3
 
-            StarVisible19 As label:
-                Align: =Align.Center
-                Height: =DataCardKey42.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey42.Y
-                ZIndex: =4
-
         "'Cadangan Tindakan_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="CadanganTindakan"
@@ -769,17 +758,6 @@ FormSemakan As screen:
                 Y: =DataCardValue1.Y + DataCardValue1.Height
                 ZIndex: =3
 
-            StarVisible1 As label:
-                Align: =Align.Center
-                Height: =DataCardKey1.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey1.Y
-                ZIndex: =4
-
         "'Masa Semakan_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="MasaSemakan"
@@ -840,17 +818,6 @@ FormSemakan As screen:
                 Y: =DataCardValue6.Y + DataCardValue6.Height
                 ZIndex: =3
 
-            StarVisible9 As label:
-                Align: =Align.Center
-                Height: =DataCardKey6.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6.Y
-                ZIndex: =4
-
         "'Plot (Lokasi)_DataCard1' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Lokasi"
@@ -909,17 +876,6 @@ FormSemakan As screen:
                 X: =30
                 Y: =DataCardValue3.Y + DataCardValue3.Height
                 ZIndex: =3
-
-            StarVisible3 As label:
-                Align: =Align.Center
-                Height: =DataCardKey3.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey3.Y
-                ZIndex: =4
 
         "'HST(Hari)_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -982,17 +938,6 @@ FormSemakan As screen:
                 Y: =DataCardValue4.Y + DataCardValue4.Height
                 ZIndex: =3
 
-            StarVisible7 As label:
-                Align: =Align.Center
-                Height: =DataCardKey4.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey4.Y
-                ZIndex: =4
-
         Suhu_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Temperature"
@@ -1053,17 +998,6 @@ FormSemakan As screen:
                 X: =30
                 Y: =DataCardValue2.Y + DataCardValue2.Height
                 ZIndex: =3
-
-            StarVisible2 As label:
-                Align: =Align.Center
-                Height: =DataCardKey2.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey2.Y
-                ZIndex: =4
 
         "'Kadar Serangan Penyakit_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid

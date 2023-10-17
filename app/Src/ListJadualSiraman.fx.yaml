@@ -2,7 +2,7 @@ ListJadualSiraman As screen:
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =721
+        Height: =981
         Items: ='Jadual Siraman_4'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -20,11 +20,12 @@ ListJadualSiraman As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =18
             Text: =ThisItem.'HST (Hari)'.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =438
-            X: =132
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle4.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+            Width: =138
+            X: =156
+            Y: =8
             ZIndex: =1
 
         Subtitle4 As label:
@@ -35,26 +36,28 @@ ListJadualSiraman As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =16
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
-            Width: =438
-            X: =132
-            Y: =Title4.Y + Title4.Height
+            Width: =106
+            X: =156
+            Y: =45
             ZIndex: =2
 
         Body2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =16
             Text: =ThisItem.'Masa (Sebenar)'.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =439
-            X: =132
-            Y: =Subtitle4.Y + Subtitle4.Height
+            Width: =106
+            X: =156
+            Y: =86
             ZIndex: =3
 
         NextArrow4 As icon.ChevronRight:
@@ -88,40 +91,41 @@ ListJadualSiraman As screen:
             ZIndex: =6
 
         Label10 As label:
-            Height: =21
+            Height: =43
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =16
             Text: ="HST (Hari)"
-            Width: =97
+            Width: =121
             X: =23
-            Y: =22
             ZIndex: =7
 
         Label11 As label:
             Height: =26
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =16
             Text: ="Tarikh"
-            Width: =97
+            Width: =109
             X: =23
             Y: =43
             ZIndex: =8
 
         Label12 As label:
-            Height: =29
+            Height: =34
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =16
             Text: ="Masa"
-            Width: =58
+            Width: =97
             X: =23
-            Y: =63
+            Y: =77
             ZIndex: =9
 
         Button13 As button:
             Fill: =RGBA(255, 255, 255, 0)
             Height: =116
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
-            OnSelect: =Select(Parent);Navigate(EditJadualSiraman);EditForm(Form4);
+            OnSelect: |-
+                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });NewForm(Form1);
+                Navigate(EditJadualSiraman);
             Size: =24
             Text: ="Button"
             Width: =636
