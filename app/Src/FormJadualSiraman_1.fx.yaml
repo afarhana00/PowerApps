@@ -1,0 +1,215 @@
+FormJadualSiraman_1 As screen:
+
+    Button14_1 As button:
+        Fill: =RGBA(17, 240, 191, 1)
+        Height: =70
+        OnSelect: |-
+            =  Refresh('Jadual Siraman_4');
+             Navigate(ListJadualSiraman);
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="SIMPAN"
+        Width: =223
+        X: =66
+        Y: =1032
+        ZIndex: =2
+
+    Rectangle5_1 As rectangle:
+        Fill: =RGBA(17, 240, 191, 1)
+        Height: =108
+        Width: =640
+        ZIndex: =3
+
+    Label6_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =108
+        Size: =30
+        Text: ="Jadual Siraman"
+        Width: =472
+        X: =113
+        ZIndex: =4
+
+    Icon3_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =61
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Penjagaan);ResetForm(Form2);
+        Width: =74
+        X: =29
+        Y: =22
+        ZIndex: =5
+
+    Button2_1 As button:
+        Fill: =RGBA(17, 240, 191, 1)
+        Height: =70
+        OnSelect: =Navigate(ListJadualSiraman);
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="SENARAI"
+        Width: =216
+        X: =370
+        Y: =1032
+        ZIndex: =6
+
+    Container2 As groupContainer.verticalAutoLayoutContainer:
+        Height: =887
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =640
+        Y: =108
+        ZIndex: =9
+
+        divPlot As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Label14 As label:
+                FillPortions: =0.2
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId As dropdown:
+                FillPortions: =0.8
+                Height: =70
+                Items: =TreePlot
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divTreeType As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Label14_1 As label:
+                FillPortions: =0.2
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Jenis Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType As dropdown:
+                FillPortions: =0.8
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divVariance As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            Label14_2 As label:
+                FillPortions: =0.2
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Varian Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_1 As dropdown:
+                FillPortions: =0.8
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divStage As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =5
+
+            Label14_3 As label:
+                FillPortions: =0.2
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Tahap Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_2 As dropdown:
+                FillPortions: =0.8
+                Height: =70
+                Items: |
+                    =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
