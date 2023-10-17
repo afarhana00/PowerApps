@@ -20,10 +20,11 @@ ListSemakan As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =ThisItem.'HST(Hari)'
             VerticalAlign: =VerticalAlign.Top
             Width: =33
-            X: =160
+            X: =193
             Y: =14
             ZIndex: =1
 
@@ -35,10 +36,11 @@ ListSemakan As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =16
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
-            Width: =418
-            X: =160
+            Width: =142
+            X: =193
             Y: =48
             ZIndex: =2
 
@@ -50,10 +52,11 @@ ListSemakan As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =16
             Text: =ThisItem.Suhu
             VerticalAlign: =VerticalAlign.Top
-            Width: =418
-            X: =160
+            Width: =86
+            X: =193
             Y: =76
             ZIndex: =3
 
@@ -90,9 +93,9 @@ ListSemakan As screen:
         Label5 As label:
             Height: =26
             OnSelect: =Select(Parent)
-            Size: =14
+            Size: =20
             Text: ="HST (Hari)"
-            Width: =114
+            Width: =168
             X: =25
             Y: =14
             ZIndex: =7
@@ -100,21 +103,21 @@ ListSemakan As screen:
         Label8 As label:
             Height: =29
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =16
             Text: |-
                 ="Tarikh                 :"
-            Width: =139
+            Width: =192
             X: =21
             Y: =40
             ZIndex: =8
 
         Label9 As label:
-            Height: =32
+            Height: =21
             OnSelect: =Select(Parent)
-            Size: =12
+            Size: =16
             Text: |-
                 ="Suhu                    :"
-            Width: =139
+            Width: =205
             X: =21
             Y: =69
             ZIndex: =9
@@ -134,7 +137,7 @@ ListSemakan As screen:
             Color: =RGBA(255, 140, 0, 1)
             Icon: =Icon.Warning
             OnSelect: =Select(Parent)
-            Visible: =!IsBlank(ThisItem.Suhu >=35)
+            Visible: =If(ThisItem.Suhu>=35,true,false)
             X: =493
             Y: =26
             ZIndex: =11
