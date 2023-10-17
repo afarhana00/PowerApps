@@ -192,7 +192,7 @@ FormSemakan As screen:
         "'ID Pokok_DataCard5' As typedDataCard.comboBoxMultiSelectEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="IDPokok"
-            Default: =ThisItem.IDPokok
+            Default: =ThisItem.'ID Pokok'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan_2'],DataSourceInfo.DisplayName,"IDPokok")
             Fill: =RGBA(0, 0, 0, 0)
@@ -222,7 +222,7 @@ FormSemakan As screen:
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 IsSearchable: =false
-                Items: =Choices([@'Semakan Kesihatan_2'].IDPokok)
+                Items: =Choices([@'Semakan Kesihatan_2'].'ID Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: =[]
