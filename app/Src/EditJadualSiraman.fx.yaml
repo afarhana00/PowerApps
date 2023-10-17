@@ -114,10 +114,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'HST (Hari)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'HST (Hari)',DataCardValue30.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -439,10 +440,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'Plot (Lokasi)',DataCardValue20.SearchText)
+                SearchItems: =[]
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -498,10 +500,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'Jenis Siraman')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'Jenis Siraman',DataCardValue24.SearchText)
+                SearchItems: =[]
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -568,10 +571,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'Berhenti Air/Baja')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'Berhenti Air/Baja',DataCardValue23.SearchText)
+                SearchItems: =[]
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -710,10 +714,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'Masa (Rancangan)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'Masa (Rancangan)',DataCardValue26.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -770,10 +775,11 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Siraman_4'].'Masa (Sebenar)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman_4'.'Masa (Sebenar)',DataCardValue27.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
