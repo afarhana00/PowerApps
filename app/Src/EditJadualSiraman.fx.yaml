@@ -154,23 +154,22 @@ EditJadualSiraman As screen:
                 Y: =DataCardKey79.Y
                 ZIndex: =4
 
-        Catatan_DataCard2 As typedDataCard.textualEditCard:
+        "'Plot (Lokasi)_DataCard5' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="field_12"
-            Default: =ThisItem.Catatan
+            DataField: ="Plot_x0028_Lokasi_x0029_"
+            Default: =ThisItem.'Plot (Lokasi)'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_12")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@'Jadual Siraman'], DataSourceInfo.MaxLength, "field_12")
             Required: =false
-            Update: =DataCardValue73.Text
+            Update: =DataCardValue78.Selected
             Width: =640
             X: =0
-            Y: =12
+            Y: =3
             ZIndex: =1
 
-            DataCardKey73 As label:
+            DataCardKey78 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -181,26 +180,25 @@ EditJadualSiraman As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue73 As text:
+            DataCardValue78 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                Items: =Choices([@'Jadual Siraman'].Plot_x0028_Lokasi_x0029_)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Siraman'.Plot_x0028_Lokasi_x0029_,DataCardValue78.SearchText)
+                SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey73.Y + DataCardKey73.Height + 5
+                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
                 ZIndex: =2
 
-            ErrorMessage73 As label:
+            ErrorMessage78 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -213,18 +211,18 @@ EditJadualSiraman As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue73.Y + DataCardValue73.Height
+                Y: =DataCardValue78.Y + DataCardValue78.Height
                 ZIndex: =3
 
-            StarVisible71 As label:
+            StarVisible76 As label:
                 Align: =Align.Center
-                Height: =DataCardKey73.Height
+                Height: =DataCardKey78.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey73.Y
+                Y: =DataCardKey78.Y
                 ZIndex: =4
 
         "'Kepekatan Baja (Kg/L)_DataCard2' As typedDataCard.numberEditCard":
@@ -513,22 +511,23 @@ EditJadualSiraman As screen:
                 Y: =DataCardKey77.Y
                 ZIndex: =4
 
-        "'Plot (Lokasi)_DataCard5' As typedDataCard.comboBoxEditCard":
+        Catatan_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
+            DataField: ="field_12"
+            Default: =ThisItem.Catatan
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_12")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
+            MaxLength: =DataSourceInfo([@'Jadual Siraman'], DataSourceInfo.MaxLength, "field_12")
             Required: =false
-            Update: =DataCardValue78.Selected
+            Update: =DataCardValue73.Text
             Width: =640
             X: =0
-            Y: =3
+            Y: =12
             ZIndex: =1
 
-            DataCardKey78 As label:
+            DataCardKey73 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -539,25 +538,26 @@ EditJadualSiraman As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue78 As combobox:
+            DataCardValue73 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].Plot_x0028_Lokasi_x0029_)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.Plot_x0028_Lokasi_x0029_,DataCardValue78.SearchText)
-                SelectMultiple: =false
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
+                Y: =DataCardKey73.Y + DataCardKey73.Height + 5
                 ZIndex: =2
 
-            ErrorMessage78 As label:
+            ErrorMessage73 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -570,18 +570,18 @@ EditJadualSiraman As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue78.Y + DataCardValue78.Height
+                Y: =DataCardValue73.Y + DataCardValue73.Height
                 ZIndex: =3
 
-            StarVisible76 As label:
+            StarVisible71 As label:
                 Align: =Align.Center
-                Height: =DataCardKey78.Height
+                Height: =DataCardKey73.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey78.Y
+                Y: =DataCardKey73.Y
                 ZIndex: =4
 
         Tarikh_DataCard3 As typedDataCard.dateEditCard:
