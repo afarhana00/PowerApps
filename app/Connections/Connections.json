@@ -40,28 +40,28 @@
       "parameterHintsV2": {}
     },
     "datasets": {
+      "https://tdmb.sharepoint.com/sites/TDMDigitalTransformation": {
+        "dataSources": {
+          "Jadual Siraman": {
+            "tableName": "42e88a92-912e-412f-ac3f-8727c28fbcfe"
+          },
+          "Semakan Kesihatan": {
+            "tableName": "edc66d9d-7a37-4cf1-adb5-5dfc064dbb0d"
+          }
+        }
+      },
       "https://tdmb-my.sharepoint.com/personal/hashim_wahab_tdmberhad_com_my": {
         "dataSources": {
           "TreePlot": {
             "tableName": "25706fe3-5c06-4898-8402-960e62890f6f"
           }
         }
-      },
-      "https://tdmb-my.sharepoint.com/personal/zati_sufia_tdmberhad_com_my": {
-        "dataSources": {
-          "Jadual Siraman_4": {
-            "tableName": "3d3d0113-dc66-4ef7-b0e9-d008da451efb"
-          },
-          "Semakan Kesihatan_2": {
-            "tableName": "aae5c6b2-7f1e-481e-9470-51433b31b63c"
-          }
-        }
       }
     },
     "dataSources": [
-      "Jadual Siraman_4",
-      "Semakan Kesihatan_2",
-      "TreePlot"
+      "TreePlot",
+      "Semakan Kesihatan",
+      "Jadual Siraman"
     ],
     "dependencies": {},
     "dependents": [],

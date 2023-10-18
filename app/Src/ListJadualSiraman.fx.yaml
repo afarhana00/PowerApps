@@ -3,7 +3,7 @@ ListJadualSiraman As screen:
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =981
-        Items: ='Jadual Siraman_4'
+        Items: ='Jadual Siraman'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(EditJadualSiraman);EditForm(Form4);
@@ -21,7 +21,7 @@ ListJadualSiraman As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'HST (Hari)'.Value
+            Text: =ThisItem.'HST(Hari)'
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =156
