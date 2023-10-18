@@ -114,7 +114,7 @@ EditSemakan As screen:
             DataCardValue64 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =520
+                Height: =210
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
