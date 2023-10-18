@@ -39,7 +39,7 @@ FormSemakan As screen:
     Icon4 As icon.BackArrow:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Penjagaan);ResetForm(Form4);
+        OnSelect: =Navigate(PilihPlotId);ResetForm(Form4);
         Width: =74
         X: =43
         Y: =23
