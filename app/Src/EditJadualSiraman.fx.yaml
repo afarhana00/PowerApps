@@ -60,7 +60,7 @@ EditJadualSiraman As screen:
         Icon: =Icon.Edit
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });
-            Notify("Your Data have been edited",NotificationType.Success);SubmitForm(Form1);
+            Notify("Your Data have been edited",NotificationType.Success);
             Navigate(EditJadualSiraman);
         X: =456
         Y: =63
