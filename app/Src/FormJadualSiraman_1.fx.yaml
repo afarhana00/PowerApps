@@ -4,8 +4,8 @@ FormJadualSiraman_1 As screen:
         Fill: =RGBA(17, 240, 191, 1)
         Height: =70
         OnSelect: |-
-            =  Refresh('Jadual Siraman_4');
-             Navigate(ListJadualSiraman);
+            =  Refresh('Jadual Siraman');
+             Navigate(FormJadualSiraman);NewForm(Form2);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30

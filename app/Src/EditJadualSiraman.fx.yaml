@@ -76,6 +76,7 @@ EditJadualSiraman As screen:
     Form1 As form:
         DataSource: ='Jadual Siraman'
         Height: =952
+        Item: =Gallery2.Selected
         Visible: =If(deleteMode, false, true)
         Width: =640
         Y: =169

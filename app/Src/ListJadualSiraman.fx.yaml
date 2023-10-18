@@ -6,7 +6,7 @@ ListJadualSiraman As screen:
         Items: ='Jadual Siraman'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate(EditJadualSiraman);EditForm(Form4);
+        OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
         Y: =121
@@ -124,7 +124,7 @@ ListJadualSiraman As screen:
             Height: =116
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });NewForm(Form1);
+                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);
                 Navigate(EditJadualSiraman);
             Size: =24
             Text: ="Button"

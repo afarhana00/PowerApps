@@ -37,7 +37,7 @@ ListSemakan As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =ThisItem.Tarikh
+            Text: =ThisItem.'Tarikh '
             VerticalAlign: =VerticalAlign.Top
             Width: =142
             X: =193
@@ -127,8 +127,8 @@ ListSemakan As screen:
             Height: =116
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |
-                =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });
-                Select(Parent);Navigate(EditSemakan);NewForm(Form3);
+                =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });EditForm(Form3);
+                Select(Parent);Navigate(EditSemakan);
             Size: =24
             Text: =""
             Width: =636
