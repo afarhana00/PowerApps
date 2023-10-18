@@ -53,7 +53,7 @@ EditSemakan As screen:
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: |-
-                =Remove([@'Semakan Kesihatan_2'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan_2'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan_2']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListSemakan);
+                =Remove([@'Semakan Kesihatan'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListSemakan);
             Size: =24
             Text: ="Delete"
             Width: =280

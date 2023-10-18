@@ -50,7 +50,7 @@ EditJadualSiraman As screen:
             LayoutMinHeight: =70
             LayoutMinWidth: =280
             OnSelect: |-
-                =Remove([@'Jadual Siraman_4'], selectedRecord); If(IsEmpty(Errors([@'Jadual Siraman_4'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Jadual Siraman_4']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListJadualSiraman);
+                =Remove([@'Jadual Siraman'], selectedRecord); If(IsEmpty(Errors([@'Jadual Siraman'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Jadual Siraman']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListJadualSiraman);
             Size: =24
             Text: ="Delete"
             Width: =280
