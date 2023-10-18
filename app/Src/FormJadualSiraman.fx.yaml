@@ -532,10 +532,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@TreePlot].Plot.Selected.Value)
+                Items: =Choices([@'Jadual Siraman'].'Plot (Lokasi)').Value
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.Plot_x0028_Lokasi_x0029_,DataCardValue80.SearchText)
+                SearchItems: =Search(Choices([@'Jadual Siraman'].'Plot (Lokasi)').Value,DataCardValue80.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
