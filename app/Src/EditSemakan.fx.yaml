@@ -97,7 +97,7 @@ EditSemakan As screen:
             Update: =DataCardValue64.Attachments
             Width: =640
             X: =0
-            Y: =8
+            Y: =16
             ZIndex: =1
 
             DataCardKey64 As label:
@@ -168,7 +168,7 @@ EditSemakan As screen:
             Update: =DataCardValue65.Text
             Width: =640
             X: =0
-            Y: =9
+            Y: =8
             ZIndex: =1
 
             DataCardKey65 As label:
@@ -240,7 +240,7 @@ EditSemakan As screen:
             Update: =DataCardValue66.Selected
             Width: =640
             X: =0
-            Y: =10
+            Y: =13
             ZIndex: =1
 
             DataCardKey66 As label:
@@ -257,10 +257,13 @@ EditSemakan As screen:
             DataCardValue66 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 Items: =Choices([@'Semakan Kesihatan'].field_13)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.field_13,DataCardValue66.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -308,7 +311,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue67.Text)
             Width: =640
             X: =0
-            Y: =11
+            Y: =10
             ZIndex: =1
 
             DataCardKey67 As label:
@@ -452,7 +455,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue69.Text)
             Width: =640
             X: =0
-            Y: =13
+            Y: =15
             ZIndex: =1
 
             DataCardKey69 As label:
@@ -596,7 +599,7 @@ EditSemakan As screen:
             Update: =DataCardValue71.Selected
             Width: =640
             X: =0
-            Y: =15
+            Y: =9
             ZIndex: =1
 
             DataCardKey71 As label:
@@ -613,10 +616,13 @@ EditSemakan As screen:
             DataCardValue71 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 Items: =Choices([@'Semakan Kesihatan'].field_9)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.field_9,DataCardValue71.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -664,7 +670,7 @@ EditSemakan As screen:
             Update: =DataCardValue72.Selected
             Width: =640
             X: =0
-            Y: =16
+            Y: =11
             ZIndex: =1
 
             DataCardKey72 As label:
@@ -681,10 +687,13 @@ EditSemakan As screen:
             DataCardValue72 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 Items: =Choices([@'Semakan Kesihatan'].field_11)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.field_11,DataCardValue72.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

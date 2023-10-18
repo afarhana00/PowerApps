@@ -245,10 +245,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_9)
+                Items: =Choices([@'Jadual Siraman'].'Masa (Rancangan)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_9,DataCardValue59.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Masa (Rancangan)',DataCardValue59.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -316,10 +316,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_10)
+                Items: =Choices([@'Jadual Siraman'].'Masa (Sebenar)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_10,DataCardValue60.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Masa (Sebenar)',DataCardValue60.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -601,10 +601,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_2)
+                Items: =Choices([@'Jadual Siraman'].'Berhenti Air/Baja')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_2,DataCardValue25.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Berhenti Air/Baja',DataCardValue25.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -643,7 +643,7 @@ FormJadualSiraman As screen:
         "'Plot (Lokasi)_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_3"
-            Default: =ThisItem.'Plot (Lokasi)'
+            Default: =ThisItem.field_3
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_3")
             Fill: =RGBA(0, 0, 0, 0)
@@ -743,10 +743,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_4)
+                Items: =Choices([@'Jadual Siraman'].'Tahap Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_4,DataCardValue27.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Tahap Pokok',DataCardValue27.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -814,10 +814,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_5)
+                Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_5,DataCardValue28.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Jenis Siraman',DataCardValue28.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
