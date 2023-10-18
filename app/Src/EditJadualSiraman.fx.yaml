@@ -59,7 +59,7 @@ EditJadualSiraman As screen:
     Icon10 As icon.Edit:
         Icon: =Icon.Edit
         OnSelect: |
-            =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });
+            =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form1);
             Notify("Your Data have been edited",NotificationType.Success);
             Navigate(EditJadualSiraman);
         X: =456
