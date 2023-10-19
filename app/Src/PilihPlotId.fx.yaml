@@ -74,7 +74,7 @@ PilihPlotId As screen:
 
     Button15 As button:
         Height: =70
-        OnSelect: =Navigate(FormSemakan);
+        OnSelect: =NewForm(Form2); Navigate(FormSemakan);
         Size: =24
         Text: ="SETERUSNYA"
         Width: =280
