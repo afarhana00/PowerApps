@@ -384,6 +384,11 @@ FormJadualSiraman As screen:
 
             DataCardValue60 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |
+                    =With(
+                        {_hr: Text(Hour(Now()), "00"), _min: Text(Minute(Now()), "00")},
+                        {Value: Text(_hr & _min, "[$-en-US]hhmm")}
+                    )
                 DefaultSelectedItems: |
                     =With(
                         {_hr: Text(Hour(Now()), "00"), _min: Text(Minute(Now()), "00")},
