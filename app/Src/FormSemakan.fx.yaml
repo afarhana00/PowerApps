@@ -811,7 +811,11 @@ FormSemakan As screen:
 
             DataCardValue2 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: |-
+                    =With(
+                        {_hr: Hour(Now()), _min: Minute(Now())},
+                        {HourValue: _hr, MinuteValue: _min}
+                    )
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
