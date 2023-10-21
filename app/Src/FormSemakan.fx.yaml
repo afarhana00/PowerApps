@@ -1,7 +1,7 @@
 FormSemakan As screen:
 
     Rectangle1 As rectangle:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =108
         Width: =640
         Y: =1
@@ -21,7 +21,7 @@ FormSemakan As screen:
         ZIndex: =3
 
     Button1 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =SubmitForm(Form2); Navigate(ListSemakan);
@@ -46,7 +46,7 @@ FormSemakan As screen:
         ZIndex: =9
 
     Button4 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =Navigate(ListSemakan);
@@ -98,6 +98,7 @@ FormSemakan As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 IsEditable: =true
                 PaddingBottom: =0
@@ -790,7 +791,8 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue2.Selected
+            Update: |-
+                =If(DataCardValue2.Selected.Value="Lain-lain",{Value :TextInput1.Text},DataCardValue2.Selected)
             Width: =640
             X: =0
             Y: =1
@@ -813,14 +815,17 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Masa Semakan')
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Masa Semakan',DataCardValue2.SearchText)
+                SearchItems: |-
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue2.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Visible: =Self.Selected.Value<>"Lain-lain"
+                Width: =424
                 X: =30
                 Y: =DataCardKey2.Y + DataCardKey2.Height + 5
                 ZIndex: =2
@@ -851,6 +856,35 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey2.Y
                 ZIndex: =4
+
+            TextInput1 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue2.Visible
+                Width: =580
+                X: =30
+                Y: =63
+                ZIndex: =5
+
+            Icon13 As icon.Cancel:
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue2);
+                    Reset(TextInput1);
+                Visible: =!DataCardValue2.Visible
+                X: =390
+                Y: =66
+                ZIndex: =6
+
+            Label15 As label:
+                Height: =70
+                Size: =21
+                Text: ="i.e.,1310 (24h)"
+                Width: =146
+                X: =464
+                Y: =60
+                ZIndex: =7
 
         "'Plot (Lokasi)_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid

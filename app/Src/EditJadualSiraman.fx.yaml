@@ -615,6 +615,7 @@ EditJadualSiraman As screen:
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 IsEditable: =true
                 PaddingBottom: =0

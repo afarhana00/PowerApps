@@ -1,7 +1,7 @@
 FormJadualSiraman As screen:
 
     Button14 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         OnSelect: |-
             = SubmitForm(Form4);
@@ -19,7 +19,7 @@ FormJadualSiraman As screen:
         ZIndex: =2
 
     Rectangle5 As rectangle:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =108
         Width: =640
         ZIndex: =3
@@ -47,7 +47,7 @@ FormJadualSiraman As screen:
         ZIndex: =5
 
     Button2 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         OnSelect: =Navigate(ListJadualSiraman);
         RadiusBottomLeft: =30
@@ -182,7 +182,7 @@ FormJadualSiraman As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey80.Y + DataCardKey80.Height + 5
+                Y: =64
                 ZIndex: =2
 
             ErrorMessage80 As label:
@@ -364,7 +364,8 @@ FormJadualSiraman As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue60.Selected
+            Update: |-
+                =If(DataCardValue60.Selected.Value="Lain-lain",{Value:TextInput3.Text},DataCardValue60.Selected)
             Width: =640
             X: =0
             Y: =10
@@ -387,14 +388,17 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].'Masa (Sebenar)')
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.'Masa (Sebenar)',DataCardValue60.SearchText)
+                SearchItems: |-
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue60.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Visible: =Self.Selected.Value<>"Lain-lain"
+                Width: =426
                 X: =30
                 Y: =DataCardKey60.Y + DataCardKey60.Height + 5
                 ZIndex: =2
@@ -425,6 +429,37 @@ FormJadualSiraman As screen:
                 Wrap: =false
                 Y: =DataCardKey60.Y
                 ZIndex: =4
+
+            TextInput3 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue60.Visible
+                Width: =580
+                X: =30
+                Y: =63
+                ZIndex: =5
+
+            Icon15 As icon.Cancel:
+                Height: =54
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue60);
+                    Reset(TextInput3);
+                Visible: =!DataCardValue60.Visible
+                Width: =54
+                X: =402
+                Y: =71
+                ZIndex: =6
+
+            Label17 As label:
+                Height: =70
+                Size: =21
+                Text: ="i.e., 1310 (24h)"
+                Width: =151
+                X: =470
+                Y: =60
+                ZIndex: =7
 
         "'Masa Siraman (Minit)_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -601,6 +636,7 @@ FormJadualSiraman As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 IsEditable: =true
                 PaddingBottom: =0

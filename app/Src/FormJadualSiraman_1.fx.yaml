@@ -1,7 +1,7 @@
 FormJadualSiraman_1 As screen:
 
     Button14_1 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         OnSelect: |-
             =  Refresh('Jadual Siraman');
@@ -18,7 +18,7 @@ FormJadualSiraman_1 As screen:
         ZIndex: =2
 
     Rectangle5_1 As rectangle:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =108
         Width: =640
         ZIndex: =3
@@ -46,7 +46,7 @@ FormJadualSiraman_1 As screen:
         ZIndex: =5
 
     Button2_1 As button:
-        Fill: =RGBA(17, 240, 191, 1)
+        Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         OnSelect: =Navigate(ListJadualSiraman);
         RadiusBottomLeft: =30

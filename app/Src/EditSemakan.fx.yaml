@@ -116,6 +116,7 @@ EditSemakan As screen:
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 IsEditable: =true
                 PaddingBottom: =0
@@ -808,7 +809,8 @@ EditSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue40.Selected
+            Update: |-
+                =If(DataCardValue40.Selected.Value="Lain-lain",{Value:TextInput2.Text},DataCardValue40.Selected)
             Width: =640
             X: =0
             Y: =1
@@ -831,14 +833,17 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Masa Semakan')
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Masa Semakan',DataCardValue40.SearchText)
+                SearchItems: |-
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue40.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Visible: =Self.Selected.Value<>"Lain-lain"
+                Width: =436
                 X: =30
                 Y: =DataCardKey40.Y + DataCardKey40.Height + 5
                 ZIndex: =2
@@ -869,6 +874,36 @@ EditSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey40.Y
                 ZIndex: =4
+
+            Label16 As label:
+                Height: =70
+                Size: =21
+                Text: ="i.e.,1310 (24h)"
+                Width: =163
+                X: =476
+                Y: =58
+                ZIndex: =5
+
+            TextInput2 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue40.Visible
+                Width: =436
+                X: =30
+                Y: =63
+                ZIndex: =6
+
+            Icon14 As icon.Cancel:
+                Height: =51
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue40);
+                    Reset(TextInput2);
+                Visible: =!DataCardValue40.Visible
+                X: =402
+                Y: =73
+                ZIndex: =7
 
         "'Plot (Lokasi)_DataCard4' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
