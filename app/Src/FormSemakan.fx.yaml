@@ -811,10 +811,10 @@ FormSemakan As screen:
 
             DataCardValue2 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: |-
+                DefaultSelectedItems: |
                     =With(
-                        {_hr: Hour(Now()), _min: Minute(Now())},
-                        {HourValue: _hr, MinuteValue: _min}
+                        {_hr: Text(Hour(Now()), "00"), _min: Text(Minute(Now()), "00")},
+                        {Value: Text(_hr & _min, "[$-en-US]hhmm")}
                     )
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
