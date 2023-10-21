@@ -377,7 +377,8 @@ EditJadualSiraman As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue76.Selected
+            Update: |-
+                =If(DataCardValue76.Selected.Value="Lain-lain",{Value:TextInput4.Text},DataCardValue76.Selected)
             Width: =640
             X: =0
             Y: =10
@@ -400,14 +401,17 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].'Masa (Sebenar)')
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.'Masa (Sebenar)',DataCardValue76.SearchText)
+                SearchItems: |-
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue76.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Visible: =Self.Selected.Value<>"Lain-lain"
+                Width: =407
                 X: =30
                 Y: =DataCardKey76.Y + DataCardKey76.Height + 5
                 ZIndex: =2
@@ -438,6 +442,37 @@ EditJadualSiraman As screen:
                 Wrap: =false
                 Y: =DataCardKey76.Y
                 ZIndex: =4
+
+            TextInput4 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue76.Visible
+                Width: =407
+                X: =30
+                Y: =63
+                ZIndex: =5
+
+            Icon16 As icon.Cancel:
+                Height: =67
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue76);
+                    Reset(TextInput4);
+                Visible: =!DataCardValue76.Visible
+                Width: =51
+                X: =373
+                Y: =63
+                ZIndex: =6
+
+            Label18 As label:
+                Height: =70
+                Size: =21
+                Text: ="i.e.,1310 (24h)"
+                Width: =203
+                X: =437
+                Y: =63
+                ZIndex: =7
 
         "'Masa Siraman (Minit)_DataCard2' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
