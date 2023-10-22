@@ -832,10 +832,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_)
+                Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Plot_x0028_Lokasi_x0029_,DataCardValue39.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue39.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

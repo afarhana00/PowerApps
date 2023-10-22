@@ -1,17 +1,17 @@
 FormJadualSiraman As screen:
 
-    Button14_1 As button:
+    Button14 As button:
         Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         OnSelect: |-
             =  Refresh('Jadual Siraman');
-             Navigate(FormJadualSiraman);NewForm(Form2);
+             Navigate(FormJadualSiraman);SubmitForm(Form2);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Size: =24
-        Text: ="SETERUSNYA"
+        Text: ="SIMPAN"
         Width: =223
         X: =66
         Y: =1032
@@ -240,7 +240,7 @@ FormJadualSiraman As screen:
                 FillPortions: =0.8
                 Height: =70
                 Items: |
-                    =TreePlot
+                    =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingRight: =20
@@ -261,77 +261,6 @@ FormJadualSiraman As screen:
             Y: =492
             ZIndex: =6
 
-            "'Plot (Lokasi)_DataCard6_1' As typedDataCard.comboBoxEditCard":
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="Plot_x0028_Lokasi_x0029_"
-                Default: =ThisItem.'Plot (Lokasi)'
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =DataCardValue80_1.Selected
-                Width: =640
-                X: =0
-                Y: =2
-                ZIndex: =1
-
-                DataCardKey80_1 As label:
-                    AutoHeight: =true
-                    Height: =48
-                    Size: =21
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    Wrap: =false
-                    X: =30
-                    Y: =10
-                    ZIndex: =1
-
-                DataCardValue80_1 As combobox:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultSelectedItems: =Parent.Default
-                    DisplayFields: =["Value"]
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =70
-                    Items: =Choices([@'Jadual Siraman'].'Plot (Lokasi)').Value
-                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    SearchFields: =["Value"]
-                    SearchItems: =Search(Choices([@'Jadual Siraman'].'Plot (Lokasi)').Value,DataCardValue80_1.SearchText,"Value")
-                    SelectMultiple: =false
-                    Size: =21
-                    Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =64
-                    ZIndex: =2
-
-                ErrorMessage80_1 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =24
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue80_1.Y + DataCardValue80_1.Height
-                    ZIndex: =3
-
-                StarVisible78_1 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey80_1.Height
-                    Size: =21
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey80_1.Y
-                    ZIndex: =4
-
             "'Kepekatan Baja (Kg/L)_DataCard1_1' As typedDataCard.numberEditCard":
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="field_8"
@@ -344,7 +273,7 @@ FormJadualSiraman As screen:
                 Update: =Value(DataCardValue58_1.Text)
                 Width: =640
                 X: =0
-                Y: =7
+                Y: =5
                 ZIndex: =1
 
                 DataCardKey58_1 As label:
@@ -416,7 +345,7 @@ FormJadualSiraman As screen:
                 Update: =DataCardValue59_1.Selected
                 Width: =640
                 X: =0
-                Y: =8
+                Y: =6
                 ZIndex: =1
 
                 DataCardKey59_1 As label:
@@ -488,7 +417,7 @@ FormJadualSiraman As screen:
                     =If(DataCardValue60_1.Selected.Value="Lain-lain",{Value:TextInput3_1.Text},DataCardValue60_1.Selected)
                 Width: =640
                 X: =0
-                Y: =9
+                Y: =7
                 ZIndex: =1
 
                 DataCardKey60_1 As label:
@@ -602,7 +531,7 @@ FormJadualSiraman As screen:
                 Update: =Value(DataCardValue61_1.Text)
                 Width: =640
                 X: =0
-                Y: =10
+                Y: =8
                 ZIndex: =1
 
                 DataCardKey61_1 As label:
@@ -675,7 +604,7 @@ FormJadualSiraman As screen:
                 Update: =DataCardValue57_1.Text
                 Width: =640
                 X: =0
-                Y: =11
+                Y: =9
                 ZIndex: =1
 
                 DataCardKey57_1 As label:
@@ -876,77 +805,6 @@ FormJadualSiraman As screen:
                     Y: =DataCardKey25_1.Y
                     ZIndex: =4
 
-            "'Tahap Pokok_DataCard1_1' As typedDataCard.comboBoxEditCard":
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="field_4"
-                Default: =ThisItem.'Tahap Pokok'
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_4")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                Required: =false
-                Update: =DataCardValue27_1.Selected
-                Width: =640
-                X: =0
-                Y: =3
-                ZIndex: =8
-
-                DataCardKey27_1 As label:
-                    AutoHeight: =true
-                    Height: =48
-                    Size: =21
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    Wrap: =false
-                    X: =30
-                    Y: =10
-                    ZIndex: =1
-
-                DataCardValue27_1 As combobox:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultSelectedItems: =Parent.Default
-                    DisplayFields: =["Value"]
-                    DisplayMode: =Parent.DisplayMode
-                    Height: =70
-                    Items: =Choices([@'Jadual Siraman'].'Tahap Pokok')
-                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    SearchFields: =["Value"]
-                    SearchItems: =Choices('Jadual Siraman'.'Tahap Pokok',DataCardValue27_1.SearchText)
-                    SelectMultiple: =false
-                    Size: =21
-                    Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey27_1.Y + DataCardKey27_1.Height + 5
-                    ZIndex: =2
-
-                ErrorMessage27_1 As label:
-                    AutoHeight: =true
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =24
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue27_1.Y + DataCardValue27_1.Height
-                    ZIndex: =3
-
-                StarVisible25_1 As label:
-                    Align: =Align.Center
-                    Height: =DataCardKey27_1.Height
-                    Size: =21
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =DataCardKey27_1.Y
-                    ZIndex: =4
-
             "'Jenis Siraman_DataCard1_1' As typedDataCard.comboBoxMultiSelectEditCard":
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="field_5"
@@ -959,7 +817,7 @@ FormJadualSiraman As screen:
                 Update: =DataCardValue28_1.SelectedItems
                 Width: =640
                 X: =0
-                Y: =4
+                Y: =2
                 ZIndex: =8
 
                 DataCardKey28_1 As label:
@@ -1030,7 +888,7 @@ FormJadualSiraman As screen:
                 Update: =DataCardValue29_1.Text
                 Width: =640
                 X: =0
-                Y: =5
+                Y: =3
                 ZIndex: =8
 
                 DataCardKey29_1 As label:
@@ -1103,7 +961,7 @@ FormJadualSiraman As screen:
                 Update: =DataCardValue30_1.Text
                 Width: =640
                 X: =0
-                Y: =6
+                Y: =4
                 ZIndex: =8
 
                 DataCardKey30_1 As label:

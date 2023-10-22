@@ -14,40 +14,39 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DisplayName"
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DisplayName",
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 23,
-                  "charOffset": 62,
+                  "charLength": 7,
+                  "charOffset": 51,
                   "snippet": {
-                    "text": "\"HST_x0028_Hari_x0029_\""
+                    "text": "\"Value\""
                   }
                 }
               },
               "properties": {
-                "member": "DisplayName",
+                "member": "SearchItems",
                 "module": "EditJadualSiraman",
-                "type": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'"
+                "type": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41"
               }
             }
           ],
           "message": {
             "arguments": [
-              "HST_x0028_Hari_x0029_",
-              "Plot_x0028_Lokasi_x0029_"
+              "Search"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
+          "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 0
         },
         {
@@ -55,39 +54,39 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DisplayName"
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DisplayName",
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 86,
-                  "charOffset": 0,
+                  "charLength": 7,
+                  "charOffset": 51,
                   "snippet": {
-                    "text": "DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,\"HST_x0028_Hari_x0029_\")"
+                    "text": "\"Value\""
                   }
                 }
               },
               "properties": {
-                "member": "DisplayName",
+                "member": "SearchItems",
                 "module": "EditJadualSiraman",
-                "type": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'"
+                "type": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41"
               }
             }
           ],
           "message": {
             "arguments": [
-              "DataSourceInfo"
+              "Value"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleId": "app-ErrColDNE-Name",
           "ruleIndex": 1
         },
         {
@@ -95,39 +94,39 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.Default"
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.Default",
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.SearchItems",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 22,
-                  "charOffset": 8,
+                  "charLength": 59,
+                  "charOffset": 0,
                   "snippet": {
-                    "text": ".HST_x0028_Hari_x0029_"
+                    "text": "Search('Jadual Siraman',DataCardValue41.SearchText,\"Value\")"
                   }
                 }
               },
               "properties": {
-                "member": "Default",
+                "member": "SearchItems",
                 "module": "EditJadualSiraman",
-                "type": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'"
+                "type": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41"
               }
             }
           ],
           "message": {
             "arguments": [
-              "HST_x0028_Hari_x0029_"
+              "Search"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
+          "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 2
         },
         {
@@ -464,36 +463,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DataCardValue79.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DataCardValue79.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "EditJadualSiraman",
-                "type": "EditJadualSiraman.Form1.'HST(Hari)_DataCard4'.DataCardValue79"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "EditJadualSiraman.Form1.Tarikh_DataCard3.DataCardValue32.AccessibleLabel"
                 }
               ],
@@ -584,19 +553,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard2'.DataCardValue35.AccessibleLabel"
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard2'.DataCardValue35.AccessibleLabel",
+                  "fullyQualifiedName": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditJadualSiraman",
-                "type": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard2'.DataCardValue35"
+                "type": "EditJadualSiraman.Form1.'Tahap Pokok_DataCard5'.DataCardValue41"
               }
             }
           ],
@@ -2624,66 +2593,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FormJadualSiraman.Container2.Form4.'Tahap Pokok_DataCard1_1'.DataCardValue27_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FormJadualSiraman.Container2.Form4.'Tahap Pokok_DataCard1_1'.DataCardValue27_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "FormJadualSiraman",
-                "type": "FormJadualSiraman.Container2.Form4.'Tahap Pokok_DataCard1_1'.DataCardValue27_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FormJadualSiraman.Container2.Form4.'Plot (Lokasi)_DataCard6_1'.DataCardValue80_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FormJadualSiraman.Container2.Form4.'Plot (Lokasi)_DataCard6_1'.DataCardValue80_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "FormJadualSiraman",
-                "type": "FormJadualSiraman.Container2.Form4.'Plot (Lokasi)_DataCard6_1'.DataCardValue80_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FormJadualSiraman.Container2.Form4.'Berhenti Air/Baja_DataCard1_1'.DataCardValue25_1.AccessibleLabel"
                 }
               ],
@@ -4096,10 +4005,29 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrColumnDoesNotExist-Name-Similar",
+              "id": "app-SuggestRemoteExecutionHint",
               "messageStrings": {
                 "issue": {
-                  "text": "The specified column '{0}' does not exist. The column with the most similar name is '{1}'."
+                  "text": "Delegation warning. The \"{0}\" part of this formula might not work correctly on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColDNE-Name",
+              "messageStrings": {
+                "issue": {
+                  "text": "The specified column '{0}' does not exist."
                 }
               },
               "properties": {
@@ -4118,23 +4046,6 @@
               },
               "properties": {
                 "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidName",
-              "messageStrings": {
-                "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
