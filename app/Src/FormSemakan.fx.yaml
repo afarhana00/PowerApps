@@ -1245,7 +1245,7 @@ FormSemakan As screen:
 
             DataCardValue17_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: ="60 %"
+                Default: ="60"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
