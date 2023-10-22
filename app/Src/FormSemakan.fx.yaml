@@ -10,72 +10,68 @@ FormSemakan As screen:
         Height: =70
         Size: =21
         Text: ="Plot"
-        Width: =560
-        X: =39
-        Y: =95
+        Width: =80
+        Y: =147
         ZIndex: =2
 
     PlotSelect As dropdown:
-        Height: =70
+        Height: =59
         Items: =TreePlot
         Size: =21
-        Width: =575
-        X: =39
+        Width: =465
+        X: =149
         Y: =147
         ZIndex: =3
 
     Label13_1 As label:
-        Height: =70
+        Height: =81
         Size: =21
         Text: ="Jenis Pokok"
-        Width: =560
-        X: =39
-        Y: =206
+        Width: =149
+        Y: =230
         ZIndex: =4
 
     TreeSelect As dropdown:
         Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =575
-        X: =39
-        Y: =276
+        Width: =465
+        X: =149
+        Y: =241
         ZIndex: =5
 
     Label13_2 As label:
-        Height: =70
+        Height: =76
         Size: =21
         Text: ="Varian Cili"
-        Width: =560
-        X: =39
-        Y: =346
+        Width: =130
+        Y: =322
         ZIndex: =6
 
     VarianceSelect As dropdown:
-        Height: =70
+        Height: =75
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =575
-        X: =39
-        Y: =401
+        Width: =465
+        X: =149
+        Y: =339
         ZIndex: =7
 
     StageSelect As label:
         Height: =60
         Size: =21
         Text: ="Tahap Pokok"
-        Width: =545
-        X: =39
-        Y: =471
+        Width: =149
+        Y: =442
         ZIndex: =8
 
     Dropdown1_3 As dropdown:
-        Height: =70
+        Height: =63
         Items: =TreePlot.'Tahap Pokok'
         Size: =21
-        Width: =575
-        X: =39
-        Y: =531
+        Width: =465
+        X: =149
+        Y: =442
         ZIndex: =9
 
     Icon12 As icon.BackArrow:
@@ -89,9 +85,9 @@ FormSemakan As screen:
 
     Form2 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =397
+        Height: =493
         Width: =640
-        Y: =621
+        Y: =523
         ZIndex: =11
 
         "'Tarikh _DataCard1_1' As typedDataCard.dateEditCard":
@@ -101,7 +97,7 @@ FormSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_16")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =116
             Required: =false
             Update: =DataCardValue47_1.SelectedDate
             Width: =640
@@ -986,6 +982,12 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey4_1.Y
                 ZIndex: =4
+
+            Rectangle1 As rectangle:
+                Fill: =RGBA(149, 149, 149, 1)
+                Height: =0
+                Width: =640
+                ZIndex: =5
 
         Cuaca_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
