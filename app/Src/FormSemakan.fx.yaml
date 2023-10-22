@@ -1008,7 +1008,7 @@ FormSemakan As screen:
 
             DataCardValue4_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
