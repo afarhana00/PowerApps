@@ -253,6 +253,7 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             DataCardValue74 As text:
+                Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -443,12 +444,12 @@ EditJadualSiraman As screen:
 
             TextInput4 As text:
                 Default: =""
-                Height: =70
+                Height: =67
                 Size: =21
                 Visible: =!DataCardValue76.Visible
-                Width: =407
-                X: =30
-                Y: =63
+                Width: =298
+                X: =286
+                Y: =10
                 ZIndex: =5
 
             Icon16 As icon.Cancel:
@@ -459,8 +460,8 @@ EditJadualSiraman As screen:
                     Reset(TextInput4);
                 Visible: =!DataCardValue76.Visible
                 Width: =51
-                X: =373
-                Y: =63
+                X: =529
+                Y: =10
                 ZIndex: =6
 
             Label18 As label:
@@ -500,6 +501,7 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             DataCardValue77 As text:
+                Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -847,12 +849,12 @@ EditJadualSiraman As screen:
 
             DataCardKey37 As label:
                 AutoHeight: =true
-                Height: =48
+                Height: =86
                 Size: =21
                 Text: |-
                     ="Jenis
                     Baja Tambahan"
-                Width: =Parent.Width - 60
+                Width: =232
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -866,6 +868,7 @@ EditJadualSiraman As screen:
                 Height: =80
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
+                PaddingTop: =10
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -874,6 +877,7 @@ EditJadualSiraman As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =326
                 X: =262
+                Y: =16
                 ZIndex: =2
 
             ErrorMessage37 As label:
@@ -1029,10 +1033,10 @@ EditJadualSiraman As screen:
             ZIndex: =3
 
             Label14_6 As label:
-                FillPortions: =0.4
+                FillPortions: =0.3
                 Height: =70
                 LayoutMinHeight: =70
-                LayoutMinWidth: =560
+                LayoutMinWidth: =250
                 PaddingLeft: =20
                 PaddingTop: =20
                 Size: =21
@@ -1044,7 +1048,7 @@ EditJadualSiraman As screen:
 
             ddPlantType_2 As dropdown:
                 Default: =
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Height: =70
                 Items: |-
                     =ForAll(Filter(TreePlot,PlotId=ddPlotId_3.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
