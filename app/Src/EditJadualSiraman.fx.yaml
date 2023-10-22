@@ -102,10 +102,10 @@ EditJadualSiraman As screen:
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =190
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue78 As combobox:
@@ -121,7 +121,7 @@ EditJadualSiraman As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =356
+                Width: =326
                 X: =254
                 Y: =10
                 ZIndex: =2
@@ -192,8 +192,8 @@ EditJadualSiraman As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =372
-                X: =238
+                Width: =326
+                X: =253
                 Y: =10
                 ZIndex: =2
 
@@ -241,10 +241,12 @@ EditJadualSiraman As screen:
 
             DataCardKey74 As label:
                 AutoHeight: =true
-                Height: =48
+                Height: =86
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: |-
+                    ="Kepekatan Baja
+                    (Kg/L)"
+                Width: =232
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -264,8 +266,8 @@ EditJadualSiraman As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =264
-                X: =346
+                Width: =326
+                X: =246
                 Y: =10
                 ZIndex: =2
 
@@ -318,8 +320,8 @@ EditJadualSiraman As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =26
                 ZIndex: =1
 
             DataCardValue75 As combobox:
@@ -335,9 +337,8 @@ EditJadualSiraman As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =301
-                X: =297
-                Y: =10
+                Width: =298
+                X: =277
                 ZIndex: =2
 
             ErrorMessage75 As label:
@@ -384,14 +385,12 @@ EditJadualSiraman As screen:
             ZIndex: =1
 
             DataCardKey76 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =64
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =224
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =29
                 ZIndex: =1
 
             DataCardValue76 As combobox:
@@ -399,7 +398,7 @@ EditJadualSiraman As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =80
+                Height: =90
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -410,8 +409,8 @@ EditJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
-                Width: =167
-                X: =270
+                Width: =296
+                X: =274
                 Y: =10
                 ZIndex: =2
 
@@ -469,8 +468,8 @@ EditJadualSiraman As screen:
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
                 Width: =203
-                X: =437
-                Y: =10
+                X: =40
+                Y: =40
                 ZIndex: =7
 
         "'Masa Siraman (Minit)_DataCard2' As typedDataCard.numberEditCard":
@@ -489,14 +488,15 @@ EditJadualSiraman As screen:
             ZIndex: =1
 
             DataCardKey77 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =64
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: |-
+                    ="Masa Siraman
+                    (Minit)"
+                Width: =215
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =26
                 ZIndex: =1
 
             DataCardValue77 As text:
@@ -513,8 +513,8 @@ EditJadualSiraman As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =240
-                X: =370
+                Width: =295
+                X: =279
                 Y: =10
                 ZIndex: =2
 
@@ -579,7 +579,11 @@ EditJadualSiraman As screen:
                 DisplayMode: =Parent.DisplayMode
                 Height: =150
                 MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
+                Mode: =TextMode.MultiLine
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =20
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -634,14 +638,12 @@ EditJadualSiraman As screen:
             ZIndex: =10
 
             DataCardKey32 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =58
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =174
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
                 ZIndex: =1
 
             DataCardValue32 As datepicker:
@@ -657,8 +659,8 @@ EditJadualSiraman As screen:
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =406
-                X: =192
+                Width: =326
+                X: =255
                 ZIndex: =2
 
             ErrorMessage32 As label:
@@ -704,13 +706,12 @@ EditJadualSiraman As screen:
             ZIndex: =10
 
             DataCardKey33 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =60
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =252
                 Wrap: =false
-                X: =30
+                X: =2
                 Y: =10
                 ZIndex: =1
 
@@ -727,8 +728,8 @@ EditJadualSiraman As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =327
-                X: =283
+                Width: =326
+                X: =254
                 ZIndex: =2
 
             ErrorMessage33 As label:
@@ -797,8 +798,8 @@ EditJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =561
-                X: =48
-                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                X: =30
+                Y: =63
                 ZIndex: =2
 
             ErrorMessage36 As label:
@@ -848,7 +849,9 @@ EditJadualSiraman As screen:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: |-
+                    ="Jenis
+                    Baja Tambahan"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -869,8 +872,8 @@ EditJadualSiraman As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =295
-                X: =329
+                Width: =326
+                X: =267
                 Y: =10
                 ZIndex: =2
 
@@ -942,8 +945,8 @@ EditJadualSiraman As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =430
-                X: =180
+                Width: =326
+                X: =261
                 Y: =10
                 ZIndex: =2
 
@@ -991,7 +994,7 @@ EditJadualSiraman As screen:
             ZIndex: =2
 
             Label14_5 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -1005,7 +1008,7 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId_3 As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =TreePlot
                 LayoutMinHeight: =70
@@ -1027,11 +1030,8 @@ EditJadualSiraman As screen:
             ZIndex: =3
 
             Label14_6 As label:
-                AlignInContainer: =AlignInContainer.Stretch
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
                 PaddingLeft: =20
                 PaddingTop: =20
                 Size: =21
@@ -1043,7 +1043,7 @@ EditJadualSiraman As screen:
 
             ddPlantType_2 As dropdown:
                 Default: =
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: |-
                     =ForAll(Filter(TreePlot,PlotId=ddPlotId_3.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
@@ -1067,7 +1067,7 @@ EditJadualSiraman As screen:
             ZIndex: =4
 
             Label14_7 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -1081,7 +1081,7 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlantType_3 As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =Filter(TreePlot, PlotId = ddPlotId_3.Selected.PlotId)
                 LayoutMinHeight: =70
@@ -1103,7 +1103,7 @@ EditJadualSiraman As screen:
             ZIndex: =5
 
             Label14_8 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -1117,7 +1117,7 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId_4 As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =Filter(TreePlot, PlotId = ddPlotId_3.Selected.PlotId)
                 LayoutMinHeight: =70
@@ -1139,7 +1139,7 @@ EditJadualSiraman As screen:
             ZIndex: =6
 
             Label14_9 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -1153,13 +1153,13 @@ EditJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId_5 As dropdown:
-                FillPortions: =0.8
+                AlignInContainer: =AlignInContainer.Start
+                FillPortions: =0.5
                 Height: =70
                 Items: |
                     =Filter(TreePlot, PlotId = ddPlotId_3.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
-                PaddingRight: =20
                 PaddingTop: =20
                 Size: =21
                 Width: =0.8

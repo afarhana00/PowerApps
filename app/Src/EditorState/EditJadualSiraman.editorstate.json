@@ -66,7 +66,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Berhenti Air/Baja_DataCard2",
@@ -517,7 +517,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Catatan_DataCard2",
@@ -996,7 +996,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey32",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1266,7 +1266,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey33",
@@ -1761,7 +1761,7 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
+          "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "Text",
           "IsLockable": true,
@@ -1814,7 +1814,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey37",
@@ -2636,7 +2636,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey73",
@@ -2857,7 +2857,7 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
+          "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "Text",
           "IsLockable": true,
@@ -2910,7 +2910,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey74",
@@ -3184,11 +3184,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey75",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3679,7 +3679,7 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
+          "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "Text",
           "IsLockable": true,
@@ -3732,11 +3732,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey77",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4010,7 +4010,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey78",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4324,7 +4324,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue32",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4652,7 +4652,14 @@
         "FontWeight",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -4669,7 +4676,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue33",
@@ -5354,7 +5361,14 @@
         "Align",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -5378,7 +5392,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue37",
@@ -5674,7 +5688,14 @@
         "Align",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -6020,7 +6041,14 @@
         "FontWeight",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -6342,7 +6370,14 @@
           "IsLockable": true,
           "NameMapSourceSchema": "?"
         },
-        "Mode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Mode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Format",
         "VirtualKeyboardMode",
         "DelayOutput",
@@ -6373,10 +6408,38 @@
         "Italic",
         "Underline",
         "Strikethrough",
-        "PaddingTop",
-        "PaddingRight",
-        "PaddingBottom",
-        "PaddingLeft",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingTop",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingRight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingBottom",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingLeft",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "RadiusBottomLeft",
         "RadiusBottomRight",
         "RadiusTopLeft",
@@ -6388,7 +6451,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue73",
@@ -6683,7 +6746,14 @@
         "Align",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -6707,7 +6777,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue74",
@@ -7041,11 +7111,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue75",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7762,11 +7832,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue77",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8079,7 +8149,14 @@
         "FontWeight",
         "X",
         "Y",
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "ZIndex",
         "BorderThickness",
@@ -8100,7 +8177,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue78",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9861,7 +9938,14 @@
           "PropertyName": "FillPortions"
         },
         {
-          "ControlPropertyState": "AlignInContainer",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "AlignInContainer",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "AlignInContainer",
@@ -11868,7 +11952,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage33",
@@ -12430,7 +12514,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage37",
@@ -12992,7 +13076,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage73",
@@ -13273,7 +13357,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage74",
@@ -13554,7 +13638,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage75",
@@ -14116,7 +14200,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage77",
@@ -14958,7 +15042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon16",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15897,7 +15981,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Jenis Baja Tambahan_DataCard2",
@@ -16196,7 +16280,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Kepekatan Baja (Kg/L)_DataCard2",
@@ -16701,44 +16785,12 @@
           "PropertyName": "FillPortions"
         },
         {
-          "ControlPropertyState": {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "AlignInContainer",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "AlignInContainer",
-            "RuleProviderType": "Unknown"
-          },
           "PropertyName": "AlignInContainer"
         },
         {
-          "ControlPropertyState": {
-            "AFDDataSourceName": "",
-            "AutoRuleBindingEnabled": false,
-            "AutoRuleBindingString": "",
-            "InvariantPropertyName": "LayoutMinWidth",
-            "IsLockable": false,
-            "NameMapSourceSchema": "?"
-          },
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "LayoutMinWidth",
-            "RuleProviderType": "Unknown"
-          },
           "PropertyName": "LayoutMinWidth"
         },
         {
-          "ControlPropertyState": "LayoutMinHeight",
-          "Property": {
-            "Category": "Design",
-            "PropertyName": "LayoutMinHeight",
-            "RuleProviderType": "Unknown"
-          },
           "PropertyName": "LayoutMinHeight"
         }
       ],
@@ -18019,7 +18071,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label18",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18775,7 +18827,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Masa (Rancangan)_DataCard2",
@@ -19069,7 +19121,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Masa Siraman (Minit)_DataCard2",
@@ -19647,7 +19699,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible30",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19924,7 +19976,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible31",
@@ -20486,7 +20538,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible35",
@@ -21048,7 +21100,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible71",
@@ -21329,7 +21381,7 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible72",
@@ -21610,11 +21662,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible73",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22172,11 +22224,11 @@
       "IsDataControl": false,
       "IsFromScreenLayout": false,
       "IsGroupControl": false,
-      "IsLocked": true,
+      "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible75",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22457,7 +22509,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible76",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23030,7 +23082,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInput4",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
