@@ -74,7 +74,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =2
+            ZIndex: =1
 
             Label14 As label:
                 FillPortions: =0.2
@@ -94,6 +94,44 @@ FormJadualSiraman As screen:
                 FillPortions: =0.8
                 Height: =70
                 Items: =TreePlot
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Label14_4 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.2
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HST (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_3 As dropdown:
+                FillPortions: =0.8
+                Height: =70
+                Items: |
+                    =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingRight: =20

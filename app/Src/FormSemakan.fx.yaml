@@ -11,49 +11,52 @@ FormSemakan As screen:
         Size: =21
         Text: ="Plot"
         Width: =80
+        X: =27
         Y: =147
         ZIndex: =2
 
     PlotSelect As dropdown:
-        Height: =59
+        Height: =70
         Items: =TreePlot
         Size: =21
-        Width: =465
-        X: =149
+        Width: =415
+        X: =199
         Y: =147
         ZIndex: =3
 
     Label13_1 As label:
-        Height: =81
+        Height: =70
         Size: =21
         Text: ="Jenis Pokok"
-        Width: =149
-        Y: =230
+        Width: =185
+        X: =8
+        Y: =243
         ZIndex: =4
 
     TreeSelect As dropdown:
         Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =465
-        X: =149
+        Width: =415
+        X: =199
         Y: =241
         ZIndex: =5
 
     Label13_2 As label:
-        Height: =76
+        Height: =89
         Size: =21
         Text: ="Varian Cili"
-        Width: =130
-        Y: =322
+        Width: =160
+        X: =8
+        Y: =332
         ZIndex: =6
 
     VarianceSelect As dropdown:
-        Height: =75
+        Height: =71
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =465
-        X: =149
+        Width: =415
+        X: =199
         Y: =339
         ZIndex: =7
 
@@ -61,16 +64,17 @@ FormSemakan As screen:
         Height: =60
         Size: =21
         Text: ="Tahap Pokok"
-        Width: =149
+        Width: =196
+        X: =8
         Y: =442
         ZIndex: =8
 
     Dropdown1_3 As dropdown:
-        Height: =63
+        Height: =60
         Items: =TreePlot.'Tahap Pokok'
         Size: =21
-        Width: =465
-        X: =149
+        Width: =414
+        X: =199
         Y: =442
         ZIndex: =9
 
