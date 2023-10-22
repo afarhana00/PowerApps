@@ -645,7 +645,8 @@ EditJadualSiraman As screen:
                 Text: =Parent.DisplayName
                 Width: =174
                 Wrap: =false
-                X: =18
+                X: =30
+                Y: =6
                 ZIndex: =1
 
             DataCardValue32 As datepicker:
@@ -711,9 +712,9 @@ EditJadualSiraman As screen:
                 Height: =60
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =252
+                Width: =235
                 Wrap: =false
-                X: =2
+                X: =19
                 Y: =10
                 ZIndex: =1
 
@@ -924,14 +925,13 @@ EditJadualSiraman As screen:
             ZIndex: =10
 
             DataCardKey38 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =213
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =26
                 ZIndex: =1
 
             DataCardValue38 As text:
