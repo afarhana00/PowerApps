@@ -74,7 +74,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =1
+            ZIndex: =2
 
             Label14 As label:
                 FillPortions: =0.2
@@ -110,7 +110,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =2
+            ZIndex: =3
 
             Label14_4 As label:
                 AlignInContainer: =AlignInContainer.Stretch
@@ -127,11 +127,10 @@ FormJadualSiraman As screen:
                 Y: =125
                 ZIndex: =1
 
-            ddPlotId_3 As dropdown:
+            ddPlantType_1 As dropdown:
                 FillPortions: =0.8
                 Height: =70
-                Items: |
-                    =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
+                Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingRight: =20
@@ -148,7 +147,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =3
+            ZIndex: =4
 
             Label14_1 As label:
                 FillPortions: =0.2
@@ -184,7 +183,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =4
+            ZIndex: =5
 
             Label14_2 As label:
                 FillPortions: =0.2
@@ -220,7 +219,7 @@ FormJadualSiraman As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =5
+            ZIndex: =6
 
             Label14_3 As label:
                 FillPortions: =0.2
@@ -259,7 +258,7 @@ FormJadualSiraman As screen:
             LayoutMinWidth: =320
             Width: =640
             Y: =492
-            ZIndex: =6
+            ZIndex: =7
 
             "'Kepekatan Baja (Kg/L)_DataCard1_1' As typedDataCard.numberEditCard":
                 BorderStyle: =BorderStyle.Solid
@@ -490,12 +489,12 @@ FormJadualSiraman As screen:
 
                 TextInput3_1 As text:
                     Default: =""
-                    Height: =70
+                    Height: =73
                     Size: =21
                     Visible: =!DataCardValue60_1.Visible
                     Width: =426
                     X: =30
-                    Y: =63
+                    Y: =60
                     ZIndex: =5
 
                 Icon15_1 As icon.Cancel:
