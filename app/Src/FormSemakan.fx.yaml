@@ -125,16 +125,16 @@ FormSemakan As screen:
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Format: ="dd/mm/yyyy"
-                Height: =70
+                Height: =58
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey47_1.Y + DataCardKey47_1.Height + 5
+                Width: =382
+                X: =211
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage47_1 As label:
@@ -204,8 +204,7 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =293
-                X: =30
-                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                X: =216
                 ZIndex: =2
 
             ErrorMessage1 As label:
@@ -347,9 +346,8 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey55_1.Y + DataCardKey55_1.Height + 5
+                Width: =356
+                X: =231
                 ZIndex: =2
 
             ErrorMessage55_1 As label:
@@ -419,9 +417,8 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey51_1.Y + DataCardKey51_1.Height + 5
+                Width: =180
+                X: =403
                 ZIndex: =2
 
             ErrorMessage51_1 As label:
@@ -482,7 +479,7 @@ FormSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =54
                 Items: =Choices([@'Semakan Kesihatan'].Perosak)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -490,9 +487,9 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey56_1.Y + DataCardKey56_1.Height + 5
+                Width: =395
+                X: =215
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage56_1 As label:
@@ -554,7 +551,7 @@ FormSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =80
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -562,9 +559,9 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey52_1.Y + DataCardKey52_1.Height + 5
+                Width: =216
+                X: =394
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage52_1 As label:
@@ -625,7 +622,7 @@ FormSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =80
                 Items: =Choices([@'Semakan Kesihatan'].'Jenis Racun')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -633,9 +630,9 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey50_1.Y + DataCardKey50_1.Height + 5
+                Width: =385
+                X: =239
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage50_1 As label:
@@ -720,12 +717,11 @@ FormSemakan As screen:
 
             Dropdown1 As dropdown:
                 Default: ="6"
-                Height: =70
+                Height: =80
                 Items: =["1","2","3","4","5","6","7","8","9","10"]
                 Size: =21
-                Width: =580
-                X: =30
-                Y: =63
+                Width: =306
+                X: =304
                 ZIndex: =5
 
         "'Ketinggian Pokok_DataCard1_1' As typedDataCard.numberEditCard":
@@ -760,7 +756,7 @@ FormSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =64
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -768,9 +764,9 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey53_1.Y + DataCardKey53_1.Height + 5
+                Width: =298
+                X: =312
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage53_1 As label:
@@ -906,7 +902,7 @@ FormSemakan As screen:
                     )
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =54
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -917,9 +913,8 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
-                Width: =424
-                X: =30
-                Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 5
+                Width: =184
+                X: =280
                 ZIndex: =2
 
             ErrorMessage2_1 As label:
@@ -974,8 +969,7 @@ FormSemakan As screen:
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
                 Width: =146
-                X: =464
-                Y: =60
+                X: =490
                 ZIndex: =7
 
         IDPokok_DataCard1_1 As typedDataCard.comboBoxEditCard:
@@ -1011,7 +1005,7 @@ FormSemakan As screen:
                 DefaultSelectedItems: =
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =67
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].IDPokok)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
@@ -1022,9 +1016,8 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Tambah Baru"
-                Width: =580
-                X: =30
-                Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 5
+                Width: =311
+                X: =221
                 ZIndex: =2
 
             ErrorMessage4_1 As label:
@@ -1105,7 +1098,7 @@ FormSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =66
                 Items: =Choices([@'Semakan Kesihatan'].Cuaca)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -1113,9 +1106,9 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 5
+                Width: =343
+                X: =255
+                Y: =1
                 ZIndex: =2
 
             ErrorMessage7_1 As label:
@@ -1177,7 +1170,7 @@ FormSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =66
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -1185,9 +1178,9 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 5
+                Width: =374
+                X: =236
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage8_1 As label:
@@ -1249,7 +1242,7 @@ FormSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =80
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -1257,9 +1250,9 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
+                Width: =306
+                X: =304
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage17_1 As label:
@@ -1354,8 +1347,8 @@ FormSemakan As screen:
 
     Rectangle1_2 As rectangle:
         Fill: =RGBA(149, 149, 149, 1)
-        Height: =0
+        Height: =5
         Width: =640
-        Y: =597
+        Y: =554
         ZIndex: =18
 

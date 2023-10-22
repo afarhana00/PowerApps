@@ -195,8 +195,8 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =242
-                X: =30
-                Y: =72
+                X: =216
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage23 As label:
@@ -330,7 +330,7 @@ EditSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =80
                 Items: =Choices([@'Semakan Kesihatan'].Penyakit)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -338,9 +338,8 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey71.Y + DataCardKey71.Height + 5
+                Width: =369
+                X: =211
                 ZIndex: =2
 
             ErrorMessage71 As label:
@@ -402,7 +401,7 @@ EditSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =80
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -410,9 +409,9 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey67.Y + DataCardKey67.Height + 5
+                Width: =203
+                X: =387
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage67 As label:
@@ -473,7 +472,7 @@ EditSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =80
                 Items: =Choices([@'Semakan Kesihatan'].Perosak)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -481,9 +480,9 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey72.Y + DataCardKey72.Height + 5
+                Width: =430
+                X: =180
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage72 As label:
@@ -545,7 +544,7 @@ EditSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =80
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -553,9 +552,9 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey68.Y + DataCardKey68.Height + 5
+                Width: =224
+                X: =386
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage68 As label:
@@ -624,9 +623,9 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey66.Y + DataCardKey66.Height + 5
+                Width: =382
+                X: =228
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage66 As label:
@@ -696,9 +695,9 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                Width: =253
+                X: =332
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage70 As label:
@@ -768,9 +767,8 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey69.Y + DataCardKey69.Height + 5
+                Width: =277
+                X: =310
                 ZIndex: =2
 
             ErrorMessage69 As label:
@@ -829,7 +827,7 @@ EditSemakan As screen:
             DataCardValue64 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
-                Height: =210
+                Height: =196
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -838,8 +836,8 @@ EditSemakan As screen:
                 PaddingTop: =5
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =561
+                X: =48
                 Y: =DataCardKey64.Y + DataCardKey64.Height + 5
                 ZIndex: =2
 
@@ -911,7 +909,7 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
-                Width: =408
+                Width: =222
                 X: =215
                 Y: =26
                 ZIndex: =2
@@ -948,8 +946,8 @@ EditSemakan As screen:
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
                 Width: =163
-                X: =30
-                Y: =62
+                X: =466
+                Y: =26
                 ZIndex: =5
 
             TextInput2 As text:
@@ -1012,9 +1010,9 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey42.Y + DataCardKey42.Height + 5
+                Width: =252
+                X: =202
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage42 As label:
@@ -1083,9 +1081,9 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                Width: =419
+                X: =191
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage44 As label:
@@ -1147,7 +1145,7 @@ EditSemakan As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =56
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -1155,9 +1153,9 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                Width: =416
+                X: =194
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage45 As label:
@@ -1227,9 +1225,9 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey46.Y + DataCardKey46.Height + 5
+                Width: =277
+                X: =321
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage46 As label:

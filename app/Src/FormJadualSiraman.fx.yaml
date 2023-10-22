@@ -294,7 +294,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value= ddPlotId.Selected.PlotId)
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =54
                     Items: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId.Selected.PlotId)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -302,9 +302,9 @@ FormJadualSiraman As screen:
                     SelectMultiple: =false
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                    Width: =311
+                    X: =299
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage2 As label:
@@ -374,9 +374,8 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey58_1.Y + DataCardKey58_1.Height + 5
+                    Width: =153
+                    X: =362
                     ZIndex: =2
 
                 ErrorMessage58_1 As label:
@@ -437,7 +436,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =79
                     Items: =Choices([@'Jadual Siraman'].'Masa (Rancangan)')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -445,9 +444,9 @@ FormJadualSiraman As screen:
                     SelectMultiple: =false
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey59_1.Y + DataCardKey59_1.Height + 5
+                    Width: =314
+                    X: =296
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage59_1 As label:
@@ -518,7 +517,7 @@ FormJadualSiraman As screen:
                         )
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =62
                     Items: |-
                         =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -529,9 +528,9 @@ FormJadualSiraman As screen:
                     Size: =21
                     Tooltip: =Parent.DisplayName
                     Visible: =Self.Selected.Value<>"Lain-lain"
-                    Width: =426
-                    X: =30
-                    Y: =DataCardKey60_1.Y + DataCardKey60_1.Height + 5
+                    Width: =181
+                    X: =275
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage60_1 As label:
@@ -588,8 +587,7 @@ FormJadualSiraman As screen:
                     Size: =21
                     Text: ="i.e., 1310 (24h)"
                     Width: =151
-                    X: =470
-                    Y: =60
+                    X: =488
                     ZIndex: =7
 
             "'Masa Siraman (Minit)_DataCard1_1' As typedDataCard.numberEditCard":
@@ -632,9 +630,8 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey61_1.Y + DataCardKey61_1.Height + 5
+                    Width: =232
+                    X: =363
                     ZIndex: =2
 
                 ErrorMessage61_1 As label:
@@ -696,7 +693,7 @@ FormJadualSiraman As screen:
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =123
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -705,9 +702,9 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey57_1.Y + DataCardKey57_1.Height + 5
+                    Width: =451
+                    X: =158
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage57_1 As label:
@@ -768,16 +765,16 @@ FormJadualSiraman As screen:
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     Format: ="dd/mm/yyyy"
-                    Height: =70
+                    Height: =64
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     Size: =24
                     StartYear: =1899
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey24_1.Y + DataCardKey24_1.Height + 5
+                    Width: =311
+                    X: =299
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage24_1 As label:
@@ -838,7 +835,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =51
                     Items: =Choices([@'Jadual Siraman'].'Berhenti Air/Baja')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -846,9 +843,9 @@ FormJadualSiraman As screen:
                     SelectMultiple: =false
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey25_1.Y + DataCardKey25_1.Height + 5
+                    Width: =306
+                    X: =304
+                    Y: =7
                     ZIndex: =2
 
                 ErrorMessage25_1 As label:
@@ -909,16 +906,15 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =59
                     Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
                     SearchItems: =Choices('Jadual Siraman'.'Jenis Siraman',DataCardValue28_1.SearchText)
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey28_1.Y + DataCardKey28_1.Height + 5
+                    Width: =314
+                    X: =296
                     ZIndex: =2
 
                 ErrorMessage28_1 As label:
@@ -989,9 +985,9 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey29_1.Y + DataCardKey29_1.Height + 5
+                    Width: =285
+                    X: =325
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage29_1 As label:
@@ -1053,7 +1049,7 @@ FormJadualSiraman As screen:
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =58
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -1062,9 +1058,8 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardKey30_1.Y + DataCardKey30_1.Height + 5
+                    Width: =419
+                    X: =191
                     ZIndex: =2
 
                 ErrorMessage30_1 As label:
