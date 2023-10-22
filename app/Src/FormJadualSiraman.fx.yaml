@@ -294,7 +294,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value= ddPlotId.Selected.PlotId)
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =54
+                    Height: =70
                     Items: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId.Selected.PlotId)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -361,6 +361,7 @@ FormJadualSiraman As screen:
                     ZIndex: =1
 
                 DataCardValue58_1 As text:
+                    Align: =Align.Center
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DelayOutput: =true
@@ -517,7 +518,7 @@ FormJadualSiraman As screen:
                         )
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =62
+                    Height: =70
                     Items: |-
                         =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Masa (Sebenar)')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -695,7 +696,11 @@ FormJadualSiraman As screen:
                     DisplayMode: =Parent.DisplayMode
                     Height: =123
                     MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
+                    Mode: =TextMode.MultiLine
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -765,7 +770,7 @@ FormJadualSiraman As screen:
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     Format: ="dd/mm/yyyy"
-                    Height: =64
+                    Height: =70
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -835,7 +840,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =51
+                    Height: =70
                     Items: =Choices([@'Jadual Siraman'].'Berhenti Air/Baja')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -906,7 +911,7 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =59
+                    Height: =70
                     Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -1049,7 +1054,7 @@ FormJadualSiraman As screen:
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    Height: =58
+                    Height: =70
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
