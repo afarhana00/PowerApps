@@ -71,7 +71,7 @@ FormSemakan As screen:
 
     Dropdown1_3 As dropdown:
         Height: =60
-        Items: =TreePlot.'Tahap Pokok'
+        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
         Width: =414
         X: =199
