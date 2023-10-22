@@ -78,11 +78,11 @@ EditSemakan As screen:
 
     Form3 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =973
+        Height: =425
         Item: =Gallery1.Selected
         Visible: =If(deleteMode,false,true)
         Width: =640
-        Y: =163
+        Y: =710
         ZIndex: =8
 
         "'Tarikh _DataCard2' As typedDataCard.dateEditCard":
@@ -105,7 +105,7 @@ EditSemakan As screen:
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =Parent.Width
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -124,9 +124,9 @@ EditSemakan As screen:
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey63.Y + DataCardKey63.Height + 5
+                Width: =420
+                X: =220
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage63 As label:
@@ -163,7 +163,7 @@ EditSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =115
             Required: =false
             Update: =DataCardValue39.Selected
             Width: =640
@@ -172,11 +172,10 @@ EditSemakan As screen:
             ZIndex: =1
 
             DataCardKey39 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =267
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -187,7 +186,7 @@ EditSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =61
                 Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
@@ -195,9 +194,9 @@ EditSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =242
                 X: =30
-                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                Y: =72
                 ZIndex: =2
 
             ErrorMessage23 As label:
@@ -888,14 +887,12 @@ EditSemakan As screen:
             ZIndex: =9
 
             DataCardKey40 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =215
                 Wrap: =false
-                X: =30
-                Y: =10
+                Y: =15
                 ZIndex: =1
 
             DataCardValue40 As combobox:
@@ -903,7 +900,7 @@ EditSemakan As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =59
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -914,9 +911,9 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
-                Width: =436
-                X: =30
-                Y: =DataCardKey40.Y + DataCardKey40.Height + 5
+                Width: =408
+                X: =215
+                Y: =26
                 ZIndex: =2
 
             ErrorMessage40 As label:
@@ -947,12 +944,12 @@ EditSemakan As screen:
                 ZIndex: =4
 
             Label16 As label:
-                Height: =70
+                Height: =55
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
                 Width: =163
-                X: =476
-                Y: =58
+                X: =30
+                Y: =62
                 ZIndex: =5
 
             TextInput2 As text:
@@ -1261,4 +1258,95 @@ EditSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey46.Y
                 ZIndex: =4
+
+    Label13_4 As label:
+        Height: =70
+        Size: =21
+        Text: ="Plot"
+        Width: =80
+        X: =41
+        Y: =193
+        ZIndex: =9
+
+    PlotSelect_2 As dropdown:
+        Height: =70
+        Items: =TreePlot
+        Size: =21
+        Width: =415
+        X: =207
+        Y: =196
+        ZIndex: =10
+
+    Label13_5 As label:
+        Height: =70
+        Size: =21
+        Text: ="Jenis Pokok"
+        Width: =185
+        X: =23
+        Y: =361
+        ZIndex: =11
+
+    TreeSelect_1 As dropdown:
+        Height: =70
+        Items: =Filter(TreePlot, PlotId = PlotSelect_2.Selected.PlotId)
+        Size: =21
+        Width: =415
+        X: =207
+        Y: =365
+        ZIndex: =12
+
+    Label13_6 As label:
+        Height: =89
+        Size: =21
+        Text: ="Varian Cili"
+        Width: =160
+        X: =23
+        Y: =456
+        ZIndex: =13
+
+    VarianceSelect_1 As dropdown:
+        Height: =70
+        Items: =Filter(TreePlot, PlotId = PlotSelect_2.Selected.PlotId)
+        Size: =21
+        Width: =415
+        X: =208
+        Y: =456
+        ZIndex: =14
+
+    StageSelect_1 As label:
+        Height: =60
+        Size: =21
+        Text: ="Tahap Pokok"
+        Width: =196
+        X: =17
+        Y: =545
+        ZIndex: =15
+
+    Dropdown1_4 As dropdown:
+        Height: =70
+        Items: =Filter(TreePlot, PlotId = PlotSelect_2.Selected.PlotId)
+        Size: =21
+        Width: =414
+        X: =207
+        Y: =548
+        ZIndex: =16
+
+    PlotSelect_3 As dropdown:
+        Height: =70
+        Items: |-
+            =ForAll(Filter(TreePlot,PlotId=PlotSelect_2.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+        Size: =21
+        Width: =415
+        X: =207
+        Y: =277
+        ZIndex: =17
+
+    Label13_7 As label:
+        Height: =71
+        Size: =21
+        Text: ="HST (Hari)"
+        Width: =155
+        X: =28
+        Y: =279
+        ZIndex: =18
 
