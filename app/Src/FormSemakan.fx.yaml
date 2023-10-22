@@ -11,8 +11,8 @@ FormSemakan As screen:
         Size: =21
         Text: ="Plot"
         Width: =80
-        X: =27
-        Y: =147
+        X: =38
+        Y: =108
         ZIndex: =2
 
     PlotSelect As dropdown:
@@ -20,8 +20,8 @@ FormSemakan As screen:
         Items: =TreePlot
         Size: =21
         Width: =415
-        X: =199
-        Y: =147
+        X: =204
+        Y: =111
         ZIndex: =3
 
     Label13_1 As label:
@@ -29,8 +29,8 @@ FormSemakan As screen:
         Size: =21
         Text: ="Jenis Pokok"
         Width: =185
-        X: =8
-        Y: =243
+        X: =20
+        Y: =276
         ZIndex: =4
 
     TreeSelect As dropdown:
@@ -38,8 +38,8 @@ FormSemakan As screen:
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
         Width: =415
-        X: =199
-        Y: =241
+        X: =204
+        Y: =280
         ZIndex: =5
 
     Label13_2 As label:
@@ -47,17 +47,17 @@ FormSemakan As screen:
         Size: =21
         Text: ="Varian Cili"
         Width: =160
-        X: =8
-        Y: =332
+        X: =20
+        Y: =371
         ZIndex: =6
 
     VarianceSelect As dropdown:
-        Height: =71
+        Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
         Width: =415
-        X: =199
-        Y: =339
+        X: =205
+        Y: =371
         ZIndex: =7
 
     StageSelect As label:
@@ -65,17 +65,17 @@ FormSemakan As screen:
         Size: =21
         Text: ="Tahap Pokok"
         Width: =196
-        X: =8
-        Y: =442
+        X: =9
+        Y: =463
         ZIndex: =8
 
     Dropdown1_3 As dropdown:
-        Height: =60
+        Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
         Width: =414
-        X: =199
-        Y: =442
+        X: =204
+        Y: =463
         ZIndex: =9
 
     Icon12 As icon.BackArrow:
@@ -177,7 +177,7 @@ FormSemakan As screen:
             Update: =DataCardValue48_1.Text
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey48_1 As label:
@@ -249,7 +249,7 @@ FormSemakan As screen:
             Update: =DataCardValue55_1.Selected
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey55_1 As label:
@@ -320,7 +320,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue51_1.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey51_1 As label:
@@ -392,7 +392,7 @@ FormSemakan As screen:
             Update: =DataCardValue56_1.Selected
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey56_1 As label:
@@ -463,7 +463,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue52_1.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey52_1 As label:
@@ -535,7 +535,7 @@ FormSemakan As screen:
             Update: =DataCardValue50_1.Selected
             Width: =640
             X: =0
-            Y: =11
+            Y: =12
             ZIndex: =1
 
             DataCardKey50_1 As label:
@@ -606,7 +606,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue54_1.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =13
             ZIndex: =1
 
             DataCardKey54_1 As label:
@@ -678,7 +678,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue53_1.Text)
             Width: =640
             X: =0
-            Y: =13
+            Y: =14
             ZIndex: =1
 
             DataCardKey53_1 As label:
@@ -750,7 +750,7 @@ FormSemakan As screen:
             Update: =DataCardValue49_1.Attachments
             Width: =640
             X: =0
-            Y: =14
+            Y: =15
             ZIndex: =1
 
             DataCardKey49_1 As label:
@@ -806,6 +806,77 @@ FormSemakan As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey49_1.Y
+                ZIndex: =4
+
+        "'Plot (Lokasi)_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Plot_x0028_Lokasi_x0029_"
+            Default: =ThisItem.'Plot (Lokasi)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue1.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId),DataCardValue1.SearchText,"Value")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =293
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
                 ZIndex: =4
 
         "'Masa Semakan_DataCard1_1' As typedDataCard.comboBoxEditCard":
@@ -889,10 +960,10 @@ FormSemakan As screen:
 
             TextInput1_1 As text:
                 Default: =""
-                Height: =70
+                Height: =67
                 Size: =21
                 Visible: =!DataCardValue2_1.Visible
-                Width: =580
+                Width: =424
                 X: =30
                 Y: =63
                 ZIndex: =5
@@ -928,7 +999,7 @@ FormSemakan As screen:
             Update: =DataCardValue4_1.Selected
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =12
 
             DataCardKey4_1 As label:
@@ -1005,7 +1076,7 @@ FormSemakan As screen:
             Update: =DataCardValue7_1.Selected
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =12
 
             DataCardKey7_1 As label:
@@ -1076,7 +1147,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue8_1.Text)
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =12
 
             DataCardKey8_1 As label:
@@ -1148,7 +1219,7 @@ FormSemakan As screen:
             Update: =Value(DataCardValue17_1.Text)
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =12
 
             DataCardKey17_1 As label:
@@ -1212,7 +1283,7 @@ FormSemakan As screen:
         Fill: =RGBA(129, 235, 235, 1)
         Height: =70
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =SubmitForm(Form2); Navigate(ListSemakan);
+        OnSelect: =SubmitForm(Form2); Navigate(ListSemakan); 
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -1251,4 +1322,23 @@ FormSemakan As screen:
         Width: =492
         X: =107
         ZIndex: =14
+
+    PlotSelect_1 As dropdown:
+        Height: =70
+        Items: |-
+            =ForAll(Filter(TreePlot,PlotId=PlotSelect.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+        Size: =21
+        Width: =415
+        X: =204
+        Y: =192
+        ZIndex: =15
+
+    Label13_3 As label:
+        Height: =71
+        Size: =21
+        Text: ="HST (Hari)"
+        Width: =155
+        X: =25
+        Y: =194
+        ZIndex: =16
 
