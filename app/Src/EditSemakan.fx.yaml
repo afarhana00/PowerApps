@@ -908,7 +908,7 @@ EditSemakan As screen:
         "'Plot (Lokasi)_DataCard4' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_2"
-            Default: =ThisItem.'Plot (Lokasi)'
+            Default: =ThisItem.field_2
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_2")
             Fill: =RGBA(0, 0, 0, 0)
@@ -937,10 +937,10 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
+                Items: =Choices([@'Semakan Kesihatan'].field_2)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue41.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.field_2,DataCardValue41.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
