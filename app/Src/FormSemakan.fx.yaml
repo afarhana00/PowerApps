@@ -110,11 +110,10 @@ FormSemakan As screen:
             ZIndex: =1
 
             DataCardKey47_1 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =166
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -132,8 +131,8 @@ FormSemakan As screen:
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =326
-                X: =211
+                Width: =356
+                X: =230
                 Y: =10
                 ZIndex: =2
 
@@ -204,7 +203,7 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =326
-                X: =216
+                X: =272
                 ZIndex: =2
 
             ErrorMessage1 As label:
@@ -346,8 +345,8 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =356
-                X: =231
+                Width: =326
+                X: =272
                 ZIndex: =2
 
             ErrorMessage55_1 As label:
@@ -393,11 +392,12 @@ FormSemakan As screen:
             ZIndex: =1
 
             DataCardKey51_1 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =70
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: |-
+                    ="Kadar Serangan 
+                    Penyakit"
+                Width: =233
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -418,8 +418,8 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =180
-                X: =403
+                Width: =155
+                X: =272
                 ZIndex: =2
 
             ErrorMessage51_1 As label:
@@ -448,6 +448,15 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey51_1.Y
                 ZIndex: =4
+
+            Label17_2 As label:
+                Font: =Font.'Lato Black'
+                Height: =71
+                Size: =26
+                Text: ="%"
+                Width: =95
+                X: =490
+                ZIndex: =5
 
         Perosak_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -488,8 +497,8 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =395
-                X: =215
+                Width: =326
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -536,11 +545,12 @@ FormSemakan As screen:
             ZIndex: =1
 
             DataCardKey52_1 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =85
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: |-
+                    ="Kadar Serangan
+                    Perosak"
+                Width: =226
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -561,8 +571,8 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =216
-                X: =394
+                Width: =155
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -592,6 +602,15 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey52_1.Y
                 ZIndex: =4
+
+            Label17_3 As label:
+                Font: =Font.'Lato Black'
+                Height: =71
+                Size: =26
+                Text: ="%"
+                Width: =95
+                X: =486
+                ZIndex: =5
 
         "'Jenis Racun_DataCard1_1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -632,8 +651,8 @@ FormSemakan As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =385
-                X: =239
+                Width: =326
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -722,8 +741,8 @@ FormSemakan As screen:
                 Height: =70
                 Items: =["1","2","3","4","5","6","7","8","9","10"]
                 Size: =21
-                Width: =306
-                X: =304
+                Width: =155
+                X: =272
                 ZIndex: =5
 
         "'Ketinggian Pokok_DataCard1_1' As typedDataCard.numberEditCard":
@@ -746,7 +765,7 @@ FormSemakan As screen:
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =242
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -767,8 +786,8 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =298
-                X: =312
+                Width: =155
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -798,6 +817,17 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey53_1.Y
                 ZIndex: =4
+
+            Label17_4 As label:
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Lighter
+                Height: =58
+                Size: =26
+                Text: ="meter"
+                Width: =140
+                X: =453
+                Y: =22
+                ZIndex: =5
 
         Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -949,12 +979,12 @@ FormSemakan As screen:
 
             TextInput1_1 As text:
                 Default: =""
-                Height: =67
+                Height: =70
                 Size: =21
                 Visible: =!DataCardValue2_1.Visible
-                Width: =424
-                X: =30
-                Y: =63
+                Width: =357
+                X: =249
+                Y: =10
                 ZIndex: =5
 
             Icon13_1 As icon.Cancel:
@@ -963,16 +993,17 @@ FormSemakan As screen:
                     =Reset(DataCardValue2_1);
                     Reset(TextInput1_1);
                 Visible: =!DataCardValue2_1.Visible
-                X: =390
-                Y: =66
+                X: =542
+                Y: =13
                 ZIndex: =6
 
             Label15_1 As label:
-                Height: =70
+                Height: =53
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
-                Width: =146
-                X: =490
+                Width: =199
+                X: =30
+                Y: =58
                 ZIndex: =7
 
         IDPokok_DataCard1_1 As typedDataCard.comboBoxEditCard:
@@ -1020,7 +1051,7 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =326
-                X: =221
+                X: =272
                 ZIndex: =2
 
             ErrorMessage4_1 As label:
@@ -1110,7 +1141,7 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =326
-                X: =255
+                X: =272
                 Y: =1
                 ZIndex: =2
 
@@ -1167,6 +1198,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue8_1 As text:
+                Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -1181,7 +1213,7 @@ FormSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =155
-                X: =293
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -1230,8 +1262,10 @@ FormSemakan As screen:
             DataCardKey17_1 As label:
                 Height: =85
                 Size: =21
-                Text: ="Kelembapan Tanah "
-                Width: =275
+                Text: |-
+                    ="Kelembapan
+                    Tanah "
+                Width: =221
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -1252,8 +1286,8 @@ FormSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =174
-                X: =305
+                Width: =155
+                X: =272
                 Y: =10
                 ZIndex: =2
 
@@ -1290,7 +1324,7 @@ FormSemakan As screen:
                 Size: =26
                 Text: ="%"
                 Width: =95
-                X: =514
+                X: =474
                 Y: =10
                 ZIndex: =5
 

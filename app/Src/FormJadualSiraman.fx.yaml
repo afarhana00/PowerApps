@@ -376,7 +376,7 @@ FormJadualSiraman As screen:
                     Size: =21
                     Tooltip: =Parent.DisplayName
                     Width: =153
-                    X: =362
+                    X: =429
                     ZIndex: =2
 
                 ErrorMessage58_1 As label:
@@ -445,9 +445,8 @@ FormJadualSiraman As screen:
                     SelectMultiple: =false
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =314
-                    X: =296
-                    Y: =10
+                    Width: =219
+                    X: =361
                     ZIndex: =2
 
                 ErrorMessage59_1 As label:
@@ -494,14 +493,12 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
                 DataCardKey60_1 As label:
-                    AutoHeight: =true
                     Height: =48
                     Size: =21
                     Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Width: =221
                     Wrap: =false
                     X: =30
-                    Y: =10
                     ZIndex: =1
 
                 DataCardValue60_1 As combobox:
@@ -529,9 +526,9 @@ FormJadualSiraman As screen:
                     Size: =21
                     Tooltip: =Parent.DisplayName
                     Visible: =Self.Selected.Value<>"Lain-lain"
-                    Width: =181
-                    X: =275
-                    Y: =10
+                    Width: =218
+                    X: =361
+                    Y: =1
                     ZIndex: =2
 
                 ErrorMessage60_1 As label:
@@ -584,11 +581,12 @@ FormJadualSiraman As screen:
                     ZIndex: =6
 
                 Label17_1 As label:
-                    Height: =70
+                    Height: =42
                     Size: =21
                     Text: ="i.e., 1310 (24h)"
-                    Width: =151
-                    X: =488
+                    Width: =221
+                    X: =30
+                    Y: =47
                     ZIndex: =7
 
             "'Masa Siraman (Minit)_DataCard1_1' As typedDataCard.numberEditCard":
@@ -607,11 +605,12 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
                 DataCardKey61_1 As label:
-                    AutoHeight: =true
-                    Height: =48
+                    Height: =60
                     Size: =21
-                    Text: =Parent.DisplayName
-                    Width: =Parent.Width - 60
+                    Text: |-
+                        ="Masa Siraman
+                        (Minit)"
+                    Width: =212
                     Wrap: =false
                     X: =30
                     Y: =10
@@ -631,8 +630,8 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =232
-                    X: =363
+                    Width: =218
+                    X: =361
                     ZIndex: =2
 
                 ErrorMessage61_1 As label:
@@ -707,7 +706,7 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =451
+                    Width: =423
                     X: =158
                     Y: =10
                     ZIndex: =2
@@ -911,15 +910,16 @@ FormJadualSiraman As screen:
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =76
                     Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
                     SearchItems: =Choices('Jadual Siraman'.'Jenis Siraman',DataCardValue28_1.SearchText)
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =314
-                    X: =296
+                    Width: =594
+                    X: =30
+                    Y: =83
                     ZIndex: =2
 
                 ErrorMessage28_1 As label:
@@ -969,7 +969,9 @@ FormJadualSiraman As screen:
                     AutoHeight: =true
                     Height: =48
                     Size: =21
-                    Text: =Parent.DisplayName
+                    Text: |-
+                        ="Jenis Baja
+                        Tambahan"
                     Width: =Parent.Width - 60
                     Wrap: =false
                     X: =30
@@ -991,7 +993,7 @@ FormJadualSiraman As screen:
                     Size: =21
                     Tooltip: =Parent.DisplayName
                     Width: =285
-                    X: =325
+                    X: =296
                     Y: =10
                     ZIndex: =2
 
@@ -1054,7 +1056,7 @@ FormJadualSiraman As screen:
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
-                    Height: =70
+                    Height: =60
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -1063,8 +1065,9 @@ FormJadualSiraman As screen:
                     RadiusTopRight: =0
                     Size: =21
                     Tooltip: =Parent.DisplayName
-                    Width: =419
-                    X: =191
+                    Width: =386
+                    X: =196
+                    Y: =10
                     ZIndex: =2
 
                 ErrorMessage30_1 As label:
