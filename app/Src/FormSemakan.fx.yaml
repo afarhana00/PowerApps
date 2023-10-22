@@ -489,7 +489,8 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue56_1.Selected
+            Update: |-
+                =If(DataCardValue56_1.Selected.Value="Tambah Baru",{Value:TextInput6.Text},DataCardValue56_1.Selected)
             Width: =640
             X: =0
             Y: =10
@@ -512,13 +513,16 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].Perosak)
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Perosak)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Perosak,DataCardValue56_1.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =326
                 X: =272
                 Y: =10
@@ -550,6 +554,26 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey56_1.Y
                 ZIndex: =4
+
+            TextInput6 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue56_1.Visible
+                Width: =338
+                X: =272
+                Y: =10
+                ZIndex: =5
+
+            Icon13 As icon.Cancel:
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue56_1);
+                    Reset(TextInput6);
+                Visible: =!DataCardValue56_1.Visible
+                X: =546
+                Y: =13
+                ZIndex: =6
 
         "'Kadar Serangan Perosak_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
