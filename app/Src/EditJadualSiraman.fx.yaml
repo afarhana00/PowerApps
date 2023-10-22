@@ -85,7 +85,7 @@ EditJadualSiraman As screen:
         "'HST(Hari)_DataCard4' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="HST_x0028_Hari_x0029_"
-            Default: =ThisItem.'HST(Hari)'
+            Default: =ThisItem.HST_x0028_Hari_x0029_
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"HST_x0028_Hari_x0029_")
             Fill: =RGBA(0, 0, 0, 0)

@@ -1,145 +1,100 @@
 FormSemakan As screen:
 
-    Rectangle1 As rectangle:
+    Rectangle1_1 As rectangle:
         Fill: =RGBA(129, 235, 235, 1)
         Height: =108
         Width: =640
-        Y: =1
+        ZIndex: =1
+
+    Label13 As label:
+        Height: =70
+        Size: =21
+        Text: ="Plot"
+        Width: =560
+        X: =39
+        Y: =95
         ZIndex: =2
 
-    Label1 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =108
-        Size: =30
-        Text: ="Semakan Kesihatan"
-        Width: =572
-        X: =68
-        Y: =1
+    PlotSelect As dropdown:
+        Height: =70
+        Items: =TreePlot
+        Size: =21
+        Width: =575
+        X: =39
+        Y: =147
         ZIndex: =3
 
-    Button1 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+    Label13_1 As label:
         Height: =70
-        HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =SubmitForm(Form2); Navigate(ListSemakan);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =24
-        Text: ="SIMPAN"
-        Width: =233
-        X: =68
-        Y: =1024
+        Size: =21
+        Text: ="Jenis Pokok"
+        Width: =560
+        X: =39
+        Y: =206
+        ZIndex: =4
+
+    TreeSelect As dropdown:
+        Height: =70
+        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
+        Size: =21
+        Width: =575
+        X: =39
+        Y: =276
         ZIndex: =5
 
-    Icon4 As icon.BackArrow:
-        Color: =RGBA(255, 255, 255, 1)
-        Icon: =Icon.BackArrow
-        OnSelect: =Navigate(PilihPlotId);ResetForm(Form4);
-        Width: =74
-        X: =43
-        Y: =23
+    Label13_2 As label:
+        Height: =70
+        Size: =21
+        Text: ="Varian Cili"
+        Width: =560
+        X: =39
+        Y: =346
+        ZIndex: =6
+
+    VarianceSelect As dropdown:
+        Height: =70
+        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
+        Size: =21
+        Width: =575
+        X: =39
+        Y: =401
+        ZIndex: =7
+
+    StageSelect As label:
+        Height: =60
+        Size: =21
+        Text: ="Tahap Pokok"
+        Width: =545
+        X: =39
+        Y: =471
+        ZIndex: =8
+
+    Dropdown1_3 As dropdown:
+        Height: =70
+        Items: =TreePlot.'Tahap Pokok'
+        Size: =21
+        Width: =575
+        X: =39
+        Y: =531
         ZIndex: =9
 
-    Button4 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+    Icon12 As icon.BackArrow:
         Height: =70
-        HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =Navigate(ListSemakan);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =24
-        Text: ="SENARAI"
-        Width: =222
-        X: =377
-        Y: =1024
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Penjagaan);
+        Width: =57
+        X: =50
+        Y: =19
         ZIndex: =10
 
     Form2 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =863
+        Height: =397
         Width: =640
-        Y: =124
+        Y: =621
         ZIndex: =11
 
-        "'Plot (Lokasi)_DataCard1' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue1.Selected
-            Width: =640
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey1 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Plot_x0028_Lokasi_x0029_,DataCardValue1.SearchText)
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
-                ZIndex: =2
-
-            ErrorMessage1 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
-                ZIndex: =3
-
-            StarVisible1 As label:
-                Align: =Align.Center
-                Height: =DataCardKey1.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey1.Y
-                ZIndex: =4
-
-        "'Tarikh _DataCard1' As typedDataCard.dateEditCard":
+        "'Tarikh _DataCard1_1' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_16"
             Default: =ThisItem.'Tarikh '
@@ -148,13 +103,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue47.SelectedDate
+            Update: =DataCardValue47_1.SelectedDate
             Width: =640
             X: =0
             Y: =0
             ZIndex: =1
 
-            DataCardKey47 As label:
+            DataCardKey47_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -165,7 +120,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue47 As datepicker:
+            DataCardValue47_1 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
@@ -179,10 +134,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey47.Y + DataCardKey47.Height + 5
+                Y: =DataCardKey47_1.Y + DataCardKey47_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage47 As label:
+            ErrorMessage47_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -195,21 +150,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue47.Y + DataCardValue47.Height
+                Y: =DataCardValue47_1.Y + DataCardValue47_1.Height
                 ZIndex: =3
 
-            StarVisible45 As label:
+            StarVisible45_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey47.Height
+                Height: =DataCardKey47_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey47.Y
+                Y: =DataCardKey47_1.Y
                 ZIndex: =4
 
-        "'Cadangan Tindakan_DataCard1' As typedDataCard.textualEditCard":
+        "'Cadangan Tindakan_DataCard1_1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_8"
             Default: =ThisItem.'Cadangan Tindakan'
@@ -219,13 +174,13 @@ FormSemakan As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@'Semakan Kesihatan'], DataSourceInfo.MaxLength, "field_8")
             Required: =false
-            Update: =DataCardValue48.Text
+            Update: =DataCardValue48_1.Text
             Width: =640
             X: =0
-            Y: =8
+            Y: =6
             ZIndex: =1
 
-            DataCardKey48 As label:
+            DataCardKey48_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -236,7 +191,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue48 As text:
+            DataCardValue48_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -252,10 +207,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey48.Y + DataCardKey48.Height + 5
+                Y: =DataCardKey48_1.Y + DataCardKey48_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage48 As label:
+            ErrorMessage48_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -268,21 +223,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue48.Y + DataCardValue48.Height
+                Y: =DataCardValue48_1.Y + DataCardValue48_1.Height
                 ZIndex: =3
 
-            StarVisible46 As label:
+            StarVisible46_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey48.Height
+                Height: =DataCardKey48_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey48.Y
+                Y: =DataCardKey48_1.Y
                 ZIndex: =4
 
-        Penyakit_DataCard1 As typedDataCard.comboBoxEditCard:
+        Penyakit_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_9"
             Default: =ThisItem.Penyakit
@@ -291,13 +246,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue55.Selected
+            Update: =DataCardValue55_1.Selected
             Width: =640
             X: =0
-            Y: =9
+            Y: =7
             ZIndex: =1
 
-            DataCardKey55 As label:
+            DataCardKey55_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -308,7 +263,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue55 As combobox:
+            DataCardValue55_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -317,16 +272,16 @@ FormSemakan As screen:
                 Items: =Choices([@'Semakan Kesihatan'].Penyakit)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Penyakit,DataCardValue55.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.Penyakit,DataCardValue55_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey55.Y + DataCardKey55.Height + 5
+                Y: =DataCardKey55_1.Y + DataCardKey55_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage55 As label:
+            ErrorMessage55_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -339,21 +294,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue55.Y + DataCardValue55.Height
+                Y: =DataCardValue55_1.Y + DataCardValue55_1.Height
                 ZIndex: =3
 
-            StarVisible53 As label:
+            StarVisible53_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey55.Height
+                Height: =DataCardKey55_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey55.Y
+                Y: =DataCardKey55_1.Y
                 ZIndex: =4
 
-        "'Kadar Serangan Penyakit_DataCard1' As typedDataCard.numberEditCard":
+        "'Kadar Serangan Penyakit_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_10"
             Default: =ThisItem.'Kadar Serangan Penyakit'
@@ -362,13 +317,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue51.Text)
+            Update: =Value(DataCardValue51_1.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =8
             ZIndex: =1
 
-            DataCardKey51 As label:
+            DataCardKey51_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -379,7 +334,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue51 As text:
+            DataCardValue51_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -395,10 +350,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey51.Y + DataCardKey51.Height + 5
+                Y: =DataCardKey51_1.Y + DataCardKey51_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage51 As label:
+            ErrorMessage51_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -411,21 +366,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue51.Y + DataCardValue51.Height
+                Y: =DataCardValue51_1.Y + DataCardValue51_1.Height
                 ZIndex: =3
 
-            StarVisible49 As label:
+            StarVisible49_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey51.Height
+                Height: =DataCardKey51_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey51.Y
+                Y: =DataCardKey51_1.Y
                 ZIndex: =4
 
-        Perosak_DataCard1 As typedDataCard.comboBoxEditCard:
+        Perosak_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_11"
             Default: =ThisItem.Perosak
@@ -434,13 +389,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue56.Selected
+            Update: =DataCardValue56_1.Selected
             Width: =640
             X: =0
-            Y: =11
+            Y: =9
             ZIndex: =1
 
-            DataCardKey56 As label:
+            DataCardKey56_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -451,7 +406,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue56 As combobox:
+            DataCardValue56_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -460,16 +415,16 @@ FormSemakan As screen:
                 Items: =Choices([@'Semakan Kesihatan'].Perosak)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Perosak,DataCardValue56.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.Perosak,DataCardValue56_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey56.Y + DataCardKey56.Height + 5
+                Y: =DataCardKey56_1.Y + DataCardKey56_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage56 As label:
+            ErrorMessage56_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -482,21 +437,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue56.Y + DataCardValue56.Height
+                Y: =DataCardValue56_1.Y + DataCardValue56_1.Height
                 ZIndex: =3
 
-            StarVisible54 As label:
+            StarVisible54_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey56.Height
+                Height: =DataCardKey56_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey56.Y
+                Y: =DataCardKey56_1.Y
                 ZIndex: =4
 
-        "'Kadar Serangan Perosak_DataCard1' As typedDataCard.numberEditCard":
+        "'Kadar Serangan Perosak_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_12"
             Default: =ThisItem.'Kadar Serangan Perosak'
@@ -505,13 +460,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue52.Text)
+            Update: =Value(DataCardValue52_1.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =10
             ZIndex: =1
 
-            DataCardKey52 As label:
+            DataCardKey52_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -522,7 +477,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue52 As text:
+            DataCardValue52_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -538,10 +493,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey52.Y + DataCardKey52.Height + 5
+                Y: =DataCardKey52_1.Y + DataCardKey52_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage52 As label:
+            ErrorMessage52_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -554,21 +509,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue52.Y + DataCardValue52.Height
+                Y: =DataCardValue52_1.Y + DataCardValue52_1.Height
                 ZIndex: =3
 
-            StarVisible50 As label:
+            StarVisible50_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey52.Height
+                Height: =DataCardKey52_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey52.Y
+                Y: =DataCardKey52_1.Y
                 ZIndex: =4
 
-        "'Jenis Racun_DataCard1' As typedDataCard.comboBoxEditCard":
+        "'Jenis Racun_DataCard1_1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_13"
             Default: =ThisItem.'Jenis Racun'
@@ -577,13 +532,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue50.Selected
+            Update: =DataCardValue50_1.Selected
             Width: =640
             X: =0
-            Y: =13
+            Y: =11
             ZIndex: =1
 
-            DataCardKey50 As label:
+            DataCardKey50_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -594,7 +549,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue50 As combobox:
+            DataCardValue50_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -603,16 +558,16 @@ FormSemakan As screen:
                 Items: =Choices([@'Semakan Kesihatan'].'Jenis Racun')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Jenis Racun',DataCardValue50.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.'Jenis Racun',DataCardValue50_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey50.Y + DataCardKey50.Height + 5
+                Y: =DataCardKey50_1.Y + DataCardKey50_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage50 As label:
+            ErrorMessage50_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -625,21 +580,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue50.Y + DataCardValue50.Height
+                Y: =DataCardValue50_1.Y + DataCardValue50_1.Height
                 ZIndex: =3
 
-            StarVisible48 As label:
+            StarVisible48_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey50.Height
+                Height: =DataCardKey50_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey50.Y
+                Y: =DataCardKey50_1.Y
                 ZIndex: =4
 
-        "'Nutrisi (Skala EC)_DataCard1' As typedDataCard.numberEditCard":
+        "'Nutrisi (Skala EC)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_14"
             Default: =ThisItem.'Nutrisi (Skala EC)'
@@ -648,13 +603,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue54.Text)
+            Update: =Value(DataCardValue54_1.Text)
             Width: =640
             X: =0
-            Y: =14
+            Y: =12
             ZIndex: =1
 
-            DataCardKey54 As label:
+            DataCardKey54_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -665,7 +620,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue54 As text:
+            DataCardValue54_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -681,10 +636,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey54.Y + DataCardKey54.Height + 5
+                Y: =DataCardKey54_1.Y + DataCardKey54_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage54 As label:
+            ErrorMessage54_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -697,21 +652,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue54.Y + DataCardValue54.Height
+                Y: =DataCardValue54_1.Y + DataCardValue54_1.Height
                 ZIndex: =3
 
-            StarVisible52 As label:
+            StarVisible52_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey54.Height
+                Height: =DataCardKey54_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey54.Y
+                Y: =DataCardKey54_1.Y
                 ZIndex: =4
 
-        "'Ketinggian Pokok_DataCard1' As typedDataCard.numberEditCard":
+        "'Ketinggian Pokok_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_15"
             Default: =ThisItem.'Ketinggian Pokok'
@@ -720,13 +675,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue53.Text)
+            Update: =Value(DataCardValue53_1.Text)
             Width: =640
             X: =0
-            Y: =15
+            Y: =13
             ZIndex: =1
 
-            DataCardKey53 As label:
+            DataCardKey53_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -737,7 +692,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue53 As text:
+            DataCardValue53_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -753,10 +708,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey53.Y + DataCardKey53.Height + 5
+                Y: =DataCardKey53_1.Y + DataCardKey53_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage53 As label:
+            ErrorMessage53_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -769,21 +724,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue53.Y + DataCardValue53.Height
+                Y: =DataCardValue53_1.Y + DataCardValue53_1.Height
                 ZIndex: =3
 
-            StarVisible51 As label:
+            StarVisible51_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey53.Height
+                Height: =DataCardKey53_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey53.Y
+                Y: =DataCardKey53_1.Y
                 ZIndex: =4
 
-        Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+        Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
             Default: =ThisItem.Attachments
@@ -792,13 +747,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue49.Attachments
+            Update: =DataCardValue49_1.Attachments
             Width: =640
             X: =0
-            Y: =16
+            Y: =14
             ZIndex: =1
 
-            DataCardKey49 As label:
+            DataCardKey49_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -809,7 +764,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue49 As attachments:
+            DataCardValue49_1 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 Height: =190
@@ -823,10 +778,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey49.Y + DataCardKey49.Height + 5
+                Y: =DataCardKey49_1.Y + DataCardKey49_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage49 As label:
+            ErrorMessage49_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -839,21 +794,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue49.Y + DataCardValue49.Height
+                Y: =DataCardValue49_1.Y + DataCardValue49_1.Height
                 ZIndex: =3
 
-            StarVisible47 As label:
+            StarVisible47_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey49.Height
+                Height: =DataCardKey49_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey49.Y
+                Y: =DataCardKey49_1.Y
                 ZIndex: =4
 
-        "'Masa Semakan_DataCard1' As typedDataCard.comboBoxEditCard":
+        "'Masa Semakan_DataCard1_1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_1"
             Default: =ThisItem.'Masa Semakan'
@@ -863,13 +818,13 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: |-
-                =If(DataCardValue2.Selected.Value="Lain-lain",{Value :TextInput1.Text},DataCardValue2.Selected)
+                =If(DataCardValue2_1.Selected.Value="Lain-lain",{Value :TextInput1_1.Text},DataCardValue2_1.Selected)
             Width: =640
             X: =0
             Y: =1
             ZIndex: =12
 
-            DataCardKey2 As label:
+            DataCardKey2_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -880,7 +835,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue2 As combobox:
+            DataCardValue2_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: |
                     =With(
@@ -895,17 +850,17 @@ FormSemakan As screen:
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue2.SearchText,"Value")
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue2_1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
                 Width: =424
                 X: =30
-                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage2 As label:
+            ErrorMessage2_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -918,41 +873,41 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue2.Y + DataCardValue2.Height
+                Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
                 ZIndex: =3
 
-            StarVisible10 As label:
+            StarVisible10_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey2.Height
+                Height: =DataCardKey2_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey2.Y
+                Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-            TextInput1 As text:
+            TextInput1_1 As text:
                 Default: =""
                 Height: =70
                 Size: =21
-                Visible: =!DataCardValue2.Visible
+                Visible: =!DataCardValue2_1.Visible
                 Width: =580
                 X: =30
                 Y: =63
                 ZIndex: =5
 
-            Icon13 As icon.Cancel:
+            Icon13_1 As icon.Cancel:
                 Icon: =Icon.Cancel
                 OnSelect: |-
-                    =Reset(DataCardValue2);
-                    Reset(TextInput1);
-                Visible: =!DataCardValue2.Visible
+                    =Reset(DataCardValue2_1);
+                    Reset(TextInput1_1);
+                Visible: =!DataCardValue2_1.Visible
                 X: =390
                 Y: =66
                 ZIndex: =6
 
-            Label15 As label:
+            Label15_1 As label:
                 Height: =70
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
@@ -961,7 +916,7 @@ FormSemakan As screen:
                 Y: =60
                 ZIndex: =7
 
-        IDPokok_DataCard1 As typedDataCard.comboBoxEditCard:
+        IDPokok_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_3"
             Default: =ThisItem.IDPokok
@@ -970,13 +925,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue4.Selected
+            Update: =DataCardValue4_1.Selected
             Width: =640
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =12
 
-            DataCardKey4 As label:
+            DataCardKey4_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -987,7 +942,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue4 As combobox:
+            DataCardValue4_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -996,16 +951,16 @@ FormSemakan As screen:
                 Items: =Choices([@'Semakan Kesihatan'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.IDPokok,DataCardValue4.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.IDPokok,DataCardValue4_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage4 As label:
+            ErrorMessage4_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -1018,93 +973,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue4.Y + DataCardValue4.Height
+                Y: =DataCardValue4_1.Y + DataCardValue4_1.Height
                 ZIndex: =3
 
-            StarVisible12 As label:
+            StarVisible12_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey4.Height
+                Height: =DataCardKey4_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey4.Y
+                Y: =DataCardKey4_1.Y
                 ZIndex: =4
 
-        "'HST(Hari)_DataCard1' As typedDataCard.numberEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_4"
-            Default: =ThisItem.'HST(Hari)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_4")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue6.Text)
-            Width: =640
-            X: =0
-            Y: =4
-            ZIndex: =12
-
-            DataCardKey6 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Format: =TextFormat.Number
-                Height: =70
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                ZIndex: =2
-
-            ErrorMessage6 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
-                ZIndex: =3
-
-            StarVisible13 As label:
-                Align: =Align.Center
-                Height: =DataCardKey6.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6.Y
-                ZIndex: =4
-
-        Cuaca_DataCard1 As typedDataCard.comboBoxEditCard:
+        Cuaca_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_5"
             Default: =ThisItem.Cuaca
@@ -1113,13 +996,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue7.Selected
+            Update: =DataCardValue7_1.Selected
             Width: =640
             X: =0
-            Y: =5
+            Y: =3
             ZIndex: =12
 
-            DataCardKey7 As label:
+            DataCardKey7_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -1130,7 +1013,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As combobox:
+            DataCardValue7_1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -1139,16 +1022,16 @@ FormSemakan As screen:
                 Items: =Choices([@'Semakan Kesihatan'].Cuaca)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Cuaca,DataCardValue7.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.Cuaca,DataCardValue7_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7 As label:
+            ErrorMessage7_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -1161,21 +1044,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValue7_1.Y + DataCardValue7_1.Height
                 ZIndex: =3
 
-            StarVisible14 As label:
+            StarVisible14_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey7.Height
+                Height: =DataCardKey7_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey7.Y
+                Y: =DataCardKey7_1.Y
                 ZIndex: =4
 
-        Suhu_DataCard1 As typedDataCard.numberEditCard:
+        Suhu_DataCard1_1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_6"
             Default: =ThisItem.Suhu
@@ -1184,13 +1067,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue8.Text)
+            Update: =Value(DataCardValue8_1.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =4
             ZIndex: =12
 
-            DataCardKey8 As label:
+            DataCardKey8_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -1201,7 +1084,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue8 As text:
+            DataCardValue8_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -1217,10 +1100,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage8 As label:
+            ErrorMessage8_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -1233,21 +1116,21 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
+                Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
                 ZIndex: =3
 
-            StarVisible15 As label:
+            StarVisible15_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey8.Height
+                Height: =DataCardKey8_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey8.Y
+                Y: =DataCardKey8_1.Y
                 ZIndex: =4
 
-        "'Kelembapan Tanah_DataCard1' As typedDataCard.numberEditCard":
+        "'Kelembapan Tanah_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_7"
             Default: =ThisItem.'Kelembapan Tanah'
@@ -1256,13 +1139,13 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue17.Text)
+            Update: =Value(DataCardValue17_1.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =5
             ZIndex: =12
 
-            DataCardKey17 As label:
+            DataCardKey17_1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -1273,7 +1156,7 @@ FormSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue17 As text:
+            DataCardValue17_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -1289,10 +1172,10 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey17.Y + DataCardKey17.Height + 5
+                Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage17 As label:
+            ErrorMessage17_1 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -1305,17 +1188,61 @@ FormSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue17.Y + DataCardValue17.Height
+                Y: =DataCardValue17_1.Y + DataCardValue17_1.Height
                 ZIndex: =3
 
-            StarVisible16 As label:
+            StarVisible16_1 As label:
                 Align: =Align.Center
-                Height: =DataCardKey17.Height
+                Height: =DataCardKey17_1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey17.Y
+                Y: =DataCardKey17_1.Y
                 ZIndex: =4
+
+    Button1_1 As button:
+        Fill: =RGBA(129, 235, 235, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
+        OnSelect: =SubmitForm(Form2); Navigate(ListSemakan);
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="SIMPAN"
+        Width: =233
+        X: =64
+        Y: =1058
+        ZIndex: =12
+
+    Button4_1 As button:
+        Fill: =RGBA(129, 235, 235, 1)
+        Height: =70
+        HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
+        OnSelect: =Navigate(ListSemakan);
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="SENARAI"
+        Width: =222
+        X: =377
+        Y: =1058
+        ZIndex: =13
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =108
+        Size: =30
+        Text: ="Semakan Kesihatan"
+        Width: =492
+        X: =107
+        ZIndex: =14
 

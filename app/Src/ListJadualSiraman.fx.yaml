@@ -21,7 +21,7 @@ ListJadualSiraman As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'HST(Hari)'
+            Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =156
@@ -94,7 +94,7 @@ ListJadualSiraman As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =16
-            Text: ="HST (Hari)"
+            Text: ="Plot ID"
             Width: =121
             X: =23
             ZIndex: =7
