@@ -156,6 +156,77 @@ EditSemakan As screen:
                 Y: =DataCardKey63.Y
                 ZIndex: =4
 
+        "'Plot (Lokasi)_DataCard2' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Plot_x0028_Lokasi_x0029_"
+            Default: =ThisItem.'Plot (Lokasi)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue39.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey39 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue39 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue39.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue39.Y + DataCardValue39.Height
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                Height: =DataCardKey39.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey39.Y
+                ZIndex: =4
+
         "'Cadangan Tindakan_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_8"
@@ -800,22 +871,23 @@ EditSemakan As screen:
                 Y: =DataCardKey64.Y
                 ZIndex: =4
 
-        "'Plot (Lokasi)_DataCard2' As typedDataCard.comboBoxEditCard":
+        "'Masa Semakan_DataCard2' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
+            DataField: ="field_1"
+            Default: =ThisItem.'Masa Semakan'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_1")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue39.Selected
+            Update: |-
+                =If(DataCardValue40.Selected.Value="Lain-lain",{Value:TextInput2.Text},DataCardValue40.Selected)
             Width: =640
             X: =0
-            Y: =2
-            ZIndex: =1
+            Y: =1
+            ZIndex: =9
 
-            DataCardKey39 As label:
+            DataCardKey40 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -826,25 +898,28 @@ EditSemakan As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue39 As combobox:
+            DataCardValue40 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue39.SearchText)
+                SearchItems: |-
+                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue40.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Visible: =Self.Selected.Value<>"Lain-lain"
+                Width: =436
                 X: =30
-                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                Y: =DataCardKey40.Y + DataCardKey40.Height + 5
                 ZIndex: =2
 
-            ErrorMessage23 As label:
+            ErrorMessage40 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -857,19 +932,49 @@ EditSemakan As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue39.Y + DataCardValue39.Height
+                Y: =DataCardValue40.Y + DataCardValue40.Height
                 ZIndex: =3
 
-            StarVisible25 As label:
+            StarVisible38 As label:
                 Align: =Align.Center
-                Height: =DataCardKey39.Height
+                Height: =DataCardKey40.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey39.Y
+                Y: =DataCardKey40.Y
                 ZIndex: =4
+
+            Label16 As label:
+                Height: =70
+                Size: =21
+                Text: ="i.e.,1310 (24h)"
+                Width: =163
+                X: =476
+                Y: =58
+                ZIndex: =5
+
+            TextInput2 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue40.Visible
+                Width: =436
+                X: =30
+                Y: =63
+                ZIndex: =6
+
+            Icon14 As icon.Cancel:
+                Height: =51
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue40);
+                    Reset(TextInput2);
+                Visible: =!DataCardValue40.Visible
+                X: =402
+                Y: =73
+                ZIndex: =7
 
         IDPokok_DataCard2 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -1156,109 +1261,4 @@ EditSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey46.Y
                 ZIndex: =4
-
-        "'Masa Semakan_DataCard2' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_1"
-            Default: =ThisItem.'Masa Semakan'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_1")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: |-
-                =If(DataCardValue40.Selected.Value="Lain-lain",{Value:TextInput2.Text},DataCardValue40.Selected)
-            Width: =640
-            X: =0
-            Y: =1
-            ZIndex: =9
-
-            DataCardKey40 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue40 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: |-
-                    =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: |-
-                    =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue40.SearchText,"Value")
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Visible: =Self.Selected.Value<>"Lain-lain"
-                Width: =436
-                X: =30
-                Y: =DataCardKey40.Y + DataCardKey40.Height + 5
-                ZIndex: =2
-
-            ErrorMessage40 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue40.Y + DataCardValue40.Height
-                ZIndex: =3
-
-            StarVisible38 As label:
-                Align: =Align.Center
-                Height: =DataCardKey40.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey40.Y
-                ZIndex: =4
-
-            Label16 As label:
-                Height: =70
-                Size: =21
-                Text: ="i.e.,1310 (24h)"
-                Width: =163
-                X: =476
-                Y: =58
-                ZIndex: =5
-
-            TextInput2 As text:
-                Default: =""
-                Height: =70
-                Size: =21
-                Visible: =!DataCardValue40.Visible
-                Width: =436
-                X: =30
-                Y: =63
-                ZIndex: =6
-
-            Icon14 As icon.Cancel:
-                Height: =51
-                Icon: =Icon.Cancel
-                OnSelect: |-
-                    =Reset(DataCardValue40);
-                    Reset(TextInput2);
-                Visible: =!DataCardValue40.Visible
-                X: =402
-                Y: =73
-                ZIndex: =7
 

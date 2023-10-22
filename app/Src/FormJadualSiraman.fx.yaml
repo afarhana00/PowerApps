@@ -128,11 +128,14 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlantType_1 As dropdown:
+                Default: =
                 FillPortions: =0.8
                 Height: =70
-                Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
+                OnSelect: =
                 PaddingRight: =20
                 PaddingTop: =20
                 Size: =21
