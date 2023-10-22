@@ -315,7 +315,8 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue55_1.Selected
+            Update: |-
+                =If(DataCardValue55_1.Selected.Value="Tambah Baru",{Value:TextInput5.Text},DataCardValue55_1.Selected)
             Width: =640
             X: =0
             Y: =8
@@ -338,13 +339,16 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].Penyakit)
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Penyakit)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Penyakit,DataCardValue55_1.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =326
                 X: =272
                 ZIndex: =2
@@ -375,6 +379,24 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey55_1.Y
                 ZIndex: =4
+
+            TextInput5 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue55_1.Visible
+                Width: =326
+                X: =272
+                ZIndex: =5
+
+            Icon4 As icon.Cancel:
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue55_1);
+                    Reset(TextInput5);
+                Visible: =!DataCardValue55_1.Visible
+                X: =534
+                ZIndex: =6
 
         "'Kadar Serangan Penyakit_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -947,7 +969,7 @@ FormSemakan As screen:
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Lain-lain"
                 Width: =326
-                X: =280
+                X: =272
                 ZIndex: =2
 
             ErrorMessage2_1 As label:
@@ -1040,6 +1062,7 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                InputTextPlaceholder: ="Sila Pilih"
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].IDPokok)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
