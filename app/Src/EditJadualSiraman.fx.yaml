@@ -75,11 +75,11 @@ EditJadualSiraman As screen:
 
     Form1 As form:
         DataSource: ='Jadual Siraman'
-        Height: =486
+        Height: =447
         Item: =Gallery2.Selected
         Visible: =If(deleteMode, false, true)
         Width: =640
-        Y: =634
+        Y: =672
         ZIndex: =9
 
         "'Plot (Lokasi)_DataCard5' As typedDataCard.comboBoxEditCard":
