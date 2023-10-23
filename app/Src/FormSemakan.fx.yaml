@@ -1084,7 +1084,7 @@ FormSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_3")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =95
             Required: =false
             Update: |-
                 =If(DataCardValue4_1.Selected.Value="Tambah Baru",
@@ -1158,9 +1158,9 @@ FormSemakan As screen:
                 Height: =70
                 Size: =21
                 Visible: =!DataCardValue4_1.Visible
-                Width: =580
-                X: =30
-                Y: =63
+                Width: =274
+                X: =272
+                Y: =10
                 ZIndex: =5
 
             Icon3 As icon.Cancel:
@@ -1170,7 +1170,7 @@ FormSemakan As screen:
                     Reset(TextInput1);
                 Visible: =!DataCardValue4_1.Visible
                 X: =546
-                Y: =66
+                Y: =16
                 ZIndex: =6
 
         Cuaca_DataCard1_1 As typedDataCard.comboBoxEditCard:

@@ -308,7 +308,8 @@ EditSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue71.Selected
+            Update: |-
+                =If(DataCardValue71.Selected.Value="Tambah Baru",{Value:TextInput10.Text},DataCardValue71.Selected)
             Width: =640
             X: =0
             Y: =8
@@ -331,14 +332,17 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =80
-                Items: =Choices([@'Semakan Kesihatan'].Penyakit)
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Penyakit)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingTop: =10
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Penyakit,DataCardValue71.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =420
                 X: =207
                 ZIndex: =2
@@ -369,6 +373,28 @@ EditSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey71.Y
                 ZIndex: =4
+
+            TextInput10 As text:
+                Default: =""
+                Height: =75
+                Size: =21
+                Visible: =!DataCardValue71.Visible
+                Width: =368
+                X: =207
+                Y: =5
+                ZIndex: =5
+
+            Icon21 As icon.Cancel:
+                Height: =70
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue71);
+                    Reset(TextInput10);
+                Visible: =!DataCardValue71.Visible
+                Width: =52
+                X: =575
+                Y: =10
+                ZIndex: =6
 
         "'Kadar Serangan Penyakit_DataCard2' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
