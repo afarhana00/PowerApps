@@ -461,14 +461,13 @@ EditSemakan As screen:
             ZIndex: =1
 
             DataCardKey72 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =146
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =26
                 ZIndex: =1
 
             DataCardValue72 As combobox:
@@ -599,7 +598,8 @@ EditSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue66.Selected
+            Update: |-
+                =If(DataCardValue66.Selected.Value="Tambah Baru",{Value:TextInput7.Text},DataCardValue66.Selected)
             Width: =640
             X: =0
             Y: =12
@@ -622,13 +622,16 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Jenis Racun')
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].'Jenis Racun')},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Jenis Racun',DataCardValue66.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =420
                 X: =207
                 Y: =10
@@ -660,6 +663,26 @@ EditSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey66.Y
                 ZIndex: =4
+
+            TextInput7 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue66.Visible
+                Width: =420
+                X: =207
+                Y: =10
+                ZIndex: =5
+
+            Icon15 As icon.Cancel:
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue66);
+                    Reset(TextInput7);
+                Visible: =!DataCardValue66.Visible
+                X: =563
+                Y: =10
+                ZIndex: =6
 
         "'Nutrisi (Skala EC)_DataCard2' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
