@@ -14,51 +14,35 @@ ListJadualSiraman As screen:
 
         Title4 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =26
+            Height: =35
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =21
             Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =138
+            Width: =163
             X: =156
             Y: =8
             ZIndex: =1
 
-        Subtitle4 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =21
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =16
-            Text: =ThisItem.Tarikh
-            VerticalAlign: =VerticalAlign.Top
-            Width: =106
-            X: =156
-            Y: =45
-            ZIndex: =2
-
         Body2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =25
+            Height: =34
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =16
+            Size: =19
             Text: =ThisItem.'Masa (Sebenar)'.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =106
+            Width: =111
             X: =156
-            Y: =86
-            ZIndex: =3
+            Y: =77
+            ZIndex: =2
 
         NextArrow4 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -74,50 +58,51 @@ ListJadualSiraman As screen:
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
+            ZIndex: =3
 
         Separator4 As rectangle:
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
+            ZIndex: =4
 
         Rectangle10 As rectangle:
             Height: =Parent.TemplateHeight - Separator4.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
-            ZIndex: =6
+            ZIndex: =5
 
         Label10 As label:
-            Height: =43
+            Height: =35
             OnSelect: =Select(Parent)
             Size: =16
             Text: ="Plot ID"
-            Width: =121
+            Width: =109
             X: =23
-            ZIndex: =7
+            Y: =8
+            ZIndex: =6
 
         Label11 As label:
-            Height: =26
+            Height: =34
             OnSelect: =Select(Parent)
             Size: =16
             Text: ="Tarikh"
-            Width: =109
+            Width: =122
             X: =23
             Y: =43
-            ZIndex: =8
+            ZIndex: =7
 
         Label12 As label:
             Height: =34
             OnSelect: =Select(Parent)
             Size: =16
             Text: ="Masa"
-            Width: =97
+            Width: =109
             X: =23
             Y: =77
-            ZIndex: =9
+            ZIndex: =8
 
         Button13 As button:
             Fill: =RGBA(255, 255, 255, 0)
@@ -131,6 +116,22 @@ ListJadualSiraman As screen:
             Text: ="Button"
             Width: =636
             X: =4
+            ZIndex: =9
+
+        Subtitle4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.Tarikh
+            VerticalAlign: =VerticalAlign.Top
+            Width: =163
+            X: =156
+            Y: =45
             ZIndex: =10
 
     Rectangle7 As rectangle:
