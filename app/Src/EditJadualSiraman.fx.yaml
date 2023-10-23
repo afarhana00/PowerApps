@@ -181,7 +181,7 @@ EditJadualSiraman As screen:
 
             DataCardValue3 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_5.Selected.'Tahap Pokok')
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =75
