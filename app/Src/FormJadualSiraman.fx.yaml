@@ -77,7 +77,7 @@ FormJadualSiraman As screen:
             ZIndex: =4
 
             Label14 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -91,7 +91,7 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =TreePlot
                 LayoutMinHeight: =70
@@ -114,7 +114,7 @@ FormJadualSiraman As screen:
 
             Label14_4 As label:
                 AlignInContainer: =AlignInContainer.Stretch
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -129,7 +129,7 @@ FormJadualSiraman As screen:
 
             ddPlantType_1 As dropdown:
                 Default: =
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: |-
                     =ForAll(Filter(TreePlot,PlotId=ddPlotId.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
@@ -153,7 +153,7 @@ FormJadualSiraman As screen:
             ZIndex: =6
 
             Label14_1 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -167,7 +167,7 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlantType As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
                 LayoutMinHeight: =70
@@ -189,7 +189,7 @@ FormJadualSiraman As screen:
             ZIndex: =7
 
             Label14_2 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -203,7 +203,7 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId_1 As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
                 LayoutMinHeight: =70
@@ -225,7 +225,7 @@ FormJadualSiraman As screen:
             ZIndex: =8
 
             Label14_3 As label:
-                FillPortions: =0.2
+                FillPortions: =0.4
                 Height: =70
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
@@ -239,7 +239,7 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             ddPlotId_2 As dropdown:
-                FillPortions: =0.8
+                FillPortions: =0.5
                 Height: =70
                 Items: |
                     =Filter(TreePlot, PlotId = ddPlotId.Selected.PlotId)
@@ -910,7 +910,7 @@ FormJadualSiraman As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =76
+                Height: =70
                 Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                 OnChange: |-
                     =Set(
