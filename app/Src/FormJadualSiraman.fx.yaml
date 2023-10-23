@@ -332,6 +332,77 @@ FormJadualSiraman As screen:
                 Y: =DataCardKey2.Y
                 ZIndex: =4
 
+        "'Tahap Pokok_DataCard2' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TahapPokok"
+            Default: =ThisItem.'Tahap Pokok'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"TahapPokok")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue4.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok')
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =80
+                Items: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok'),DataCardValue4.SearchText,"Value")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =304
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey4.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
         "'Kepekatan Baja (Kg/L)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_8"
@@ -344,7 +415,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue58_1.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey58_1 As label:
@@ -417,7 +488,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue59_1.Selected
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey59_1 As label:
@@ -488,7 +559,7 @@ FormJadualSiraman As screen:
                 =If(DataCardValue60_1.Selected.Value="Lain-lain",{Value:TextInput3_1.Text},DataCardValue60_1.Selected)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey60_1 As label:
@@ -600,7 +671,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue61_1.Text)
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey61_1 As label:
@@ -674,7 +745,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue57_1.Text
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey57_1 As label:
@@ -820,7 +891,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue25_1.Selected
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =8
 
             DataCardKey25_1 As label:
@@ -891,7 +962,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue28_1.SelectedItems
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =8
 
             DataCardKey28_1 As label:
@@ -967,7 +1038,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue29_1.Text
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =8
 
             DataCardKey29_1 As label:
@@ -1042,7 +1113,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue30_1.Text
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =8
 
             DataCardKey30_1 As label:
