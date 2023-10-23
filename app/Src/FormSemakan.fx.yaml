@@ -19,7 +19,7 @@ FormSemakan As screen:
         Height: =70
         Items: =TreePlot
         Size: =21
-        Width: =415
+        Width: =345
         X: =204
         Y: =128
         ZIndex: =3
@@ -37,7 +37,7 @@ FormSemakan As screen:
         Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =415
+        Width: =345
         X: =204
         Y: =314
         ZIndex: =5
@@ -55,7 +55,7 @@ FormSemakan As screen:
         Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =415
+        Width: =345
         X: =204
         Y: =409
         ZIndex: =7
@@ -73,7 +73,7 @@ FormSemakan As screen:
         Height: =70
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
-        Width: =414
+        Width: =345
         X: =204
         Y: =510
         ZIndex: =9
@@ -1449,7 +1449,7 @@ FormSemakan As screen:
         Items: |-
             =ForAll(Filter(TreePlot,PlotId=PlotSelect.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
         Size: =21
-        Width: =415
+        Width: =345
         X: =204
         Y: =226
         ZIndex: =15
