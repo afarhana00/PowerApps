@@ -70,7 +70,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Attachments_DataCard2",
-      "ParentIndex": 15,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -204,6 +204,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
           "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PaddingBottom",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -442,6 +450,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Design",
+          "PropertyName": "PaddingBottom",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
@@ -528,7 +541,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cadangan Tindakan_DataCard2",
-      "ParentIndex": 7,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -624,7 +637,14 @@
         },
         "Fill",
         "X",
-        "Y",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Y",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Width",
         "Height",
         "DisplayMode",
@@ -669,7 +689,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container1",
-      "ParentIndex": 4,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11209,7 +11229,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Dropdown1_4",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18693,7 +18713,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_4",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18955,7 +18975,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_5",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19217,7 +19237,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_6",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19479,7 +19499,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13_7",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21082,7 +21102,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PlotSelect_2",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21364,7 +21384,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PlotSelect_3",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21637,7 +21657,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "StageSelect_1",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27767,7 +27787,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TreeSelect_1",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28049,7 +28069,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "VarianceSelect_1",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

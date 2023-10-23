@@ -19,12 +19,12 @@ EditJadualSiraman As screen:
         ZIndex: =4
 
     ContainerDel As groupContainer.verticalAutoLayoutContainer:
-        Height: =676
+        Height: =411
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =If(deleteMode, true, false)
         Width: =640
-        Y: =142
+        Y: =640
         ZIndex: =5
 
         Icon8_1 As icon.CancelBadge:
@@ -36,7 +36,7 @@ EditJadualSiraman As screen:
         Label4_1 As label:
             Align: =Align.Center
             AlignInContainer: =AlignInContainer.Stretch
-            FillPortions: =0.5
+            FillPortions: =0.8
             Height: =70
             LayoutMinWidth: =560
             Size: =21
