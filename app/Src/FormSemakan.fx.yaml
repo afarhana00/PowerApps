@@ -11,8 +11,8 @@ FormSemakan As screen:
         Size: =21
         Text: ="Plot"
         Width: =80
-        X: =38
-        Y: =108
+        X: =8
+        Y: =132
         ZIndex: =2
 
     PlotSelect As dropdown:
@@ -21,16 +21,16 @@ FormSemakan As screen:
         Size: =21
         Width: =415
         X: =204
-        Y: =111
+        Y: =128
         ZIndex: =3
 
     Label13_1 As label:
-        Height: =70
+        Height: =60
         Size: =21
         Text: ="Jenis Pokok"
-        Width: =185
-        X: =20
-        Y: =276
+        Width: =161
+        X: =8
+        Y: =324
         ZIndex: =4
 
     TreeSelect As dropdown:
@@ -39,16 +39,16 @@ FormSemakan As screen:
         Size: =21
         Width: =415
         X: =204
-        Y: =280
+        Y: =314
         ZIndex: =5
 
     Label13_2 As label:
-        Height: =89
+        Height: =45
         Size: =21
         Text: ="Varian Cili"
-        Width: =160
-        X: =20
-        Y: =371
+        Width: =158
+        X: =8
+        Y: =423
         ZIndex: =6
 
     VarianceSelect As dropdown:
@@ -56,17 +56,17 @@ FormSemakan As screen:
         Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
         Size: =21
         Width: =415
-        X: =205
-        Y: =371
+        X: =204
+        Y: =409
         ZIndex: =7
 
     StageSelect As label:
-        Height: =60
+        Height: =67
         Size: =21
         Text: ="Tahap Pokok"
         Width: =196
-        X: =14
-        Y: =460
+        X: =8
+        Y: =500
         ZIndex: =8
 
     Dropdown1_3 As dropdown:
@@ -75,7 +75,7 @@ FormSemakan As screen:
         Size: =21
         Width: =414
         X: =204
-        Y: =463
+        Y: =510
         ZIndex: =9
 
     Icon12 As icon.BackArrow:
@@ -89,9 +89,9 @@ FormSemakan As screen:
 
     Form2 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =430
+        Height: =390
         Width: =640
-        Y: =585
+        Y: =625
         ZIndex: =11
 
         "'Tarikh _DataCard1_1' As typedDataCard.dateEditCard":
@@ -101,7 +101,7 @@ FormSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_16")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =116
+            Height: =76
             Required: =false
             Update: =DataCardValue47_1.SelectedDate
             Width: =640
@@ -131,9 +131,8 @@ FormSemakan As screen:
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =356
-                X: =230
-                Y: =10
+                Width: =326
+                X: =272
                 ZIndex: =2
 
             ErrorMessage47_1 As label:
@@ -1426,7 +1425,7 @@ FormSemakan As screen:
         Size: =21
         Width: =415
         X: =204
-        Y: =192
+        Y: =226
         ZIndex: =15
 
     Label13_3 As label:
@@ -1434,14 +1433,42 @@ FormSemakan As screen:
         Size: =21
         Text: ="HST (Hari)"
         Width: =155
-        X: =25
-        Y: =194
+        X: =8
+        Y: =228
         ZIndex: =16
 
     Rectangle1_2 As rectangle:
         Fill: =RGBA(149, 149, 149, 1)
         Height: =5
         Width: =640
-        Y: =554
+        Y: =580
         ZIndex: =18
+
+    Rectangle1_3 As rectangle:
+        Fill: =RGBA(149, 149, 149, 1)
+        Height: =5
+        Width: =640
+        Y: =482
+        ZIndex: =19
+
+    Rectangle1_4 As rectangle:
+        Fill: =RGBA(149, 149, 149, 1)
+        Height: =5
+        Width: =640
+        Y: =218
+        ZIndex: =20
+
+    Rectangle1_5 As rectangle:
+        Fill: =RGBA(149, 149, 149, 1)
+        Height: =5
+        Width: =640
+        Y: =299
+        ZIndex: =21
+
+    Rectangle1_6 As rectangle:
+        Fill: =RGBA(149, 149, 149, 1)
+        Height: =3
+        Width: =640
+        Y: =392
+        ZIndex: =22
 
