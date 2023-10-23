@@ -666,7 +666,8 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue50_1.Selected
+            Update: |-
+                =If(DataCardValue50_1.Selected.Value="Tambah Baru",{Value:TextInput8.Text},DataCardValue50_1.Selected)
             Width: =640
             X: =0
             Y: =12
@@ -689,13 +690,16 @@ FormSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].'Jenis Racun')
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].'Jenis Racun')},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Jenis Racun',DataCardValue50_1.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =326
                 X: =272
                 Y: =10
@@ -727,6 +731,28 @@ FormSemakan As screen:
                 Wrap: =false
                 Y: =DataCardKey50_1.Y
                 ZIndex: =4
+
+            TextInput8 As text:
+                Default: =""
+                Height: =70
+                Size: =21
+                Visible: =!DataCardValue50_1.Visible
+                Width: =326
+                X: =272
+                Y: =10
+                ZIndex: =5
+
+            Icon19 As icon.Cancel:
+                Height: =48
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue50_1);
+                    Reset(TextInput8);
+                Visible: =!DataCardValue50_1.Visible
+                Width: =48
+                X: =550
+                Y: =21
+                ZIndex: =6
 
         "'Nutrisi (Skala EC)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -1240,7 +1266,7 @@ FormSemakan As screen:
                 Width: =206
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =27
                 ZIndex: =1
 
             DataCardValue8_1 As text:
