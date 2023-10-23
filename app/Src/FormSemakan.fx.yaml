@@ -987,14 +987,11 @@ FormSemakan As screen:
             ZIndex: =12
 
             DataCardKey2_1 As label:
-                AutoHeight: =true
-                Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =219
                 Wrap: =false
                 X: =30
-                Y: =10
                 ZIndex: =1
 
             DataCardValue2_1 As combobox:
@@ -1069,12 +1066,12 @@ FormSemakan As screen:
                 ZIndex: =6
 
             Label15_1 As label:
-                Height: =53
+                Height: =31
                 Size: =21
-                Text: ="i.e.,1310 (24h)"
-                Width: =199
-                X: =30
-                Y: =58
+                Text: ="(i.e.,1310 (24h))"
+                Width: =221
+                X: =28
+                Y: =40
                 ZIndex: =7
 
         IDPokok_DataCard1_1 As typedDataCard.comboBoxEditCard:

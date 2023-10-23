@@ -79,11 +79,11 @@ EditSemakan As screen:
 
     Form3 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =425
+        Height: =453
         Item: =Gallery1.Selected
         Visible: =If(deleteMode,false,true)
         Width: =640
-        Y: =710
+        Y: =670
         ZIndex: =8
 
         "'Tarikh _DataCard2' As typedDataCard.dateEditCard":
@@ -1424,4 +1424,10 @@ EditSemakan As screen:
         X: =28
         Y: =279
         ZIndex: =18
+
+    Rectangle1 As rectangle:
+        Height: =3
+        Width: =640
+        Y: =650
+        ZIndex: =19
 
