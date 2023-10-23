@@ -454,7 +454,8 @@ EditSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue72.Selected
+            Update: |-
+                =If(DataCardValue72.Selected.Value="Tambah Baru",{Value:TextInput9.Text},DataCardValue72.Selected)
             Width: =640
             X: =0
             Y: =10
@@ -476,13 +477,16 @@ EditSemakan As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =80
-                Items: =Choices([@'Semakan Kesihatan'].Perosak)
+                IsSearchable: =false
+                Items: |-
+                    =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Perosak)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Perosak,DataCardValue72.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
+                Visible: =Self.Selected.Value<>"Tambah Baru"
                 Width: =420
                 X: =207
                 Y: =10
@@ -515,6 +519,28 @@ EditSemakan As screen:
                 Y: =DataCardKey72.Y
                 ZIndex: =4
 
+            TextInput9 As text:
+                Default: =""
+                Height: =80
+                Size: =21
+                Visible: =!DataCardValue72.Visible
+                Width: =368
+                X: =207
+                Y: =10
+                ZIndex: =5
+
+            Icon20 As icon.Cancel:
+                Height: =56
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =Reset(DataCardValue72);
+                    Reset(TextInput9);
+                Visible: =!DataCardValue72.Visible
+                Width: =52
+                X: =575
+                Y: =26
+                ZIndex: =6
+
         "'Kadar Serangan Perosak_DataCard2' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_12"
@@ -544,6 +570,7 @@ EditSemakan As screen:
                 ZIndex: =1
 
             DataCardValue68 As text:
+                Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -773,11 +800,10 @@ EditSemakan As screen:
             ZIndex: =1
 
             DataCardKey69 As label:
-                AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: ="Ketinggian Pokok (m)"
+                Width: =324
                 Wrap: =false
                 X: =30
                 Y: =10
