@@ -153,7 +153,7 @@ EditJadualSiraman As screen:
                 Y: =DataCardKey78.Y
                 ZIndex: =4
 
-        "'Tahap Pokok_DataCard5' As typedDataCard.comboBoxEditCard":
+        "'Tahap Pokok_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="TahapPokok"
             Default: =ThisItem.'Tahap Pokok'
@@ -162,13 +162,13 @@ EditJadualSiraman As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue41.Selected
+            Update: =DataCardValue3.Selected
             Width: =640
             X: =0
             Y: =3
             ZIndex: =1
 
-            DataCardKey41 As label:
+            DataCardKey3 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -179,25 +179,25 @@ EditJadualSiraman As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue41 As combobox:
+            DataCardValue3 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: ='Jadual Siraman'
+                Height: =75
+                Items: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_5.Selected.'Tahap Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Search('Jadual Siraman',DataCardValue41.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_5.Selected.'Tahap Pokok'),DataCardValue3.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =326
-                X: =253
+                Width: =330
+                X: =251
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage24 As label:
+            ErrorMessage3 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -210,18 +210,18 @@ EditJadualSiraman As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue41.Y + DataCardValue41.Height
+                Y: =DataCardValue3.Y + DataCardValue3.Height
                 ZIndex: =3
 
-            StarVisible26 As label:
+            StarVisible3 As label:
                 Align: =Align.Center
-                Height: =DataCardKey41.Height
+                Height: =DataCardKey3.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey41.Y
+                Y: =DataCardKey3.Y
                 ZIndex: =4
 
         "'Kepekatan Baja (Kg/L)_DataCard2' As typedDataCard.numberEditCard":
