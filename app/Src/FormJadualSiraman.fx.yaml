@@ -5,7 +5,7 @@ FormJadualSiraman As screen:
         Height: =70
         OnSelect: |-
             =  Refresh('Jadual Siraman');
-             Navigate(FormJadualSiraman);SubmitForm(Form4);
+             Navigate(ListJadualSiraman);SubmitForm(Form4);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
@@ -13,8 +13,8 @@ FormJadualSiraman As screen:
         Size: =24
         Text: ="SIMPAN"
         Width: =223
-        X: =66
-        Y: =1032
+        X: =362
+        Y: =1022
         ZIndex: =2
 
     Rectangle5_1 As rectangle:
@@ -56,8 +56,8 @@ FormJadualSiraman As screen:
         Size: =24
         Text: ="SENARAI"
         Width: =216
-        X: =370
-        Y: =1032
+        X: =82
+        Y: =1022
         ZIndex: =6
 
     Container2 As groupContainer.verticalAutoLayoutContainer:
@@ -255,7 +255,7 @@ FormJadualSiraman As screen:
 
     Form4 As form:
         DataSource: ='Jadual Siraman'
-        Height: =424
+        Height: =397
         Item: =Gallery2.Selected
         Width: =640
         Y: =608
@@ -739,7 +739,7 @@ FormJadualSiraman As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_12")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =69
             MaxLength: =DataSourceInfo([@'Jadual Siraman'], DataSourceInfo.MaxLength, "field_12")
             Required: =false
             Update: =DataCardValue57_1.Text
