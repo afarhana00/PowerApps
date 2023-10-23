@@ -703,6 +703,7 @@ FormJadualSiraman As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =218
                 X: =361
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage61_1 As label:
@@ -970,9 +971,9 @@ FormJadualSiraman As screen:
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =216
                 Wrap: =false
-                X: =30
+                X: =31
                 Y: =10
                 ZIndex: =1
 
@@ -981,7 +982,7 @@ FormJadualSiraman As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Height: =70
+                Height: =80
                 Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
                 OnChange: |-
                     =Set(
@@ -993,9 +994,9 @@ FormJadualSiraman As screen:
                 SearchItems: =Choices('Jadual Siraman'.'Jenis Siraman',DataCardValue28_1.SearchText)
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =594
+                Width: =593
                 X: =30
-                Y: =68
+                Y: =58
                 ZIndex: =2
 
             ErrorMessage28_1 As label:

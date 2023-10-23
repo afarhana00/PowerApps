@@ -140,8 +140,8 @@ ListSemakan As screen:
             Icon: =Icon.Warning
             OnSelect: =Select(Parent)
             Visible: =If(ThisItem.Suhu>=35,true,false)
-            X: =551
-            Y: =19
+            X: =461
+            Y: =48
             ZIndex: =11
 
         Label1 As label:
@@ -165,6 +165,15 @@ ListSemakan As screen:
             X: =349
             Y: =22
             ZIndex: =13
+
+        Icon17 As icon.Bug:
+            Height: =49
+            Icon: =Icon.Bug
+            OnSelect: =Select(Parent)
+            Width: =41
+            X: =394
+            Y: =48
+            ZIndex: =14
 
     Rectangle4 As rectangle:
         Fill: =RGBA(129, 235, 235, 1)
