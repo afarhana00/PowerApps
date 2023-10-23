@@ -482,7 +482,7 @@ FormJadualSiraman As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_10")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =105
             Required: =false
             Update: |-
                 =If(DataCardValue60_1.Selected.Value="Lain-lain",{Value:TextInput3_1.Text},DataCardValue60_1.Selected)
@@ -559,12 +559,12 @@ FormJadualSiraman As screen:
 
             TextInput3_1 As text:
                 Default: =""
-                Height: =73
+                Height: =70
                 Size: =21
                 Visible: =!DataCardValue60_1.Visible
-                Width: =426
-                X: =30
-                Y: =60
+                Width: =219
+                X: =361
+                Y: =16
                 ZIndex: =5
 
             Icon15_1 As icon.Cancel:
@@ -575,14 +575,14 @@ FormJadualSiraman As screen:
                     Reset(TextInput3_1);
                 Visible: =!DataCardValue60_1.Visible
                 Width: =54
-                X: =402
-                Y: =71
+                X: =522
+                Y: =27
                 ZIndex: =6
 
             Label17_1 As label:
                 Height: =42
                 Size: =21
-                Text: ="i.e., 1310 (24h)"
+                Text: ="(i.e., 1310 (24h))"
                 Width: =221
                 X: =30
                 Y: =47
@@ -616,6 +616,7 @@ FormJadualSiraman As screen:
                 ZIndex: =1
 
             DataCardValue61_1 As text:
+                Align: =Align.Center
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
