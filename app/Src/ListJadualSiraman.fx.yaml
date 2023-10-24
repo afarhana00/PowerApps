@@ -2,14 +2,20 @@ ListJadualSiraman As screen:
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =981
-        Items: ='Jadual Siraman'
+        Height: =805
+        Items: |-
+            =Filter('Jadual Siraman', Tarikh=DatePicker1.SelectedDate 
+             &&
+                (Dropdown1.Selected.Value = "All"
+                Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
+                Or Dropdown1.Selected.Value=Blank())
+              )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =121
+        Y: =295
         ZIndex: =1
 
         Title4 As label:
@@ -134,15 +140,6 @@ ListJadualSiraman As screen:
             Y: =45
             ZIndex: =10
 
-        Image6 As image:
-            Height: =83
-            Image: ='download (1)'
-            OnSelect: =Select(Parent)
-            Width: =57
-            X: =520
-            Y: =16
-            ZIndex: =11
-
     Rectangle7 As rectangle:
         Fill: =RGBA(129, 235, 235, 1)
         Height: =108
@@ -171,4 +168,45 @@ ListJadualSiraman As screen:
         X: =34
         Y: =21
         ZIndex: =6
+
+    Icon18 As icon.FilterFlat:
+        Height: =60
+        Icon: =Icon.FilterFlat
+        Width: =44
+        X: =21
+        Y: =141
+        ZIndex: =8
+
+    DatePicker1 As datepicker:
+        Height: =70
+        Size: =24
+        Width: =265
+        X: =90
+        Y: =131
+        ZIndex: =9
+
+    Dropdown1 As dropdown:
+        Height: =70
+        Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        Size: =21
+        Width: =161
+        X: =450
+        Y: =131
+        ZIndex: =11
+
+    Button2 As button:
+        Height: =60
+        OnSelect: |-
+            =
+            Reset(Dropdown1);Reset(DatePicker1); 
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="ALL"
+        Width: =134
+        X: =489
+        Y: =218
+        ZIndex: =12
 
