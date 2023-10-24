@@ -4,7 +4,8 @@ ListJadualSiraman As screen:
         DelayItemLoading: =true
         Height: =805
         Items: |
-            =Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
+            =
+            Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
                     (Dropdown1.Selected.Value = "All"
                     Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
                     Or IsBlank(Dropdown1.Selected.Value))
@@ -199,19 +200,14 @@ ListJadualSiraman As screen:
             =Switch(
                 Button2.Pressed,
                 true, Gallery2.AllItems,
-                false, Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
-                    (Dropdown1.Selected.Value = "All"
-                    Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
-                    Or IsBlank(Dropdown1.Selected.Value))
-                )
-            );
+                false);
             Reset(Dropdown1);Reset(DatePicker1); 
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Size: =24
-        Text: ="ALL"
+        Text: ="RESET"
         Width: =134
         X: =489
         Y: =218
