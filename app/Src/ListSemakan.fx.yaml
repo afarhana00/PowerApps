@@ -58,21 +58,21 @@ ListSemakan As screen:
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
+            ZIndex: =3
 
         Separator2 As rectangle:
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
+            ZIndex: =4
 
         Rectangle8 As rectangle:
             Height: =Parent.TemplateHeight - Separator2.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
-            ZIndex: =6
+            ZIndex: =5
 
         Label5 As label:
             Height: =26
@@ -82,7 +82,7 @@ ListSemakan As screen:
             Width: =168
             X: =25
             Y: =14
-            ZIndex: =7
+            ZIndex: =6
 
         Label8 As label:
             Height: =26
@@ -93,7 +93,60 @@ ListSemakan As screen:
             Width: =205
             X: =25
             Y: =80
+            ZIndex: =7
+
+        Icon11 As icon.Warning:
+            Color: =RGBA(255, 140, 0, 1)
+            Height: =50
+            Icon: =Icon.Warning
+            OnSelect: =Select(Parent)
+            Visible: =If(!IsBlank(ThisItem.'Penyakit'.Value),true,false)
+            Width: =51
+            X: =402
+            Y: =26
             ZIndex: =8
+
+        Label1 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =ThisItem.IDPokok.Value
+            Width: =90
+            X: =187
+            Y: =51
+            ZIndex: =9
+
+        Label6 As label:
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="ID Pokok       :"
+            Width: =168
+            X: =25
+            Y: =48
+            ZIndex: =10
+
+        Icon17 As icon.Bug:
+            Height: =49
+            Icon: =Icon.Bug
+            OnSelect: =Select(Parent)
+            Visible: =If(!IsBlank(ThisItem.'Perosak'.Value),true,false)
+            Width: =41
+            X: =525
+            Y: =26
+            ZIndex: =11
+
+        Image4 As image:
+            Height: =80
+            Image: =download
+            OnSelect: =Select(Parent)
+            Visible: =If(ThisItem.Suhu>=35,true,false)
+            Width: =68
+            X: =453
+            Y: =10
+            ZIndex: =12
 
         Button12 As button:
             Fill: =RGBA(255, 255, 255, 0.01)
@@ -106,60 +159,7 @@ ListSemakan As screen:
             Text: =""
             Width: =636
             X: =4
-            ZIndex: =10
-
-        Icon11 As icon.Warning:
-            Color: =RGBA(255, 140, 0, 1)
-            Height: =50
-            Icon: =Icon.Warning
-            OnSelect: =Select(Parent)
-            Visible: =If(!IsBlank(ThisItem.'Penyakit'.Value),true,false)
-            Width: =51
-            X: =402
-            Y: =26
-            ZIndex: =11
-
-        Label1 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =25
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =ThisItem.IDPokok.Value
-            Width: =90
-            X: =187
-            Y: =51
-            ZIndex: =12
-
-        Label6 As label:
-            Height: =32
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: |-
-                ="ID Pokok       :"
-            Width: =168
-            X: =25
-            Y: =48
             ZIndex: =13
-
-        Icon17 As icon.Bug:
-            Height: =49
-            Icon: =Icon.Bug
-            OnSelect: =Select(Parent)
-            Visible: =If(!IsBlank(ThisItem.'Perosak'.Value),true,false)
-            Width: =41
-            X: =525
-            Y: =26
-            ZIndex: =14
-
-        Image4 As image:
-            Height: =80
-            Image: =download
-            OnSelect: =Select(Parent)
-            Visible: =If(ThisItem.Suhu>=35,true,false)
-            Width: =68
-            X: =453
-            Y: =10
-            ZIndex: =16
 
     Rectangle4 As rectangle:
         Fill: =RGBA(129, 235, 235, 1)
