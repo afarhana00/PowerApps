@@ -100,7 +100,7 @@ ListSemakan As screen:
             Height: =50
             Icon: =Icon.Warning
             OnSelect: =Select(Parent)
-            Visible: =If(!IsBlank(ThisItem.'Penyakit'.Value),true,false)
+            Visible: =If(!IsBlank(ThisItem.Penyakit.Value),true,false)
             Width: =51
             X: =402
             Y: =26
@@ -132,7 +132,7 @@ ListSemakan As screen:
             Height: =49
             Icon: =Icon.Bug
             OnSelect: =Select(Parent)
-            Visible: =If(!IsBlank(ThisItem.'Perosak'.Value),true,false)
+            Visible: =If(!IsBlank(ThisItem.Perosak.Value),true,false)
             Width: =41
             X: =525
             Y: =26

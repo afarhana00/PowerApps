@@ -3,13 +3,12 @@ ListJadualSiraman As screen:
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =805
-        Items: |-
-            =Filter('Jadual Siraman', Tarikh=DatePicker1.SelectedDate 
-             &&
-                (Dropdown1.Selected.Value = "All"
-                Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
-                Or Dropdown1.Selected.Value=Blank())
-              )
+        Items: |
+            =Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
+                    (Dropdown1.Selected.Value = "All"
+                    Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
+                    Or IsBlank(Dropdown1.Selected.Value))
+                )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
@@ -197,7 +196,15 @@ ListJadualSiraman As screen:
     Button2 As button:
         Height: =60
         OnSelect: |-
-            =
+            =Switch(
+                Button2.Pressed,
+                true, Gallery2.AllItems,
+                false, Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
+                    (Dropdown1.Selected.Value = "All"
+                    Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
+                    Or IsBlank(Dropdown1.Selected.Value))
+                )
+            );
             Reset(Dropdown1);Reset(DatePicker1); 
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
