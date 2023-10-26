@@ -190,14 +190,14 @@ FormSemakan As screen:
 
             DataCardValue1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId)
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId)
+                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_), Value = PlotSelect.Selected.PlotId),DataCardValue1.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId),DataCardValue1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -756,7 +756,7 @@ FormSemakan As screen:
         "'Ketinggian Pokok_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_15"
-            Default: =ThisItem.'Ketinggian Pokok'
+            Default: =ThisItem.'Ketinggian Pokok (cm)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_15")
             Fill: =RGBA(0, 0, 0, 0)

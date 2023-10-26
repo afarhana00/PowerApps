@@ -360,14 +360,14 @@ FormJadualSiraman As screen:
 
             DataCardValue4 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok')
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Tahap Pokok'), Value = ddPlotId_2.Selected.'Tahap Pokok')
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =80
-                Items: =Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok')
+                Items: =Filter(Choices([@'Jadual Siraman'].'Tahap Pokok'), Value = ddPlotId_2.Selected.'Tahap Pokok')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].TahapPokok), Value = ddPlotId_2.Selected.'Tahap Pokok'),DataCardValue4.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].'Tahap Pokok'), Value = ddPlotId_2.Selected.'Tahap Pokok'),DataCardValue4.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -406,7 +406,7 @@ FormJadualSiraman As screen:
         "'Kepekatan Baja (Kg/L)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_8"
-            Default: =ThisItem.'Kepekatan Baja (Kg/L)'
+            Default: =ThisItem.field_8
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_8")
             Fill: =RGBA(0, 0, 0, 0)

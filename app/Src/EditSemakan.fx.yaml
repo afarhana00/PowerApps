@@ -740,7 +740,7 @@ EditSemakan As screen:
         "'Ketinggian Pokok_DataCard2' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_15"
-            Default: =ThisItem.'Ketinggian Pokok'
+            Default: =ThisItem.'Ketinggian Pokok (cm)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_15")
             Fill: =RGBA(0, 0, 0, 0)

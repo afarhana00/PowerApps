@@ -140,6 +140,56 @@ ListJadualSiraman As screen:
             Y: =45
             ZIndex: =10
 
+        Label19 As label:
+            Height: =37
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =Concat(ThisItem.'Jenis Siraman', Text(Value),";")
+            Width: =287
+            X: =319
+            Y: =8
+            ZIndex: =12
+
+        Label25 As label:
+            Height: =31
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kepekatan Baja AB (EC)'
+            Width: =65
+            X: =328
+            Y: =47
+            ZIndex: =14
+
+        Label26 As label:
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kepekatan Baja Tunggal (EC)'
+            Width: =66
+            X: =407
+            Y: =44
+            ZIndex: =15
+
+        Label27 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kuantiti Baja AB (Liter)'
+            Width: =63
+            X: =330
+            Y: =78
+            ZIndex: =16
+
+        Label28 As label:
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kuantiti Baja Tunggal (Kg)'
+            Width: =66
+            X: =407
+            Y: =74
+            ZIndex: =17
+
     Rectangle7 As rectangle:
         Fill: =RGBA(129, 235, 235, 1)
         Height: =108
