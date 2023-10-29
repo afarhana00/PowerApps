@@ -2,28 +2,11 @@ Screen2 As screen:
 
     Form5 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =459
+        Height: =978
+        Visible: =If(varshowfields=2||varshowfields=-1,true,false)
         Width: =640
-        Y: =623
+        Y: =158
         ZIndex: =1
-
-        DataCard2 As typedDataCard.blankCard:
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =67
-            Width: =640
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-            Button20 As button:
-                Height: =60
-                Size: =24
-                Text: ="Semakan Kesihatan"
-                Width: =640
-                Y: =4
-                ZIndex: =1
 
         "'Tarikh _DataCard1' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -37,7 +20,7 @@ Screen2 As screen:
             Update: =DataCardValue7.SelectedDate
             Width: =640
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =2
 
             DataCardKey7 As label:
@@ -107,7 +90,7 @@ Screen2 As screen:
             Update: =DataCardValue8.Selected
             Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =2
 
             DataCardKey8 As label:
@@ -178,7 +161,7 @@ Screen2 As screen:
             Update: =DataCardValue9.Selected
             Width: =640
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =2
 
             DataCardKey9 As label:
@@ -249,7 +232,7 @@ Screen2 As screen:
             Update: =DataCardValue10.Selected
             Width: =640
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =2
 
             DataCardKey10 As label:
@@ -320,7 +303,7 @@ Screen2 As screen:
             Update: =DataCardValue11.Selected
             Width: =640
             X: =0
-            Y: =5
+            Y: =4
             ZIndex: =2
 
             DataCardKey11 As label:
@@ -391,7 +374,7 @@ Screen2 As screen:
             Update: =Value(DataCardValue12.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =2
 
             DataCardKey12 As label:
@@ -463,7 +446,7 @@ Screen2 As screen:
             Update: =Value(DataCardValue13.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =6
             ZIndex: =2
 
             DataCardKey13 As label:
@@ -536,7 +519,7 @@ Screen2 As screen:
             Update: =DataCardValue14.Text
             Width: =640
             X: =0
-            Y: =8
+            Y: =7
             ZIndex: =2
 
             DataCardKey14 As label:
@@ -598,26 +581,11 @@ Screen2 As screen:
 
     Form6 As form:
         DataSource: =TreePlot
+        Height: =995
+        Visible: =If(varshowfields=1||varshowfields=-1,true,false)
         Width: =640
-        Y: =106
+        Y: =141
         ZIndex: =2
-
-        DataCard1 As typedDataCard.blankCard:
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =61
-            Width: =640
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-            Button19 As button:
-                Height: =53
-                Size: =24
-                Text: ="Maklumat Plot"
-                Width: =640
-                ZIndex: =1
 
         PlotId_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -632,7 +600,7 @@ Screen2 As screen:
             Update: =DataCardValue16.Text
             Width: =640
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =3
 
             DataCardKey16 As label:
@@ -705,7 +673,7 @@ Screen2 As screen:
             Update: =DataCardValue17.Text
             Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =3
 
             DataCardKey17 As label:
@@ -778,7 +746,7 @@ Screen2 As screen:
             Update: =DataCardValue18.Text
             Width: =640
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =3
 
             DataCardKey18 As label:
@@ -850,7 +818,7 @@ Screen2 As screen:
             Update: =DataCardValue19.SelectedDate
             Width: =640
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =3
 
             DataCardKey19 As label:
@@ -920,7 +888,7 @@ Screen2 As screen:
             Update: =DataCardValue20.SelectedDate
             Width: =640
             X: =0
-            Y: =5
+            Y: =4
             ZIndex: =3
 
             DataCardKey20 As label:
@@ -990,7 +958,7 @@ Screen2 As screen:
             Update: =DataCardValue21.SelectedDate
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =3
 
             DataCardKey21 As label:
@@ -1055,13 +1023,13 @@ Screen2 As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@TreePlot],DataSourceInfo.DisplayName,"Spare1")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =143
             MaxLength: =DataSourceInfo([@TreePlot], DataSourceInfo.MaxLength, "Spare1")
             Required: =false
             Update: =DataCardValue22.Text
             Width: =640
             X: =0
-            Y: =7
+            Y: =6
             ZIndex: =3
 
             DataCardKey22 As label:
@@ -1120,4 +1088,24 @@ Screen2 As screen:
                 Wrap: =false
                 Y: =DataCardKey22.Y
                 ZIndex: =4
+
+    Button4 As button:
+        Height: =73
+        OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1))
+        Size: =24
+        Text: ="Plot"
+        Width: =184
+        X: =46
+        Y: =68
+        ZIndex: =3
+
+    Button15 As button:
+        Height: =73
+        OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2))
+        Size: =24
+        Text: ="Semakan Kesihatan"
+        Width: =346
+        X: =282
+        Y: =68
+        ZIndex: =4
 

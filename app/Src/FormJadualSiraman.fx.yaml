@@ -1,7 +1,7 @@
 FormJadualSiraman As screen:
 
     Button14 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =70
         OnSelect: |-
             =  Refresh('Jadual Siraman');
@@ -18,7 +18,7 @@ FormJadualSiraman As screen:
         ZIndex: =2
 
     Rectangle5_1 As rectangle:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =108
         Width: =640
         ZIndex: =3
@@ -46,7 +46,7 @@ FormJadualSiraman As screen:
         ZIndex: =5
 
     Button2_1 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =70
         OnSelect: =Navigate(ListJadualSiraman);
         RadiusBottomLeft: =30
@@ -301,8 +301,8 @@ FormJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =306
-                X: =304
-                Y: =10
+                X: =271
+                Y: =20
                 ZIndex: =2
 
             ErrorMessage2 As label:
@@ -372,7 +372,7 @@ FormJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =306
-                X: =304
+                X: =271
                 Y: =10
                 ZIndex: =2
 
@@ -445,7 +445,7 @@ FormJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =219
-                X: =364
+                X: =361
                 Y: =10
                 ZIndex: =2
 
@@ -849,7 +849,7 @@ FormJadualSiraman As screen:
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
                 Width: =306
-                X: =304
+                X: =268
                 Y: =10
                 ZIndex: =2
 
@@ -920,8 +920,8 @@ FormJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =306
-                X: =304
-                Y: =7
+                X: =274
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage25_1 As label:
@@ -1143,8 +1143,8 @@ FormJadualSiraman As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =285
-                X: =298
-                Y: =4
+                X: =297
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage30_1 As label:

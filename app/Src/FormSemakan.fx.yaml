@@ -1,82 +1,10 @@
 FormSemakan As screen:
 
     Rectangle1_1 As rectangle:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =108
         Width: =640
         ZIndex: =1
-
-    Label13 As label:
-        Height: =70
-        Size: =21
-        Text: ="Plot"
-        Width: =80
-        X: =8
-        Y: =132
-        ZIndex: =2
-
-    PlotSelect As dropdown:
-        Height: =70
-        Items: =TreePlot
-        Size: =21
-        Width: =345
-        X: =204
-        Y: =128
-        ZIndex: =3
-
-    Label13_1 As label:
-        Height: =60
-        Size: =21
-        Text: ="Jenis Pokok"
-        Width: =161
-        X: =8
-        Y: =324
-        ZIndex: =4
-
-    TreeSelect As dropdown:
-        Height: =70
-        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
-        Size: =21
-        Width: =345
-        X: =204
-        Y: =314
-        ZIndex: =5
-
-    Label13_2 As label:
-        Height: =45
-        Size: =21
-        Text: ="Varian Cili"
-        Width: =158
-        X: =8
-        Y: =423
-        ZIndex: =6
-
-    VarianceSelect As dropdown:
-        Height: =70
-        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
-        Size: =21
-        Width: =345
-        X: =204
-        Y: =409
-        ZIndex: =7
-
-    StageSelect As label:
-        Height: =67
-        Size: =21
-        Text: ="Tahap Pokok"
-        Width: =196
-        X: =8
-        Y: =500
-        ZIndex: =8
-
-    Dropdown1_3 As dropdown:
-        Height: =70
-        Items: =Filter(TreePlot, PlotId = PlotSelect.Selected.PlotId)
-        Size: =21
-        Width: =345
-        X: =204
-        Y: =493
-        ZIndex: =9
 
     Icon12 As icon.BackArrow:
         Height: =70
@@ -89,9 +17,10 @@ FormSemakan As screen:
 
     Form2 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =390
+        Height: =790
+        Visible: =If(varshowfields=2||varshowfields=-1,true,false)
         Width: =640
-        Y: =625
+        Y: =225
         ZIndex: =11
 
         "'Tarikh _DataCard1_1' As typedDataCard.dateEditCard":
@@ -190,14 +119,14 @@ FormSemakan As screen:
 
             DataCardValue1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId6.Selected.PlotId)
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId)
+                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = ddPlotId_6.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = PlotSelect.Selected.PlotId),DataCardValue1.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = ddPlotId_6.Selected.PlotId),DataCardValue1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1408,7 +1337,7 @@ FormSemakan As screen:
                 ZIndex: =5
 
     Button1_1 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =70
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =SubmitForm(Form2); Navigate(ListSemakan); 
@@ -1424,7 +1353,7 @@ FormSemakan As screen:
         ZIndex: =12
 
     Button4_1 As button:
-        Fill: =RGBA(129, 235, 235, 1)
+        Fill: =RGBA(0,168,156,255)
         Height: =70
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =Navigate(ListSemakan);
@@ -1451,22 +1380,217 @@ FormSemakan As screen:
         X: =107
         ZIndex: =14
 
-    PlotSelect_1 As dropdown:
-        Height: =70
-        Items: |-
-            =ForAll(Filter(TreePlot,PlotId=PlotSelect.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
-        Size: =21
-        Width: =345
-        X: =204
-        Y: =226
+    Button4_2 As button:
+        Height: =73
+        OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
+        Size: =24
+        Text: ="Plot"
+        Width: =184
+        X: =50
+        Y: =130
         ZIndex: =15
 
-    Label13_3 As label:
-        Height: =71
-        Size: =21
-        Text: ="HST (Hari)"
-        Width: =155
-        X: =8
-        Y: =228
+    Button15_1 As button:
+        Height: =73
+        OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2))
+        Size: =24
+        Text: ="Semakan Kesihatan"
+        Width: =346
+        X: =286
+        Y: =130
         ZIndex: =16
+
+    Container2_2 As groupContainer.verticalAutoLayoutContainer:
+        Height: =651
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(varshowfields=1||varshowfields=-1,true,false)
+        Width: =640
+        Y: =286
+        ZIndex: =17
+
+        divPlot_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            Label14_10 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_6 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =TreePlot
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =5
+
+            Label14_11 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HST (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_4 As dropdown:
+                Default: =
+                FillPortions: =0.5
+                Height: =70
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_6.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                OnSelect: =
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divTreeType_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =6
+
+            Label14_12 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Jenis Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_5 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId_6.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divVariance_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =7
+
+            Label14_13 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Varian Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_7 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId_6.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divStage_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =8
+
+            Label14_14 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Tahap Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_8 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: |
+                    =Filter(TreePlot, PlotId = ddPlotId_6.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
 
