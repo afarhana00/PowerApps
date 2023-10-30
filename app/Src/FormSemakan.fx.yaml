@@ -119,14 +119,14 @@ FormSemakan As screen:
 
             DataCardValue1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId6.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId)
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = ddPlotId_6.Selected.PlotId)
+                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'), Value = ddPlotId_6.Selected.PlotId),DataCardValue1.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId),DataCardValue1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -701,7 +701,9 @@ FormSemakan As screen:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: |-
+                    ="Ketinggian
+                    Pokok"
                 Width: =242
                 Wrap: =false
                 X: =30
@@ -1031,14 +1033,13 @@ FormSemakan As screen:
             ZIndex: =12
 
             DataCardKey4_1 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =42
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: ="ID Pokok"
+                Width: =182
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =16
                 ZIndex: =1
 
             DataCardValue4_1 As combobox:
@@ -1383,20 +1384,27 @@ FormSemakan As screen:
     Button4_2 As button:
         Height: =73
         OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
-        Size: =24
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =20
         Text: ="Plot"
-        Width: =184
-        X: =50
+        X: =131
         Y: =130
         ZIndex: =15
 
     Button15_1 As button:
         Height: =73
         OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2))
-        Size: =24
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =18
         Text: ="Semakan Kesihatan"
-        Width: =346
-        X: =286
+        Width: =176
+        X: =356
         Y: =130
         ZIndex: =16
 
