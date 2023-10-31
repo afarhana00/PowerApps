@@ -110,10 +110,10 @@ Screen2 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].field_1)
+                Items: =Choices([@'Semakan Kesihatan'].'Masa Semakan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.field_1,DataCardValue8.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.'Masa Semakan',DataCardValue8.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -181,10 +181,10 @@ Screen2 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].field_3)
+                Items: =Choices([@'Semakan Kesihatan'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.field_3,DataCardValue9.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.IDPokok,DataCardValue9.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -252,10 +252,10 @@ Screen2 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_)
+                Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Plot_x0028_Lokasi_x0029_,DataCardValue10.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue10.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -323,10 +323,10 @@ Screen2 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Semakan Kesihatan'].field_5)
+                Items: =Choices([@'Semakan Kesihatan'].Cuaca)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.field_5,DataCardValue11.SearchText)
+                SearchItems: =Choices('Semakan Kesihatan'.Cuaca,DataCardValue11.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
