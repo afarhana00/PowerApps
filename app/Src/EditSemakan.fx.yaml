@@ -1,11 +1,17 @@
 EditSemakan As screen:
 
+    Rectangle9 As rectangle:
+        Fill: =RGBA(0, 168, 156, 1)
+        Width: =640
+        ZIndex: =1
+
     Icon7 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(ListSemakan);
         Width: =55
-        X: =50
-        Y: =56
+        X: =28
+        Y: =18
         ZIndex: =2
 
     Icon4_1 As icon.Trash:
@@ -15,9 +21,9 @@ EditSemakan As screen:
             =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery1.Selected })
             
         Width: =60
-        X: =548
-        Y: =63
-        ZIndex: =4
+        X: =153
+        Y: =1037
+        ZIndex: =3
 
     Container1 As groupContainer.verticalAutoLayoutContainer:
         BorderStyle: =BorderStyle.None
@@ -27,7 +33,7 @@ EditSemakan As screen:
         Visible: =If(deleteMode, true, false)
         Width: =640
         Y: =650
-        ZIndex: =5
+        ZIndex: =4
 
         Icon8 As icon.CancelBadge:
             AlignInContainer: =AlignInContainer.Start
@@ -60,31 +66,24 @@ EditSemakan As screen:
             Width: =280
             ZIndex: =3
 
-    Icon6 As icon.Home:
-        Icon: =Icon.Home
-        OnSelect: =Navigate(Penjagaan);
-        X: =136
-        Y: =56
-        ZIndex: =6
-
     Icon9 As icon.Edit:
         Icon: =Icon.Edit
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true }); SubmitForm(Form3);
             Notify("Your Data have been edited",NotificationType.Success);
             Navigate(ListSemakan,ScreenTransition.Fade);
-        X: =460
-        Y: =65
-        ZIndex: =7
+        X: =484
+        Y: =1030
+        ZIndex: =5
 
     Form3 As form:
         DataSource: ='Semakan Kesihatan'
-        Height: =453
+        Height: =83
         Item: =Gallery1.Selected
         Visible: =If(deleteMode,false,true)
         Width: =640
         Y: =670
-        ZIndex: =8
+        ZIndex: =6
 
         "'Tarikh _DataCard2' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -1355,7 +1354,7 @@ EditSemakan As screen:
         Width: =80
         X: =28
         Y: =196
-        ZIndex: =9
+        ZIndex: =7
 
     PlotSelect_2 As dropdown:
         Height: =70
@@ -1364,7 +1363,7 @@ EditSemakan As screen:
         Width: =388
         X: =234
         Y: =196
-        ZIndex: =10
+        ZIndex: =8
 
     Label13_5 As label:
         Height: =70
@@ -1373,7 +1372,7 @@ EditSemakan As screen:
         Width: =180
         X: =28
         Y: =361
-        ZIndex: =11
+        ZIndex: =9
 
     TreeSelect_1 As dropdown:
         Height: =70
@@ -1382,7 +1381,7 @@ EditSemakan As screen:
         Width: =388
         X: =234
         Y: =365
-        ZIndex: =12
+        ZIndex: =10
 
     Label13_6 As label:
         Height: =89
@@ -1391,7 +1390,7 @@ EditSemakan As screen:
         Width: =155
         X: =28
         Y: =456
-        ZIndex: =13
+        ZIndex: =11
 
     VarianceSelect_1 As dropdown:
         Height: =70
@@ -1400,7 +1399,7 @@ EditSemakan As screen:
         Width: =389
         X: =234
         Y: =456
-        ZIndex: =14
+        ZIndex: =12
 
     StageSelect_1 As label:
         Height: =60
@@ -1409,7 +1408,7 @@ EditSemakan As screen:
         Width: =185
         X: =28
         Y: =545
-        ZIndex: =15
+        ZIndex: =13
 
     Dropdown1_4 As dropdown:
         Height: =70
@@ -1418,7 +1417,7 @@ EditSemakan As screen:
         Width: =386
         X: =234
         Y: =548
-        ZIndex: =16
+        ZIndex: =14
 
     PlotSelect_3 As dropdown:
         Height: =70
@@ -1428,7 +1427,7 @@ EditSemakan As screen:
         Width: =388
         X: =234
         Y: =277
-        ZIndex: =17
+        ZIndex: =15
 
     Label13_7 As label:
         Height: =71
@@ -1437,11 +1436,20 @@ EditSemakan As screen:
         Width: =155
         X: =28
         Y: =279
-        ZIndex: =18
+        ZIndex: =16
 
     Rectangle1 As rectangle:
         Height: =3
         Width: =640
         Y: =650
-        ZIndex: =19
+        ZIndex: =17
+
+    Label12 As label:
+        Height: =70
+        Size: =21
+        Text: ="Text"
+        Width: =509
+        X: =113
+        Y: =12
+        ZIndex: =18
 
