@@ -1,9 +1,45 @@
 EditSemakan As screen:
 
+    Button18 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =106
+        HoverFill: =ColorFade(RGBA(3,192,60, 1), -20%)
+        OnSelect: |
+            =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true }); SubmitForm(Form3);
+            Notify("Your Data have been edited",NotificationType.Success);
+            Navigate(ListSemakan,ScreenTransition.Fade);
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="SIMPAN"
+        Width: =320
+        X: =320
+        Y: =1030
+        ZIndex: =1
+
+    Button17 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =106
+        HoverFill: =ColorFade(RGBA(194,223,186, 255), -20%)
+        OnSelect: |+
+            =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery1.Selected })
+            
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="PADAM"
+        Width: =320
+        Y: =1030
+        ZIndex: =2
+
     Rectangle9 As rectangle:
         Fill: =RGBA(0, 168, 156, 1)
         Width: =640
-        ZIndex: =1
+        ZIndex: =3
 
     Icon7 As icon.BackArrow:
         Color: =RGBA(255, 255, 255, 1)
@@ -12,18 +48,7 @@ EditSemakan As screen:
         Width: =55
         X: =28
         Y: =18
-        ZIndex: =2
-
-    Icon4_1 As icon.Trash:
-        Height: =57
-        Icon: =Icon.Trash
-        OnSelect: |+
-            =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery1.Selected })
-            
-        Width: =60
-        X: =153
-        Y: =1037
-        ZIndex: =3
+        ZIndex: =4
 
     Container1 As groupContainer.verticalAutoLayoutContainer:
         BorderStyle: =BorderStyle.None
@@ -33,7 +58,7 @@ EditSemakan As screen:
         Visible: =If(deleteMode, true, false)
         Width: =640
         Y: =650
-        ZIndex: =4
+        ZIndex: =6
 
         Icon8 As icon.CancelBadge:
             AlignInContainer: =AlignInContainer.Start
@@ -66,16 +91,6 @@ EditSemakan As screen:
             Width: =280
             ZIndex: =3
 
-    Icon9 As icon.Edit:
-        Icon: =Icon.Edit
-        OnSelect: |
-            =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true }); SubmitForm(Form3);
-            Notify("Your Data have been edited",NotificationType.Success);
-            Navigate(ListSemakan,ScreenTransition.Fade);
-        X: =484
-        Y: =1030
-        ZIndex: =5
-
     Form3 As form:
         DataSource: ='Semakan Kesihatan'
         Height: =750
@@ -83,7 +98,7 @@ EditSemakan As screen:
         Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode,false,true)
         Width: =640
         Y: =223
-        ZIndex: =6
+        ZIndex: =8
 
         "'Tarikh _DataCard2' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -124,8 +139,8 @@ EditSemakan As screen:
                 Size: =24
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =420
-                X: =207
+                Width: =269
+                X: =357
                 Y: =10
                 ZIndex: =2
 
@@ -270,8 +285,8 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Tambah Baru"
-                Width: =420
-                X: =207
+                Width: =276
+                X: =350
                 ZIndex: =2
 
             ErrorMessage71 As label:
@@ -366,8 +381,8 @@ EditSemakan As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =252
-                X: =369
+                Width: =271
+                X: =349
                 Y: =10
                 ZIndex: =2
 
@@ -440,8 +455,8 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Tambah Baru"
-                Width: =420
-                X: =207
+                Width: =279
+                X: =347
                 Y: =10
                 ZIndex: =2
 
@@ -612,8 +627,8 @@ EditSemakan As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Visible: =Self.Selected.Value<>"Tambah Baru"
-                Width: =420
-                X: =207
+                Width: =391
+                X: =235
                 Y: =10
                 ZIndex: =2
 
@@ -1356,7 +1371,7 @@ EditSemakan As screen:
         Width: =333
         X: =183
         Y: =12
-        ZIndex: =18
+        ZIndex: =9
 
     Button4_5 As button:
         Fill: =RGBA(0, 168, 156, 0.78)
@@ -1371,7 +1386,7 @@ EditSemakan As screen:
         Text: ="Plot"
         X: =131
         Y: =111
-        ZIndex: =19
+        ZIndex: =10
 
     Button15_4 As button:
         Fill: =RGBA(0, 168, 156, 0.65)
@@ -1387,7 +1402,7 @@ EditSemakan As screen:
         Width: =176
         X: =356
         Y: =111
-        ZIndex: =20
+        ZIndex: =11
 
     Container2_5 As groupContainer.verticalAutoLayoutContainer:
         Height: =488
@@ -1396,7 +1411,7 @@ EditSemakan As screen:
         Visible: =If(varshowfields=1||varshowfields=-1,true,false)
         Width: =640
         Y: =306
-        ZIndex: =22
+        ZIndex: =12
 
         divPlot_5 As groupContainer.horizontalAutoLayoutContainer:
             FillPortions: =0
