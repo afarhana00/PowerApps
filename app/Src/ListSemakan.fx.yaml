@@ -106,17 +106,6 @@ ListSemakan As screen:
             Y: =26
             ZIndex: =8
 
-        Label1 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =25
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =ThisItem.IDPokok.Value
-            Width: =90
-            X: =187
-            Y: =51
-            ZIndex: =9
-
         Label6 As label:
             Height: =32
             OnSelect: =Select(Parent)
@@ -126,7 +115,7 @@ ListSemakan As screen:
             Width: =168
             X: =25
             Y: =48
-            ZIndex: =10
+            ZIndex: =9
 
         Icon17 As icon.Bug:
             Height: =49
@@ -136,6 +125,16 @@ ListSemakan As screen:
             Width: =41
             X: =525
             Y: =26
+            ZIndex: =10
+
+        Label1 As label:
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.IDPokok.Value
+            Width: =209
+            X: =193
+            Y: =42
             ZIndex: =11
 
         Image4 As image:

@@ -1,12 +1,12 @@
 EditJadualSiraman As screen:
 
     ContainerDel As groupContainer.verticalAutoLayoutContainer:
-        Height: =411
+        Height: =466
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =If(deleteMode, true, false)
         Width: =640
-        Y: =640
+        Y: =326
         ZIndex: =5
 
         Icon8_1 As icon.CancelBadge:
@@ -22,7 +22,7 @@ EditJadualSiraman As screen:
             Height: =70
             LayoutMinWidth: =560
             Size: =21
-            Text: ="Are you sure you want to delete this record?"
+            Text: ="Adakah Anda ingin memadam rekod ini?"
             Width: =560
             ZIndex: =2
 
@@ -34,13 +34,14 @@ EditJadualSiraman As screen:
             OnSelect: |-
                 =Remove([@'Jadual Siraman'], selectedRecord); If(IsEmpty(Errors([@'Jadual Siraman'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Jadual Siraman']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListJadualSiraman);
             Size: =24
-            Text: ="Delete"
+            Text: ="Padam"
             Width: =280
             ZIndex: =3
 
     Button1 As button:
         Fill: =RGBA(255, 0, 0, 1)
         Height: =108
+        HoverFill: =ColorFade(RGBA(255,105,97,1), -20%)
         OnSelect: |
             =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery2.Selected })
         RadiusBottomLeft: =0
@@ -48,7 +49,7 @@ EditJadualSiraman As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =24
-        Text: ="BUANG"
+        Text: ="PADAM"
         Width: =333
         Y: =1028
         ZIndex: =8
@@ -56,8 +57,9 @@ EditJadualSiraman As screen:
     Button16 As button:
         Fill: =RGBA(54, 176, 75, 1)
         Height: =108
+        HoverFill: =ColorFade(RGBA(193, 225, 193, 1), -20%)
         OnSelect: |
-            =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form1);
+            =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form4_1);
             Notify("Your Data have been edited",NotificationType.Success);
             Navigate(EditJadualSiraman);
         RadiusBottomLeft: =0
@@ -70,4 +72,1291 @@ EditJadualSiraman As screen:
         X: =333
         Y: =1028
         ZIndex: =9
+
+    Form4_1 As form:
+        DataSource: ='Jadual Siraman'
+        Height: =861
+        Item: =Gallery2.Selected
+        Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode, false, true)
+        Width: =640
+        Y: =161
+        ZIndex: =10
+
+        "'Plot (Lokasi)_DataCard3_1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Plot_x0028_Lokasi_x0029_"
+            Default: =ThisItem.'Plot (Lokasi)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue2_2.Selected
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey2_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2_2 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value= ddPlotId_9.Selected.PlotId)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =20
+                ZIndex: =2
+
+            ErrorMessage2_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2_2.Y + DataCardValue2_2.Height
+                ZIndex: =3
+
+            StarVisible2_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2_2.Y
+                ZIndex: =4
+
+        "'Jenis Baja Tambahan_DataCard1_1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_6"
+            Default: =ThisItem.'Jenis Baja Tambahan'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_6")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue3_1.Selected
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey3_1 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Jenis Baja
+                    Tambahan"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3_1 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Jadual Siraman'].field_6)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Siraman'.field_6,DataCardValue3_1.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =299
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage3_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                ZIndex: =3
+
+            StarVisible3_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3_1.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3_1.Y
+                ZIndex: =4
+
+        "'Kepekatan Baja Tunggal (EC)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KepekatanBajaTunggal_x0028_EC_x0"
+            Default: =ThisItem.'Kepekatan Baja Tunggal (EC)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"KepekatanBajaTunggal_x0028_EC_x0")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue43_1.Text)
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey49_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kepekatan Baja
+                    Tunggal(EC)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue43_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage49_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue43_1.Y + DataCardValue43_1.Height
+                ZIndex: =3
+
+            StarVisible49_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey49_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey49_2.Y
+                ZIndex: =4
+
+        "'Kuantiti Baja Tunggal (Kg)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KuantitiBajaTunggal_x0028_Kg_x00"
+            Default: =ThisItem.'Kuantiti Baja Tunggal (Kg)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"KuantitiBajaTunggal_x0028_Kg_x00")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue47_2.Text)
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey50_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kuantiti Baja 
+                    Tunggal (KG)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue47_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage50_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue47_2.Y + DataCardValue47_2.Height
+                ZIndex: =3
+
+            StarVisible50_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey50_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey50_2.Y
+                ZIndex: =4
+
+        "'Kepekatan Baja AB (EC)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KepekatanBajaAB_x0028_EC_x0029_"
+            Default: =ThisItem.'Kepekatan Baja AB (EC)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"KepekatanBajaAB_x0028_EC_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue48_2.Text)
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey51_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kepekatan Baja
+                    AB (EC)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue48_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =80
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                ZIndex: =2
+
+            ErrorMessage51_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue48_2.Y + DataCardValue48_2.Height
+                ZIndex: =3
+
+            StarVisible51_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey51_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey51_2.Y
+                ZIndex: =4
+
+        "'Kuantiti Baja AB (Liter)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KuantitiBajaAB_x0028_Liter_x0029"
+            Default: =ThisItem.'Kuantiti Baja AB (Liter)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"KuantitiBajaAB_x0028_Liter_x0029")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue49_2.Text)
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey52_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Kuantiti Baja 
+                    AB (Liter)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue49_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage52_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue49_2.Y + DataCardValue49_2.Height
+                ZIndex: =3
+
+            StarVisible52_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey52_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey52_2.Y
+                ZIndex: =4
+
+        "'Nilai pH (Air Sungai)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="NilaipH_x0028_AirSungai_x0029_"
+            Default: =ThisItem.'Nilai pH (Air Sungai)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"NilaipH_x0028_AirSungai_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue50_2.Text)
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey53_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Nilai pH 
+                    (Air Sungai)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue50_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =80
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage53_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue50_2.Y + DataCardValue50_2.Height
+                ZIndex: =3
+
+            StarVisible53_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey53_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey53_2.Y
+                ZIndex: =4
+
+        "'Waktu Siraman_DataCard1_1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_9"
+            Default: =ThisItem.'Waktu Siraman'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_9")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue51_2.Selected
+            Width: =640
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey54_1 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue51_2 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =80
+                Items: =Choices([@'Jadual Siraman'].'Waktu Siraman')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Siraman'.'Waktu Siraman',DataCardValue51_2.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage54_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue51_2.Y + DataCardValue51_2.Height
+                ZIndex: =3
+
+            StarVisible54_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey54_1.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey54_1.Y
+                ZIndex: =4
+
+        "'Masa Siraman (Minit)_DataCard1_1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_11"
+            Default: =ThisItem.'Masa Siraman (Minit)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_11")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue52_2.Text)
+            Width: =640
+            X: =0
+            Y: =12
+            ZIndex: =1
+
+            DataCardKey55_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Masa Siraman
+                    (Minit)"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue52_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage55_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue52_2.Y + DataCardValue52_2.Height
+                ZIndex: =3
+
+            StarVisible55_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey55_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey55_2.Y
+                ZIndex: =4
+
+        Catatan_DataCard1_2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_12"
+            Default: =ThisItem.Catatan
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_12")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =69
+            MaxLength: =DataSourceInfo([@'Jadual Siraman'], DataSourceInfo.MaxLength, "field_12")
+            Required: =false
+            Update: =DataCardValue57_2.Text
+            Width: =640
+            X: =0
+            Y: =13
+            ZIndex: =1
+
+            DataCardKey57_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue57_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =123
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =20
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =423
+                X: =158
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage57_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue57_2.Y + DataCardValue57_2.Height
+                ZIndex: =3
+
+            StarVisible55_3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey57_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey57_2.Y
+                ZIndex: =4
+
+        Tarikh_DataCard2_2 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_1"
+            Default: =ThisItem.Tarikh
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue24_2.SelectedDate
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+            DataCardKey24_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue24_2 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Format: ="dd/mm/yyyy"
+                Height: =70
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage24_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue24_2.Y + DataCardValue24_2.Height
+                ZIndex: =3
+
+            StarVisible18_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey24_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24_2.Y
+                ZIndex: =4
+
+        "'Berhenti Air/Baja_DataCard1_2' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_2"
+            Default: =ThisItem.'Puasa/Berhenti Air/Baja'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue25_2.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =8
+
+            DataCardKey25_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: |-
+                    ="Puasa
+                    Berhenti Air/Baja"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue25_2 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Jadual Siraman'].'Puasa/Berhenti Air/Baja')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Siraman'.'Puasa/Berhenti Air/Baja',DataCardValue25_2.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage25_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue25_2.Y + DataCardValue25_2.Height
+                ZIndex: =3
+
+            StarVisible20_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25_2.Y
+                ZIndex: =4
+
+        "'Jenis Siraman_DataCard1_2' As typedDataCard.comboBoxMultiSelectEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_5"
+            Default: =ThisItem.'Jenis Siraman'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_5")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue28_2.SelectedItems
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =8
+
+            DataCardKey28_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =216
+                Wrap: =false
+                X: =31
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue28_2 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =80
+                Items: =Choices([@'Jadual Siraman'].'Jenis Siraman')
+                OnChange: |-
+                    =Set(
+                        _fn_glbEnableComboBoxStatus,
+                        {Enabled:true,Count:CountRows(DataCardValue28_2.SelectedItems)}
+                    );
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Siraman'.'Jenis Siraman',DataCardValue28_2.SearchText)
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage28_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue28_2.Y + DataCardValue28_2.Height
+                ZIndex: =3
+
+            StarVisible26_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey28_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey28_2.Y
+                ZIndex: =4
+
+        "'Lain-lain_DataCard1_2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="field_7"
+            Default: =ThisItem.'Lain-lain'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_7")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Jadual Siraman'], DataSourceInfo.MaxLength, "field_7")
+            Required: =false
+            Update: =DataCardValue30_2.Text
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =8
+
+            DataCardKey30_2 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =268
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage30_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue30_2.Y + DataCardValue30_2.Height
+                ZIndex: =3
+
+            StarVisible28_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey30_2.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey30_2.Y
+                ZIndex: =4
+
+    Button4_4 As button:
+        Fill: =RGBA(0, 168, 156, 0.78)
+        Height: =73
+        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
+        OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =20
+        Text: ="Plot"
+        X: =116
+        Y: =200
+        ZIndex: =11
+
+    Button15_3 As button:
+        Fill: =RGBA(0, 168, 156, 0.65)
+        Height: =73
+        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
+        OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form4);
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =18
+        Text: ="Jadual Siraman"
+        Width: =176
+        X: =347
+        Y: =200
+        ZIndex: =12
+
+    Container2_4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =488
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(varshowfields=1||varshowfields=-1,true,false)
+        Width: =640
+        Y: =326
+        ZIndex: =14
+
+        divPlot_4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            Label14_20 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_12 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =TreePlot
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari_4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =5
+
+            Label14_21 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HST (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_8 As dropdown:
+                Default: =
+                FillPortions: =0.5
+                Height: =70
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                OnSelect: =
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divTreeType_4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =6
+
+            Label14_22 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Jenis Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_9 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divVariance_4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =7
+
+            Label14_23 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Varian Pokok"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_13 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divStage_4 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =8
+
+            Label14_24 As label:
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="Tahap Plot"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlotId_14 As dropdown:
+                FillPortions: =0.5
+                Height: =70
+                Items: |
+                    =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+    Rectangle5 As rectangle:
+        Fill: =RGBA(0, 168, 156, 1)
+        Width: =640
+        ZIndex: =15
+
+    Label10 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Black'
+        Height: =70
+        Size: =25
+        Text: ="Jadual Siraman"
+        Width: =432
+        X: =116
+        Y: =15
+        ZIndex: =16
+
+    Icon10 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(ListJadualSiraman);
+        Width: =65
+        X: =39
+        Y: =15
+        ZIndex: =17
 
