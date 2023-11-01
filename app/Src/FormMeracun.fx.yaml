@@ -295,7 +295,7 @@ FormMeracun As screen:
         "'Kuantiti (ml)_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kuantiti_x0028_ml_x0029_"
-            Default: =ThisItem.'Kuantiti (ml)'
+            Default: =ThisItem.'Kuantiti Racun Serangga (ml/L)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_ml_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -438,7 +438,7 @@ FormMeracun As screen:
         "'Kuantiti (g)_DataCard1' As typedDataCard.numberEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kuantiti_x0028_g_x0029_"
-            Default: =ThisItem.'Kuantiti (g)'
+            Default: =ThisItem.'Kuantiti Racun Kulat (g/KG/ml/L)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_g_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -510,7 +510,7 @@ FormMeracun As screen:
         "'Racun Foliar_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Foliar"
-            Default: =ThisItem.'Racun Foliar'
+            Default: =ThisItem.'Baja Foliar'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Foliar")
             Fill: =RGBA(0, 0, 0, 0)
@@ -539,10 +539,10 @@ FormMeracun As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Meracun'].'Racun Foliar')
+                Items: =Choices([@'Jadual Meracun'].'Baja Foliar')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Racun Foliar',DataCardValue29.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Baja Foliar',DataCardValue29.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName

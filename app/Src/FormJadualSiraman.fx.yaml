@@ -541,10 +541,10 @@ FormJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =80
-                Items: =Choices([@'Jadual Siraman'].field_9)
+                Items: =Choices([@'Jadual Siraman'].'Waktu Siraman')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_9,DataCardValue51.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Waktu Siraman',DataCardValue51.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
