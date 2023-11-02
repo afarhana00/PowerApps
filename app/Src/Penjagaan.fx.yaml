@@ -3,7 +3,7 @@ Penjagaan As screen:
     Button9 As button:
         Fill: =RGBA(0,168,156,255)
         Height: =116
-        HoverFill: =ColorFade(RGBA(175, 228, 222, 1), -20%)
+        HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
         OnSelect: =Navigate(FormJadualSiraman);NewForm(Form4); 
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
@@ -19,7 +19,7 @@ Penjagaan As screen:
     Button10 As button:
         Fill: =RGBA(0,168,156,255)
         Height: =116
-        HoverFill: =ColorFade(RGBA(175, 228, 222 ,1), -20%)
+        HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
         OnSelect: =Navigate(FormSemakan);NewForm(Form2); ResetForm(Form2);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
@@ -35,7 +35,7 @@ Penjagaan As screen:
     Button11 As button:
         Fill: =RGBA(0,168,156,255)
         Height: =116
-        HoverFill: =ColorFade(RGBA(175, 228, 222, 1), -20%)
+        HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
         OnSelect: =Navigate(FormMeracun);NewForm(Form7);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30

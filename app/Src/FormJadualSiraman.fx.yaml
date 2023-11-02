@@ -3,6 +3,7 @@ FormJadualSiraman As screen:
     Button14 As button:
         Fill: =RGBA(0,168,156,255)
         Height: =70
+        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |-
             =  Refresh('Jadual Siraman');
              Navigate(ListJadualSiraman);SubmitForm(Form4);
@@ -48,6 +49,7 @@ FormJadualSiraman As screen:
     Button2_1 As button:
         Fill: =RGBA(0,168,156,255)
         Height: =70
+        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =Navigate(ListJadualSiraman);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
@@ -1127,7 +1129,7 @@ FormJadualSiraman As screen:
         ZIndex: =12
 
     Container2_3 As groupContainer.verticalAutoLayoutContainer:
-        Height: =488
+        Height: =634
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =If(varshowfields=1||varshowfields=-1,true,false)
@@ -1312,6 +1314,46 @@ FormJadualSiraman As screen:
                     =Filter(TreePlot, PlotId = ddPlotId_9.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari_8 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =9
+
+            Label14_32 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HSS (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_14 As dropdown:
+                Default: =
+                FillPortions: =0.5
+                Height: =70
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_9.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                OnSelect: =
                 PaddingRight: =20
                 PaddingTop: =20
                 Size: =21

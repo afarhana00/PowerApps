@@ -1846,8 +1846,8 @@ FormSemakan As screen:
         Size: =24
         Text: ="SIMPAN"
         Width: =233
-        X: =316
-        Y: =1058
+        X: =356
+        Y: =1046
         ZIndex: =12
 
     Button4_1 As button:
@@ -1862,8 +1862,8 @@ FormSemakan As screen:
         Size: =24
         Text: ="SENARAI"
         Width: =222
-        X: =50
-        Y: =1058
+        X: =82
+        Y: =1046
         ZIndex: =13
 
     Label1_1 As label:
@@ -1904,13 +1904,13 @@ FormSemakan As screen:
         RadiusTopRight: =30
         Size: =18
         Text: ="Semakan Kesihatan"
-        Width: =176
+        Width: =193
         X: =356
         Y: =130
         ZIndex: =16
 
     Container2_2 As groupContainer.verticalAutoLayoutContainer:
-        Height: =488
+        Height: =594
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =If(varshowfields=1||varshowfields=-1,true,false)
@@ -1924,6 +1924,7 @@ FormSemakan As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingTop: =20
             ZIndex: =4
 
             Label14_10 As label:
@@ -1960,6 +1961,7 @@ FormSemakan As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingTop: =15
             ZIndex: =5
 
             Label14_11 As label:
@@ -2000,6 +2002,7 @@ FormSemakan As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingTop: =20
             ZIndex: =6
 
             Label14_12 As label:
@@ -2036,6 +2039,7 @@ FormSemakan As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingTop: =20
             ZIndex: =7
 
             Label14_13 As label:
@@ -2072,6 +2076,7 @@ FormSemakan As screen:
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
+            PaddingTop: =20
             ZIndex: =8
 
             Label14_14 As label:
@@ -2095,6 +2100,47 @@ FormSemakan As screen:
                     =Filter(TreePlot, PlotId = ddPlotId_6.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari_6 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingTop: =15
+            ZIndex: =9
+
+            Label14_30 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HSS (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_12 As dropdown:
+                Default: =
+                FillPortions: =0.5
+                Height: =70
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_6.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                OnSelect: =
                 PaddingRight: =20
                 PaddingTop: =20
                 Size: =21

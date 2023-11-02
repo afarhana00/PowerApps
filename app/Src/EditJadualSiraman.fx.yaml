@@ -41,7 +41,7 @@ EditJadualSiraman As screen:
     Button1 As button:
         Fill: =RGBA(255, 0, 0, 1)
         Height: =108
-        HoverFill: =ColorFade(RGBA(255,105,97,1), -20%)
+        HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
         OnSelect: |
             =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery2.Selected })
         RadiusBottomLeft: =0
@@ -75,11 +75,11 @@ EditJadualSiraman As screen:
 
     Form4_1 As form:
         DataSource: ='Jadual Siraman'
-        Height: =861
+        Height: =807
         Item: =Gallery2.Selected
         Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
-        Y: =161
+        Y: =215
         ZIndex: =10
 
         "'Plot (Lokasi)_DataCard3_1' As typedDataCard.comboBoxEditCard":
@@ -1121,7 +1121,7 @@ EditJadualSiraman As screen:
         Size: =20
         Text: ="Plot"
         X: =116
-        Y: =200
+        Y: =127
         ZIndex: =11
 
     Button15_3 As button:
@@ -1136,17 +1136,17 @@ EditJadualSiraman As screen:
         Size: =18
         Text: ="Jadual Siraman"
         Width: =176
-        X: =347
-        Y: =200
+        X: =372
+        Y: =127
         ZIndex: =12
 
     Container2_4 As groupContainer.verticalAutoLayoutContainer:
-        Height: =488
+        Height: =680
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Visible: =If(varshowfields=1||varshowfields=-1,true,false)
         Width: =640
-        Y: =326
+        Y: =270
         ZIndex: =14
 
         divPlot_4 As groupContainer.horizontalAutoLayoutContainer:
@@ -1326,6 +1326,46 @@ EditJadualSiraman As screen:
                     =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
+                PaddingRight: =20
+                PaddingTop: =20
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =2
+
+        divHari_9 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =9
+
+            Label14_33 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =0.4
+                Height: =70
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingLeft: =20
+                PaddingTop: =20
+                Size: =21
+                Text: ="HSS (Hari)"
+                Width: =0.2
+                X: =32
+                Y: =125
+                ZIndex: =1
+
+            ddPlantType_15 As dropdown:
+                Default: =
+                FillPortions: =0.5
+                Height: =70
+                Items: |-
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                OnSelect: =
                 PaddingRight: =20
                 PaddingTop: =20
                 Size: =21
