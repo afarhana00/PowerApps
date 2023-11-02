@@ -5,9 +5,9 @@ ListSemakan As screen:
         Height: =822
         Items: |
             =If(
-                DatePicker1.SelectedDate = Today(),
+                DatePicker2.SelectedDate = Today(),
                 'Semakan Kesihatan',
-                Filter('Semakan Kesihatan', Tarikh = DatePicker1.SelectedDate)
+                Filter('Semakan Kesihatan', Tarikh = DatePicker2.SelectedDate)
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -211,13 +211,13 @@ ListSemakan As screen:
 
     Button19 As button:
         Height: =62
-        OnSelect: =Reset(DatePicker1);
+        OnSelect: =Reset(DatePicker2);
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Size: =24
-        Text: ="Reset"
+        Text: ="All"
         Width: =126
         X: =424
         Y: =147
