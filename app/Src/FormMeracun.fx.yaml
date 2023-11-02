@@ -8,6 +8,77 @@ FormMeracun As screen:
         Y: =224
         ZIndex: =1
 
+        "'Plot _DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Plot"
+            Default: =ThisItem.'Plot '
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Plot")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue4.Selected
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId),DataCardValue4.SearchText,"Value")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey4.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
         "'Masa Meracun_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="MasaMeracun"
@@ -79,22 +150,23 @@ FormMeracun As screen:
                 Y: =DataCardKey37.Y
                 ZIndex: =4
 
-        "'Plot _DataCard1' As typedDataCard.comboBoxEditCard":
+        "'Kuantiti Baja Foliar (g/KG)_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot"
-            Default: =ThisItem.'Plot '
+            DataField: ="Kuantiti_x0028_KG_x0029_"
+            Default: =ThisItem.'Kuantiti Baja Foliar (g/KG)'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Plot")
+            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
+            MaxLength: =DataSourceInfo([@'Jadual Meracun'], DataSourceInfo.MaxLength, "Kuantiti_x0028_KG_x0029_")
             Required: =false
-            Update: =DataCardValue4.Selected
+            Update: =DataCardValue32.Text
             Width: =640
             X: =0
-            Y: =0
+            Y: =9
             ZIndex: =1
 
-            DataCardKey4 As label:
+            DataCardKey32 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -105,25 +177,26 @@ FormMeracun As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue4 As combobox:
+            DataCardValue32 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
-                DisplayFields: =["Value"]
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId),DataCardValue4.SearchText,"Value")
-                SelectMultiple: =false
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
                 ZIndex: =2
 
-            ErrorMessage4 As label:
+            ErrorMessage33 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -136,18 +209,89 @@ FormMeracun As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue4.Y + DataCardValue4.Height
+                Y: =DataCardValue32.Y + DataCardValue32.Height
                 ZIndex: =3
 
-            StarVisible4 As label:
+            StarVisible31 As label:
                 Align: =Align.Center
-                Height: =DataCardKey4.Height
+                Height: =DataCardKey32.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey4.Y
+                Y: =DataCardKey32.Y
+                ZIndex: =4
+
+        "'Racun Organic_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="RacunOrganic"
+            Default: =ThisItem.'Racun Organic'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"RacunOrganic")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue31.Selected
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey31 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue31 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Jadual Meracun'].'Racun Organic')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Jadual Meracun'.'Racun Organic',DataCardValue31.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey31.Y + DataCardKey31.Height + 5
+                ZIndex: =2
+
+            ErrorMessage32 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue31.Y + DataCardValue31.Height
+                ZIndex: =3
+
+            StarVisible30 As label:
+                Align: =Align.Center
+                Height: =DataCardKey31.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey31.Y
                 ZIndex: =4
 
         "'Kuantiti Racun Organic_DataCard1' As typedDataCard.numberEditCard":
@@ -293,150 +437,6 @@ FormMeracun As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey36.Y
-                ZIndex: =4
-
-        "'Kuantiti Baja Foliar (g/KG)_DataCard1' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Kuantiti_x0028_KG_x0029_"
-            Default: =ThisItem.'Kuantiti Baja Foliar (g/KG)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_KG_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@'Jadual Meracun'], DataSourceInfo.MaxLength, "Kuantiti_x0028_KG_x0029_")
-            Required: =false
-            Update: =DataCardValue32.Text
-            Width: =640
-            X: =0
-            Y: =9
-            ZIndex: =1
-
-            DataCardKey32 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue32 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
-                ZIndex: =2
-
-            ErrorMessage33 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue32.Y + DataCardValue32.Height
-                ZIndex: =3
-
-            StarVisible31 As label:
-                Align: =Align.Center
-                Height: =DataCardKey32.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey32.Y
-                ZIndex: =4
-
-        "'Racun Organic_DataCard1' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="RacunOrganic"
-            Default: =ThisItem.'Racun Organic'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"RacunOrganic")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue31.Selected
-            Width: =640
-            X: =0
-            Y: =10
-            ZIndex: =1
-
-            DataCardKey31 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue31 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                Items: =Choices([@'Jadual Meracun'].'Racun Organic')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Racun Organic',DataCardValue31.SearchText)
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey31.Y + DataCardKey31.Height + 5
-                ZIndex: =2
-
-            ErrorMessage32 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue31.Y + DataCardValue31.Height
-                ZIndex: =3
-
-            StarVisible30 As label:
-                Align: =Align.Center
-                Height: =DataCardKey31.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey31.Y
                 ZIndex: =4
 
         "'HST (Hari)_DataCard2' As typedDataCard.numberEditCard":

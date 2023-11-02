@@ -2,15 +2,24 @@ ListMeracun As screen:
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =957
-        Items: |
-            ='Jadual Meracun'
+        Height: =812
+        Items: |+
+            =If(
+                DatePicker4.SelectedDate = Today(),
+                'Jadual Meracun',
+                Filter(
+                    'Jadual Meracun',
+                    (Tarikh = DatePicker4.SelectedDate) &&
+                    (IsBlank(Dropdown3.Selected.Value) || Plot.Value = Dropdown3.Selected.Value)
+                )
+            )
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =142
+        Y: =324
         ZIndex: =1
 
         Title4_1 As label:
@@ -142,4 +151,77 @@ ListMeracun As screen:
             Width: =196
             X: =444
             ZIndex: =14
+
+    Rectangle7_1 As rectangle:
+        Fill: =RGBA(0,168,156,255)
+        Height: =108
+        Width: =640
+        ZIndex: =2
+
+    Label7_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =103
+        Size: =30
+        Text: ="Senarai Jadual Meracun"
+        Width: =498
+        X: =125
+        Y: =5
+        ZIndex: =3
+
+    Icon5_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =61
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Penjagaan);NewForm(Form4);
+        Width: =74
+        X: =34
+        Y: =21
+        ZIndex: =4
+
+    Icon18_1 As icon.FilterFlat:
+        Height: =60
+        Icon: =Icon.FilterFlat
+        Width: =44
+        X: =29
+        Y: =131
+        ZIndex: =5
+
+    DatePicker4 As datepicker:
+        Height: =70
+        Size: =24
+        Width: =265
+        X: =90
+        Y: =131
+        ZIndex: =6
+
+    Dropdown3 As dropdown:
+        Height: =70
+        Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        Size: =21
+        Width: =161
+        X: =432
+        Y: =131
+        ZIndex: =7
+
+    Button2_2 As button:
+        Height: =60
+        OnSelect: |-
+            =Switch(
+                Button2_2.Pressed,
+                true, Gallery2.AllItems,
+                false);
+            Reset(Dropdown3);Reset(DatePicker4); 
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="ALL"
+        Width: =134
+        X: =459
+        Y: =227
+        ZIndex: =8
 
