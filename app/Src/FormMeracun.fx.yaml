@@ -82,7 +82,7 @@ FormMeracun As screen:
         "'Masa Meracun_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="MasaMeracun"
-            Default: =ThisItem.'Masa Meracun'
+            Default: =ThisItem.MasaMeracun
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"MasaMeracun")
             Fill: =RGBA(0, 0, 0, 0)

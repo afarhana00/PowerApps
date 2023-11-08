@@ -10,7 +10,7 @@ ListMeracun As screen:
                 Filter(
                     'Jadual Meracun',
                     (Tarikh = DatePicker4.SelectedDate) &&
-                    (IsBlank(Dropdown3.Selected.Value) || Plot.Value = Dropdown3.Selected.Value)
+                    (IsBlank(Dropdown3.Selected.Value) || 'Plot '.Value = Dropdown3.Selected.Value)
                 )
             )
             
@@ -118,7 +118,7 @@ ListMeracun As screen:
             Height: =47
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =ThisItem.'Masa Meracun'.Value
+            Text: =ThisItem.MasaMeracun.Value
             Width: =179
             X: =265
             ZIndex: =11

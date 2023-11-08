@@ -187,10 +187,10 @@ EditJadualSiraman As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Jadual Siraman'].field_6)
+                Items: =Choices([@'Jadual Siraman'].'Jenis Baja Tambahan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Siraman'.field_6,DataCardValue3_1.SearchText)
+                SearchItems: =Choices('Jadual Siraman'.'Jenis Baja Tambahan',DataCardValue3_1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
