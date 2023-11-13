@@ -7,7 +7,7 @@ ListSemakan As screen:
             =If(
                 DatePicker2.SelectedDate = Today(),
                 'Semakan Kesihatan',
-                Filter('Semakan Kesihatan', Tarikh = DatePicker2.SelectedDate)
+                Filter('Semakan Kesihatan', 'Tarikh ' = DatePicker2.SelectedDate)
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data

@@ -111,10 +111,11 @@ FormMeracun As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].MasaMeracun)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaMeracun,DataCardValue37.SearchText)
+                SearchItems: =[]
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
