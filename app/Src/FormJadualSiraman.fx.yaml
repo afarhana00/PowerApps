@@ -2,19 +2,19 @@ FormJadualSiraman As screen:
 
     Button14 As button:
         Fill: =RGBA(0,168,156,255)
-        Height: =70
+        Height: =114
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |-
             =  Refresh('Jadual Siraman');
              Navigate(ListJadualSiraman);SubmitForm(Form4);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: ="SIMPAN"
-        Width: =223
-        X: =362
+        Width: =342
+        X: =298
         Y: =1022
         ZIndex: =2
 
@@ -47,18 +47,17 @@ FormJadualSiraman As screen:
         ZIndex: =5
 
     Button2_1 As button:
-        Fill: =RGBA(0,168,156,255)
-        Height: =70
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =114
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =Navigate(ListJadualSiraman);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: ="SENARAI"
-        Width: =216
-        X: =82
+        Width: =319
         Y: =1022
         ZIndex: =6
 
@@ -94,7 +93,7 @@ FormJadualSiraman As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =31
                 ZIndex: =1
 
             DataCardValue2 As combobox:
@@ -145,7 +144,7 @@ FormJadualSiraman As screen:
         "'Jenis Baja Tambahan_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_6"
-            Default: =ThisItem.'Jenis Baja Tambahan'
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_6")
             Fill: =RGBA(0, 0, 0, 0)
@@ -607,7 +606,7 @@ FormJadualSiraman As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =26
                 ZIndex: =1
 
             DataCardValue51 As combobox:
@@ -753,7 +752,7 @@ FormJadualSiraman As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =47
                 ZIndex: =1
 
             DataCardValue57_1 As text:
@@ -829,7 +828,7 @@ FormJadualSiraman As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =32
                 ZIndex: =1
 
             DataCardValue24_1 As datepicker:
@@ -971,8 +970,8 @@ FormJadualSiraman As screen:
                 Text: =Parent.DisplayName
                 Width: =216
                 Wrap: =false
-                X: =31
-                Y: =10
+                X: =30
+                Y: =26
                 ZIndex: =1
 
             DataCardValue28_1 As combobox:
@@ -1048,7 +1047,7 @@ FormJadualSiraman As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =32
                 ZIndex: =1
 
             DataCardValue30_1 As text:

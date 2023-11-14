@@ -1836,33 +1836,32 @@ FormSemakan As screen:
 
     Button1_1 As button:
         Fill: =RGBA(0,168,156,255)
-        Height: =70
+        Height: =90
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =SubmitForm(Form2); Navigate(ListSemakan); 
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: ="SIMPAN"
-        Width: =233
-        X: =356
+        Width: =306
+        X: =319
         Y: =1046
         ZIndex: =12
 
     Button4_1 As button:
         Fill: =RGBA(0,168,156,255)
-        Height: =70
+        Height: =90
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =Navigate(ListSemakan);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =24
         Text: ="SENARAI"
-        Width: =222
-        X: =82
+        Width: =319
         Y: =1046
         ZIndex: =13
 

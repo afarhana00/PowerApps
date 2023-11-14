@@ -118,9 +118,9 @@ ListMeracun As screen:
             Height: =47
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =ThisItem.MasaMeracun.Value
-            Width: =179
-            X: =265
+            Text: =
+            Width: =254
+            X: =190
             ZIndex: =11
 
         Label14 As label:
@@ -129,17 +129,17 @@ ListMeracun As screen:
             Size: =21
             Text: =ThisItem.'Racun Serangga'.Value
             Width: =375
-            X: =265
-            Y: =46
+            X: =190
+            Y: =40
             ZIndex: =12
 
         Label15 As label:
-            Height: =31
+            Height: =34
             OnSelect: =Select(Parent)
             Size: =21
             Text: =ThisItem.'Racun Kulat'.Value
-            Width: =375
-            X: =265
+            Width: =288
+            X: =190
             Y: =74
             ZIndex: =13
 
