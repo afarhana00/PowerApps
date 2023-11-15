@@ -1,19 +1,57 @@
 Screen3 As screen:
 
     FormViewer1 As formViewer:
-        DataSource: ='Chili Tayor Production'
+        DataSource: ='Penuaian Cili'
         Height: =1022
         Item: =Gallery4.Selected
         Width: =640
         Y: =100
         ZIndex: =1
 
+        "'RM (Original Target)_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="RM_x0020__x0028_Original_x0020_T"
+            Default: =Round(ThisItem.'RM (Original Target)',2)
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Original_x0020_T")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey105 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue102 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey105.Y + DataCardKey105.Height + 5
+                ZIndex: =2
+
         "'RM (Revise Target)_DataCard1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="RM_x0020__x0028_Revise_x0020_Tar"
-            Default: =Round((ThisItem.'RM (Revise Target)'),2)
+            Default: =Round(ThisItem.'RM (Revise Target)',2)
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Revise_x0020_Tar")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Revise_x0020_Tar")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -22,7 +60,7 @@ Screen3 As screen:
             Y: =8
             ZIndex: =1
 
-            DataCardKey78 As label:
+            DataCardKey106 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -33,7 +71,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue75 As label:
+            DataCardValue103 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -43,7 +81,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
+                Y: =DataCardKey106.Y + DataCardKey106.Height + 5
                 ZIndex: =2
 
         "'Actual (kg)_DataCard2' As typedDataCard.textualViewCard":
@@ -51,7 +89,7 @@ Screen3 As screen:
             DataField: ="field_9"
             Default: =ThisItem.'Actual (kg)'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"field_9")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_9")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -60,7 +98,7 @@ Screen3 As screen:
             Y: =9
             ZIndex: =1
 
-            DataCardKey62 As label:
+            DataCardKey96 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -71,7 +109,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue59 As label:
+            DataCardValue93 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -81,7 +119,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey62.Y + DataCardKey62.Height + 5
+                Y: =DataCardKey96.Y + DataCardKey96.Height + 5
                 ZIndex: =2
 
         "'Average Price Actual_DataCard2' As typedDataCard.textualViewCard":
@@ -89,7 +127,7 @@ Screen3 As screen:
             DataField: ="Average_x0020_Price_x0020_Actual"
             Default: =ThisItem.'Average Price Actual'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"Average_x0020_Price_x0020_Actual")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Average_x0020_Price_x0020_Actual")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -98,7 +136,7 @@ Screen3 As screen:
             Y: =10
             ZIndex: =1
 
-            DataCardKey70 As label:
+            DataCardKey97 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -109,7 +147,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue60 As label:
+            DataCardValue94 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -119,15 +157,15 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                Y: =DataCardKey97.Y + DataCardKey97.Height + 5
                 ZIndex: =2
 
-        "'RM (Actual)_DataCard2' As typedDataCard.textualViewCard":
+        "'Total Price (RM)_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="RM_x0020__x0028_Actual_x0029_"
-            Default: =Round((ThisItem.'RM (Actual)'),2)
+            Default: =Round(ThisItem.'Total Price (RM)',2)
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Actual_x0029_")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Actual_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -136,7 +174,7 @@ Screen3 As screen:
             Y: =11
             ZIndex: =1
 
-            DataCardKey77 As label:
+            DataCardKey107 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -147,7 +185,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue74 As label:
+            DataCardValue104 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -157,7 +195,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey77.Y + DataCardKey77.Height + 5
+                Y: =DataCardKey107.Y + DataCardKey107.Height + 5
                 ZIndex: =2
 
         "'Grade A (KG)_DataCard2' As typedDataCard.textualViewCard":
@@ -165,16 +203,16 @@ Screen3 As screen:
             DataField: ="GradeA_x0028_KG_x0029_"
             Default: =ThisItem.'Grade A (KG)'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"GradeA_x0028_KG_x0029_")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"GradeA_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =89
             Required: =false
             Width: =640
             X: =0
             Y: =12
             ZIndex: =1
 
-            DataCardKey73 As label:
+            DataCardKey98 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -185,25 +223,24 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue61 As label:
-                AutoHeight: =true
+            DataCardValue95 As label:
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey73.Y + DataCardKey73.Height + 5
+                Width: =354
+                X: =285
+                Y: =18
                 ZIndex: =2
 
-        "'Grade B (KG)_DataCard2' As typedDataCard.textualViewCard":
+        "'Price Grade A_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="GradeB_x0028_KG_x0029_"
-            Default: =ThisItem.'Grade B (KG)'
+            DataField: ="spare1"
+            Default: =ThisItem.'Price Grade A'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"GradeB_x0028_KG_x0029_")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare1")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -212,7 +249,7 @@ Screen3 As screen:
             Y: =13
             ZIndex: =1
 
-            DataCardKey74 As label:
+            DataCardKey101 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -220,10 +257,10 @@ Screen3 As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =9
                 ZIndex: =1
 
-            DataCardValue62 As label:
+            DataCardValue98 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -233,15 +270,15 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey74.Y + DataCardKey74.Height + 5
+                Y: =DataCardKey101.Y + DataCardKey101.Height + 5
                 ZIndex: =2
 
-        "'Grade C (KG)_DataCard2' As typedDataCard.textualViewCard":
+        "'Total Price Grade A_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="GradeC_x0028_KG_x0029_"
-            Default: =ThisItem.'Grade C (KG)'
+            DataField: ="TotalPriceGradeA"
+            Default: =ThisItem.'Total Price Grade A'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"GradeC_x0028_KG_x0029_")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeA")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -250,7 +287,7 @@ Screen3 As screen:
             Y: =14
             ZIndex: =1
 
-            DataCardKey75 As label:
+            DataCardKey108 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -261,7 +298,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue70 As label:
+            DataCardValue105 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -271,15 +308,15 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
+                Y: =DataCardKey108.Y + DataCardKey108.Height + 5
                 ZIndex: =2
 
-        "'Reject (KG)_DataCard2' As typedDataCard.textualViewCard":
+        "'Grade B (KG)_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Reject_x0028_KG_x0029_"
-            Default: =ThisItem.'Reject (KG)'
+            DataField: ="GradeB_x0028_KG_x0029_"
+            Default: =ThisItem.'Grade B (KG)'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"Reject_x0028_KG_x0029_")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"GradeB_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -288,7 +325,7 @@ Screen3 As screen:
             Y: =15
             ZIndex: =1
 
-            DataCardKey76 As label:
+            DataCardKey99 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -299,7 +336,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue73 As label:
+            DataCardValue96 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -309,25 +346,24 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
+                Y: =DataCardKey99.Y + DataCardKey99.Height + 5
                 ZIndex: =2
 
-        Month_DataCard2 As typedDataCard.comboBoxViewCard:
+        "'Price Grade B_DataCard2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Month2"
-            Default: =ThisItem.Month
+            DataField: ="spare10"
+            Default: =ThisItem.'Price Grade B'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"Month2")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare10")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =40
             Required: =false
-            Update: =DataCardValue24.Selected
             Width: =640
             X: =0
-            Y: =0
-            ZIndex: =2
+            Y: =16
+            ZIndex: =1
 
-            DataCardKey24 As label:
+            DataCardKey102 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -338,23 +374,289 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue24 As combobox:
+            DataCardValue99 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey102.Y + DataCardKey102.Height + 5
+                ZIndex: =2
+
+        "'Total Price Grade B_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TotalPriceGradeB"
+            Default: =ThisItem.'Total Price Grade B'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeB")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =17
+            ZIndex: =1
+
+            DataCardKey109 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue106 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey109.Y + DataCardKey109.Height + 5
+                ZIndex: =2
+
+        "'Grade C (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="GradeC_x0028_KG_x0029_"
+            Default: =ThisItem.'Grade C (KG)'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"GradeC_x0028_KG_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =18
+            ZIndex: =1
+
+            DataCardKey100 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue97 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey100.Y + DataCardKey100.Height + 5
+                ZIndex: =2
+
+        "'Price Grade C_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PriceGradeC"
+            Default: =ThisItem.'Price Grade C'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"PriceGradeC")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =19
+            ZIndex: =1
+
+            DataCardKey103 As label:
+                Height: =54
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =277
+                Wrap: =false
+                X: =30
+                Y: =4
+                ZIndex: =1
+
+            DataCardValue100 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey103.Y + DataCardKey103.Height + 5
+                ZIndex: =2
+
+        "'Total Price Grade C_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TotalPriceGradeC"
+            Default: =ThisItem.'Total Price Grade C'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeC")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =20
+            ZIndex: =1
+
+            DataCardKey110 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue107 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =6
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =272
+                X: =338
+                Y: =10
+                ZIndex: =2
+
+        "'Reject (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Reject_x0028_KG_x0029_"
+            Default: =ThisItem.'Reject (KG)'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Reject_x0028_KG_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =21
+            ZIndex: =1
+
+            DataCardKey104 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue101 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey104.Y + DataCardKey104.Height + 5
+                ZIndex: =2
+
+        "'Total Weight_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Total_x0020_Weight"
+            Default: =Round(ThisItem.'Total Weight',2)
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Total_x0020_Weight")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =1
+
+            DataCardKey111 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue108 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey111.Y + DataCardKey111.Height + 5
+                ZIndex: =2
+
+        Month_DataCard2 As typedDataCard.comboBoxViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Month2"
+            Default: =ThisItem.Month
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Month2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue85.Selected
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey88 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue85 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Chili Tayor Production'].Month)
+                Items: =Choices([@'Penuaian Cili'].Month2)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Chili Tayor Production'.Month,DataCardValue24.SearchText)
+                SearchItems: =Choices('Penuaian Cili'.Month2,DataCardValue85.SearchText)
                 SelectMultiple: =false
                 Size: =21
-                Width: =430
-                X: =210
+                Width: =417
+                X: =222
                 ZIndex: =2
 
-            ErrorMessage21 As label:
+            ErrorMessage62 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -367,18 +669,18 @@ Screen3 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue24.Y + DataCardValue24.Height
+                Y: =DataCardValue85.Y + DataCardValue85.Height
                 ZIndex: =3
 
-            StarVisible21 As label:
+            StarVisible71 As label:
                 Align: =Align.Center
-                Height: =DataCardKey24.Height
+                Height: =DataCardKey88.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey24.Y
+                Y: =DataCardKey88.Y
                 ZIndex: =4
 
         "'Start Date_DataCard2' As typedDataCard.textualViewCard":
@@ -386,7 +688,7 @@ Screen3 As screen:
             DataField: ="field_1"
             Default: =ThisItem.'Start Date'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"field_1")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_1")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -395,7 +697,7 @@ Screen3 As screen:
             Y: =1
             ZIndex: =2
 
-            DataCardKey38 As label:
+            DataCardKey89 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -406,17 +708,16 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue38 As label:
-                AutoHeight: =true
+            DataCardValue86 As label:
                 DisplayMode: =Parent.DisplayMode
+                Height: =58
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =437
-                X: =202
-                Y: =10
+                Width: =421
+                X: =218
                 ZIndex: =2
 
         "'End Date_DataCard2' As typedDataCard.textualViewCard":
@@ -424,7 +725,7 @@ Screen3 As screen:
             DataField: ="EndDate"
             Default: =ThisItem.'End Date'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"EndDate")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"EndDate")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -433,7 +734,7 @@ Screen3 As screen:
             Y: =2
             ZIndex: =2
 
-            DataCardKey56 As label:
+            DataCardKey90 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -444,17 +745,17 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue53 As label:
+            DataCardValue87 As label:
+                AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =45
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =395
-                X: =202
-                Y: =10
+                Width: =420
+                X: =220
+                Y: =18
                 ZIndex: =2
 
         "'Weekly Original Target (kg)_DataCard2' As typedDataCard.textualViewCard":
@@ -462,7 +763,7 @@ Screen3 As screen:
             DataField: ="field_3"
             Default: =ThisItem.'Weekly Original Target (kg)'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"field_3")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_3")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -471,7 +772,7 @@ Screen3 As screen:
             Y: =3
             ZIndex: =2
 
-            DataCardKey57 As label:
+            DataCardKey91 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -482,7 +783,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue54 As label:
+            DataCardValue88 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -492,7 +793,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey57.Y + DataCardKey57.Height + 5
+                Y: =DataCardKey91.Y + DataCardKey91.Height + 5
                 ZIndex: =2
 
         "'Average Price Original_DataCard2' As typedDataCard.textualViewCard":
@@ -500,7 +801,7 @@ Screen3 As screen:
             DataField: ="AveragePrice"
             Default: =ThisItem.'Average Price Original'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"AveragePrice")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"AveragePrice")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -509,7 +810,7 @@ Screen3 As screen:
             Y: =4
             ZIndex: =2
 
-            DataCardKey58 As label:
+            DataCardKey92 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -520,7 +821,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue55 As label:
+            DataCardValue89 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -530,45 +831,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey58.Y + DataCardKey58.Height + 5
-                ZIndex: =2
-
-        "'RM (Original Target)_DataCard2' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="RM_x0020__x0028_Original_x0020_T"
-            Default: =Round((ThisItem.'RM (Original Target)'),2)
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"RM_x0020__x0028_Original_x0020_T")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =2
-
-            DataCardKey59 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue56 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey59.Y + DataCardKey59.Height + 5
+                Y: =DataCardKey92.Y + DataCardKey92.Height + 5
                 ZIndex: =2
 
         "'Weekly Revise Target (kg)_DataCard2' As typedDataCard.textualViewCard":
@@ -576,7 +839,7 @@ Screen3 As screen:
             DataField: ="field_6"
             Default: =ThisItem.'Weekly Revise Target (kg)'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"field_6")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_6")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -585,7 +848,7 @@ Screen3 As screen:
             Y: =6
             ZIndex: =2
 
-            DataCardKey60 As label:
+            DataCardKey94 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -596,7 +859,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue57 As label:
+            DataCardValue91 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -606,7 +869,7 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey60.Y + DataCardKey60.Height + 5
+                Y: =DataCardKey94.Y + DataCardKey94.Height + 5
                 ZIndex: =2
 
         "'Average Price Revise_DataCard2' As typedDataCard.textualViewCard":
@@ -614,7 +877,7 @@ Screen3 As screen:
             DataField: ="Average_x0020_Price_x0020_Revise"
             Default: =ThisItem.'Average Price Revise'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Chili Tayor Production'],DataSourceInfo.DisplayName,"Average_x0020_Price_x0020_Revise")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Average_x0020_Price_x0020_Revise")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -623,7 +886,7 @@ Screen3 As screen:
             Y: =7
             ZIndex: =2
 
-            DataCardKey61 As label:
+            DataCardKey95 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -634,7 +897,7 @@ Screen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue58 As label:
+            DataCardValue92 As label:
                 AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
                 PaddingLeft: =0
@@ -644,12 +907,12 @@ Screen3 As screen:
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey61.Y + DataCardKey61.Height + 5
+                Y: =DataCardKey95.Y + DataCardKey95.Height + 5
                 ZIndex: =2
 
     Arrow1 As arrow.backArrow:
         Height: =58
-        OnSelect: =Navigate(Screen2);
+        OnSelect: =Navigate(Screen1);
         Width: =60
         X: =28
         Y: =20

@@ -156,7 +156,8 @@ ListSemakan As screen:
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |
                 =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });EditForm(Form3);
-                Select(Parent);Navigate(EditSemakan);
+                Select(Parent);UpdateContext({showContainer: !showContainer});
+                Navigate(EditSemakan);
             Size: =24
             Text: =""
             Width: =636
