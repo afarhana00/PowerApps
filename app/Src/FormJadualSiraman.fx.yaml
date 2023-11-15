@@ -47,7 +47,7 @@ FormJadualSiraman As screen:
         ZIndex: =5
 
     Button2_1 As button:
-        Fill: =RGBA(255, 191, 0, 1)
+        Fill: =RGBA(0, 255, 183, 1)
         Height: =114
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =Navigate(ListJadualSiraman);
@@ -1098,33 +1098,34 @@ FormJadualSiraman As screen:
 
     Button4_3 As button:
         Fill: =RGBA(0, 168, 156, 0.78)
-        Height: =73
+        Height: =102
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =20
         Text: ="Plot"
-        X: =131
-        Y: =130
+        Width: =149
+        X: =339
+        Y: =108
         ZIndex: =11
 
     Button15_2 As button:
         Fill: =RGBA(0, 168, 156, 0.65)
-        Height: =73
+        Height: =102
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form4);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =18
         Text: ="Jadual Siraman"
-        Width: =176
-        X: =356
-        Y: =130
+        Width: =150
+        X: =489
+        Y: =108
         ZIndex: =12
 
     Container2_3 As groupContainer.verticalAutoLayoutContainer:

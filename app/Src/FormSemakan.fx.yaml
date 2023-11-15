@@ -1882,14 +1882,14 @@ FormSemakan As screen:
         Height: =73
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =20
         Text: ="Plot"
-        X: =131
-        Y: =130
+        X: =287
+        Y: =108
         ZIndex: =15
 
     Button15_1 As button:
@@ -1897,15 +1897,15 @@ FormSemakan As screen:
         Height: =73
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form2);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =18
         Text: ="Semakan Kesihatan"
         Width: =193
-        X: =356
-        Y: =130
+        X: =447
+        Y: =108
         ZIndex: =16
 
     Container2_2 As groupContainer.verticalAutoLayoutContainer:

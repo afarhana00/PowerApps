@@ -344,10 +344,10 @@ Screen3 As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
-                Items: =Choices([@'Chili Tayor Production'].Month2)
+                Items: =Choices([@'Chili Tayor Production'].Month)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Chili Tayor Production'.Month2,DataCardValue24.SearchText)
+                SearchItems: =Choices('Chili Tayor Production'.Month,DataCardValue24.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Width: =430
