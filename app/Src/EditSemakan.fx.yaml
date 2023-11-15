@@ -264,7 +264,7 @@ EditSemakan As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue71 As combobox:
@@ -1096,7 +1096,7 @@ EditSemakan As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue42 As combobox:
@@ -1167,7 +1167,7 @@ EditSemakan As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue44 As combobox:
@@ -1375,33 +1375,34 @@ EditSemakan As screen:
 
     Button4_5 As button:
         Fill: =RGBA(0, 168, 156, 0.78)
-        Height: =73
+        Height: =84
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =20
         Text: ="Plot"
+        Width: =225
         X: =131
-        Y: =111
+        Y: =100
         ZIndex: =10
 
     Button15_4 As button:
         Fill: =RGBA(0, 168, 156, 0.65)
-        Height: =73
+        Height: =84
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form2);
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =18
         Text: ="Semakan Kesihatan"
-        Width: =176
+        Width: =284
         X: =356
-        Y: =111
+        Y: =100
         ZIndex: =11
 
     Container2_5 As groupContainer.verticalAutoLayoutContainer:

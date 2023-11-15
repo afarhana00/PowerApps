@@ -18,7 +18,7 @@ ListMeracun As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
-        TemplateSize: =116
+        TemplateSize: =145
         Y: =324
         ZIndex: =1
 
@@ -51,7 +51,7 @@ ListMeracun As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =83
             X: =27
-            Y: =74
+            Y: =95
             ZIndex: =2
 
         NextArrow4_1 As icon.ChevronRight:
@@ -71,7 +71,9 @@ ListMeracun As screen:
             ZIndex: =3
 
         Separator4_1 As rectangle:
-            Height: =8
+            BorderColor: =RGBA(202, 202, 202, 1)
+            BorderThickness: =2
+            Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
@@ -86,7 +88,7 @@ ListMeracun As screen:
 
         Button13_1 As button:
             Fill: =RGBA(255, 255, 255, 0)
-            Height: =116
+            Height: =144
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
@@ -94,8 +96,7 @@ ListMeracun As screen:
                 Navigate(FormJadualSiraman);
             Size: =24
             Text: ="Button"
-            Width: =636
-            X: =4
+            Width: =640
             ZIndex: =9
 
         Subtitle1 As label:
@@ -110,8 +111,8 @@ ListMeracun As screen:
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
             Width: =163
-            X: =27
-            Y: =42
+            X: =29
+            Y: =51
             ZIndex: =10
 
         Label13 As label:
@@ -126,30 +127,30 @@ ListMeracun As screen:
         Label14 As label:
             Height: =28
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =17
             Text: =ThisItem.'Racun Serangga'.Value
             Width: =375
             X: =190
-            Y: =40
             ZIndex: =12
 
         Label15 As label:
-            Height: =34
+            Height: =58
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =17
             Text: =ThisItem.'Racun Kulat'.Value
-            Width: =288
-            X: =190
-            Y: =74
+            Width: =309
+            X: =189
+            Y: =25
             ZIndex: =13
 
         Label18 As label:
-            Height: =108
+            Height: =74
             OnSelect: =Select(Parent)
             Size: =17
             Text: =ThisItem.'Baja Foliar'.Value
-            Width: =196
-            X: =444
+            Width: =249
+            X: =192
+            Y: =71
             ZIndex: =14
 
     Rectangle7_1 As rectangle:
@@ -181,20 +182,12 @@ ListMeracun As screen:
         Y: =21
         ZIndex: =4
 
-    Icon18_1 As icon.FilterFlat:
-        Height: =60
-        Icon: =Icon.FilterFlat
-        Width: =44
-        X: =29
-        Y: =131
-        ZIndex: =5
-
     DatePicker4 As datepicker:
         Height: =70
         Size: =24
         Width: =265
-        X: =90
-        Y: =131
+        X: =328
+        Y: =142
         ZIndex: =6
 
     Dropdown3 As dropdown:
@@ -202,12 +195,12 @@ ListMeracun As screen:
         Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
         Size: =21
         Width: =161
-        X: =432
-        Y: =131
+        X: =96
+        Y: =142
         ZIndex: =7
 
     Button2_2 As button:
-        Height: =60
+        Height: =41
         OnSelect: |-
             =Switch(
                 Button2_2.Pressed,
@@ -218,10 +211,10 @@ ListMeracun As screen:
         RadiusBottomRight: =30
         RadiusTopLeft: =30
         RadiusTopRight: =30
-        Size: =24
-        Text: ="ALL"
-        Width: =134
-        X: =459
+        Size: =18
+        Text: ="SEMUA REKOD"
+        Width: =222
+        X: =371
         Y: =227
         ZIndex: =8
 

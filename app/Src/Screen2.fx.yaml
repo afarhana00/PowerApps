@@ -2,15 +2,16 @@ Screen2 As screen:
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =917
+        Height: =907
         Items: ='Chili Tayor Production'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
             =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); Navigate(Screen3);
         TemplatePadding: =0
-        TemplateSize: =104
-        Y: =128
+        TemplateSize: =103
+        Width: =296
+        Y: =138
         ZIndex: =1
 
         Title1 As label:
@@ -82,6 +83,16 @@ Screen2 As screen:
             X: =151
             Y: =31
             ZIndex: =7
+
+        Label23 As label:
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Actual (kg)'
+            Width: =136
+            X: =57
+            Y: =58
+            ZIndex: =8
 
     Dropdown2 As dropdown:
         Height: =48
