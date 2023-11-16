@@ -1,6 +1,8 @@
 Screen3 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     FormViewer1 As formViewer:
+        BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Penuaian Cili'
         Height: =1022
         Item: =Gallery4.Selected
@@ -9,6 +11,7 @@ Screen3 As screen:
         ZIndex: =1
 
         "'RM (Original Target)_DataCard3' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="RM_x0020__x0028_Original_x0020_T"
             Default: =Round(ThisItem.'RM (Original Target)',2)
@@ -24,7 +27,17 @@ Screen3 As screen:
 
             DataCardKey105 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -35,7 +48,15 @@ Screen3 As screen:
 
             DataCardValue102 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -47,6 +68,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'RM (Revise Target)_DataCard1' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="RM_x0020__x0028_Revise_x0020_Tar"
             Default: =Round(ThisItem.'RM (Revise Target)',2)
@@ -62,7 +84,17 @@ Screen3 As screen:
 
             DataCardKey106 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -73,7 +105,15 @@ Screen3 As screen:
 
             DataCardValue103 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -85,6 +125,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Actual (kg)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_9"
             Default: =ThisItem.'Actual (kg)'
@@ -100,7 +141,17 @@ Screen3 As screen:
 
             DataCardKey96 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -111,7 +162,15 @@ Screen3 As screen:
 
             DataCardValue93 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -123,6 +182,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Average Price Actual_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Average_x0020_Price_x0020_Actual"
             Default: =ThisItem.'Average Price Actual'
@@ -138,7 +198,17 @@ Screen3 As screen:
 
             DataCardKey97 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -149,7 +219,15 @@ Screen3 As screen:
 
             DataCardValue94 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -161,6 +239,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Total Price (RM)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="RM_x0020__x0028_Actual_x0029_"
             Default: =Round(ThisItem.'Total Price (RM)',2)
@@ -176,7 +255,17 @@ Screen3 As screen:
 
             DataCardKey107 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -187,7 +276,15 @@ Screen3 As screen:
 
             DataCardValue104 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -199,6 +296,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Grade A (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="GradeA_x0028_KG_x0029_"
             Default: =ThisItem.'Grade A (KG)'
@@ -214,7 +312,17 @@ Screen3 As screen:
 
             DataCardKey98 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -224,7 +332,15 @@ Screen3 As screen:
                 ZIndex: =1
 
             DataCardValue95 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -236,6 +352,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Price Grade A_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare1"
             Default: =ThisItem.'Price Grade A'
@@ -251,7 +368,17 @@ Screen3 As screen:
 
             DataCardKey101 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -262,7 +389,15 @@ Screen3 As screen:
 
             DataCardValue98 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -274,13 +409,14 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Total Price Grade A_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeA"
             Default: =ThisItem.'Total Price Grade A'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeA")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =65
             Required: =false
             Width: =640
             X: =0
@@ -289,7 +425,17 @@ Screen3 As screen:
 
             DataCardKey108 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -300,7 +446,15 @@ Screen3 As screen:
 
             DataCardValue105 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -312,6 +466,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Grade B (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="GradeB_x0028_KG_x0029_"
             Default: =ThisItem.'Grade B (KG)'
@@ -327,7 +482,17 @@ Screen3 As screen:
 
             DataCardKey99 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -338,7 +503,15 @@ Screen3 As screen:
 
             DataCardValue96 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -350,6 +523,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Price Grade B_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare10"
             Default: =ThisItem.'Price Grade B'
@@ -365,7 +539,17 @@ Screen3 As screen:
 
             DataCardKey102 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -376,7 +560,15 @@ Screen3 As screen:
 
             DataCardValue99 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -388,6 +580,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Total Price Grade B_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeB"
             Default: =ThisItem.'Total Price Grade B'
@@ -403,7 +596,17 @@ Screen3 As screen:
 
             DataCardKey109 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -414,7 +617,15 @@ Screen3 As screen:
 
             DataCardValue106 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -426,6 +637,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Grade C (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="GradeC_x0028_KG_x0029_"
             Default: =ThisItem.'Grade C (KG)'
@@ -441,7 +653,17 @@ Screen3 As screen:
 
             DataCardKey100 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -452,7 +674,15 @@ Screen3 As screen:
 
             DataCardValue97 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -464,6 +694,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Price Grade C_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="PriceGradeC"
             Default: =ThisItem.'Price Grade C'
@@ -478,7 +709,17 @@ Screen3 As screen:
             ZIndex: =1
 
             DataCardKey103 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =54
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =277
@@ -489,7 +730,15 @@ Screen3 As screen:
 
             DataCardValue100 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -501,6 +750,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Total Price Grade C_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeC"
             Default: =ThisItem.'Total Price Grade C'
@@ -516,7 +766,17 @@ Screen3 As screen:
 
             DataCardKey110 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -526,7 +786,15 @@ Screen3 As screen:
                 ZIndex: =1
 
             DataCardValue107 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 Height: =6
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -539,6 +807,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Reject (KG)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Reject_x0028_KG_x0029_"
             Default: =ThisItem.'Reject (KG)'
@@ -554,7 +823,17 @@ Screen3 As screen:
 
             DataCardKey104 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -565,7 +844,15 @@ Screen3 As screen:
 
             DataCardValue101 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -577,6 +864,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Total Weight_DataCard1' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Total_x0020_Weight"
             Default: =Round(ThisItem.'Total Weight',2)
@@ -592,7 +880,17 @@ Screen3 As screen:
 
             DataCardKey111 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -603,7 +901,15 @@ Screen3 As screen:
 
             DataCardValue108 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -615,6 +921,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         Month_DataCard2 As typedDataCard.comboBoxViewCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Month2"
             Default: =ThisItem.Month
@@ -631,7 +938,17 @@ Screen3 As screen:
 
             DataCardKey88 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -642,14 +959,33 @@ Screen3 As screen:
 
             DataCardValue85 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronFill: =RGBA(50, 49, 48, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
                 DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(245, 245, 245, 1)
+                Font: =Font.'Segoe UI'
                 Height: =70
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Penuaian Cili'].Month2)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Penuaian Cili'.Month2,DataCardValue85.SearchText)
+                SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =21
                 Width: =417
@@ -658,13 +994,22 @@ Screen3 As screen:
 
             ErrorMessage62 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =10
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =24
+                Size: =21
                 Text: =Parent.Error
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
@@ -674,7 +1019,17 @@ Screen3 As screen:
 
             StarVisible71 As label:
                 Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =DataCardKey88.Height
+                PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -684,6 +1039,7 @@ Screen3 As screen:
                 ZIndex: =4
 
         "'Start Date_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_1"
             Default: =ThisItem.'Start Date'
@@ -699,7 +1055,17 @@ Screen3 As screen:
 
             DataCardKey89 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -709,7 +1075,15 @@ Screen3 As screen:
                 ZIndex: =1
 
             DataCardValue86 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 Height: =58
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -721,6 +1095,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'End Date_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="EndDate"
             Default: =ThisItem.'End Date'
@@ -736,7 +1111,17 @@ Screen3 As screen:
 
             DataCardKey90 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -747,7 +1132,15 @@ Screen3 As screen:
 
             DataCardValue87 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -759,6 +1152,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Weekly Original Target (kg)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_3"
             Default: =ThisItem.'Weekly Original Target (kg)'
@@ -774,7 +1168,17 @@ Screen3 As screen:
 
             DataCardKey91 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -785,7 +1189,15 @@ Screen3 As screen:
 
             DataCardValue88 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -797,6 +1209,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Average Price Original_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="AveragePrice"
             Default: =ThisItem.'Average Price Original'
@@ -812,7 +1225,17 @@ Screen3 As screen:
 
             DataCardKey92 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -823,7 +1246,15 @@ Screen3 As screen:
 
             DataCardValue89 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -835,6 +1266,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Weekly Revise Target (kg)_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_6"
             Default: =ThisItem.'Weekly Revise Target (kg)'
@@ -850,7 +1282,17 @@ Screen3 As screen:
 
             DataCardKey94 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -861,7 +1303,15 @@ Screen3 As screen:
 
             DataCardValue91 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -873,6 +1323,7 @@ Screen3 As screen:
                 ZIndex: =2
 
         "'Average Price Revise_DataCard2' As typedDataCard.textualViewCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Average_x0020_Price_x0020_Revise"
             Default: =ThisItem.'Average Price Revise'
@@ -888,7 +1339,17 @@ Screen3 As screen:
 
             DataCardKey95 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -899,7 +1360,15 @@ Screen3 As screen:
 
             DataCardValue92 As label:
                 AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -911,6 +1380,9 @@ Screen3 As screen:
                 ZIndex: =2
 
     Arrow1 As arrow.backArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 120, 212, 1)
         Height: =58
         OnSelect: =Navigate(Screen1);
         Width: =60

@@ -1,9 +1,12 @@
 Screen2 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =997
-        Items: ='Chili Tayor Production'
+        Items: |
+            =Filter('Chili Tayor Production',Month.Value=Dropdown2.Selected.Value)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
@@ -14,11 +17,14 @@ Screen2 As screen:
         ZIndex: =1
 
         Title1 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =17
@@ -30,11 +36,14 @@ Screen2 As screen:
             ZIndex: =2
 
         Subtitle3 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =21
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
@@ -47,14 +56,25 @@ Screen2 As screen:
 
         NextArrow1 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
             Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
@@ -62,6 +82,8 @@ Screen2 As screen:
             ZIndex: =4
 
         Separator1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -69,6 +91,8 @@ Screen2 As screen:
             ZIndex: =5
 
         Rectangle1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 120, 212, 1)
             Height: =Parent.TemplateHeight - Separator1.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
@@ -76,6 +100,14 @@ Screen2 As screen:
             ZIndex: =6
 
         Label20 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =27
             OnSelect: =Select(Parent)
             Size: =16
@@ -86,21 +118,89 @@ Screen2 As screen:
             ZIndex: =7
 
         Label23 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =38
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =19
             Text: =ThisItem.'Actual (kg)'
             Width: =136
             X: =347
             Y: =38
             ZIndex: =8
 
+        Label30 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: ="Actual (KG)"
+            Width: =162
+            X: =347
+            ZIndex: =9
+
+        Label33 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =54
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="-"
+            Width: =29
+            X: =161
+            Y: =33
+            ZIndex: =10
+
     Dropdown2 As dropdown:
-        Height: =48
-        Items: ='Chili Tayor Production'
+        BorderColor: =RGBA(245, 245, 245, 1)
+        ChevronBackground: =RGBA(245, 245, 245, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronFill: =RGBA(50, 49, 48, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Height: =65
+        HoverBorderColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
+        Items: =Choices('Penuaian Cili'.Month)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =199
-        X: =52
-        Y: =40
+        Width: =251
+        X: =60
+        Y: =38
         ZIndex: =2
 

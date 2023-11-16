@@ -1,6 +1,8 @@
 ListJadualSiraman As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =805
         Items: |
@@ -19,11 +21,14 @@ ListJadualSiraman As screen:
         ZIndex: =1
 
         Title4 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =39
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
@@ -35,11 +40,14 @@ ListJadualSiraman As screen:
             ZIndex: =1
 
         Body2 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =37
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =19
@@ -52,14 +60,25 @@ ListJadualSiraman As screen:
 
         NextArrow4 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
             Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent);Navigate(EditJadualSiraman);EditForm(Form4);
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
@@ -67,6 +86,8 @@ ListJadualSiraman As screen:
             ZIndex: =3
 
         Separator4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
@@ -74,6 +95,8 @@ ListJadualSiraman As screen:
             ZIndex: =4
 
         Rectangle10 As rectangle:
+            BorderColor: =RGBA(0, 168, 156, 1)
+            Fill: =RGBA(0, 168, 156, 1)
             Height: =Parent.TemplateHeight - Separator4.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
@@ -81,13 +104,28 @@ ListJadualSiraman As screen:
             ZIndex: =5
 
         Button13 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(255, 255, 255, 0)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =116
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
                 =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);
                 Navigate(EditJadualSiraman);
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Size: =24
             Text: ="Button"
             Width: =636
@@ -95,11 +133,14 @@ ListJadualSiraman As screen:
             ZIndex: =9
 
         Subtitle4 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
@@ -111,6 +152,14 @@ ListJadualSiraman As screen:
             ZIndex: =10
 
         Label19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =62
             OnSelect: =Select(Parent)
             Size: =16
@@ -120,6 +169,14 @@ ListJadualSiraman As screen:
             ZIndex: =12
 
         Label25 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =36
             OnSelect: =Select(Parent)
             Size: =21
@@ -130,6 +187,14 @@ ListJadualSiraman As screen:
             ZIndex: =14
 
         Label26 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =33
             OnSelect: =Select(Parent)
             Size: =21
@@ -140,6 +205,14 @@ ListJadualSiraman As screen:
             ZIndex: =15
 
         Label27 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =38
             OnSelect: =Select(Parent)
             Size: =21
@@ -150,6 +223,14 @@ ListJadualSiraman As screen:
             ZIndex: =16
 
         Label28 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =42
             OnSelect: =Select(Parent)
             Size: =21
@@ -160,6 +241,14 @@ ListJadualSiraman As screen:
             ZIndex: =17
 
         Label11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =18
             Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
@@ -169,14 +258,27 @@ ListJadualSiraman As screen:
             ZIndex: =18
 
     Rectangle7 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
         Fill: =RGBA(0,168,156,255)
+        FocusedBorderThickness: =4
         Height: =108
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
         Width: =640
         ZIndex: =2
 
     Label7 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =103
@@ -188,48 +290,110 @@ ListJadualSiraman As screen:
         ZIndex: =5
 
     Icon5 As icon.BackArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
         Height: =61
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan);NewForm(Form4);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
         Width: =74
         X: =34
         Y: =21
         ZIndex: =6
 
     DatePicker1 As datepicker:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        CalendarHeaderFill: =RGBA(16, 110, 190, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
         Height: =70
-        Size: =24
-        Width: =265
-        X: =52
-        Y: =128
+        HoverDateFill: =RGBA(184, 187, 184, 1)
+        IconBackground: =RGBA(0, 168, 156, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(0, 120, 212, 1)
+        Size: =21
+        Width: =243
+        X: =34
+        Y: =123
         ZIndex: =9
 
     Dropdown1 As dropdown:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        ChevronBackground: =RGBA(0, 168, 156, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronFill: =RGBA(50, 49, 48, 1)
+        ChevronHoverBackground: =RGBA(0, 168, 156, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
         Height: =70
+        HoverBorderColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
         Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =161
-        X: =52
-        Y: =211
+        X: =306
+        Y: =123
         ZIndex: =11
 
     Button2 As button:
-        Height: =65
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |-
             =Switch(
                 Button2.Pressed,
                 true, Gallery2.AllItems,
                 false);
             Reset(Dropdown1);Reset(DatePicker1); 
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =24
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
         Text: ="SET SEMULA"
-        Width: =244
-        X: =367
-        Y: =218
+        Width: =143
+        X: =480
+        Y: =123
         ZIndex: =12
 
