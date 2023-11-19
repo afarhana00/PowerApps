@@ -24,7 +24,7 @@ FormSemakan As screen:
         FocusedBorderThickness: =4
         Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan);
@@ -3126,8 +3126,8 @@ FormSemakan As screen:
         FontWeight: =FontWeight.Semibold
         Height: =94
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(230, 230, 230, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
         OnSelect: =If(varshowfields=1,Set(varshowfields,2),Set(varshowfields,1)) 
         PressedBorderColor: =RGBA(204, 204, 204, 1)
         PressedColor: =RGBA(0, 0, 0, 1)
@@ -3307,6 +3307,7 @@ FormSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.6
                 Font: =Font.'Segoe UI'
@@ -3381,6 +3382,7 @@ FormSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.6
                 Font: =Font.'Segoe UI'
@@ -3454,6 +3456,7 @@ FormSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.6
                 Font: =Font.'Segoe UI'
@@ -3527,6 +3530,7 @@ FormSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.6
                 Font: =Font.'Segoe UI'
@@ -3603,6 +3607,7 @@ FormSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.6
                 Font: =Font.'Segoe UI'

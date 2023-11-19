@@ -84,15 +84,14 @@ EditMeracun As screen:
             ZIndex: =3
 
     Button1_3 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
+        BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(255, 0, 0, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =108
+        Height: =92
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
@@ -108,19 +107,18 @@ EditMeracun As screen:
         Size: =24
         Text: ="PADAM"
         Width: =333
-        Y: =1028
+        Y: =1044
         ZIndex: =2
 
     Button16_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
+        BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(54, 176, 75, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =108
+        Height: =92
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(193, 225, 193, 1), -20%)
@@ -139,7 +137,7 @@ EditMeracun As screen:
         Text: ="SIMPAN"
         Width: =306
         X: =333
-        Y: =1028
+        Y: =1044
         ZIndex: =3
 
     Button4_8 As button:

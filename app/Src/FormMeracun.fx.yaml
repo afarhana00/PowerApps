@@ -50,7 +50,7 @@ FormMeracun As screen:
 
             DataCardValue4 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -171,7 +171,7 @@ FormMeracun As screen:
 
             DataCardValue13 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -293,7 +293,7 @@ FormMeracun As screen:
 
             DataCardValue12 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -412,7 +412,7 @@ FormMeracun As screen:
 
             DataCardValue11 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -1340,7 +1340,7 @@ FormMeracun As screen:
 
             DataCardValue25 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -1576,7 +1576,7 @@ FormMeracun As screen:
 
             DataCardValue27 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -1810,7 +1810,7 @@ FormMeracun As screen:
 
             DataCardValue29 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
                 ChevronFill: =RGBA(50, 49, 48, 1)
@@ -1898,8 +1898,8 @@ FormMeracun As screen:
         Fill: =RGBA(0, 168, 156, 1)
         FocusedBorderThickness: =4
         Height: =93
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
         Width: =640
         ZIndex: =2
 
@@ -1929,7 +1929,7 @@ FormMeracun As screen:
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan)
@@ -2036,9 +2036,9 @@ FormMeracun As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: =If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); NewForm(Form7_1);
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -2186,6 +2186,7 @@ FormMeracun As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.5
                 Font: =Font.'Segoe UI'
@@ -2260,6 +2261,7 @@ FormMeracun As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.5
                 Font: =Font.'Segoe UI'
@@ -2332,6 +2334,7 @@ FormMeracun As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.5
                 Font: =Font.'Segoe UI'
@@ -2404,6 +2407,7 @@ FormMeracun As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.5
                 Font: =Font.'Segoe UI'
@@ -2479,6 +2483,7 @@ FormMeracun As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 FillPortions: =0.5
                 Font: =Font.'Segoe UI'
