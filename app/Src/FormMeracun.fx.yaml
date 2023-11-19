@@ -48,7 +48,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue4 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -75,7 +75,7 @@ FormMeracun As screen:
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId),DataCardValue4.SearchText,"Value")
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -169,7 +169,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue13 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -186,17 +186,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].MasaRacunSerangga)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.MasaRacunSerangga,DataCardValue13.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -291,7 +291,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue12 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -308,17 +308,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].MasaRacunKulat)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.MasaRacunKulat,DataCardValue12.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -410,7 +410,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue11 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -427,17 +427,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].MasaFoliar)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.MasaFoliar,DataCardValue11.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -532,7 +532,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue32 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -544,12 +544,12 @@ FormMeracun As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -647,11 +647,10 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue31 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(55, 179, 172, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -674,7 +673,7 @@ FormMeracun As screen:
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.'Racun Organic',DataCardValue31.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -767,7 +766,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue33 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -780,11 +779,11 @@ FormMeracun As screen:
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -882,7 +881,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue10 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -894,12 +893,12 @@ FormMeracun As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -998,7 +997,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue36 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -1010,12 +1009,12 @@ FormMeracun As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -1113,7 +1112,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue15 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =LookUp(TreePlot,'HST (Hari)' = ddPlantType_16.Selected.PlotId,'HST (Hari)')
@@ -1126,11 +1125,11 @@ FormMeracun As screen:
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -1228,7 +1227,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue23 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1240,7 +1239,7 @@ FormMeracun As screen:
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverDateFill: =RGBA(184, 187, 184, 1)
-                IconBackground: =RGBA(0, 120, 212, 1)
+                IconBackground: =RGBA(0, 168, 156, 1)
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -1336,7 +1335,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue25 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -1353,17 +1352,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].'Racun Serangga')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.'Racun Serangga',DataCardValue25.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1457,7 +1456,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue26 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -1470,11 +1469,11 @@ FormMeracun As screen:
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -1572,7 +1571,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue27 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -1589,17 +1588,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =75
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].'Racun Kulat')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.'Racun Kulat',DataCardValue27.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1692,7 +1691,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue28 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
                 Default: =Parent.Default
@@ -1705,11 +1704,11 @@ FormMeracun As screen:
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =75
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -1806,7 +1805,7 @@ FormMeracun As screen:
                 ZIndex: =1
 
             DataCardValue29 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(245, 245, 245, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -1823,17 +1822,17 @@ FormMeracun As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Jadual Meracun'].'Baja Foliar')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Jadual Meracun'.'Baja Foliar',DataCardValue29.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1971,7 +1970,7 @@ FormMeracun As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(55, 191, 182, 1)
+        Fill: =RGBA(46, 199, 156, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =110
@@ -2102,7 +2101,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2176,7 +2174,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2252,7 +2249,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2325,7 +2321,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2398,7 +2393,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2473,7 +2467,6 @@ FormMeracun As screen:
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(0, 168, 156, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
