@@ -1,4 +1,5 @@
 ListSemakan As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
@@ -54,7 +55,7 @@ ListSemakan As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =156
             X: =193
-            Y: =80
+            Y: =72
             ZIndex: =2
 
         NextArrow2 As icon.ChevronRight:
@@ -113,7 +114,7 @@ ListSemakan As screen:
             Font: =Font.'Segoe UI'
             Height: =26
             OnSelect: =Select(Parent)
-            Size: =20
+            Size: =18
             Text: ="Plot"
             Width: =168
             X: =25

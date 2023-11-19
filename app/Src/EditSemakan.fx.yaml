@@ -1,4 +1,5 @@
 EditSemakan As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     Button18 As button:
@@ -180,11 +181,12 @@ EditSemakan As screen:
     Form3 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Semakan Kesihatan'
-        Height: =750
+        Fill: =RGBA(228, 240, 239, 1)
+        Height: =849
         Item: =Gallery1.Selected
         Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode,false,true)
         Width: =640
-        Y: =223
+        Y: =185
         ZIndex: =8
 
         "'Tarikh _DataCard2' As typedDataCard.dateEditCard":
@@ -225,7 +227,7 @@ EditSemakan As screen:
                 ZIndex: =1
 
             DataCardValue63 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
                 DefaultDate: =Parent.Default
@@ -1684,7 +1686,7 @@ EditSemakan As screen:
                 ZIndex: =1
 
             DataCardValue40 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -2383,7 +2385,7 @@ EditSemakan As screen:
 
     Container2_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =622
+        Height: =845
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =4
@@ -2392,7 +2394,7 @@ EditSemakan As screen:
         RadiusTopRight: =4
         Visible: =If(varshowfields=1||varshowfields=-1,true,false) 
         Width: =640
-        Y: =306
+        Y: =184
         ZIndex: =12
 
         divPlot_5 As groupContainer.horizontalAutoLayoutContainer:

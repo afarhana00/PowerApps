@@ -1,4 +1,5 @@
 FormSemakan As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     Rectangle1_1 As rectangle:
@@ -38,10 +39,11 @@ FormSemakan As screen:
     Form2 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Semakan Kesihatan'
-        Height: =790
+        Fill: =RGBA(228, 240, 239, 100)
+        Height: =847
         Visible: =If(varshowfields=2||varshowfields=-1,true,false)
         Width: =640
-        Y: =225
+        Y: =202
         ZIndex: =11
 
         "'Tarikh _DataCard1_1' As typedDataCard.dateEditCard":
@@ -81,7 +83,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue47_1 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -190,7 +192,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(194, 237, 234, 1)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -216,7 +218,7 @@ FormSemakan As screen:
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId),DataCardValue1.SearchText,"Value")
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -308,7 +310,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue30 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -428,7 +430,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue55_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -714,7 +716,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue56_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -1004,7 +1006,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue50_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -1556,10 +1558,10 @@ FormSemakan As screen:
                 Height: =320
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
+                HoverFill: =RGBA(0, 168, 156, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 Size: =24
                 Width: =Parent.Width - 60
                 X: =30
@@ -2031,10 +2033,10 @@ FormSemakan As screen:
                 Height: =320
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
+                HoverFill: =RGBA(0, 168, 156, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 Size: =24
                 Width: =Parent.Width - 60
                 X: =30
@@ -2157,10 +2159,10 @@ FormSemakan As screen:
                 Height: =320
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
+                HoverFill: =RGBA(0, 168, 156, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 Size: =24
                 Width: =Parent.Width - 60
                 X: =30
@@ -2363,7 +2365,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue2_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -2556,7 +2558,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue4_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -2585,7 +2587,7 @@ FormSemakan As screen:
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =[]
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -2728,7 +2730,7 @@ FormSemakan As screen:
                 ZIndex: =1
 
             DataCardValue7_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
@@ -2754,7 +2756,7 @@ FormSemakan As screen:
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Semakan Kesihatan'.Cuaca,DataCardValue7_1.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -3042,8 +3044,7 @@ FormSemakan As screen:
                 ZIndex: =4
 
     Button1_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
+        BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
@@ -3070,12 +3071,11 @@ FormSemakan As screen:
         ZIndex: =12
 
     Button4_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
+        BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(46, 199, 156, 1)
+        Fill: =RGBA(0, 168, 156, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =90
@@ -3117,20 +3117,21 @@ FormSemakan As screen:
     Button4_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 168, 156, 0.78)
+        Fill: =RGBA(228, 240, 239, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =73
+        Height: =94
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
+        HoverFill: =RGBA(230, 230, 230, 1)
+        OnSelect: =If(varshowfields=1,Set(varshowfields,2),Set(varshowfields,1)) 
+        PressedBorderColor: =RGBA(204, 204, 204, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(230, 230, 230, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -3144,17 +3145,18 @@ FormSemakan As screen:
     Button15_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
+        Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 168, 156, 0.65)
+        Fill: =RGBA(228, 240, 239, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =73
+        Height: =94
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form2);
+        OnSelect: =If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -3171,7 +3173,7 @@ FormSemakan As screen:
 
     Container2_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =594
+        Height: =838
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =4
@@ -3180,7 +3182,7 @@ FormSemakan As screen:
         RadiusTopRight: =4
         Visible: =If(varshowfields=1||varshowfields=-1 ,true,false) 
         Width: =640
-        Y: =286
+        Y: =208
         ZIndex: =17
 
         divPlot_2 As groupContainer.horizontalAutoLayoutContainer:
@@ -3232,7 +3234,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -3243,7 +3245,6 @@ FormSemakan As screen:
                 LayoutMinWidth: =0
                 PaddingBottom: =5
                 PaddingLeft: =12
-                PaddingRight: =20
                 PaddingTop: =20
                 PressedBorderColor: =RGBA(16, 110, 190, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -3307,7 +3308,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -3320,7 +3321,6 @@ FormSemakan As screen:
                 OnSelect: =
                 PaddingBottom: =5
                 PaddingLeft: =12
-                PaddingRight: =20
                 PaddingTop: =20
                 PressedBorderColor: =RGBA(16, 110, 190, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -3382,7 +3382,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -3455,7 +3455,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -3528,7 +3528,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -3604,7 +3604,7 @@ FormSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)

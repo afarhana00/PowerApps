@@ -1,4 +1,5 @@
 ListMeracun As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
@@ -12,7 +13,7 @@ ListMeracun As screen:
                 Filter(
                     'Jadual Meracun',
                     (Tarikh = DatePicker4.SelectedDate) &&
-                    (IsBlank(Dropdown3.Selected.Value) || 'Plot '.Value = Dropdown3.Selected.Value)
+                    (IsBlank(Dropdown3.Selected.Value))
                 )
             )
             
@@ -75,7 +76,7 @@ ListMeracun As screen:
             HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);Navigate(EditJadualSiraman);EditForm(Form4);
+            OnSelect: =Select(Parent);Navigate(EditMeracun);EditForm(Form7_1);
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -108,34 +109,6 @@ ListMeracun As screen:
             Width: =4
             ZIndex: =5
 
-        Button13_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(255, 255, 255, 0)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =144
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
-            OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery3.Selected, editMode: true }); EditForm(Form7);Select(Parent);
-                Navigate(FormJadualSiraman);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Button"
-            Width: =640
-            ZIndex: =9
-
         Subtitle1 As label:
             Color: =RGBA(96, 94, 92, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
@@ -153,7 +126,7 @@ ListMeracun As screen:
             Width: =163
             X: =29
             Y: =51
-            ZIndex: =10
+            ZIndex: =6
 
         Label13 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -170,7 +143,7 @@ ListMeracun As screen:
             Text: =
             Width: =254
             X: =190
-            ZIndex: =11
+            ZIndex: =7
 
         Label14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -187,7 +160,7 @@ ListMeracun As screen:
             Text: =ThisItem.'Racun Serangga'.Value
             Width: =375
             X: =190
-            ZIndex: =12
+            ZIndex: =8
 
         Label15 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -205,7 +178,7 @@ ListMeracun As screen:
             Width: =309
             X: =189
             Y: =25
-            ZIndex: =13
+            ZIndex: =9
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -223,7 +196,35 @@ ListMeracun As screen:
             Width: =249
             X: =192
             Y: =71
-            ZIndex: =14
+            ZIndex: =10
+
+        Button13_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(255, 255, 255, 0)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =144
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
+            OnSelect: |-
+                =UpdateContext({ selectedRecord: Gallery3.Selected, editMode: true }); EditForm(Form7_1);Select(Parent);
+                Navigate(EditMeracun);
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: =""
+            Width: =640
+            ZIndex: =11
 
     Rectangle7_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)

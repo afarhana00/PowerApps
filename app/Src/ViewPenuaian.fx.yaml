@@ -1,4 +1,5 @@
-Screen3 As screen:
+ViewPenuaian As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     FormViewer1 As formViewer:
@@ -347,8 +348,8 @@ Screen3 As screen:
                 Size: =21
                 Text: =Parent.Default
                 Width: =354
-                X: =256
-                Y: =17
+                X: =30
+                Y: =49
                 ZIndex: =2
 
         "'Price Grade A_DataCard2' As typedDataCard.textualViewCard":
@@ -473,7 +474,7 @@ Screen3 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"GradeB_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =101
             Required: =false
             Width: =640
             X: =0
@@ -518,8 +519,8 @@ Screen3 As screen:
                 Size: =21
                 Text: =Parent.Default
                 Width: =332
-                X: =258
-                Y: =10
+                X: =30
+                Y: =56
                 ZIndex: =2
 
         "'Price Grade B_DataCard2' As typedDataCard.textualViewCard":
@@ -538,7 +539,6 @@ Screen3 As screen:
             ZIndex: =1
 
             DataCardKey102 As label:
-                AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -548,11 +548,11 @@ Screen3 As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =52
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =248
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -644,7 +644,7 @@ Screen3 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"GradeC_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =99
             Required: =false
             Width: =640
             X: =0
@@ -689,8 +689,8 @@ Screen3 As screen:
                 Size: =21
                 Text: =Parent.Default
                 Width: =369
-                X: =241
-                Y: =12
+                X: =30
+                Y: =54
                 ZIndex: =2
 
         "'Price Grade C_DataCard2' As typedDataCard.textualViewCard":
@@ -701,7 +701,7 @@ Screen3 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"PriceGradeC")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =86
             Required: =false
             Width: =640
             X: =0
@@ -814,7 +814,7 @@ Screen3 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Reject_x0028_KG_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =103
             Required: =false
             Width: =640
             X: =0
@@ -859,8 +859,8 @@ Screen3 As screen:
                 Size: =21
                 Text: =Parent.Default
                 Width: =348
-                X: =249
-                Y: =20
+                X: =30
+                Y: =57
                 ZIndex: =2
 
         "'Total Weight_DataCard1' As typedDataCard.textualViewCard":
@@ -871,7 +871,7 @@ Screen3 As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Total_x0020_Weight")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =105
             Required: =false
             Width: =640
             X: =0
@@ -916,8 +916,8 @@ Screen3 As screen:
                 Size: =21
                 Text: =Parent.Default
                 Width: =359
-                X: =251
-                Y: =14
+                X: =30
+                Y: =57
                 ZIndex: =2
 
         Month_DataCard2 As typedDataCard.comboBoxViewCard:
@@ -1384,7 +1384,7 @@ Screen3 As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Fill: =RGBA(0, 168, 156, 1)
         Height: =58
-        OnSelect: =Navigate(Screen1);
+        OnSelect: =Navigate(FormPenuaian);
         Width: =60
         X: =28
         Y: =20

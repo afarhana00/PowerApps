@@ -1,4 +1,5 @@
 ListJadualSiraman As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
@@ -119,15 +120,15 @@ ListJadualSiraman As screen:
             OnSelect: |-
                 =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);
                 Navigate(EditJadualSiraman);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedBorderColor: =RGBA(0, 168, 156, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 168, 156, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =24
-            Text: ="Button"
+            Text: =""
             Width: =636
             X: =4
             ZIndex: =9
@@ -265,8 +266,8 @@ ListJadualSiraman As screen:
         Fill: =RGBA(0,168,156,255)
         FocusedBorderThickness: =4
         Height: =108
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
         Width: =640
         ZIndex: =2
 
@@ -298,7 +299,7 @@ ListJadualSiraman As screen:
         FocusedBorderThickness: =4
         Height: =61
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan);NewForm(Form4);
@@ -345,7 +346,7 @@ ListJadualSiraman As screen:
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
         Height: =70
-        HoverBorderColor: =RGBA(16, 110, 190, 1)
+        HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
@@ -353,11 +354,11 @@ ListJadualSiraman As screen:
         PaddingLeft: =12
         PaddingRight: =5
         PaddingTop: =5
-        PressedBorderColor: =RGBA(16, 110, 190, 1)
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
         SelectionColor: =RGBA(50, 49, 48, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
         Width: =161
         X: =306
@@ -376,16 +377,16 @@ ListJadualSiraman As screen:
         Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(16, 110, 190, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
         OnSelect: |-
             =Switch(
                 Button2.Pressed,
                 true, Gallery2.AllItems,
                 false);
             Reset(Dropdown1);Reset(DatePicker1); 
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
