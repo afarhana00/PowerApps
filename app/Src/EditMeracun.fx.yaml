@@ -892,13 +892,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].MasaRacunSerangga)
+                Items: =Choices([@'Jadual Meracun'].'Masa Racun Serangga')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaRacunSerangga,DataCardValue13_1.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Masa Racun Serangga',DataCardValue13_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1014,13 +1014,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].MasaRacunKulat)
+                Items: =Choices([@'Jadual Meracun'].'Masa Racun Kulat')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaRacunKulat,DataCardValue12_1.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Masa Racun Kulat',DataCardValue12_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1133,13 +1133,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].MasaFoliar)
+                Items: =Choices([@'Jadual Meracun'].'Masa Foliar')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaFoliar,DataCardValue11_1.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Masa Foliar',DataCardValue11_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1316,7 +1316,7 @@ EditMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="RacunOrganic"
-            Default: =ThisItem.'Racun Organic'
+            Default: =ThisItem.'Racun Organik'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"RacunOrganic")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1369,13 +1369,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].'Racun Organic')
+                Items: =Choices([@'Jadual Meracun'].'Racun Organik')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(16, 110, 190, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Racun Organic',DataCardValue31_1.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Racun Organik',DataCardValue31_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1435,7 +1435,7 @@ EditMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="KuantitiRacunOrganic"
-            Default: =ThisItem.'Kuantiti Racun Organic'
+            Default: =ThisItem.'Kuantiti Racun Organik'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"KuantitiRacunOrganic")
             Fill: =RGBA(0, 0, 0, 0)
