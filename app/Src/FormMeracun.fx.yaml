@@ -2007,7 +2007,7 @@ FormMeracun As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,2),Set(varshowfields,1)) 
+        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)) 
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -2035,7 +2035,7 @@ FormMeracun As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); NewForm(Form7_1);
+        OnSelect: =If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); NewForm(Form7_1);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
