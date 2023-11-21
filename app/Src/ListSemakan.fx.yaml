@@ -40,7 +40,7 @@ ListSemakan As screen:
             ZIndex: =1
 
         Subtitle2 As label:
-            Color: =RGBA(96, 94, 92, 1)
+            Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
@@ -159,8 +159,8 @@ ListSemakan As screen:
             Size: =21
             Text: =ThisItem.IDPokok.Value
             Width: =194
-            X: =245
-            Y: =13
+            X: =272
+            Y: =10
             ZIndex: =11
 
         Image4 As image:
@@ -229,6 +229,60 @@ ListSemakan As screen:
             Y: =46
             ZIndex: =14
 
+        Label5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="/"
+            Width: =37
+            X: =245
+            Y: =12
+            ZIndex: =15
+
+        Label6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =56
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kadar Serangan Penyakit'
+            Width: =77
+            X: =254
+            Y: =46
+            ZIndex: =16
+
+        Label8 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =56
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Kadar Serangan Perosak'
+            Width: =76
+            X: =372
+            Y: =46
+            ZIndex: =17
+
     Rectangle4 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -270,7 +324,7 @@ ListSemakan As screen:
         FocusedBorderThickness: =4
         Height: =61
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan); NewForm(Form2);
