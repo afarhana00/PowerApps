@@ -54,8 +54,8 @@ ListSemakan As screen:
             Text: =ThisItem.'Tarikh '
             VerticalAlign: =VerticalAlign.Top
             Width: =156
-            X: =193
-            Y: =72
+            X: =4
+            Y: =16
             ZIndex: =2
 
         NextArrow2 As icon.ChevronRight:
@@ -103,43 +103,6 @@ ListSemakan As screen:
             Width: =4
             ZIndex: =5
 
-        Label5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =26
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: ="Plot"
-            Width: =168
-            X: =25
-            Y: =14
-            ZIndex: =6
-
-        Label8 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =26
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            Size: =18
-            Text: ="Tarikh"
-            Width: =205
-            X: =25
-            Y: =80
-            ZIndex: =7
-
         Icon11 As icon.Warning:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(255, 140, 0, 1)
@@ -156,30 +119,10 @@ ListSemakan As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(!IsBlank(ThisItem.Penyakit.Value),true,false)
             Width: =51
-            X: =402
-            Y: =26
+            X: =203
+            Y: =52
             ZIndex: =8
-
-        Label6 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =32
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            Size: =18
-            Text: ="ID Pokok"
-            Width: =168
-            X: =25
-            Y: =48
-            ZIndex: =9
 
         Icon17 As icon.Bug:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -197,10 +140,9 @@ ListSemakan As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(!IsBlank(ThisItem.Perosak.Value),true,false)
             Width: =41
-            X: =525
-            Y: =26
+            X: =331
+            Y: =51
             ZIndex: =10
 
         Label1 As label:
@@ -212,13 +154,13 @@ ListSemakan As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =36
+            Height: =34
             OnSelect: =Select(Parent)
             Size: =21
             Text: =ThisItem.IDPokok.Value
-            Width: =249
-            X: =193
-            Y: =42
+            Width: =194
+            X: =245
+            Y: =13
             ZIndex: =11
 
         Image4 As image:
@@ -235,10 +177,8 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.Suhu>=35,true,false)
             Width: =68
-            X: =453
-            Y: =10
+            Y: =36
             ZIndex: =12
 
         Button12 As button:
@@ -270,6 +210,24 @@ ListSemakan As screen:
             Width: =636
             X: =4
             ZIndex: =13
+
+        Label4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.Suhu
+            Width: =72
+            X: =54
+            Y: =46
+            ZIndex: =14
 
     Rectangle4 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -357,7 +315,7 @@ ListSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2);
+        OnSelect: ='Semakan Kesihatan'
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -442,7 +400,7 @@ ListSemakan As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        Items: =Choices('Semakan Kesihatan'.'Plot (Lokasi)')
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
