@@ -3121,14 +3121,14 @@ FormSemakan As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(228, 240, 239, 1)
+        Fill: =If(varshowfields=1,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =94
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)) 
+        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); NewForm(Form2);
         PressedBorderColor: =RGBA(204, 204, 204, 1)
         PressedColor: =RGBA(0, 0, 0, 1)
         PressedFill: =RGBA(230, 230, 230, 1)
@@ -3138,6 +3138,7 @@ FormSemakan As screen:
         RadiusTopRight: =0
         Size: =20
         Text: ="Plot"
+        Underline: =If(varshowfields=1,true,false)
         Width: =319
         Y: =108
         ZIndex: =15
@@ -3149,7 +3150,7 @@ FormSemakan As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(228, 240, 239, 1)
+        Fill: =If(varshowfields=2,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =94
@@ -3166,6 +3167,7 @@ FormSemakan As screen:
         RadiusTopRight: =0
         Size: =18
         Text: ="Semakan Kesihatan"
+        Underline: =If(varshowfields=2,true,false)
         Width: =321
         X: =319
         Y: =108
