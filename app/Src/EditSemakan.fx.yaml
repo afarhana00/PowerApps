@@ -44,9 +44,8 @@ EditSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
-        OnSelect: |+
-            =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery1.Selected })
-            
+        OnSelect: |-
+            =Remove([@'Semakan Kesihatan'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListSemakan);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -91,90 +90,6 @@ EditSemakan As screen:
         X: =28
         Y: =18
         ZIndex: =4
-
-    Container1 As groupContainer.verticalAutoLayoutContainer:
-        BorderStyle: =BorderStyle.None
-        DropShadow: =DropShadow.Light
-        Height: =476
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =If(deleteMode, true, false)
-        Width: =640
-        Y: =650
-        ZIndex: =6
-
-        Icon8 As icon.CancelBadge:
-            AlignInContainer: =AlignInContainer.Start
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.CancelBadge
-            OnSelect: |-
-                =UpdateContext({ deleteMode: false, deleteCancelled: true })
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            ZIndex: =1
-
-        Label4 As label:
-            Align: =Align.Center
-            AlignInContainer: =AlignInContainer.Stretch
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FillPortions: =0.8
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =70
-            LayoutMinHeight: =20
-            LayoutMinWidth: =560
-            Size: =21
-            Text: ="Are you sure you want to delete this record?"
-            Width: =560
-            ZIndex: =2
-
-        Button5 As button:
-            AlignInContainer: =AlignInContainer.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(0, 120, 212, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =70
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(16, 110, 190, 1)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |-
-                =Remove([@'Semakan Kesihatan'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListSemakan);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Delete"
-            Width: =280
-            ZIndex: =3
 
     Form3 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
@@ -248,7 +163,8 @@ EditSemakan As screen:
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
                 Width: =300
-                X: =322
+                X: =323
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage63 As label:
@@ -1415,7 +1331,7 @@ EditSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_8")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =160
             MaxLength: =DataSourceInfo([@'Semakan Kesihatan'], DataSourceInfo.MaxLength, "field_8")
             Required: =false
             Update: =DataCardValue65.Text
@@ -1678,7 +1594,7 @@ EditSemakan As screen:
                 Text: =Parent.DisplayName
                 Width: =215
                 Wrap: =false
-                X: =13
+                X: =30
                 Y: =1
                 ZIndex: =1
 
@@ -1780,7 +1696,7 @@ EditSemakan As screen:
                 Size: =21
                 Text: ="i.e.,1310 (24h)"
                 Width: =215
-                X: =13
+                X: =30
                 Y: =49
                 ZIndex: =5
 
@@ -1963,7 +1879,7 @@ EditSemakan As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_5")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =123
+            Height: =89
             Required: =false
             Update: =DataCardValue44.Selected
             Width: =640

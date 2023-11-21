@@ -1,4 +1,5 @@
 FormMeracun As screen:
+    Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     Form7 As form:
@@ -2053,7 +2054,7 @@ FormMeracun As screen:
     Container2_6 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =839
+        Height: =821
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =4
@@ -2062,7 +2063,7 @@ FormMeracun As screen:
         RadiusTopRight: =4
         Visible: =If(varshowfields=1||varshowfields=-1,true,false)
         Width: =640
-        Y: =187
+        Y: =204
         ZIndex: =10
 
         divPlot_6 As groupContainer.horizontalAutoLayoutContainer:
@@ -2510,4 +2511,18 @@ FormMeracun As screen:
                 X: =17
                 Y: =335
                 ZIndex: =2
+
+    Rectangle14_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =3
+        HoverFill: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(0, 0, 0, 1)
+        Width: =640
+        Y: =194
+        ZIndex: =11
 

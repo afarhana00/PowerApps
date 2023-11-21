@@ -148,7 +148,7 @@ ListJadualSiraman As screen:
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
             Width: =163
-            X: =27
+            X: =22
             Y: =42
             ZIndex: =10
 
@@ -250,10 +250,11 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =18
             Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
-            Width: =143
+            Width: =148
             X: =27
             Y: =70
             ZIndex: =18

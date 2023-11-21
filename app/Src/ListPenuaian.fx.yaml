@@ -205,7 +205,9 @@ ListPenuaian As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(230, 230, 230, 0.07)
-            OnSelect: =Select(Parent);Navigate(ViewPenuaian);
+            OnSelect: |-
+                =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); EditForm(EditForm3);Select(Parent);
+                Navigate(EditPenuaian);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(16, 110, 190, 0)
@@ -217,27 +219,6 @@ ListPenuaian As screen:
             Text: =""
             Width: =640
             ZIndex: =11
-
-        Icon16 As icon.Edit:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 168, 156, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =49
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Edit
-            OnSelect: =Select(Parent); Navigate(EditPenuaian);
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =46
-            X: =463
-            Y: =16
-            ZIndex: =12
 
     Rectangle13 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
