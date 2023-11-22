@@ -5,20 +5,24 @@ ListJadualSiraman As screen:
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =805
+        Height: =788
         Items: |
             =
-            Filter('Jadual Siraman', Tarikh = DatePicker1.SelectedDate &&
+            If(
+                DatePicker2_1.SelectedDate = Today(),
+                'Jadual Siraman',
+                Filter('Jadual Siraman', 'Tarikh' = DatePicker2_1.SelectedDate || 'Tarikh' >= DatePicker2_1.SelectedDate &&
+            'Tarikh' <= DatePicker3_1.SelectedDate &&
                     (Dropdown1.Selected.Value = "All"
                     Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
-                    Or IsBlank(Dropdown1.Selected.Value))
+                    Or IsBlank(Dropdown1.Selected.Value)))
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =295
+        Y: =345
         ZIndex: =1
 
         Title4 As label:
