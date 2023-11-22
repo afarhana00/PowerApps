@@ -107,27 +107,6 @@ ListSemakan As screen:
             Width: =4
             ZIndex: =5
 
-        Icon11 As icon.Warning:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(255, 140, 0, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Warning
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =51
-            X: =203
-            Y: =52
-            ZIndex: =8
-
         Icon17 As icon.Bug:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(0, 120, 212, 1)
@@ -266,11 +245,11 @@ ListSemakan As screen:
             Size: =21
             Text: =ThisItem.'Kadar Serangan Penyakit'
             Width: =77
-            X: =254
-            Y: =46
+            X: =225
+            Y: =51
             ZIndex: =16
 
-        Label8 As label:
+        lblPerosak As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -288,7 +267,7 @@ ListSemakan As screen:
             Y: =46
             ZIndex: =17
 
-        Image12 As image:
+        imgSuhu As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -306,6 +285,25 @@ ListSemakan As screen:
             Width: =68
             Y: =44
             ZIndex: =18
+
+        imgPokok As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =59
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-healthy-food-100'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =68
+            X: =160
+            Y: =43
+            ZIndex: =19
 
     Rectangle4 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)

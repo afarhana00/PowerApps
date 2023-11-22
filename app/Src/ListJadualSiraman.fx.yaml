@@ -22,21 +22,21 @@ ListJadualSiraman As screen:
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =345
+        Y: =348
         ZIndex: =1
 
         Title4 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
             Height: =39
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =19
+            Size: =18
             Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
@@ -44,10 +44,10 @@ ListJadualSiraman As screen:
             ZIndex: =1
 
         Body2 As label:
-            Color: =RGBA(96, 94, 92, 1)
+            Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
             Height: =37
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -132,15 +132,15 @@ ListJadualSiraman As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =636
-            X: =4
+            Width: =108
+            X: =531
             ZIndex: =9
 
         Subtitle4 As label:
-            Color: =RGBA(96, 94, 92, 1)
+            Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
             Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -164,9 +164,10 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =45
             OnSelect: =Select(Parent)
-            Size: =16
+            Size: =18
             Text: =Concat(ThisItem.'Jenis Siraman', Text(Value),";")
             Width: =357
             X: =283
@@ -236,11 +237,12 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =41
+            FontWeight: =FontWeight.Bold
+            Height: =42
             OnSelect: =Select(Parent)
             Size: =18
             Text: =Text(Round(ThisItem.'Waktu Selepas Siraman',0))
-            Width: =63
+            Width: =79
             X: =165
             Y: =61
             ZIndex: =20
@@ -265,25 +267,6 @@ ListJadualSiraman As screen:
             Y: =62
             ZIndex: =21
 
-        Image8 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='icons8-watering-plant-50'
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =50
-            X: =233
-            Y: =55
-            ZIndex: =22
-
         Image13 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -298,6 +281,7 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(ThisItem.'Kepekatan Baja AB (EC)',false,true)
             Width: =53
             X: =345
             ZIndex: =23
@@ -320,6 +304,25 @@ ListJadualSiraman As screen:
             X: =487
             Y: =11
             ZIndex: =24
+
+        Image17 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='download (1)'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =61
+            X: =228
+            Y: =44
+            ZIndex: =25
 
     Rectangle7 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
