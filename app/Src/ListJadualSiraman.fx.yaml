@@ -281,7 +281,7 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.'Kepekatan Baja AB (EC)',false,true)
+            Visible: =If(!IsBlank(ThisItem.'Kepekatan Baja AB (EC)'),true,false)
             Width: =53
             X: =345
             ZIndex: =23

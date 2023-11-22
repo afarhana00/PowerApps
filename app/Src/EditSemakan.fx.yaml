@@ -2741,6 +2741,8 @@ EditSemakan As screen:
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
                     =ForAll(Filter(TreePlot,PlotId=ddPlotId_15.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =575
                 OnSelect: =
                 PaddingBottom: =5
                 PaddingLeft: =12

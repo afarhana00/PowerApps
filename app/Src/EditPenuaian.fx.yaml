@@ -1155,6 +1155,7 @@ EditPenuaian As screen:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
+                DefaultDate: =Gallery4.Selected.'Start Date'
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -1263,7 +1264,7 @@ EditPenuaian As screen:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultDate: =Today()+7
+                DefaultDate: =Gallery4.Selected.'End Date'
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)

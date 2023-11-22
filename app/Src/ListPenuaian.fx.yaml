@@ -42,13 +42,11 @@ ListPenuaian As screen:
         Fill: =RGBA(228, 240, 239, 1)
         Height: =737
         Items: |
-            =
-            
-            If(
+            =If(
                 DatePicker2_3.SelectedDate = Today(),
                 'Penuaian Cili',
-                Filter('Penuaian Cili', 'Start Date' = DatePicker2_3.SelectedDate || 'Start Date' >= DatePicker2_3.SelectedDate &&
-            'End Date' <= DatePicker3_3.SelectedDate && Month.Value=Dropdown2.Selected.Value&&
+                Filter('Penuaian Cili', 'Start Date' = DatePicker2_3.SelectedDate && 'Start Date' >= DatePicker2_3.SelectedDate &&
+            'End Date' <= DatePicker3_3.SelectedDate || Month.Value=Dropdown2.Selected.Value &&
                     (Dropdown1_1.Selected.Value = "All"
                     Or Plot.Value = Dropdown1_1.Selected.Value
                     Or IsBlank(Dropdown1_1.Selected.Value))))
@@ -65,7 +63,7 @@ ListPenuaian As screen:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
             Height: =39
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -83,7 +81,7 @@ ListPenuaian As screen:
             Color: =RGBA(5, 5, 5, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
             Height: =35
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -93,9 +91,9 @@ ListPenuaian As screen:
             Size: =16
             Text: =ThisItem.'Start Date'
             VerticalAlign: =VerticalAlign.Top
-            Width: =162
-            X: =250
-            Y: =10
+            Width: =136
+            X: =261
+            Y: =19
             ZIndex: =3
 
         NextArrow1 As icon.ChevronRight:
@@ -141,6 +139,7 @@ ListPenuaian As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =14
             OnSelect: =Select(Parent)
             Size: =21
@@ -159,12 +158,14 @@ ListPenuaian As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =42
+            FontWeight: =FontWeight.Bold
+            Height: =23
             OnSelect: =Select(Parent)
             Size: =16
             Text: =ThisItem.'End Date'
             Width: =243
             X: =397
+            Y: =19
             ZIndex: =8
 
         Label23 As label:
@@ -176,6 +177,7 @@ ListPenuaian As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             OnSelect: =Select(Parent)
             Size: =16
             Text: |-
@@ -194,13 +196,14 @@ ListPenuaian As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =42
+            FontWeight: =FontWeight.Bold
+            Height: =33
             OnSelect: =Select(Parent)
             Size: =16
             Text: =ThisItem.'Actual (kg)'
-            Width: =113
-            X: =273
-            Y: =69
+            Width: =81
+            X: =263
+            Y: =72
             ZIndex: =10
 
         Button34 As button:
@@ -247,26 +250,26 @@ ListPenuaian As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =50
             X: =196
-            Y: =5
+            Y: =11
             ZIndex: =12
 
-        Image18 As image:
+        Image8 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =54
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =iconberatcili
+            Image: =iconberatcili2
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =50
-            X: =201
-            Y: =58
+            Width: =53
+            X: =193
+            Y: =51
             ZIndex: =13
 
     Rectangle13 As rectangle:
@@ -353,7 +356,7 @@ ListPenuaian As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2_3);
+        OnSelect: =Reset(DatePicker2_3);Reset(DatePicker3_3);Reset(Dropdown2); Reset(Dropdown1_3);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -453,6 +456,6 @@ ListPenuaian As screen:
         Size: =21
         Width: =180
         X: =432
-        Y: =115
+        Y: =104
         ZIndex: =12
 
