@@ -41,7 +41,19 @@ ListPenuaian As screen:
         DelayItemLoading: =true
         Fill: =RGBA(228, 240, 239, 1)
         Height: =700
-        Items: =Filter('Penuaian Cili',Month.Value=Dropdown2.Selected.Value)
+        Items: |
+            =
+            
+            If(
+                DatePicker2_3.SelectedDate = Today(),
+                'Penuaian Cili',
+                Filter('Penuaian Cili', 'Start Date' = DatePicker2_3.SelectedDate || 'Start Date' >= DatePicker2_3.SelectedDate &&
+            'End Date' <= DatePicker3_3.SelectedDate && Month.Value=Dropdown2.Selected.Value&&
+                    (Dropdown1_1.Selected.Value = "All"
+                    Or Plot.Value = Dropdown1_1.Selected.Value
+                    Or IsBlank(Dropdown1_1.Selected.Value))))
+                   
+                
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0

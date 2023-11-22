@@ -8,14 +8,14 @@ ListMeracun As screen:
         Height: =812
         Items: |+
             =If(
-                DatePicker4.SelectedDate = Today(),
+                DatePicker2_2.SelectedDate = Today(),
                 'Jadual Meracun',
-                Filter(
-                    'Jadual Meracun',
-                    (Tarikh = DatePicker4.SelectedDate) &&
-                    (IsBlank(Dropdown3.Selected.Value))
-                )
-            )
+                Filter('Jadual Meracun', 'Tarikh' = DatePicker2_2.SelectedDate || 'Tarikh' >= DatePicker2_2.SelectedDate &&
+            'Tarikh' <= DatePicker3_2.SelectedDate &&
+                    (Dropdown1_2.Selected.Value = "All"
+                    Or 'Plot'.Value = Dropdown1_2.Selected.Value
+                    Or IsBlank(Dropdown1_2.Selected.Value))))
+            
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
