@@ -2248,7 +2248,7 @@ EditSemakan As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(228, 240, 239, 1)
+        Fill: =If(varshowfields=1,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =84
@@ -2277,7 +2277,7 @@ EditSemakan As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(228, 240, 239, 1)
+        Fill: =If(varshowfields=2,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =84
@@ -2302,7 +2302,7 @@ EditSemakan As screen:
 
     Container2_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =845
+        Height: =861
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         RadiusBottomLeft: =4
@@ -2362,7 +2362,7 @@ EditSemakan As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2435,8 +2435,9 @@ EditSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2509,8 +2510,9 @@ EditSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2581,8 +2583,9 @@ EditSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2653,8 +2656,9 @@ EditSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2728,8 +2732,8 @@ EditSemakan As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2737,8 +2741,6 @@ EditSemakan As screen:
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
                     =ForAll(Filter(TreePlot,PlotId=ddPlotId_15.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
                 OnSelect: =
                 PaddingBottom: =5
                 PaddingLeft: =12
@@ -2754,4 +2756,43 @@ EditSemakan As screen:
                 X: =17
                 Y: =335
                 ZIndex: =2
+
+            ddPlotId_24 As dropdown:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronFill: =RGBA(50, 49, 48, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(245, 245, 245, 1)
+                FillPortions: =0.6
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                Items: |
+                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_15.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                LayoutMinHeight: =70
+                LayoutMinWidth: =0
+                PaddingBottom: =5
+                PaddingLeft: =12
+                PaddingRight: =20
+                PaddingTop: =20
+                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SelectionColor: =RGBA(50, 49, 48, 1)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                Size: =21
+                Width: =0.8
+                X: =17
+                Y: =335
+                ZIndex: =3
 

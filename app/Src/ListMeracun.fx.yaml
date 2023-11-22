@@ -10,10 +10,10 @@ ListMeracun As screen:
             =If(
                 DatePicker2_2.SelectedDate = Today(),
                 'Jadual Meracun',
-                Filter('Jadual Meracun', 'Tarikh' = DatePicker2_2.SelectedDate || 'Tarikh' >= DatePicker2_2.SelectedDate &&
-            'Tarikh' <= DatePicker3_2.SelectedDate &&
+                Filter('Jadual Meracun', Tarikh = DatePicker2_2.SelectedDate || Tarikh >= DatePicker2_2.SelectedDate &&
+            Tarikh <= DatePicker3_2.SelectedDate &&
                     (Dropdown1_2.Selected.Value = "All"
-                    Or 'Plot'.Value = Dropdown1_2.Selected.Value
+                    Or Plot.Value = Dropdown1_2.Selected.Value
                     Or IsBlank(Dropdown1_2.Selected.Value))))
             
             
@@ -36,12 +36,12 @@ ListMeracun As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =22
+            Size: =20
             Text: =ThisItem.'Plot '.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
-            X: =27
-            Y: =8
+            X: =247
+            Y: =7
             ZIndex: =1
 
         Body1 As label:
@@ -55,12 +55,12 @@ ListMeracun As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =19
+            Size: =20
             Text: =ThisItem.'HST (Hari)'
             VerticalAlign: =VerticalAlign.Top
-            Width: =83
-            X: =27
-            Y: =95
+            Width: =69
+            X: =427
+            Y: =4
             ZIndex: =2
 
         NextArrow4_1 As icon.ChevronRight:
@@ -120,30 +120,13 @@ ListMeracun As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =19
+            Size: =20
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
             Width: =163
-            X: =29
-            Y: =51
+            X: =30
+            Y: =7
             ZIndex: =6
-
-        Label13 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =47
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: =
-            Width: =254
-            X: =190
-            ZIndex: =7
 
         Label14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -154,12 +137,13 @@ ListMeracun As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =28
+            Height: =59
             OnSelect: =Select(Parent)
             Size: =17
             Text: =ThisItem.'Racun Serangga'.Value
-            Width: =375
-            X: =190
+            Width: =106
+            X: =64
+            Y: =73
             ZIndex: =8
 
         Label15 As label:
@@ -171,13 +155,13 @@ ListMeracun As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =58
+            Height: =97
             OnSelect: =Select(Parent)
             Size: =17
             Text: =ThisItem.'Racun Kulat'.Value
-            Width: =309
-            X: =189
-            Y: =25
+            Width: =179
+            X: =219
+            Y: =47
             ZIndex: =9
 
         Label18 As label:
@@ -189,13 +173,13 @@ ListMeracun As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =74
+            Height: =108
             OnSelect: =Select(Parent)
             Size: =17
             Text: =ThisItem.'Baja Foliar'.Value
-            Width: =249
-            X: =192
-            Y: =71
+            Width: =211
+            X: =427
+            Y: =37
             ZIndex: =10
 
         Button13_1 As button:
@@ -225,6 +209,63 @@ ListMeracun As screen:
             Text: =""
             Width: =640
             ZIndex: =11
+
+        Image9 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =48
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='download (6)'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =60
+            X: =4
+            Y: =85
+            ZIndex: =12
+
+        Image10 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =47
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-fertilizer-60'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =52
+            X: =371
+            Y: =85
+            ZIndex: =13
+
+        Image11 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =48
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-potted-plant-50 (1)'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =47
+            X: =170
+            Y: =85
+            ZIndex: =14
 
     Rectangle7_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)

@@ -11,8 +11,8 @@ ListJadualSiraman As screen:
             If(
                 DatePicker2_1.SelectedDate = Today(),
                 'Jadual Siraman',
-                Filter('Jadual Siraman', 'Tarikh' = DatePicker2_1.SelectedDate || 'Tarikh' >= DatePicker2_1.SelectedDate &&
-            'Tarikh' <= DatePicker3_1.SelectedDate &&
+                Filter('Jadual Siraman', Tarikh = DatePicker2_1.SelectedDate || Tarikh >= DatePicker2_1.SelectedDate &&
+            Tarikh <= DatePicker3_1.SelectedDate &&
                     (Dropdown1.Selected.Value = "All"
                     Or 'Plot (Lokasi)'.Value = Dropdown1.Selected.Value
                     Or IsBlank(Dropdown1.Selected.Value)))
@@ -36,12 +36,11 @@ ListJadualSiraman As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =19
             Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
-            X: =27
-            Y: =8
+            X: =233
             ZIndex: =1
 
         Body2 As label:
@@ -59,8 +58,8 @@ ListJadualSiraman As screen:
             Text: =ThisItem.'Waktu Siraman'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =83
-            X: =27
-            Y: =74
+            X: =53
+            Y: =66
             ZIndex: =2
 
         NextArrow4 As icon.ChevronRight:
@@ -148,12 +147,12 @@ ListJadualSiraman As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =19
             Text: =ThisItem.Tarikh
             VerticalAlign: =VerticalAlign.Top
             Width: =163
-            X: =22
-            Y: =42
+            X: =53
+            Y: =1
             ZIndex: =10
 
         Label19 As label:
@@ -165,15 +164,16 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =62
+            Height: =45
             OnSelect: =Select(Parent)
             Size: =16
             Text: =Concat(ThisItem.'Jenis Siraman', Text(Value),";")
-            Width: =374
-            X: =204
+            Width: =357
+            X: =283
+            Y: =55
             ZIndex: =12
 
-        Label25 As label:
+        bajaAB As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -182,68 +182,14 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =36
+            Height: =30
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =19
             Text: =ThisItem.'Kepekatan Baja AB (EC)'
-            Width: =63
-            X: =287
-            Y: =47
+            Width: =100
+            X: =402
+            Y: =9
             ZIndex: =14
-
-        Label26 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =33
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: =ThisItem.'Kepekatan Baja Tunggal (EC)'
-            Width: =66
-            X: =378
-            Y: =37
-            ZIndex: =15
-
-        Label27 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =38
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: =ThisItem.'Kuantiti Baja AB (Liter)'
-            Width: =63
-            X: =287
-            Y: =70
-            ZIndex: =16
-
-        Label28 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: =ThisItem.'Kuantiti Baja Tunggal (Kg)'
-            Width: =66
-            X: =390
-            Y: =74
-            ZIndex: =17
 
         Label11 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -259,9 +205,121 @@ ListJadualSiraman As screen:
             Size: =18
             Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
             Width: =148
-            X: =27
-            Y: =70
+            X: =68
+            Y: =32
             ZIndex: =18
+
+        Label25 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="-"
+            Width: =30
+            X: =135
+            Y: =62
+            ZIndex: =19
+
+        Label26 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =Text(Round(ThisItem.'Waktu Selepas Siraman',0))
+            Width: =63
+            X: =165
+            Y: =61
+            ZIndex: =20
+
+        Image7 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =38
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-alarm-clock-50'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(ThisItem.'Waktu Siraman'.Value,false,true)
+            Width: =44
+            X: =14
+            Y: =62
+            ZIndex: =21
+
+        Image8 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-watering-plant-50'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =50
+            X: =233
+            Y: =55
+            ZIndex: =22
+
+        Image13 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-fertilizer-96'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =53
+            X: =345
+            ZIndex: =23
+
+        Label27 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: ="EC"
+            Visible: =If(ThisItem.'Kepekatan Baja AB (EC)',false,true)
+            Width: =153
+            X: =487
+            Y: =11
+            ZIndex: =24
 
     Rectangle7 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -330,7 +388,7 @@ ListJadualSiraman As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
-        Height: =70
+        Height: =72
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
@@ -379,7 +437,7 @@ ListJadualSiraman As screen:
         Fill: =RGBA(0, 168, 156, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =62
+        Height: =60
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
@@ -393,9 +451,9 @@ ListJadualSiraman As screen:
         RadiusTopRight: =30
         Size: =21
         Text: ="Semua Rekod"
-        Width: =202
+        Width: =192
         X: =431
-        Y: =253
+        Y: =254
         ZIndex: =14
 
     DatePicker3_1 As datepicker:
@@ -413,7 +471,7 @@ ListJadualSiraman As screen:
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =244
+        Width: =239
         X: =147
         Y: =242
         ZIndex: =15
