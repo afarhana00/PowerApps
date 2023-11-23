@@ -174,7 +174,8 @@ ListMeracun As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        Items: |-
+            =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Plot (Lokasi)')},{DropdownOptions:["Semua"]}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -197,12 +198,12 @@ ListMeracun As screen:
         Items: |
             =
             If(
-                DatePicker2_1.SelectedDate = Today(),
+                Dropdown1_2.Selected.Value = "Semua" ,
                 'Jadual Meracun',
                 Filter('Jadual Meracun', Tarikh = DatePicker2_2.SelectedDate || Tarikh >= DatePicker2_2.SelectedDate &&
             Tarikh <= DatePicker3_2.SelectedDate &&
                     (Dropdown1_2.Selected.Value = "All"
-                    Or 'Plot'.Value = Dropdown1_2.Selected.Value
+                    Or 'Plot '.Value = Dropdown1_2.Selected.Value
                     Or IsBlank(Dropdown1_2.Selected.Value)))
                 )
         Layout: =Layout.Vertical
