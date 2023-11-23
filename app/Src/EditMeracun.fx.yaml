@@ -710,6 +710,7 @@ EditMeracun As screen:
         DataSource: ='Jadual Meracun'
         Fill: =RGBA(228, 240, 239, 1)
         Height: =836
+        Item: =Gallery3.Selected
         Visible: =If(varshowfields=2||varshowfields=-1,true,false)
         Width: =640
         Y: =207
