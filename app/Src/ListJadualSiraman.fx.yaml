@@ -107,6 +107,194 @@ ListJadualSiraman As screen:
             Width: =4
             ZIndex: =5
 
+        Subtitle4 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
+            Height: =32
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19
+            Text: =ThisItem.Tarikh
+            VerticalAlign: =VerticalAlign.Top
+            Width: =163
+            X: =53
+            Y: =1
+            ZIndex: =6
+
+        Label19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =67
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =Concat(ThisItem.'Jenis Siraman', Text(Value),";")
+            Width: =357
+            X: =283
+            Y: =33
+            ZIndex: =7
+
+        bajaAB As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =19
+            Text: =ThisItem.'Kepekatan Baja AB (EC)'
+            Width: =100
+            X: =402
+            Y: =9
+            ZIndex: =8
+
+        Label11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
+            Width: =148
+            X: =68
+            Y: =32
+            ZIndex: =9
+
+        Label25 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="-"
+            Width: =30
+            X: =135
+            Y: =62
+            ZIndex: =10
+
+        Label26 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =Text(Round(ThisItem.'Waktu Selepas Siraman',0))
+            Width: =79
+            X: =165
+            Y: =61
+            ZIndex: =11
+
+        Image7 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =38
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-alarm-clock-50'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(ThisItem.'Waktu Siraman'.Value,false,true)
+            Width: =44
+            X: =14
+            Y: =62
+            ZIndex: =12
+
+        Image13 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='icons8-fertilizer-96'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(!IsBlank(ThisItem.'Kepekatan Baja AB (EC)'),true,false)
+            Width: =53
+            X: =345
+            ZIndex: =13
+
+        Label27 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: ="EC"
+            Visible: =If(ThisItem.'Kepekatan Baja AB (EC)',false,true)
+            Width: =153
+            X: =487
+            Y: =11
+            ZIndex: =14
+
+        Image17 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='download (1)'
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =61
+            X: =228
+            Y: =44
+            ZIndex: =15
+
         Button13 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -132,197 +320,8 @@ ListJadualSiraman As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =108
-            X: =531
-            ZIndex: =9
-
-        Subtitle4 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Bold)
-            Height: =32
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =12
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =19
-            Text: =ThisItem.Tarikh
-            VerticalAlign: =VerticalAlign.Top
-            Width: =163
-            X: =53
-            Y: =1
-            ZIndex: =10
-
-        Label19 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =45
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =Concat(ThisItem.'Jenis Siraman', Text(Value),";")
-            Width: =357
-            X: =283
-            Y: =55
-            ZIndex: =12
-
-        bajaAB As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =30
-            OnSelect: =Select(Parent)
-            Size: =19
-            Text: =ThisItem.'Kepekatan Baja AB (EC)'
-            Width: =100
-            X: =402
-            Y: =9
-            ZIndex: =14
-
-        Label11 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
-            Width: =148
-            X: =68
-            Y: =32
-            ZIndex: =18
-
-        Label25 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =38
-            OnSelect: =Select(Parent)
-            Size: =21
-            Text: ="-"
-            Width: =30
-            X: =135
-            Y: =62
-            ZIndex: =19
-
-        Label26 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =Text(Round(ThisItem.'Waktu Selepas Siraman',0))
-            Width: =79
-            X: =165
-            Y: =61
-            ZIndex: =20
-
-        Image7 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =38
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='icons8-alarm-clock-50'
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.'Waktu Siraman'.Value,false,true)
-            Width: =44
-            X: =14
-            Y: =62
-            ZIndex: =21
-
-        Image13 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='icons8-fertilizer-96'
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(!IsBlank(ThisItem.'Kepekatan Baja AB (EC)'),true,false)
-            Width: =53
-            X: =345
-            ZIndex: =23
-
-        Label27 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =33
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: ="EC"
-            Visible: =If(ThisItem.'Kepekatan Baja AB (EC)',false,true)
-            Width: =153
-            X: =487
-            Y: =11
-            ZIndex: =24
-
-        Image17 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='download (1)'
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =61
-            X: =228
-            Y: =44
-            ZIndex: =25
+            Width: =639
+            ZIndex: =16
 
     Rectangle7 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)

@@ -147,14 +147,14 @@ EditMeracun As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowfields=1,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
+        Fill: =If(varshowfields=1,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =100
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1)) 
+        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)) 
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -164,6 +164,7 @@ EditMeracun As screen:
         RadiusTopRight: =0
         Size: =22
         Text: ="Plot"
+        Underline: =If(varshowfields=1,true,false)
         Width: =313
         Y: =100
         ZIndex: =5
@@ -175,14 +176,14 @@ EditMeracun As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowfields=2,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
+        Fill: =If(varshowfields=2,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =100
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2)); NewForm(Form4);
+        OnSelect: =If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); NewForm(Form7_1);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -192,6 +193,7 @@ EditMeracun As screen:
         RadiusTopRight: =0
         Size: =22
         Text: ="Jadual Meracun"
+        Underline: =If(varshowfields=2,true,false)
         Width: =327
         X: =313
         Y: =100
@@ -691,7 +693,7 @@ EditMeracun As screen:
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(ListMeracun);
@@ -707,10 +709,10 @@ EditMeracun As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Jadual Meracun'
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =844
+        Height: =836
         Visible: =If(varshowfields=2||varshowfields=-1,true,false)
         Width: =640
-        Y: =200
+        Y: =207
         ZIndex: =11
 
         "'Plot _DataCard1_1' As typedDataCard.comboBoxEditCard":
@@ -752,10 +754,9 @@ EditMeracun As screen:
 
             DataCardValue4_2 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -873,10 +874,9 @@ EditMeracun As screen:
 
             DataCardValue13_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -995,10 +995,9 @@ EditMeracun As screen:
 
             DataCardValue12_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -1114,10 +1113,9 @@ EditMeracun As screen:
 
             DataCardValue11_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2042,10 +2040,9 @@ EditMeracun As screen:
 
             DataCardValue25_3 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2278,10 +2275,9 @@ EditMeracun As screen:
 
             DataCardValue27_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -2512,10 +2508,9 @@ EditMeracun As screen:
 
             DataCardValue29_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0,	168,156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)

@@ -2001,7 +2001,7 @@ FormMeracun As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowfields=1,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
+        Fill: =If(varshowfields=1,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =94
@@ -2018,6 +2018,7 @@ FormMeracun As screen:
         RadiusTopRight: =0
         Size: =20
         Text: ="Plot"
+        Underline: =If(varshowfields=1,true,false)
         Width: =320
         Y: =93
         ZIndex: =8
@@ -2029,7 +2030,7 @@ FormMeracun As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowfields=2,RGBA(220,220,220,1),RGBA(228, 240, 239, 1))
+        Fill: =If(varshowfields=2,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =94
@@ -2046,6 +2047,7 @@ FormMeracun As screen:
         RadiusTopRight: =0
         Size: =20
         Text: ="Jadual Meracun"
+        Underline: =If(varshowfields=2,true,false)
         Width: =320
         X: =320
         Y: =93
