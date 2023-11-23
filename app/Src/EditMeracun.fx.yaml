@@ -2125,7 +2125,7 @@ EditMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kuantiti_x0028_ml_x0029_"
-            Default: =ThisItem.'Kuantiti Racun Serangga (ml/L)'
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_ml_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -2171,7 +2171,6 @@ EditMeracun As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
                 Height: =70
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
@@ -2360,7 +2359,7 @@ EditMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kuantiti_x0028_g_x0029_"
-            Default: =ThisItem.'Kuantiti Racun Kulat (g/KG/ml/L)'
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Kuantiti_x0028_g_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -2405,7 +2404,6 @@ EditMeracun As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
                 Height: =75
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
