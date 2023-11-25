@@ -176,7 +176,7 @@ ListMeracun As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:Choices('Jadual Siraman'.'Plot (Lokasi)')},{DropdownOptions:["Semua"]}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:Choices('Jadual Meracun'.'Plot')},{DropdownOptions:["Semua"]}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

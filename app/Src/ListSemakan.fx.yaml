@@ -6,17 +6,25 @@ ListSemakan As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =735
-        Items: |+
+        Items: |
             =If(
-                DatePicker2.SelectedDate = Today(),
-                ('Semakan Kesihatan') 
-                   ,
-                Filter('Semakan Kesihatan', 'Tarikh ' = DatePicker2.SelectedDate || 'Tarikh ' >= DatePicker2.SelectedDate && 
-            'Tarikh ' <= DatePicker3.SelectedDate &&
-                    (Dropdown1_1.Selected.Value = "All"
-                    Or 'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value
-                    Or IsBlank(Dropdown1_1.Selected.Value))))
-            
+                Dropdown1_1.Selected.Value = "Semua" || DatePicker2.SelectedDate = Today(),
+                
+                    'Semakan Kesihatan',
+                If(
+                    Dropdown1_1.Selected.Value = "Semua" ,
+                    Filter(
+                        'Semakan Kesihatan',
+                        ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value = "A2" || 'Plot (Lokasi)'.Value = "A3") &&
+                        ('Tarikh ' >= DatePicker2.SelectedDate && 'Tarikh ' <= DatePicker3.SelectedDate)
+                    ),
+                    Filter(
+                        'Semakan Kesihatan',
+                        'Tarikh ' >= DatePicker2.SelectedDate && 'Tarikh ' <= DatePicker3.SelectedDate &&
+                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value || IsBlank(Dropdown1_1.Selected.Value)
+                    )
+                )
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -399,7 +407,7 @@ ListSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2);Reset(DatePicker3);
+        OnSelect: =Reset(DatePicker2);Reset(Dropdown1_1);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
