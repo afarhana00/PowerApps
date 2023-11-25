@@ -402,7 +402,8 @@ ListJadualSiraman As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices('Jadual Siraman'.'Plot (Lokasi)')
+        Items: |-
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Siraman'.'Plot (Lokasi)')}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
