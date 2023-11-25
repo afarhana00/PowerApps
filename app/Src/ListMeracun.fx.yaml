@@ -88,7 +88,7 @@ ListMeracun As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2_2);
+        OnSelect: =Reset(DatePicker2_2); Reset(Dropdown1_2);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -197,15 +197,24 @@ ListMeracun As screen:
         DelayItemLoading: =true
         Height: =781
         Items: |
-            =
-            If(
-                Dropdown1_2.Selected.Value = "Semua" ,
-                Filter('Jadual Meracun', 'Plot '.Value = Dropdown1_2.Selected.Value
-                    Or IsBlank(Dropdown1_2.Selected.Value)),
-                Filter('Jadual Meracun', Tarikh = DatePicker2_2.SelectedDate && Tarikh >= DatePicker2_2.SelectedDate &&
-            Tarikh <= DatePicker3_2.SelectedDate ))
-                    
+            =If(
+                Dropdown1_2.Selected.Value = "Semua" || DatePicker2_2.SelectedDate = Today(),
                 
+                    'Jadual Meracun',
+                If(
+                    Dropdown1_2.Selected.Value = "Semua" ,
+                    Filter(
+                        'Jadual Meracun',
+                        ('Plot'.Value = "A1" || 'Plot'.Value = "A2" || 'Plot'.Value = "A3") &&
+                        (Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate)
+                    ),
+                    Filter(
+                        'Jadual Meracun',
+                        Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate &&
+                        'Plot'.Value = Dropdown1_2.Selected.Value || IsBlank(Dropdown1_2.Selected.Value)
+                    )
+                )
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
