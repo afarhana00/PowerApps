@@ -2,87 +2,6 @@ EditMeracun As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    ContainerDel_1 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =466
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =If(deleteMode, true, false)
-        Width: =640
-        Y: =326
-        ZIndex: =1
-
-        Icon8_2 As icon.CancelBadge:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.CancelBadge
-            OnSelect: |-
-                =UpdateContext({ deleteMode: false, deleteCancelled: true })
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            ZIndex: =1
-
-        Label4_2 As label:
-            Align: =Align.Center
-            AlignInContainer: =AlignInContainer.Stretch
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FillPortions: =0.8
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =70
-            LayoutMinWidth: =560
-            Size: =21
-            Text: ="Adakah Anda ingin memadam rekod ini?"
-            Width: =560
-            ZIndex: =2
-
-        Button5_2 As button:
-            AlignInContainer: =AlignInContainer.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(0, 120, 212, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =70
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(16, 110, 190, 1)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: |-
-                =Remove([@'Jadual Meracun'], selectedRecord); If(IsEmpty(Errors([@'Jadual Meracun'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Jadual Meracun']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListMeracun);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =24
-            Text: ="Padam"
-            Width: =280
-            ZIndex: =3
-
     Button1_3 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -209,7 +128,7 @@ EditMeracun As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =If(varshowfields=1||varshowfields=-1,true,false)
+        Visible: =If(varshowfields=1||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
         Y: =200
         ZIndex: =7
@@ -711,7 +630,7 @@ EditMeracun As screen:
         Fill: =RGBA(228, 240, 239, 1)
         Height: =836
         Item: =Gallery3.Selected
-        Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+        Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
         Y: =207
         ZIndex: =11
@@ -2591,4 +2510,91 @@ EditMeracun As screen:
                 Wrap: =false
                 Y: =DataCardKey29_1.Y
                 ZIndex: =4
+
+    Container1_3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(204, 228, 246, 0)
+        Height: =603
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =deleteMode
+        Width: =640
+        Y: =275
+        ZIndex: =12
+
+        Label8_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =70
+            Size: =23
+            Text: ="Adakah anda pasti untuk memadam data ini? "
+            Width: =560
+            X: =60
+            Y: =52
+            ZIndex: =1
+
+        Button2_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(184, 0, 0, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(184, 0, 0, 1)
+            OnSelect: |-
+                =Remove([@'Jadual Meracun'], selectedRecord); If(IsEmpty(Errors([@'Jadual Meracun'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Jadual Meracun']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListMeracun);
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(184, 0, 0, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="PADAM"
+            Width: =280
+            X: =38
+            Y: =501
+            ZIndex: =2
+
+        Button5_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(0, 168, 156, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 168, 156, 1)
+            OnSelect: |-
+                =UpdateContext({ deleteMode: false, deleteCancelled: true })
+            PressedBorderColor: =RGBA(0, 168, 156, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 168, 156, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="BATAL"
+            Width: =280
+            X: =340
+            Y: =501
+            ZIndex: =3
 

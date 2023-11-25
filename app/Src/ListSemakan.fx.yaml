@@ -44,7 +44,7 @@ ListSemakan As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =23
+            Size: =20
             Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =73
@@ -63,7 +63,7 @@ ListSemakan As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =19
             Text: =ThisItem.'Tarikh '
             VerticalAlign: =VerticalAlign.Top
             Width: =156
@@ -202,15 +202,14 @@ ListSemakan As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =636
-            X: =4
+            Width: =640
             ZIndex: =13
 
         Label4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4

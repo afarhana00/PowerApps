@@ -2305,7 +2305,7 @@ EditSemakan As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =If(varshowfields=1||varshowfields=-1,true,false) 
+        Visible: =If(varshowfields=1||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
         Y: =184
         ZIndex: =12
