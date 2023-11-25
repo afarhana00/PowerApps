@@ -356,7 +356,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare1"
-            Default: =ThisItem.'Price Grade A'
+            Default: =ThisItem.'Berat Buah / Biji A'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare1")
             Fill: =RGBA(0, 0, 0, 0)
@@ -413,7 +413,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeA"
-            Default: =ThisItem.'Total Price Grade A'
+            Default: =ThisItem.'Bilangan Biji / Kilo A'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeA")
             Fill: =RGBA(0, 0, 0, 0)
@@ -527,7 +527,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare10"
-            Default: =ThisItem.'Price Grade B'
+            Default: =ThisItem.'Berat Buah / Biji B'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare10")
             Fill: =RGBA(0, 0, 0, 0)
@@ -583,7 +583,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeB"
-            Default: =ThisItem.'Total Price Grade B'
+            Default: =ThisItem.'Bilangan Biji / Kilo B '
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeB")
             Fill: =RGBA(0, 0, 0, 0)
@@ -697,7 +697,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="PriceGradeC"
-            Default: =ThisItem.'Price Grade C'
+            Default: =ThisItem.'Berat Buah / Biji C'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"PriceGradeC")
             Fill: =RGBA(0, 0, 0, 0)
@@ -753,7 +753,7 @@ ViewPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TotalPriceGradeC"
-            Default: =ThisItem.'Total Price Grade C'
+            Default: =ThisItem.'Bilangan Biji / Kilo C'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"TotalPriceGradeC")
             Fill: =RGBA(0, 0, 0, 0)

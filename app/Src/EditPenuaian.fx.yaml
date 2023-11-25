@@ -431,7 +431,7 @@ EditPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare1"
-            Default: =ThisItem.'Price Grade A'
+            Default: =ThisItem.'Berat Buah / Biji A'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare1")
             Fill: =RGBA(0, 0, 0, 0)
@@ -659,7 +659,7 @@ EditPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare10"
-            Default: =ThisItem.'Price Grade B'
+            Default: =ThisItem.'Berat Buah / Biji B'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"spare10")
             Fill: =RGBA(0, 0, 0, 0)
@@ -888,7 +888,7 @@ EditPenuaian As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="PriceGradeC"
-            Default: =ThisItem.'Price Grade C'
+            Default: =ThisItem.'Berat Buah / Biji C'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"PriceGradeC")
             Fill: =RGBA(0, 0, 0, 0)
