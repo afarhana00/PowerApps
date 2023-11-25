@@ -200,13 +200,12 @@ ListMeracun As screen:
             =
             If(
                 Dropdown1_2.Selected.Value = "Semua" ,
-                'Jadual Meracun',
-                Filter('Jadual Meracun', Tarikh = DatePicker2_2.SelectedDate || Tarikh >= DatePicker2_2.SelectedDate &&
-            Tarikh <= DatePicker3_2.SelectedDate &&
-                    (Dropdown1_2.Selected.Value = "All"
-                    Or 'Plot '.Value = Dropdown1_2.Selected.Value
-                    Or IsBlank(Dropdown1_2.Selected.Value)))
-                )
+                Filter('Jadual Meracun', 'Plot '.Value = Dropdown1_2.Selected.Value
+                    Or IsBlank(Dropdown1_2.Selected.Value)),
+                Filter('Jadual Meracun', Tarikh = DatePicker2_2.SelectedDate && Tarikh >= DatePicker2_2.SelectedDate &&
+            Tarikh <= DatePicker3_2.SelectedDate ))
+                    
+                
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -352,11 +351,11 @@ ListMeracun As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =58
+            Height: =55
             OnSelect: =Select(Parent)
             Size: =16
             Text: =ThisItem.'Racun Serangga'.Value
-            Width: =124
+            Width: =149
             X: =61
             Y: =34
             ZIndex: =11
@@ -423,6 +422,7 @@ ListMeracun As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =640
+            Width: =430
+            X: =210
             ZIndex: =14
 
