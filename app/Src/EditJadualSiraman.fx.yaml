@@ -43,7 +43,7 @@ EditJadualSiraman As screen:
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form4_1);
             Notify("Your Data have been edited",NotificationType.Success);
-            Navigate(EditJadualSiraman);
+            Navigate(ListJadualSiraman);
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
