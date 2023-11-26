@@ -8,7 +8,7 @@ ListSemakan As screen:
         Height: =735
         Items: |
             =If(
-                Dropdown1_1.Selected.Value = "Semua" || DatePicker2.SelectedDate = Today(),
+                Dropdown1_1.Selected.Value = "Semua" &&  DatePicker2.SelectedDate = Today(),
                 
                     'Semakan Kesihatan',
                 If(
@@ -20,8 +20,8 @@ ListSemakan As screen:
                     ),
                     Filter(
                         'Semakan Kesihatan',
-                        'Tarikh ' >= DatePicker2.SelectedDate && 'Tarikh ' <= DatePicker3.SelectedDate &&
-                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value || IsBlank(Dropdown1_1.Selected.Value)
+                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value &&'Tarikh ' >= DatePicker2.SelectedDate && 'Tarikh ' <= DatePicker3.SelectedDate &&
+                          IsBlank(Dropdown1_1.Selected.Value)
                     )
                 )
             )

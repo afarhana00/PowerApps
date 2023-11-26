@@ -176,7 +176,7 @@ ListMeracun As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Meracun'.'Plot')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Meracun'.Plot)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -205,13 +205,13 @@ ListMeracun As screen:
                     Dropdown1_2.Selected.Value = "Semua" ,
                     Filter(
                         'Jadual Meracun',
-                        ('Plot'.Value = "A1" || 'Plot'.Value = "A2" || 'Plot'.Value = "A3") &&
+                        (Plot.Value = "A1" || Plot.Value = "A2" || Plot.Value = "A3") &&
                         (Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate)
                     ),
                     Filter(
                         'Jadual Meracun',
-                        Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate &&
-                        'Plot'.Value = Dropdown1_2.Selected.Value || IsBlank(Dropdown1_2.Selected.Value)
+                        Plot.Value = Dropdown1_2.Selected.Value && Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate &&
+                        IsBlank(Dropdown1_2.Selected.Value)
                     )
                 )
             )

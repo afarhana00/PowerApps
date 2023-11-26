@@ -442,7 +442,7 @@ ListPenuaian As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.'Plot')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.Plot)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
