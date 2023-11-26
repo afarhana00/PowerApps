@@ -7,12 +7,9 @@ ListJadualSiraman As screen:
         DelayItemLoading: =true
         Height: =788
         Items: |+
-            =If(
-                Dropdown1.Selected.Value = "Semua" || DatePicker2_1.SelectedDate = Today(),
-                
-                    'Jadual Siraman',
+            =
                 If(
-                    Dropdown1.Selected.Value = "Semua" ,
+                     DatePicker2_1.SelectedDate = Today() ,
                     Filter(
                         'Jadual Siraman',
                         ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value  = "A2" || 'Plot (Lokasi)'.Value  = "A3") &&
@@ -20,10 +17,10 @@ ListJadualSiraman As screen:
                     ),
                     Filter(
                         'Jadual Siraman',
-                        'Plot (Lokasi)'.Value = Dropdown1.Selected.Value &&Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate && IsBlank(Dropdown1.Selected.Value)
+                        'Plot (Lokasi)'.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate && IsBlank(Dropdown1.Selected.Value)
                     )
                 )
-            )
+            
             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
