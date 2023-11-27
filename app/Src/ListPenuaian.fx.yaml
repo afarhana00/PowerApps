@@ -18,7 +18,7 @@ ListPenuaian As screen:
         Height: =69
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(245, 245, 245, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
         Items: =Choices('Penuaian Cili'.Month)
         PaddingBottom: =5
         PaddingLeft: =12
@@ -42,15 +42,19 @@ ListPenuaian As screen:
         Height: =737
         Items: |
             =If(
-                DatePicker2_3.SelectedDate = Today(),
+                Dropdown1_3.Selected.Value = "Semua",
                 'Penuaian Cili',
-                Filter('Penuaian Cili', 'Start Date' = DatePicker2_3.SelectedDate && 'Start Date' >= DatePicker2_3.SelectedDate &&
-            'End Date' <= DatePicker3_3.SelectedDate || Month.Value=Dropdown2.Selected.Value &&
-                    (Dropdown1_3.Selected.Value = "Semua"
-                    Or Plot.Value = Dropdown1_3.Selected.Value
-                    Or IsBlank(Dropdown1_3.Selected.Value))))
-                   
-                
+                Filter(
+                    'Penuaian Cili',
+                    Month.Value = Dropdown2.Selected.Value &&
+                    ('Start Date' = DatePicker2_3.SelectedDate ||
+                    'Start Date' >= DatePicker2_3.SelectedDate ||
+                    'End Date' <= DatePicker3_3.SelectedDate ||
+                    Dropdown1_3.Selected.Value = "Semua" ||
+                    Plot.Value = Dropdown1_3.Selected.Value ||
+                    IsBlank(Dropdown1_3.Selected.Value))
+                )
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -314,7 +318,7 @@ ListPenuaian As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(ScreenTitle);
+        OnSelect: =Navigate(Penuaian);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(16, 110, 190, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -439,7 +443,7 @@ ListPenuaian As screen:
         Font: =Font.'Segoe UI'
         Height: =72
         HoverBorderColor: =RGBA(0, 168, 156, 1)
-        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
             =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.Plot)}),"DropdownOptions")
@@ -457,4 +461,23 @@ ListPenuaian As screen:
         X: =410
         Y: =104
         ZIndex: =12
+
+    Label28_3 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(2, 201, 191, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Tiada Data Ditemui"
+        Visible: =If(IsBlank(Gallery4),true,false)
+        Width: =560
+        X: =40
+        Y: =519
+        ZIndex: =13
 
