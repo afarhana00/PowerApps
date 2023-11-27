@@ -16,7 +16,7 @@ ListJadualSiraman As screen:
                     ),
                     Filter(
                         'Jadual Siraman',
-                        'Plot (Lokasi)'.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate && IsBlank(Dropdown1.Selected.Value)
+                        'Plot (Lokasi)'.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
                     )
                 )
             
