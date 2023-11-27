@@ -193,9 +193,9 @@ ListSemakan As screen:
                 =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });EditForm(Form3);
                 Select(Parent);UpdateContext({showContainer: !showContainer});
                 Navigate(EditSemakan);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -506,4 +506,23 @@ ListSemakan As screen:
         X: =431
         Y: =131
         ZIndex: =12
+
+    Label28_2 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(2, 201, 191, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Tiada Data Ditemui"
+        Visible: =If(IsBlank(Gallery1),true,false)
+        Width: =560
+        X: =51
+        Y: =459
+        ZIndex: =13
 

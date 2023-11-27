@@ -198,7 +198,7 @@ ListMeracun As screen:
         Height: =781
         Items: |
             =If(
-                Dropdown1_2.Selected.Value = "Semua" || DatePicker2_2.SelectedDate = Today(),
+                Dropdown1_2.Selected.Value = "Semua" && DatePicker2_2.SelectedDate = Today(),
                 
                     'Jadual Meracun',
                 If(
@@ -210,7 +210,7 @@ ListMeracun As screen:
                     ),
                     Filter(
                         'Jadual Meracun',
-                        Plot.Value = Dropdown1_2.Selected.Value && Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate &&
+                        Plot.Value = Dropdown1_2.Selected.Value && Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate ||
                         IsBlank(Dropdown1_2.Selected.Value)
                     )
                 )
@@ -431,4 +431,23 @@ ListMeracun As screen:
             Text: =""
             Width: =640
             ZIndex: =14
+
+    Label28 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(2, 201, 191, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Tiada Data Ditemui"
+        Visible: =If(IsBlank(Gallery3),true,false)
+        Width: =560
+        X: =51
+        Y: =459
+        ZIndex: =16
 

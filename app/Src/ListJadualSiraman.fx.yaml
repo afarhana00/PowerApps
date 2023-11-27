@@ -5,12 +5,11 @@ ListJadualSiraman As screen:
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =788
+        Height: =822
         Items: |+
-            =
-                If(
-                     DatePicker2_1.SelectedDate = Today() ,
-                    Filter(
+            =If(
+                Dropdown1.Selected.Value = "Semua" ,
+                 Filter(
                         'Jadual Siraman',
                         ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value  = "A2" || 'Plot (Lokasi)'.Value  = "A3") &&
                         (Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate)
@@ -27,7 +26,7 @@ ListJadualSiraman As screen:
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =348
+        Y: =312
         ZIndex: =1
 
         Title4 As label:
@@ -516,4 +515,23 @@ ListJadualSiraman As screen:
         X: =18
         Y: =228
         ZIndex: =17
+
+    Label28_1 As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(2, 201, 191, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Tiada Data Ditemui"
+        Visible: =If(IsBlank(Gallery2),true,false)
+        Width: =560
+        X: =51
+        Y: =459
+        ZIndex: =18
 
