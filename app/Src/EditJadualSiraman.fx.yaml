@@ -132,7 +132,7 @@ EditJadualSiraman As screen:
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_9.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
