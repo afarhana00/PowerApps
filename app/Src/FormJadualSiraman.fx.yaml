@@ -177,7 +177,7 @@ FormJadualSiraman As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(99, 219, 213, 1)
-                Items: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId)
+                Items: =Filter(Choices([@'Jadual Siraman'].'Plot'), Value = ddPlotId_9.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -2270,7 +2270,7 @@ FormJadualSiraman As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_9.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_9.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =

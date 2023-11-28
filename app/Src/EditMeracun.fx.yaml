@@ -555,7 +555,7 @@ EditMeracun As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_21.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_21.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =
