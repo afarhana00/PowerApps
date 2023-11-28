@@ -73,9 +73,9 @@ EditJadualSiraman As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
+            Default: =ThisItem.'Plot'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -114,7 +114,7 @@ EditJadualSiraman As screen:
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value= ddPlotId_9.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot'), Value= ddPlotId_9.Selected.PlotId)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -1254,7 +1254,7 @@ EditJadualSiraman As screen:
             DataField: ="field_1"
             Default: =ThisItem.Tarikh
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_1")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Tarikh")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -1847,7 +1847,7 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =TreePlot
+                Items: =Plot
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -1923,7 +1923,7 @@ EditJadualSiraman As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =
@@ -1997,7 +1997,7 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -2070,7 +2070,7 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -2144,7 +2144,7 @@ EditJadualSiraman As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |
-                    =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                    =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5

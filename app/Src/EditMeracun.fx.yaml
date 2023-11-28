@@ -187,7 +187,7 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =TreePlot
+                Items: =Plot
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -262,7 +262,7 @@ EditMeracun As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_21.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_21.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =
@@ -335,7 +335,7 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_21.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_21.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -407,7 +407,7 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_21.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_21.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -480,7 +480,7 @@ EditMeracun As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |
-                    =Filter(TreePlot, PlotId = ddPlotId_21.Selected.PlotId)
+                    =Filter(Plot, PlotId = ddPlotId_21.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -1973,7 +1973,7 @@ EditMeracun As screen:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
-                Default: =LookUp(TreePlot,'HST (Hari)' = ddPlantType_16.Selected.PlotId,'HST (Hari)')
+                Default: =LookUp(Plot,'HST (Hari)' = ddPlantType_16.Selected.PlotId,'HST (Hari)')
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
