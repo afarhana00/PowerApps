@@ -51,7 +51,7 @@ ListPenuaian As screen:
                     'Start Date' >= DatePicker2_3.SelectedDate ||
                     'End Date' <= DatePicker3_3.SelectedDate ||
                     Dropdown1_3.Selected.Value = "Semua" ||
-                    Plot.Value = Dropdown1_3.Selected.Value ||
+                    'Plot (Lokasi)'.Value = Dropdown1_3.Selected.Value ||
                     IsBlank(Dropdown1_3.Selected.Value))
                 )
             )
@@ -446,7 +446,7 @@ ListPenuaian As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.Plot)}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.'Plot (Lokasi)')}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
