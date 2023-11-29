@@ -2251,7 +2251,7 @@ EditSemakan As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |
-            =If(varshowfields=1,Set(varshowfields,2),Set(varshowfields,1));
+            =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1));
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -2281,7 +2281,7 @@ EditSemakan As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |
-            =If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); NewForm(Form2);
+            =If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
