@@ -9,7 +9,7 @@ EditJadualSiraman As screen:
         Fill: =RGBA(255, 0, 0, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =101
+        Height: =90
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
@@ -24,8 +24,8 @@ EditJadualSiraman As screen:
         RadiusTopRight: =0
         Size: =24
         Text: ="PADAM"
-        Width: =313
-        Y: =1035
+        Width: =319
+        Y: =1046
         ZIndex: =8
 
     Button16 As button:
@@ -36,7 +36,7 @@ EditJadualSiraman As screen:
         Fill: =RGBA(54, 176, 75, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =101
+        Height: =90
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(193, 225, 193, 1), -20%)
@@ -53,16 +53,16 @@ EditJadualSiraman As screen:
         RadiusTopRight: =0
         Size: =24
         Text: ="SIMPAN"
-        Width: =326
-        X: =313
-        Y: =1035
+        Width: =320
+        X: =320
+        Y: =1046
         ZIndex: =9
 
     Form4_1 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Jadual Siraman'
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =834
+        Height: =849
         Item: =Gallery2.Selected
         Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
