@@ -43,8 +43,8 @@ EditPenuaian As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(54, 176, 75, 1)
         OnSelect: |
-            =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); SubmitForm(EditForm3);
-            Notify("Your Data have been edited",NotificationType.Success);
+            =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); SubmitForm(EditForm1_1);
+            Notify("Data anda telah berjaya disimpan",NotificationType.Success);
             Navigate(ListPenuaian,ScreenTransition.Fade);
         PressedBorderColor: =RGBA(54, 176, 75, 1)
         PressedColor: =RGBA(255, 255, 255, 1)

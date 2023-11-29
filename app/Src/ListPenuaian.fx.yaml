@@ -223,7 +223,7 @@ ListPenuaian As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(230, 230, 230, 0.07)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); EditForm(EditForm3);Select(Parent);
+                =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); EditForm(EditForm1_1);Select(Parent);
                 Navigate(EditPenuaian);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
