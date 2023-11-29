@@ -11,12 +11,12 @@ ListJadualSiraman As screen:
                 Dropdown1.Selected.Value = "Semua" ,
                  Filter(
                         'Jadual Siraman',
-                        ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value  = "A2" || 'Plot (Lokasi)'.Value  = "A3") &&
+                        (Plot.Value = "A1" || Plot.Value  = "A2" || Plot.Value  = "A3") &&
                         (Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate)
                     ),
                     Filter(
                         'Jadual Siraman',
-                        'Plot (Lokasi)'.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
+                        Plot.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
                     )
                 )
             
@@ -41,7 +41,7 @@ ListJadualSiraman As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'Plot (Lokasi)'.Value
+            Text: =ThisItem.Plot.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
             X: =233
@@ -176,6 +176,7 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =42
             OnSelect: =Select(Parent)
             Size: =18
@@ -198,6 +199,7 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             Size: =21
             Text: ="-"
+            Visible: =If(IsBlank(ThisItem.'Waktu Siraman'),false,true)
             Width: =30
             X: =135
             Y: =62
@@ -217,6 +219,7 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             Size: =18
             Text: =Text(Round(ThisItem.'Waktu Selepas Siraman',0))
+            Visible: =If(IsBlank(ThisItem.'Waktu Siraman'),false,true)
             Width: =79
             X: =165
             Y: =61
@@ -294,10 +297,51 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(IsBlank(ThisItem.'Puasa/Berhenti Air/Baja'),true,false)
             Width: =61
             X: =228
             Y: =44
             ZIndex: =15
+
+        iconselesai As icon.CheckBadge:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(4, 117, 110, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CheckBadge
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(ThisItem.Status.Value="Selesai",true,false)
+            X: =549
+            Y: =19
+            ZIndex: =16
+
+        iconbatal As icon.CancelBadge:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(184, 0, 0, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.CancelBadge
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(ThisItem.Status.Value="Batal",true,false)
+            X: =549
+            Y: =19
+            ZIndex: =17
 
         Button13 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -313,19 +357,20 @@ ListJadualSiraman As screen:
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);
+                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); 
                 Navigate(EditJadualSiraman);
-            PressedBorderColor: =RGBA(0, 168, 156, 1)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 168, 156, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =639
-            ZIndex: =16
+            Width: =306
+            X: =332
+            ZIndex: =18
 
     Rectangle7 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -373,7 +418,7 @@ ListJadualSiraman As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan);NewForm(Form4);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =74
         X: =34
@@ -399,7 +444,7 @@ ListJadualSiraman As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Siraman'.'Plot (Lokasi)')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Siraman'.Plot)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

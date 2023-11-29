@@ -25,54 +25,42 @@
     "dependents": [],
     "id": "25541e0b-2206-4599-ba9d-83d051a8a2ef"
   },
-  "2cc09cac-f63c-4066-a0d6-c8412f4c53a7": {
-    "appActions": [
-      "providers/PowerPlatform.Governance/Operations/Read",
-      "providers/PowerPlatform.Governance/Operations/Write",
-      "providers/PowerPlatform.Governance/Operations/Delete"
-    ],
+  "ceac552c-bc99-4a47-864a-5c2927b45ffe": {
     "connectionRef": {
-      "apiTier": "Standard",
       "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3429/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
-      "parameterHints": {},
-      "parameterHintsV2": {}
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {
-      "https://tdmb.sharepoint.com/sites/TDMDigitalTransformation": {
+      "https://tdmb.sharepoint.com/sites/TDMLadangCiliTayor": {
         "dataSources": {
-          "Chili Tayor Production": {
-            "tableName": "2772e716-b535-4bda-9112-69cb429715ab"
-          },
           "Jadual Meracun": {
-            "tableName": "9d4c3c2a-88ad-44ac-ad54-fdde9764da13"
+            "tableName": "cb7f6326-4ea9-4fc9-a361-ffab1710c847"
           },
           "Jadual Siraman": {
-            "tableName": "42e88a92-912e-412f-ac3f-8727c28fbcfe"
+            "tableName": "08b4a4de-638f-429d-ad76-c5ef564fd1fc"
           },
           "Penuaian Cili": {
-            "tableName": "2772e716-b535-4bda-9112-69cb429715ab"
+            "tableName": "662d546a-7447-4480-8c36-7b00c96ff7c9"
+          },
+          "Plot": {
+            "tableName": "d509ca94-c0b4-45ac-9443-3a2d201ae016"
           },
           "Semakan Kesihatan": {
-            "tableName": "edc66d9d-7a37-4cf1-adb5-5dfc064dbb0d"
-          },
-          "TreePlot": {
-            "tableName": "bf49e5d8-3199-49f5-b91a-36660b47d26e"
+            "tableName": "60dd7ab1-54a5-476e-966f-45046d7aa9e0"
           }
         }
       }
     },
     "dataSources": [
-      "Semakan Kesihatan",
-      "Jadual Siraman",
-      "TreePlot",
       "Jadual Meracun",
-      "Chili Tayor Production",
-      "Penuaian Cili"
+      "Jadual Siraman",
+      "Penuaian Cili",
+      "Plot",
+      "Semakan Kesihatan"
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "2cc09cac-f63c-4066-a0d6-c8412f4c53a7"
+    "id": "ceac552c-bc99-4a47-864a-5c2927b45ffe"
   }
 }

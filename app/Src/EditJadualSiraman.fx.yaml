@@ -9,23 +9,23 @@ EditJadualSiraman As screen:
         Fill: =RGBA(255, 0, 0, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =101
+        Height: =90
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
         OnSelect: |
             =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery2.Selected })
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(255, 0, 0, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(255, 0, 0, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =24
         Text: ="PADAM"
-        Width: =313
-        Y: =1035
+        Width: =319
+        Y: =1046
         ZIndex: =8
 
     Button16 As button:
@@ -36,33 +36,33 @@ EditJadualSiraman As screen:
         Fill: =RGBA(54, 176, 75, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =101
+        Height: =90
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(193, 225, 193, 1), -20%)
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form4_1);
-            Notify("Your Data have been edited",NotificationType.Success);
+            Notify("Data anda telah berjaya disimpan",NotificationType.Success);
             Navigate(ListJadualSiraman);
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(54, 176, 75, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(54, 176, 75, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =24
         Text: ="SIMPAN"
-        Width: =326
-        X: =313
-        Y: =1035
+        Width: =320
+        X: =320
+        Y: =1046
         ZIndex: =9
 
     Form4_1 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Jadual Siraman'
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =834
+        Height: =849
         Item: =Gallery2.Selected
         Visible: =If(varshowfields=2||varshowfields=-1,true,false) && If(deleteMode, false, true)
         Width: =640
@@ -73,9 +73,9 @@ EditJadualSiraman As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
+            Default: =ThisItem.Plot
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -114,7 +114,7 @@ EditJadualSiraman As screen:
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value= ddPlotId_9.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].Plot), Value= ddPlotId_12.Selected.PlotId)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -126,13 +126,13 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId)
+                Items: =Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_12.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].'Plot (Lokasi)'), Value = ddPlotId_9.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_12.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -188,6 +188,116 @@ EditJadualSiraman As screen:
                 Y: =DataCardKey2_2.Y
                 ZIndex: =4
 
+        Status_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Status"
+            Default: =ThisItem.Status
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Radio1.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey18 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =47
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =122
+                Wrap: =false
+                X: =30
+                Y: =38
+                ZIndex: =1
+
+            ErrorMessage18 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Radio1.Y + Radio1.Height
+                ZIndex: =3
+
+            StarVisible18 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey18.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey18.Y
+                ZIndex: =4
+
+            Radio1 As radio:
+                BorderColor: =RGBA(50, 49, 48, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =ThisItem.Status.Value
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 168, 156, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =124
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Items: =Choices([@'Jadual Siraman'].Status)
+                PaddingBottom: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadioBorderColor: =RGBA(50, 49, 48, 1)
+                RadioSelectionFill: =RGBA(0, 168, 156, 1)
+                RadioSize: =60
+                Size: =21
+                Width: =303
+                X: =308
+                Y: =20
+                ZIndex: =5
+
         "'Jenis Baja Tambahan_DataCard1_1' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -201,7 +311,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue3_1.Selected
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey3_1 As label:
@@ -322,7 +432,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue43_1.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey49_2 As label:
@@ -439,7 +549,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue47_2.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey50_2 As label:
@@ -556,7 +666,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue48_2.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey51_2 As label:
@@ -671,7 +781,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue49_2.Text)
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey52_2 As label:
@@ -788,7 +898,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue50_2.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey53_2 As label:
@@ -905,7 +1015,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue51_2.Selected
             Width: =640
             X: =0
-            Y: =11
+            Y: =12
             ZIndex: =1
 
             DataCardKey54_1 As label:
@@ -1024,7 +1134,7 @@ EditJadualSiraman As screen:
             Update: =Value(DataCardValue52_2.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =13
             ZIndex: =1
 
             DataCardKey55_2 As label:
@@ -1142,7 +1252,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue57_2.Text
             Width: =640
             X: =0
-            Y: =13
+            Y: =14
             ZIndex: =1
 
             DataCardKey57_2 As label:
@@ -1254,7 +1364,7 @@ EditJadualSiraman As screen:
             DataField: ="field_1"
             Default: =ThisItem.Tarikh
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"field_1")
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Tarikh")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -1372,7 +1482,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue25_2.Selected
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =8
 
             DataCardKey25_2 As label:
@@ -1493,7 +1603,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue28_2.SelectedItems
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =8
 
             DataCardKey28_2 As label:
@@ -1617,7 +1727,7 @@ EditJadualSiraman As screen:
             Update: =DataCardValue30_2.Text
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =8
 
             DataCardKey30_2 As label:
@@ -1733,7 +1843,7 @@ EditJadualSiraman As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,2),Set(varshowfields,1)) 
+        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)) 
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -1762,7 +1872,7 @@ EditJadualSiraman As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); NewForm(Form4);
+        OnSelect: =If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); NewForm(Form4);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -1830,10 +1940,9 @@ EditJadualSiraman As screen:
 
             ddPlotId_12 As dropdown:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -1841,22 +1950,22 @@ EditJadualSiraman As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =TreePlot
+                Items: =Plot
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
                 PaddingLeft: =12
                 PaddingRight: =20
                 PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SelectionColor: =RGBA(50, 49, 48, 1)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
@@ -1916,14 +2025,14 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =
@@ -1991,13 +2100,13 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -2064,13 +2173,13 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                Items: =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
@@ -2137,25 +2246,25 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |
-                    =Filter(TreePlot, PlotId = ddPlotId_12.Selected.PlotId)
+                    =Filter(Plot, PlotId = ddPlotId_12.Selected.PlotId)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 PaddingBottom: =5
                 PaddingLeft: =12
                 PaddingRight: =20
                 PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
                 Width: =0.8
                 X: =17
@@ -2213,14 +2322,14 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |-
-                    =ForAll(Filter(TreePlot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
+                    =ForAll(Filter(Plot,PlotId=ddPlotId_12.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
                 LayoutMinHeight: =70
                 LayoutMinWidth: =0
                 OnSelect: =
@@ -2276,15 +2385,16 @@ EditJadualSiraman As screen:
         DisabledColor: =RGBA(225, 223, 221, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
+        Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(ListJadualSiraman);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =65
+        Width: =94
         X: =39
         Y: =15
         ZIndex: =17

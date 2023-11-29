@@ -25,7 +25,7 @@ ListPenuaian As screen:
         PaddingRight: =5
         PaddingTop: =5
         PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
@@ -51,7 +51,7 @@ ListPenuaian As screen:
                     'Start Date' >= DatePicker2_3.SelectedDate ||
                     'End Date' <= DatePicker3_3.SelectedDate ||
                     Dropdown1_3.Selected.Value = "Semua" ||
-                    Plot.Value = Dropdown1_3.Selected.Value ||
+                    'Plot (Lokasi)'.Value = Dropdown1_3.Selected.Value ||
                     IsBlank(Dropdown1_3.Selected.Value))
                 )
             )
@@ -223,7 +223,7 @@ ListPenuaian As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(230, 230, 230, 0.07)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); EditForm(EditForm3);Select(Parent);
+                =UpdateContext({ selectedRecord: Gallery4.Selected, editMode: true }); EditForm(EditForm1_1);Select(Parent);
                 Navigate(EditPenuaian);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -320,7 +320,7 @@ ListPenuaian As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penuaian);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         X: =22
         Y: =16
@@ -341,7 +341,7 @@ ListPenuaian As screen:
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =239
+        Width: =259
         X: =126
         Y: =104
         ZIndex: =7
@@ -389,7 +389,7 @@ ListPenuaian As screen:
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =239
+        Width: =259
         X: =126
         Y: =215
         ZIndex: =9
@@ -443,16 +443,16 @@ ListPenuaian As screen:
         Font: =Font.'Segoe UI'
         Height: =72
         HoverBorderColor: =RGBA(0, 168, 156, 1)
-        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.Plot)}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Penuaian Cili'.'Plot (Lokasi)')}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
         PaddingTop: =5
         PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
