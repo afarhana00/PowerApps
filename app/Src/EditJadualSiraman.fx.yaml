@@ -15,9 +15,9 @@ EditJadualSiraman As screen:
         HoverFill: =ColorFade(RGBA(214,51,51,1), -20%)
         OnSelect: |
             =UpdateContext({ deleteMode: true, deleteCancelled: false, selectedRecord: Gallery2.Selected })
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(255, 0, 0, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(255, 0, 0, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -44,9 +44,9 @@ EditJadualSiraman As screen:
             =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true });SubmitForm(Form4_1);
             Notify("Data anda telah berjaya disimpan",NotificationType.Success);
             Navigate(ListJadualSiraman);
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedBorderColor: =RGBA(54, 176, 75, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(54, 176, 75, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -278,7 +278,8 @@ EditJadualSiraman As screen:
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(0, 168, 156, 1)
                 FocusedBorderThickness: =4
-                Font: =Font.'Lato Black'
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
                 Height: =124
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
