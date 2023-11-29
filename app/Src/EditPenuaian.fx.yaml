@@ -2109,13 +2109,13 @@ EditPenuaian As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Penuaian Cili'].Plot_x0028_Lokasi_x0029_)
+                Items: =Choices([@'Penuaian Cili'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Penuaian Cili'.Plot_x0028_Lokasi_x0029_,DataCardValue8_2.SearchText)
+                SearchItems: =Choices('Penuaian Cili'.'Plot (Lokasi)',DataCardValue8_2.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -2228,13 +2228,13 @@ EditPenuaian As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Penuaian Cili'].field_1)
+                Items: =Choices([@'Penuaian Cili'].Month)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Penuaian Cili'.field_1,DataCardValue9_1.SearchText)
+                SearchItems: =Choices('Penuaian Cili'.Month,DataCardValue9_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
