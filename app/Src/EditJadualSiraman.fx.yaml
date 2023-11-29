@@ -114,7 +114,7 @@ EditJadualSiraman As screen:
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].Plot), Value= ddPlotId_9.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].Plot), Value= ddPlotId_12.Selected.PlotId)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -126,13 +126,13 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_9.Selected.PlotId)
+                Items: =Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_12.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_9.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_12.Selected.PlotId),DataCardValue2_2.SearchText,"Value")
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1830,10 +1830,9 @@ EditJadualSiraman As screen:
 
             ddPlotId_12 As dropdown:
                 BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
                 ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -1841,10 +1840,10 @@ EditJadualSiraman As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Plot
@@ -1854,9 +1853,9 @@ EditJadualSiraman As screen:
                 PaddingLeft: =12
                 PaddingRight: =20
                 PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SelectionColor: =RGBA(50, 49, 48, 1)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
@@ -1916,7 +1915,7 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
@@ -1991,7 +1990,7 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2064,7 +2063,7 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2137,10 +2136,10 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: |
@@ -2151,11 +2150,11 @@ EditJadualSiraman As screen:
                 PaddingLeft: =12
                 PaddingRight: =20
                 PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
                 Width: =0.8
                 X: =17
@@ -2213,7 +2212,7 @@ EditJadualSiraman As screen:
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.5
+                FillPortions: =0.6
                 Font: =Font.'Segoe UI'
                 Height: =70
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2276,15 +2275,16 @@ EditJadualSiraman As screen:
         DisabledColor: =RGBA(225, 223, 221, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
+        Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(ListJadualSiraman);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =65
+        Width: =57
         X: =39
         Y: =15
         ZIndex: =17

@@ -176,6 +176,7 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =42
             OnSelect: =Select(Parent)
             Size: =18
@@ -313,11 +314,11 @@ ListJadualSiraman As screen:
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); 
+                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); 
                 Navigate(EditJadualSiraman);
-            PressedBorderColor: =RGBA(0, 168, 156, 1)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 168, 156, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -373,7 +374,7 @@ ListJadualSiraman As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan);NewForm(Form4);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =74
         X: =34
