@@ -287,7 +287,7 @@ ListMeracun As screen:
             Height: =30
             OnSelect: =Select(Parent)
             Size: =18
-            Text: =ThisItem.'Plot '.Value
+            Text: =ThisItem.Plot.Value
             Width: =62
             X: =192
             ZIndex: =7
@@ -419,7 +419,7 @@ ListMeracun As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |
-                =UpdateContext({ selectedRecord: Gallery3.Selected, editMode: true });EditForm(Form7_1);Select(Parent);If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); Navigate(EditMeracun);
+                =UpdateContext({ selectedRecord: Gallery3.Selected, editMode: true });EditForm(Form7_1);Select(Parent);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); Navigate(EditMeracun);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 0, 0, 0)

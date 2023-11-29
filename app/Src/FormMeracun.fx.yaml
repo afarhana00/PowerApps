@@ -16,7 +16,7 @@ FormMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Plot"
-            Default: =ThisItem.'Plot '
+            Default: =ThisItem.Plot
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Plot")
             Fill: =RGBA(0, 0, 0, 0)
@@ -58,7 +58,7 @@ FormMeracun As screen:
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Meracun'].Plot),Value = ddPlotId_18.Selected.PlotId)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -70,13 +70,13 @@ FormMeracun As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId)
+                Items: =Filter(Choices([@'Jadual Meracun'].Plot),Value = ddPlotId_18.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(16, 110, 190, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].'Plot '),Value = ddPlotId_18.Selected.PlotId),DataCardValue4.SearchText,"Value")
+                SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].Plot),Value = ddPlotId_18.Selected.PlotId),DataCardValue4.SearchText,"Value")
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
