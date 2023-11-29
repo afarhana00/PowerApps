@@ -5,7 +5,7 @@ ListSemakan As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =735
+        Height: =717
         Items: |
             =If(
                 Dropdown1_1.Selected.Value = "Semua" &&  DatePicker2.SelectedDate = Today(),
@@ -30,7 +30,7 @@ ListSemakan As screen:
         OnSelect: =
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =359
+        Y: =376
         ZIndex: =1
 
         Title2 As label:
@@ -70,33 +70,6 @@ ListSemakan As screen:
             X: =4
             Y: =16
             ZIndex: =2
-
-        NextArrow2 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);Navigate(EditSemakan);EditForm(Form2);
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =3
 
         Separator2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -366,7 +339,7 @@ ListSemakan As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(Penjagaan); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =74
         X: =26
@@ -525,4 +498,24 @@ ListSemakan As screen:
         X: =51
         Y: =459
         ZIndex: =13
+
+    Icon8 As icon.Add:
+        BorderColor: =RGBA(3, 115, 107, 1)
+        BorderThickness: =4
+        Color: =RGBA(2, 102, 95, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(0, 168, 156, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Add
+        OnSelect: =Navigate(FormJadualSiraman);NewForm(Form2);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2));
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(0, 168, 156, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =15
+        Y: =299
+        ZIndex: =14
 

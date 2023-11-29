@@ -43,7 +43,7 @@ EditMeracun As screen:
         HoverFill: =ColorFade(RGBA(193, 225, 193, 1), -20%)
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery3.Selected, editMode: true });SubmitForm(Form7_1);
-            Notify("Your Data have been edited",NotificationType.Success);
+            Notify("Data anda telah berjaya disimpan",NotificationType.Success);
             Navigate(ListMeracun);
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
