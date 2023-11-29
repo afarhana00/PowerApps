@@ -266,17 +266,18 @@ EditSemakan As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(138, 219, 214, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Semakan Kesihatan'].'Plot (Lokasi)')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Plot (Lokasi)',DataCardValue39.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SearchItems: =[]
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -394,12 +395,12 @@ EditSemakan As screen:
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Penyakit)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingTop: =10
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =[]
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1611,19 +1612,19 @@ EditSemakan As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =75
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(138, 219, 214, 1)
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions")
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
                     =Search(Ungroup(Table({DropdownOptions:Choices('Semakan Kesihatan'.'Masa Semakan')},{DropdownOptions:["Lain-lain"]}),"DropdownOptions"),DataCardValue40.SearchText,"Value")
-                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1801,14 +1802,14 @@ EditSemakan As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Semakan Kesihatan'].IDPokok)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Semakan Kesihatan'.IDPokok,DataCardValue42.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
@@ -1920,14 +1921,14 @@ EditSemakan As screen:
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(138, 219, 214, 1)
                 Items: =Choices([@'Semakan Kesihatan'].Cuaca)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
                 SearchItems: =Choices('Semakan Kesihatan'.Cuaca,DataCardValue44.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
