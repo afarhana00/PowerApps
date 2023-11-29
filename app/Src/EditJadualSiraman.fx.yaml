@@ -73,7 +73,7 @@ EditJadualSiraman As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot'
+            Default: =ThisItem.Plot
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Plot")
             Fill: =RGBA(0, 0, 0, 0)
@@ -114,7 +114,7 @@ EditJadualSiraman As screen:
                 ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].'Plot'), Value= ddPlotId_9.Selected.PlotId)
+                DefaultSelectedItems: =Filter(Choices([@'Jadual Siraman'].Plot), Value= ddPlotId_9.Selected.PlotId)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -126,7 +126,7 @@ EditJadualSiraman As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Choices([@'Jadual Siraman'].'Plot'), Value = ddPlotId_9.Selected.PlotId)
+                Items: =Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_9.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)

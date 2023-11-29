@@ -11,12 +11,12 @@ ListJadualSiraman As screen:
                 Dropdown1.Selected.Value = "Semua" ,
                  Filter(
                         'Jadual Siraman',
-                        ('Plot'.Value = "A1" || 'Plot'.Value  = "A2" || 'Plot'.Value  = "A3") &&
+                        (Plot.Value = "A1" || Plot.Value  = "A2" || Plot.Value  = "A3") &&
                         (Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate)
                     ),
                     Filter(
                         'Jadual Siraman',
-                        'Plot'.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
+                        Plot.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
                     )
                 )
             
@@ -41,7 +41,7 @@ ListJadualSiraman As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'Plot'.Value
+            Text: =ThisItem.Plot.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
             X: =233
@@ -313,7 +313,7 @@ ListJadualSiraman As screen:
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =ColorFade(RGBA(0, 0, 0, 0), -20%)
             OnSelect: |-
-                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);
+                =UpdateContext({ selectedRecord: Gallery2.Selected, editMode: true }); EditForm(Form4);Select(Parent);If(varshowfields=2,Set(varshowfields,1),Set(varshowfields,2)); 
                 Navigate(EditJadualSiraman);
             PressedBorderColor: =RGBA(0, 168, 156, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -399,7 +399,7 @@ ListJadualSiraman As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Siraman'.'Plot')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Siraman'.Plot)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
