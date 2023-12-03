@@ -8,11 +8,11 @@ ListSemakan As screen:
         Height: =717
         Items: |
             =If(
-                Dropdown1_1.Selected.Value = "Semua" &&  DatePicker2.SelectedDate = Today(),
+                Dropdown1_1.Selected.Value = "Semua Plot" &&  DatePicker2.SelectedDate = Today(),
                 
                     'Semakan Kesihatan',
                 If(
-                    Dropdown1_1.Selected.Value = "Semua" ,
+                    Dropdown1_1.Selected.Value = "Semua Plot" ,
                     Filter(
                         'Semakan Kesihatan',
                         ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value = "A2" || 'Plot (Lokasi)'.Value = "A3") &&
@@ -459,12 +459,12 @@ ListSemakan As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
-        Height: =70
+        Height: =69
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Semakan Kesihatan'.'Plot (Lokasi)')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Choices('Semakan Kesihatan'.'Plot (Lokasi)')}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -475,8 +475,8 @@ ListSemakan As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =161
-        X: =431
+        Width: =193
+        X: =415
         Y: =131
         ZIndex: =12
 
@@ -499,23 +499,31 @@ ListSemakan As screen:
         Y: =459
         ZIndex: =13
 
-    Icon8 As icon.Add:
-        BorderColor: =RGBA(3, 115, 107, 1)
-        BorderThickness: =4
-        Color: =RGBA(2, 102, 95, 1)
-        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-        DisabledColor: =RGBA(225, 223, 221, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
+    Button22 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(0, 168, 156, 1)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Add
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: =Navigate(FormJadualSiraman);NewForm(Form2);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2));
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(0, 168, 156, 1)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =15
-        Y: =299
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Tambah Baru"
+        Width: =202
+        X: =411
+        Y: =314
         ZIndex: =14
 
