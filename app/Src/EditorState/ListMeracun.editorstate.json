@@ -744,7 +744,7 @@
       "MetaDataIDKey": "",
       "Name": "Button35",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -936,7 +936,14 @@
       "ControlPropertyState": [
         "DefaultDate",
         "DateTimeZone",
-        "Format",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DateTimeFormat.ShortDate",
+          "InvariantPropertyName": "Format",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "InputTextPlaceholder",
         "StartYear",
         "EndYear",
@@ -1236,7 +1243,14 @@
       "ControlPropertyState": [
         "DefaultDate",
         "DateTimeZone",
-        "Format",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DateTimeFormat.ShortDate",
+          "InvariantPropertyName": "Format",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "InputTextPlaceholder",
         "StartYear",
         "EndYear",
@@ -5966,7 +5980,7 @@
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -64,6 +64,7 @@ ListMeracun As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyy"
         Height: =72
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
@@ -112,6 +113,7 @@ ListMeracun As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
         Height: =69
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
@@ -176,7 +178,7 @@ ListMeracun As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua"]},{DropdownOptions:Choices('Jadual Meracun'.Plot)}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Choices('Jadual Meracun'.Plot)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -187,8 +189,8 @@ ListMeracun As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =161
-        X: =449
+        Width: =213
+        X: =410
         Y: =144
         ZIndex: =14
 
@@ -198,11 +200,11 @@ ListMeracun As screen:
         Height: =731
         Items: |
             =If(
-                Dropdown1_2.Selected.Value = "Semua" && DatePicker2_2.SelectedDate = Today(),
+                Dropdown1_2.Selected.Value = "Semua Plot" && DatePicker2_2.SelectedDate = Today(),
                 
                     'Jadual Meracun',
                 If(
-                    Dropdown1_2.Selected.Value = "Semua" ,
+                    Dropdown1_2.Selected.Value = "Semua Plot" ,
                     Filter(
                         'Jadual Meracun',
                         (Plot.Value = "A1" || Plot.Value = "A2" || Plot.Value = "A3") &&
@@ -234,7 +236,8 @@ ListMeracun As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.Tarikh
+            Text: |
+                =Text(ThisItem.'Tarikh', "[$-en-US]dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
             Width: =144
             X: =22
@@ -415,7 +418,7 @@ ListMeracun As screen:
             Fill: =RGBA(0, 120, 212, 0)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =43
+            Height: =136
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -430,8 +433,7 @@ ListMeracun As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =618
-            X: =22
+            Width: =640
             ZIndex: =14
 
     Label28 As label:

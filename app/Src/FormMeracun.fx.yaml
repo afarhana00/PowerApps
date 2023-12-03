@@ -1360,13 +1360,13 @@ FormMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].'Racun Serangga')
+                Items: =Filter(Choices([@'Jadual Meracun'].'Racun Serangga'), Value = DataCardValue4.Selected.Value)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Racun Serangga',DataCardValue25.SearchText)
+                SearchItems: =Search(Filter(Choices([@'Jadual Meracun'].'Racun Serangga'), Value = DataCardValue4.Selected.Value),DataCardValue25.SearchText,"Value")
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21

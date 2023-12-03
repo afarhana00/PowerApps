@@ -58,7 +58,8 @@ ListPenuaian As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =ThisItem.'Start Date'
+            Text: |
+                =Text(ThisItem.'Start Date', "[$-en-US]dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
             Width: =136
             X: =261
@@ -131,7 +132,8 @@ ListPenuaian As screen:
             Height: =23
             OnSelect: =Select(Parent)
             Size: =16
-            Text: =ThisItem.'End Date'
+            Text: |
+                =Text(ThisItem.'End Date', "[$-en-US]dd/mm/yyyy")
             Width: =243
             X: =397
             Y: =19
@@ -301,6 +303,7 @@ ListPenuaian As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
         Height: =72
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
@@ -349,6 +352,7 @@ ListPenuaian As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
         Height: =69
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
@@ -446,4 +450,32 @@ ListPenuaian As screen:
         X: =40
         Y: =519
         ZIndex: =13
+
+    Button22_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Navigate(FormPenuaian);NewForm(EditForm1);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Tambah Baru"
+        Width: =202
+        X: =410
+        Y: =306
+        ZIndex: =14
 
