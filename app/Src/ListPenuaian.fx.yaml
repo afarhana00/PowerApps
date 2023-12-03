@@ -349,7 +349,7 @@ ListPenuaian As screen:
         BorderColor: =RGBA(0, 168, 156, 1)
         CalendarHeaderFill: =RGBA(16, 110, 190, 1)
         Color: =RGBA(50, 49, 48, 1)
-        DefaultDate: =If(DatePicker2_3.SelectedDate=Today(),Today(),DatePicker2_3.SelectedDate+30)
+        DefaultDate: =If(DatePicker2_3.SelectedDate="1/1/2023",DatePicker2_3.SelectedDate+30,Today())
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
