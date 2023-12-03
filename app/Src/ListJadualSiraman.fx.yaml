@@ -123,7 +123,8 @@ ListJadualSiraman As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =19
-            Text: =ThisItem.Tarikh
+            Text: |
+                =Text(ThisItem.'Tarikh', "[$-en-US]dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
             Width: =163
             X: =53
@@ -367,7 +368,8 @@ ListJadualSiraman As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =637
+            Width: =404
+            X: =233
             ZIndex: =18
 
     Rectangle7 As rectangle:
