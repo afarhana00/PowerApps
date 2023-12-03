@@ -361,7 +361,8 @@ ListMeracun As screen:
             Height: =55
             OnSelect: =Select(Parent)
             Size: =16
-            Text: =ThisItem.'Racun Serangga'.Value
+            Text: |
+                =Concat(ThisItem.'Racun Serangga'.Value, Value)
             Width: =149
             X: =61
             Y: =34
