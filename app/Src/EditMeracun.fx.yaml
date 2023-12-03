@@ -2100,6 +2100,7 @@ EditMeracun As screen:
                 EndYear: =Year(Today())+100
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 HoverDateFill: =RGBA(184, 187, 184, 1)
                 IconBackground: =RGBA(0, 168, 156, 1)
@@ -2164,7 +2165,7 @@ EditMeracun As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Serangga"
-            Default: =ThisItem.'Racun Serangga'
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Meracun'],DataSourceInfo.DisplayName,"Serangga")
             Fill: =RGBA(0, 0, 0, 0)

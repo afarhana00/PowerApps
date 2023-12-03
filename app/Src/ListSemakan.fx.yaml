@@ -190,13 +190,13 @@ ListSemakan As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            Height: =70
+            Height: =58
             OnSelect: =Select(Parent)
             Size: =21
             Text: =ThisItem.Suhu
-            Width: =72
-            X: =54
-            Y: =46
+            Width: =67
+            X: =68
+            Y: =51
             ZIndex: =14
 
         Label5 As label:
@@ -263,7 +263,7 @@ ListSemakan As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =65
+            Height: =73
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
             Image: ='download (4)'
@@ -271,8 +271,8 @@ ListSemakan As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(ThisItem.Suhu<=36,true,false)
-            Width: =68
-            Y: =44
+            Width: =80
+            Y: =36
             ZIndex: =18
 
         imgPokok As image:
@@ -357,6 +357,7 @@ ListSemakan As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
         Height: =72
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
@@ -405,6 +406,7 @@ ListSemakan As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
         Height: =69
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
