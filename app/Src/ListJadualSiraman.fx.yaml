@@ -182,8 +182,8 @@ ListJadualSiraman As screen:
             Size: =18
             Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
             Width: =148
-            X: =68
-            Y: =32
+            X: =323
+            Y: =33
             ZIndex: =9
 
         Label25 As label:
@@ -239,7 +239,6 @@ ListJadualSiraman As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.'Waktu Siraman'.Value,false,true)
             Width: =44
             X: =14
             Y: =62
@@ -368,8 +367,8 @@ ListJadualSiraman As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =306
-            X: =332
+            Width: =555
+            X: =82
             ZIndex: =18
 
     Rectangle7 As rectangle:

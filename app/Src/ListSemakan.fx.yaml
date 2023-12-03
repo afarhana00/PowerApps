@@ -475,8 +475,8 @@ ListSemakan As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =193
-        X: =415
+        Width: =213
+        X: =411
         Y: =131
         ZIndex: =12
 
@@ -495,8 +495,8 @@ ListSemakan As screen:
         Text: ="Tiada Data Ditemui"
         Visible: =If(IsBlank(Gallery1),true,false)
         Width: =560
-        X: =51
-        Y: =459
+        X: =40
+        Y: =504
         ZIndex: =13
 
     Button22 As button:
@@ -511,11 +511,11 @@ ListSemakan As screen:
         Height: =62
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: =Navigate(FormJadualSiraman);NewForm(Form2);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2));
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Navigate(FormSemakan);NewForm(Form2);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2));
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30

@@ -2,39 +2,6 @@ ListPenuaian As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Dropdown2 As dropdown:
-        BorderColor: =RGBA(0, 168, 156, 1)
-        ChevronBackground: =RGBA(0, 168, 156, 1)
-        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(245, 245, 245, 1)
-        Font: =Font.'Segoe UI'
-        Height: =69
-        HoverBorderColor: =RGBA(0, 168, 156, 1)
-        HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(0, 168, 156, 1)
-        Items: =Choices('Penuaian Cili'.Month)
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(0, 0, 0, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        SelectionColor: =RGBA(50, 49, 48, 1)
-        SelectionFill: =RGBA(0, 168, 156, 1)
-        Size: =21
-        Width: =202
-        X: =410
-        Y: =215
-        ZIndex: =2
-
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
@@ -46,7 +13,6 @@ ListPenuaian As screen:
                 'Penuaian Cili',
                 Filter(
                     'Penuaian Cili',
-                    Month.Value = Dropdown2.Selected.Value &&
                     ('Start Date' = DatePicker2_3.SelectedDate ||
                     'Start Date' >= DatePicker2_3.SelectedDate ||
                     'End Date' <= DatePicker3_3.SelectedDate ||
@@ -359,7 +325,7 @@ ListPenuaian As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2_3);Reset(DatePicker3_3);Reset(Dropdown2); Reset(Dropdown1_3);
+        OnSelect: =Reset(DatePicker2_3);Reset(DatePicker3_3); Reset(Dropdown1_3);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -371,7 +337,7 @@ ListPenuaian As screen:
         Text: ="Semua Rekod"
         Width: =202
         X: =410
-        Y: =313
+        Y: =218
         ZIndex: =8
 
     DatePicker3_3 As datepicker:
