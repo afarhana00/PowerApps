@@ -9,7 +9,7 @@ ListPenuaian As screen:
         Height: =737
         Items: |
             =If(
-                DatePicker2_3.SelectedDate= "1/1/2023",
+                DatePicker2_3.SelectedDate= "01/01/2023" ,
                 'Penuaian Cili',
                 Filter(
                     'Penuaian Cili',
