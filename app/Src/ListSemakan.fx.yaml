@@ -8,7 +8,7 @@ ListSemakan As screen:
         Height: =717
         Items: |
             =If(
-                Dropdown1_1.Selected.Value = "Semua Plot" &&  DatePicker2.SelectedDate = Today(),
+                Dropdown1_1.Selected.Value = "Semua Plot" ,
                 
                     'Semakan Kesihatan',
                 If(
@@ -141,7 +141,7 @@ ListSemakan As screen:
             Height: =80
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =download
+            Image: =ThisItem.'Pertumbuhan Cabang'
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -236,7 +236,7 @@ ListSemakan As screen:
             Height: =73
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='download (4)'
+            Image: =ThisItem.'Sebelum Meracun'
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -255,7 +255,7 @@ ListSemakan As screen:
             Height: =59
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='icons8-healthy-food-100'
+            Image: =ThisItem.'Selepas Meracun'
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
