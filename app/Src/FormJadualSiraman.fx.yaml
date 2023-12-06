@@ -239,6 +239,116 @@ FormJadualSiraman As screen:
                 Y: =DataCardKey2.Y
                 ZIndex: =4
 
+        Status_DataCard3 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Status"
+            Default: =ThisItem.Status
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"Status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Radio4.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey70 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage70 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Radio4.Y + Radio4.Height
+                ZIndex: =3
+
+            StarVisible72 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey70.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey70.Y
+                ZIndex: =4
+
+            Radio4 As radio:
+                BorderColor: =RGBA(50, 49, 48, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: ="Sedang Dirancang"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =164
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Items: =Choices([@'Jadual Siraman'].Status)
+                PaddingBottom: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadioBorderColor: =RGBA(50, 49, 48, 1)
+                RadioSelectionFill: =RGBA(0, 168, 156, 1)
+                RadioSize: =50
+                Size: =21
+                Width: =334
+                X: =261
+                Y: =10
+                ZIndex: =5
+
         "'Jenis Baja Tambahan_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -252,7 +362,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue3.Selected
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey3 As label:
@@ -373,7 +483,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue43.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey49 As label:
@@ -490,7 +600,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue47.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey50 As label:
@@ -607,7 +717,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue48.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey51 As label:
@@ -723,7 +833,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue49.Text)
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey52 As label:
@@ -840,7 +950,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue50.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey53 As label:
@@ -957,7 +1067,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue51.Selected
             Width: =640
             X: =0
-            Y: =11
+            Y: =12
             ZIndex: =1
 
             DataCardKey54 As label:
@@ -1076,7 +1186,7 @@ FormJadualSiraman As screen:
             Update: =Value(DataCardValue52.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =13
             ZIndex: =1
 
             DataCardKey55 As label:
@@ -1193,7 +1303,7 @@ FormJadualSiraman As screen:
             Update: =Radio2.Selected
             Width: =640
             X: =0
-            Y: =13
+            Y: =14
             ZIndex: =1
 
             DataCardKey19 As label:
@@ -1303,7 +1413,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue57_1.Text
             Width: =640
             X: =0
-            Y: =14
+            Y: =15
             ZIndex: =1
 
             DataCardKey57_1 As label:
@@ -1532,7 +1642,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue25_1.Selected
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =8
 
             DataCardKey25_1 As label:
@@ -1653,7 +1763,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue28_1.SelectedItems
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =8
 
             DataCardKey28_1 As label:
@@ -1777,7 +1887,7 @@ FormJadualSiraman As screen:
             Update: =DataCardValue30_1.Text
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =8
 
             DataCardKey30_1 As label:
