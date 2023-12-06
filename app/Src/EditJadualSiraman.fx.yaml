@@ -198,7 +198,7 @@ EditJadualSiraman As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Radio1.Selected
+            Update: =RadioStatus.Selected
             Width: =640
             X: =0
             Y: =2
@@ -246,7 +246,7 @@ EditJadualSiraman As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =Radio1.Y + Radio1.Height
+                Y: =RadioStatus.Y + RadioStatus.Height
                 ZIndex: =3
 
             StarVisible18 As label:
@@ -270,33 +270,32 @@ EditJadualSiraman As screen:
                 Y: =DataCardKey18.Y
                 ZIndex: =4
 
-            Radio1 As radio:
+            RadioStatus As radio:
                 BorderColor: =RGBA(50, 49, 48, 1)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
-                Default: =ThisItem.Status.Value
+                Default: ="Sedang Dirancang"
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(0, 168, 156, 1)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
-                Height: =124
+                Height: =157
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Items: =Choices([@'Jadual Siraman'].Status)
+                Items: =["Sedang Dirancang","Selesai","Batal"]
                 PaddingBottom: =5
                 PaddingTop: =5
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 RadioBorderColor: =RGBA(50, 49, 48, 1)
                 RadioSelectionFill: =RGBA(0, 168, 156, 1)
-                RadioSize: =60
-                Size: =21
-                Width: =303
-                X: =308
-                Y: =20
-                ZIndex: =5
+                RadioSize: =50
+                Size: =19
+                Width: =312
+                X: =310
+                ZIndex: =6
 
         "'Jenis Baja Tambahan_DataCard1_1' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
