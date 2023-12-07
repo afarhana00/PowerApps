@@ -198,11 +198,8 @@ ListMeracun As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =731
-        Items: |
-            =If(
-                Dropdown1_2.Selected.Value = "Semua Plot" && DatePicker2_2.SelectedDate = Today(),
-                
-                    'Jadual Meracun',
+        Items: |+
+            =
                 If(
                     Dropdown1_2.Selected.Value = "Semua Plot" ,
                     Filter(
@@ -216,7 +213,7 @@ ListMeracun As screen:
                         IsBlank(Dropdown1_2.Selected.Value)
                     )
                 )
-            )
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -328,8 +325,8 @@ ListMeracun As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =62
-            X: =185
-            Y: =60
+            X: =170
+            Y: =67
             ZIndex: =9
 
         Image12 As image:
@@ -433,7 +430,8 @@ ListMeracun As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =640
+            Width: =350
+            X: =289
             ZIndex: =14
 
     Label28 As label:
