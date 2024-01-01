@@ -1379,7 +1379,7 @@ FormSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="NilaipH_x0028_Polibeg_x0029_"
-            Default: =ThisItem.'Nilai pH (Polibeg)'
+            Default: =ThisItem.NilaipH_x0028_Polibeg_x0029_
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"NilaipH_x0028_Polibeg_x0029_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -2815,7 +2815,7 @@ FormSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_6"
-            Default: =ThisItem.Suhu
+            Default: =ThisItem.field_6
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_6")
             Fill: =RGBA(0, 0, 0, 0)

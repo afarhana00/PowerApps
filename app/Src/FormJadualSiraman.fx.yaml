@@ -941,7 +941,7 @@ FormJadualSiraman As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="NilaipH_x0028_AirSungai_x0029_"
-            Default: =ThisItem.'Nilai pH (Air Sungai)'
+            Default: =ThisItem.NilaipH_x0028_AirSungai_x0029_
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Jadual Siraman'],DataSourceInfo.DisplayName,"NilaipH_x0028_AirSungai_x0029_")
             Fill: =RGBA(0, 0, 0, 0)

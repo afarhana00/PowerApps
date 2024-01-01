@@ -142,7 +142,7 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.Suhu>=37,true,false)
+            Visible: =If(ThisItem.field_6>=37,true,false)
             Width: =68
             Y: =36
             ZIndex: =7
@@ -160,7 +160,7 @@ ListSemakan As screen:
             Height: =58
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =ThisItem.Suhu
+            Text: =ThisItem.field_6
             Width: =67
             X: =68
             Y: =51
@@ -287,7 +287,7 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.Suhu<=36,true,false)
+            Visible: =If(ThisItem.field_6<=36,true,false)
             Width: =86
             Y: =36
             ZIndex: =14
@@ -306,7 +306,7 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.Suhu<=36,false,true)
+            Visible: =If(ThisItem.field_6<=36,false,true)
             Width: =85
             Y: =36
             ZIndex: =15
