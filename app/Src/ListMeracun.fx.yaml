@@ -466,7 +466,7 @@ ListMeracun As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Navigate(FormMeracun);NewForm(Form7);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2));
+        OnSelect: =Navigate(FormMeracun);NewForm(Form7);Set(varshowfields,2);ResetForm(Form7);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)

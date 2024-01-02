@@ -7,7 +7,7 @@ FormMeracun As screen:
         DataSource: ='Jadual Meracun'
         Fill: =RGBA(228, 240, 239, 1)
         Height: =822
-        Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+        Visible: =If(varshowfields=2,true,false)
         Width: =640
         Y: =204
         ZIndex: =1
@@ -45,8 +45,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =35
                 ZIndex: =1
 
             DataCardValue4 As combobox:
@@ -169,8 +169,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue10 As datepicker:
@@ -279,8 +279,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =24
                 ZIndex: =1
 
             DataCardValue11 As combobox:
@@ -397,8 +397,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue12 As combobox:
@@ -516,8 +516,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue13 As text:
@@ -631,8 +631,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue15 As combobox:
@@ -751,8 +751,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue18 As text:
@@ -867,8 +867,8 @@ FormMeracun As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =18
+                Y: =21
                 ZIndex: =1
 
             DataCardValue19 As text:
@@ -1011,7 +1011,7 @@ FormMeracun As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =SubmitForm(Form7_1); Navigate(ListMeracun); 
+        OnSelect: =SubmitForm(Form7); Navigate(ListMeracun); 
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -1039,9 +1039,9 @@ FormMeracun As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
         OnSelect: =Navigate(ListMeracun);
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
