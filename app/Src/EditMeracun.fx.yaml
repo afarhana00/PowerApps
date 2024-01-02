@@ -816,13 +816,14 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].MasaRacunSerangga)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaRacunSerangga,DataCardValue13_1.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1054,13 +1055,14 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].MasaRacunKulat)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaRacunKulat,DataCardValue12_1.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1289,13 +1291,14 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].MasaFoliar)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.MasaFoliar,DataCardValue11_1.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1525,13 +1528,14 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].'Kuantiti Miracle')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Kuantiti Miracle',DataCardValue31_1.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -2337,13 +2341,14 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
+                IsSearchable: =false
                 Items: =Choices([@'Jadual Meracun'].'Kuantiti Semburan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.'Kuantiti Semburan',DataCardValue27_1.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
