@@ -84,7 +84,7 @@ EditSemakan As screen:
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(ListSemakan);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedColor: =RGBA(0, 156, 168, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =55
         X: =28
@@ -106,7 +106,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_16"
-            Default: =ThisItem.Title
+            Default: =ThisItem.Tarikh
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_16")
             Fill: =RGBA(0, 0, 0, 0)
@@ -119,7 +119,6 @@ EditSemakan As screen:
             ZIndex: =1
 
             DataCardKey63 As label:
-                AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -129,11 +128,11 @@ EditSemakan As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =80
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width
+                Width: =593
                 Wrap: =false
                 X: =30
                 Y: =10
@@ -346,7 +345,7 @@ EditSemakan As screen:
                 =If(DataCardValue71.Selected.Value="Tambah Baru",{Value:TextInput10.Text},DataCardValue71.Selected)
             Width: =640
             X: =0
-            Y: =7
+            Y: =6
             ZIndex: =1
 
             DataCardKey71 As label:
@@ -521,7 +520,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue67.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =7
             ZIndex: =1
 
             DataCardKey67 As label:
@@ -640,7 +639,7 @@ EditSemakan As screen:
                 =If(DataCardValue72.Selected.Value="Tambah Baru",{Value:TextInput9.Text},DataCardValue72.Selected)
             Width: =640
             X: =0
-            Y: =9
+            Y: =8
             ZIndex: =1
 
             DataCardKey72 As label:
@@ -813,7 +812,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue68.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =9
             ZIndex: =1
 
             DataCardKey68 As label:
@@ -932,7 +931,7 @@ EditSemakan As screen:
                 =If(DataCardValue66.Selected.Value="Tambah Baru",{Value:TextInput7.Text},DataCardValue66.Selected)
             Width: =640
             X: =0
-            Y: =11
+            Y: =10
             ZIndex: =1
 
             DataCardKey66 As label:
@@ -1104,7 +1103,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue6.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =11
             ZIndex: =1
 
             DataCardKey6 As label:
@@ -1219,7 +1218,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue69.Text)
             Width: =640
             X: =0
-            Y: =13
+            Y: =12
             ZIndex: =1
 
             DataCardKey69 As label:
@@ -1334,7 +1333,7 @@ EditSemakan As screen:
             Update: =DataCardValue65.Text
             Width: =640
             X: =0
-            Y: =14
+            Y: =13
             ZIndex: =1
 
             DataCardKey65 As label:
@@ -1453,7 +1452,7 @@ EditSemakan As screen:
             Update: =DataCardValue64.Attachments
             Width: =640
             X: =0
-            Y: =15
+            Y: =14
             ZIndex: =1
 
             DataCardKey64 As label:
@@ -1986,122 +1985,6 @@ EditSemakan As screen:
                 Y: =DataCardKey44.Y
                 ZIndex: =4
 
-        Suhu_DataCard2 As typedDataCard.numberEditCard:
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_6"
-            Default: =ThisItem.field_6
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_6")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue45.Text)
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =9
-
-            DataCardKey45 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: ="Suhu (Celcius)"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue45 As text:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =300
-                X: =322
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage45 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue45.Y + DataCardValue45.Height
-                ZIndex: =3
-
-            StarVisible43 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey45.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey45.Y
-                ZIndex: =4
-
         "'Kelembapan Tanah_DataCard2' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -2115,7 +1998,7 @@ EditSemakan As screen:
             Update: =Value(DataCardValue46.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =9
 
             DataCardKey46 As label:
