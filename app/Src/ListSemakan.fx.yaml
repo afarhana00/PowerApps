@@ -62,7 +62,7 @@ ListSemakan As screen:
             PaddingTop: =0
             Size: =20
             Text: |
-                =Text(ThisItem.Tarikh, "[$-en-US]dd/mm/yyyy")
+                =Text(ThisItem.Title, "[$-en-US]dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
             Width: =189
             X: =4
