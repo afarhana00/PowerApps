@@ -29,7 +29,7 @@ ListJadualSiraman As screen:
         Y: =384
         ZIndex: =1
 
-        Title4 As label:
+        plot_1 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
@@ -40,14 +40,14 @@ ListJadualSiraman As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =20
             Text: =ThisItem.Plot.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =64
             X: =233
             ZIndex: =1
 
-        Body2 As label:
+        waktu As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
@@ -111,7 +111,7 @@ ListJadualSiraman As screen:
             Width: =4
             ZIndex: =5
 
-        Subtitle4 As label:
+        tarikh As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
@@ -131,7 +131,7 @@ ListJadualSiraman As screen:
             Y: =1
             ZIndex: =6
 
-        Label19 As label:
+        "'jenis siraman' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -168,7 +168,7 @@ ListJadualSiraman As screen:
             Y: =9
             ZIndex: =8
 
-        Label11 As label:
+        puasa As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -180,14 +180,14 @@ ListJadualSiraman As screen:
             FontWeight: =FontWeight.Bold
             Height: =42
             OnSelect: =Select(Parent)
-            Size: =18
+            Size: =20
             Text: =ThisItem.'Puasa/Berhenti Air/Baja'.Value
             Width: =148
-            X: =323
-            Y: =33
+            X: =235
+            Y: =58
             ZIndex: =9
 
-        Label25 As label:
+        "'-' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -206,7 +206,7 @@ ListJadualSiraman As screen:
             Y: =62
             ZIndex: =10
 
-        Label26 As label:
+        "'selepas siram' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -226,7 +226,7 @@ ListJadualSiraman As screen:
             Y: =61
             ZIndex: =11
 
-        Image7 As image:
+        "'icon clock' As image":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -245,7 +245,7 @@ ListJadualSiraman As screen:
             Y: =62
             ZIndex: =12
 
-        Image13 As image:
+        "'icon baja' As image":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -264,7 +264,7 @@ ListJadualSiraman As screen:
             X: =345
             ZIndex: =13
 
-        Label27 As label:
+        "'icon ec' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -283,7 +283,7 @@ ListJadualSiraman As screen:
             Y: =11
             ZIndex: =14
 
-        Image17 As image:
+        image As image:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -480,7 +480,7 @@ ListJadualSiraman As screen:
         Y: =131
         ZIndex: =13
 
-    Button19_1 As button:
+    "'semua rekod' As button":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -529,7 +529,7 @@ ListJadualSiraman As screen:
         Y: =222
         ZIndex: =15
 
-    Label21_1 As label:
+    dari As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -546,7 +546,7 @@ ListJadualSiraman As screen:
         Y: =134
         ZIndex: =16
 
-    Label22_1 As label:
+    hingga As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -563,7 +563,7 @@ ListJadualSiraman As screen:
         Y: =228
         ZIndex: =17
 
-    Label28_1 As label:
+    "'tiada data ditemui' As label":
         Align: =Align.Center
         BorderThickness: =2
         Color: =RGBA(255, 255, 255, 1)
