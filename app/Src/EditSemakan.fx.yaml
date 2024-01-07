@@ -106,7 +106,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_16"
-            Default: =ThisItem.'Tarikh '
+            Default: =ThisItem.Title
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"field_16")
             Fill: =RGBA(0, 0, 0, 0)
