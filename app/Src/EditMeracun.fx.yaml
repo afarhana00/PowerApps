@@ -1017,13 +1017,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].JenisSemburan)
+                Items: =Choices([@'Jadual Meracun'].'Jenis Semburan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.JenisSemburan,DataCardValue11_2.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Jenis Semburan',DataCardValue11_2.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1135,13 +1135,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].Serangga)
+                Items: =Choices([@'Jadual Meracun'].'Nama Semburan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.Serangga,DataCardValue12_2.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Nama Semburan',DataCardValue12_2.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 Size: =21
                 Tooltip: =Parent.DisplayName
@@ -1369,13 +1369,13 @@ EditMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Jadual Meracun'].Foliar)
+                Items: =Choices([@'Jadual Meracun'].'Masa Semburan')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Jadual Meracun'.Foliar,DataCardValue15_2.SearchText)
+                SearchItems: =Choices('Jadual Meracun'.'Masa Semburan',DataCardValue15_2.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
