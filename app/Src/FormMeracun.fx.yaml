@@ -72,16 +72,14 @@ FormMeracun As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
-                Items: |
-                    =Filter(Choices('Jadual Meracun'.Plot), Value = ddPlotId_18.Selected.PlotId)
+                IsSearchable: =false
+                Items: =Filter(Choices('Jadual Meracun'.Plot),Value = ddPlotId_18.Selected.PlotId)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: |-
-                    =Search(Filter(Choices('Jadual Meracun'.Plot), Value = ddPlotId_18.Selected.PlotId)
-                    ,DataCardValue4.SearchText,"Value")
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
