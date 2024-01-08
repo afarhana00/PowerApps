@@ -45,8 +45,8 @@ ListSemakan As screen:
             Text: =ThisItem.'Plot (Lokasi)'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =73
-            X: =196
-            Y: =17
+            X: =193
+            Y: =14
             ZIndex: =1
 
         Tarikh As label:
@@ -121,11 +121,11 @@ ListSemakan As screen:
             FontWeight: =FontWeight.Bold
             Height: =41
             OnSelect: =Select(Parent)
-            Size: =21
+            Size: =20
             Text: =ThisItem.'Masa Semakan'.Value
             Width: =147
             X: =365
-            Y: =17
+            Y: =14
             ZIndex: =6
 
         "'icon merah' As image":
@@ -182,7 +182,7 @@ ListSemakan As screen:
             Text: ="/"
             Width: =37
             X: =243
-            Y: =21
+            Y: =14
             ZIndex: =9
 
         Button12 As button:
@@ -211,7 +211,8 @@ ListSemakan As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =638
+            Width: =111
+            X: =527
             ZIndex: =13
 
         "'icon suhu biru' As image":
