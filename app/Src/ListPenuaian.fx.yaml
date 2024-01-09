@@ -6,7 +6,7 @@ ListPenuaian As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =737
+        Height: =693
         Items: |
             =If(
                 DatePicker2_3.SelectedDate= "01/01/2023" ,
@@ -25,7 +25,7 @@ ListPenuaian As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =123
-        Y: =395
+        Y: =438
         ZIndex: =3
 
         Title1 As label:
@@ -298,8 +298,7 @@ ListPenuaian As screen:
         BorderColor: =RGBA(0, 168, 156, 1)
         CalendarHeaderFill: =RGBA(16, 110, 190, 1)
         Color: =RGBA(50, 49, 48, 1)
-        DefaultDate: |
-            ="1/1/2023"
+        DefaultDate: ="1/1/2023"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
@@ -313,8 +312,8 @@ ListPenuaian As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =259
-        X: =126
-        Y: =104
+        X: =80
+        Y: =127
         ZIndex: =7
 
     Button19_3 As button:
@@ -341,8 +340,8 @@ ListPenuaian As screen:
         Size: =21
         Text: ="Semua Rekod"
         Width: =202
-        X: =424
-        Y: =218
+        X: =86
+        Y: =357
         ZIndex: =8
 
     DatePicker3_3 As datepicker:
@@ -356,15 +355,15 @@ ListPenuaian As screen:
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
         Format: ="dd/mm/yyyy"
-        Height: =69
+        Height: =72
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =259
-        X: =126
-        Y: =215
+        X: =80
+        Y: =258
         ZIndex: =9
 
     Label21_3 As label:
@@ -376,12 +375,12 @@ ListPenuaian As screen:
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =65
+        Height: =45
         Size: =21
         Text: ="Dari"
-        Width: =159
-        X: =13
-        Y: =120
+        Width: =113
+        X: =73
+        Y: =82
         ZIndex: =10
 
     Label22_3 As label:
@@ -397,8 +396,8 @@ ListPenuaian As screen:
         Size: =21
         Text: ="Hingga"
         Width: =115
-        X: =13
-        Y: =228
+        X: =71
+        Y: =202
         ZIndex: =11
 
     Dropdown1_3 As dropdown:
@@ -431,8 +430,8 @@ ListPenuaian As screen:
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
         Width: =216
-        X: =410
-        Y: =104
+        X: =384
+        Y: =258
         ZIndex: =12
 
     Label28_3 As label:
@@ -478,7 +477,75 @@ ListPenuaian As screen:
         Size: =21
         Text: ="Tambah Baru"
         Width: =202
-        X: =424
-        Y: =306
+        X: =327
+        Y: =357
         ZIndex: =14
+
+    Dropdown2_3 As dropdown:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        ChevronBackground: =RGBA(0, 168, 156, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =RGBA(0, 168, 156, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
+        Items: =Choices('Jadual Siraman'.Kitaran)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 168, 156, 1)
+        Size: =21
+        Width: =216
+        X: =384
+        Y: =134
+        ZIndex: =15
+
+    Label16_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =35
+        Size: =21
+        Text: ="Kitaran"
+        Width: =191
+        X: =376
+        Y: =89
+        ZIndex: =16
+
+    Label25 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =45
+        Size: =21
+        Text: ="Plot"
+        Width: =176
+        X: =376
+        Y: =215
+        ZIndex: =17
 
