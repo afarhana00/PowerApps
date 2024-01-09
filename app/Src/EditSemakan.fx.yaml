@@ -932,7 +932,7 @@ EditSemakan As screen:
                 IconBackground: =RGBA(0, 168, 156, 1)
                 IsEditable: =true
                 PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =21
                 StartYear: =1899
@@ -1107,6 +1107,244 @@ EditSemakan As screen:
                 Y: =DataCardKey28_3.Y
                 ZIndex: =4
 
+        "'Plot (Lokasi)_DataCard5' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Plot_x0028_Lokasi_x0029_"
+            Default: =ThisItem.'Plot (Lokasi)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue14.Selected
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14 As combobox:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                ChevronBackground: =RGBA(1, 168, 156, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(245, 245, 245, 1)
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                Items: =Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.Plot_x0028_Lokasi_x0029_,DataCardValue14.SearchText)
+                SelectionFill: =RGBA(0, 168, 156, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =326
+                X: =272
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue14.Y + DataCardValue14.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey14.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+        "'Baris Pokok_DataCard1_1' As typedDataCard.comboBoxEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="BarisPokok"
+            Default: =ThisItem.'Baris Pokok'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"BarisPokok")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue30_3.Selected
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey30_3 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30_3 As combobox:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(245, 245, 245, 1)
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                Items: =Choices([@'Semakan Kesihatan'].'Baris Pokok')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Semakan Kesihatan'.'Baris Pokok',DataCardValue30_3.SearchText)
+                SelectionFill: =RGBA(0, 168, 156, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =326
+                X: =272
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage31_1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue30_3.Y + DataCardValue30_3.Height
+                ZIndex: =3
+
+            StarVisible33_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey30_3.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey30_3.Y
+                ZIndex: =4
+
         "'Nutrisi (Skala EC)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1161,7 +1399,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1276,7 +1514,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1393,7 +1631,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1509,7 +1747,7 @@ EditSemakan As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1626,7 +1864,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1743,7 +1981,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1860,7 +2098,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -1977,7 +2215,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -2094,7 +2332,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -2342,7 +2580,7 @@ EditSemakan As screen:
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Penyakit)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -2507,7 +2745,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -2628,7 +2866,7 @@ EditSemakan As screen:
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].Perosak)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -2796,7 +3034,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -2918,7 +3156,7 @@ EditSemakan As screen:
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].'Jenis Racun')},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -3087,7 +3325,7 @@ EditSemakan As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -3457,7 +3695,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -3644,245 +3882,6 @@ EditSemakan As screen:
                 Y: =DataCardKey45_1.Y
                 ZIndex: =5
 
-        "'Plot (Lokasi)_DataCard2' As typedDataCard.comboBoxViewCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue7.Selected
-            Width: =640
-            X: =0
-            Y: =4
-            ZIndex: =1
-
-            DataCardKey7 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue7 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                ChevronBackground: =RGBA(245, 245, 245, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Parent.Default
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayFields: =["Value"]
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Semakan Kesihatan'].Plot_x0028_Lokasi_x0029_)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.View, 20, 0)
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.Plot_x0028_Lokasi_x0029_,DataCardValue7.SearchText)
-                SelectionFill: =RGBA(0, 120, 212, 1)
-                SelectMultiple: =false
-                Size: =21
-                Width: |
-                    =326
-                X: =272
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage7 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
-                ZIndex: =3
-
-            StarVisible7 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey7.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =4
-
-        "'Baris Pokok_DataCard1_1' As typedDataCard.comboBoxEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="BarisPokok"
-            Default: =ThisItem.'Baris Pokok'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"BarisPokok")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue30_3.Selected
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =1
-
-            DataCardKey30_3 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue30_3 As combobox:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Parent.Default
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Fill: =RGBA(245, 245, 245, 1)
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Choices([@'Semakan Kesihatan'].'Baris Pokok')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('Semakan Kesihatan'.'Baris Pokok',DataCardValue30_3.SearchText)
-                SelectionFill: =RGBA(0, 168, 156, 1)
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =326
-                X: =272
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage31_1 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue30_3.Y + DataCardValue30_3.Height
-                ZIndex: =3
-
-            StarVisible33_1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey30_3.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey30_3.Y
-                ZIndex: =4
-
         "'Masa Semakan_DataCard1_2' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -3939,7 +3938,7 @@ EditSemakan As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(194, 237, 234, 1)
                 Items: =Choices('Semakan Kesihatan'.'Masa Semakan')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -4129,7 +4128,7 @@ EditSemakan As screen:
                 IsSearchable: =false
                 Items: |-
                     =Ungroup(Table({DropdownOptions:Choices([@'Semakan Kesihatan'].IDPokok)},{DropdownOptions:["Tambah Baru"]}),"DropdownOptions")
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 20, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -4414,7 +4413,7 @@ EditSemakan As screen:
                 HoverBorderColor: =RGBA(16, 110, 190, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =20
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
