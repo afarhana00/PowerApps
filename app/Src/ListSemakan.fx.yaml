@@ -16,7 +16,7 @@ ListSemakan As screen:
                     ),
                     Filter(
                         'Semakan Kesihatan',
-                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value && Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate &&
+                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value && Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate ||
                           IsBlank(Dropdown1_1.Selected.Value)
                     )
                 )
