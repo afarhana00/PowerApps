@@ -12,7 +12,6 @@ ListSemakan As screen:
                     Dropdown1_1.Selected.Value = "Semua Plot" ,
                     Filter(
                         'Semakan Kesihatan',
-                        ('Plot (Lokasi)'.Value = "A1" || 'Plot (Lokasi)'.Value = "A2" || 'Plot (Lokasi)'.Value = "A3") &&
                         (Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate)
                     ),
                     Filter(
@@ -291,6 +290,25 @@ ListSemakan As screen:
             Y: =58
             ZIndex: =19
 
+        "'Suhu dlm GH' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =56
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Purata Suhu Dalam GH (°C)'
+            Width: =116
+            X: =58
+            Y: =60
+            ZIndex: =20
+
     Rectangle4 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -527,23 +545,4 @@ ListSemakan As screen:
         X: =411
         Y: =314
         ZIndex: =14
-
-    "'suhu dlm GH' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =58
-        OnSelect: =Select(Parent)
-        Size: =21
-        Text: =ThisItem.'Purata Suhu Dalam GH (°C)'
-        Width: =67
-        X: =20
-        Y: =20
-        ZIndex: =15
 
