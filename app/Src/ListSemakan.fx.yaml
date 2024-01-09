@@ -5,17 +5,17 @@ ListSemakan As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =760
+        Height: =656
         Items: |+
             =
                 If(
                     Dropdown1_1.Selected.Value = "Semua Plot" ,
                     Filter(
-                        'Semakan Kesihatan',
+                        'Semakan Kesihatan',  Kitaran.Value = Dropdown2_1.Selected.Value &&
                         (Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate)
                     ),
                     Filter(
-                        'Semakan Kesihatan',
+                        'Semakan Kesihatan',Kitaran.Value = Dropdown2_1.Selected.Value &&
                         'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value && Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate ||
                           IsBlank(Dropdown1_1.Selected.Value)
                     )
@@ -27,7 +27,7 @@ ListSemakan As screen:
         TemplatePadding: =0
         TemplateSize: =116
         Width: =639
-        Y: =376
+        Y: =479
         ZIndex: =1
 
         plotA As label:
@@ -372,15 +372,15 @@ ListSemakan As screen:
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
         Format: ="dd/mm/yyyy"
-        Height: =72
+        Height: =70
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =239
-        X: =133
-        Y: =131
+        Width: =228
+        X: =40
+        Y: =140
         ZIndex: =7
 
     Button19 As button:
@@ -407,8 +407,8 @@ ListSemakan As screen:
         Size: =21
         Text: ="Semua Rekod"
         Width: =202
-        X: =411
-        Y: =233
+        X: =100
+        Y: =378
         ZIndex: =8
 
     DatePicker3 As datepicker:
@@ -421,15 +421,15 @@ ListSemakan As screen:
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
         Format: ="dd/mm/yyyy"
-        Height: =69
+        Height: =70
         HoverDateFill: =RGBA(184, 187, 184, 1)
         IconBackground: =RGBA(0, 168, 156, 1)
         PaddingTop: =5
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
-        Width: =239
-        X: =133
-        Y: =222
+        Width: =242
+        X: =40
+        Y: =271
         ZIndex: =9
 
     Label21 As label:
@@ -441,11 +441,12 @@ ListSemakan As screen:
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =65
+        Height: =41
         Size: =21
         Text: ="Dari"
         Width: =159
-        Y: =135
+        X: =40
+        Y: =99
         ZIndex: =10
 
     Label22 As label:
@@ -457,11 +458,12 @@ ListSemakan As screen:
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =56
+        Height: =50
         Size: =21
         Text: ="Hingga"
-        Width: =115
-        Y: =222
+        Width: =121
+        X: =40
+        Y: =226
         ZIndex: =11
 
     Dropdown1_1 As dropdown:
@@ -477,7 +479,7 @@ ListSemakan As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
-        Height: =69
+        Height: =70
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
@@ -493,9 +495,9 @@ ListSemakan As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =213
-        X: =411
-        Y: =131
+        Width: =231
+        X: =328
+        Y: =140
         ZIndex: =12
 
     Label28_2 As label:
@@ -542,7 +544,75 @@ ListSemakan As screen:
         Size: =21
         Text: ="Tambah Baru"
         Width: =202
-        X: =411
-        Y: =314
+        X: =339
+        Y: =378
         ZIndex: =14
+
+    Dropdown2_1 As dropdown:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        ChevronBackground: =RGBA(0, 168, 156, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =RGBA(0, 168, 156, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
+        Items: =Choices('Jadual Siraman'.Kitaran)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 168, 156, 1)
+        Size: =21
+        Width: =232
+        X: =327
+        Y: =271
+        ZIndex: =15
+
+    Label15 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =26
+        Size: =21
+        Text: ="Plot"
+        Width: =283
+        X: =339
+        Y: =109
+        ZIndex: =16
+
+    Label16 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =30
+        Size: =21
+        Text: ="Kitaran"
+        Width: =301
+        X: =339
+        Y: =226
+        ZIndex: =17
 

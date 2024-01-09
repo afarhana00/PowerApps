@@ -15,7 +15,7 @@ FormJadualSiraman As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |-
-            =  Refresh('Jadual Siraman');
+            =
              Navigate(ListJadualSiraman);SubmitForm(Form4);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -170,7 +170,7 @@ FormJadualSiraman As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
                 DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 Fill: =RGBA(245, 245, 245, 1)
                 Font: =Font.'Segoe UI'
                 Height: =70
@@ -178,7 +178,7 @@ FormJadualSiraman As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(99, 219, 213, 1)
                 Items: =Filter(Choices([@'Jadual Siraman'].Plot), Value = ddPlotId_9.Selected.PlotId)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.View, 10, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)

@@ -72,8 +72,8 @@ ListMeracun As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =239
-        X: =135
-        Y: =144
+        X: =34
+        Y: =149
         ZIndex: =9
 
     Button19_2 As button:
@@ -100,8 +100,8 @@ ListMeracun As screen:
         Size: =21
         Text: ="Semua Rekod"
         Width: =202
-        X: =430
-        Y: =235
+        X: =108
+        Y: =370
         ZIndex: =10
 
     DatePicker3_2 As datepicker:
@@ -121,8 +121,8 @@ ListMeracun As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =239
-        X: =135
-        Y: =235
+        X: =34
+        Y: =267
         ZIndex: =11
 
     Label21_2 As label:
@@ -134,12 +134,12 @@ ListMeracun As screen:
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =65
+        Height: =36
         Size: =21
         Text: ="Dari"
-        Width: =159
+        Width: =132
         X: =20
-        Y: =155
+        Y: =108
         ZIndex: =12
 
     Label22_2 As label:
@@ -156,7 +156,7 @@ ListMeracun As screen:
         Text: ="Hingga"
         Width: =115
         X: =20
-        Y: =242
+        Y: =211
         ZIndex: =13
 
     Dropdown1_2 As dropdown:
@@ -189,26 +189,26 @@ ListMeracun As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =213
-        X: =410
-        Y: =144
+        Width: =232
+        X: =336
+        Y: =149
         ZIndex: =14
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =731
+        Height: =661
         Items: |+
             =
                 If(
                     Dropdown1_2.Selected.Value = "Semua Plot" ,
                     Filter(
-                        'Jadual Meracun',
+                        'Jadual Meracun',Kitaran.Value = Dropdown2_2.Selected.Value&&
                         (Plot.Value = "A1" || Plot.Value = "A2" || Plot.Value = "A3") &&
                         (Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate)
                     ),
                     Filter(
-                        'Jadual Meracun',
+                        'Jadual Meracun',Kitaran.Value = Dropdown2_2.Selected.Value&&
                         Plot.Value = Dropdown1_2.Selected.Value && Tarikh >= DatePicker2_2.SelectedDate && Tarikh <= DatePicker3_2.SelectedDate ||
                         IsBlank(Dropdown1_2.Selected.Value)
                     )
@@ -218,7 +218,7 @@ ListMeracun As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =144
-        Y: =405
+        Y: =475
         ZIndex: =15
 
         Title3 As label:
@@ -239,7 +239,7 @@ ListMeracun As screen:
             Width: =144
             X: =84
             Y: =8
-            ZIndex: =2
+            ZIndex: =1
 
         NextArrow3 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -255,7 +255,7 @@ ListMeracun As screen:
             Width: =50
             X: =Parent.TemplateWidth - Self.Width - 12
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
+            ZIndex: =2
 
         Separator3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -264,7 +264,7 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
+            ZIndex: =3
 
         Rectangle15 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -273,7 +273,7 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =10
-            ZIndex: =6
+            ZIndex: =4
 
         Subtitle1 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -292,7 +292,7 @@ ListMeracun As screen:
             Width: =62
             X: =22
             Y: =4
-            ZIndex: =7
+            ZIndex: =5
 
         Image10 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -310,7 +310,7 @@ ListMeracun As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =69
             X: =460
-            ZIndex: =8
+            ZIndex: =6
 
         Image11 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -328,7 +328,7 @@ ListMeracun As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =62
             X: =369
-            ZIndex: =9
+            ZIndex: =7
 
         Image12 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -346,7 +346,7 @@ ListMeracun As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =77
             X: =281
-            ZIndex: =10
+            ZIndex: =8
 
         Label14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -362,11 +362,11 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             Size: =16
             Text: |
-                =Concat(ThisItem.'Nama Semburan'.Value,Value)
+                =ThisItem.'Nama Semburan'.Value
             Width: =170
             X: =96
             Y: =42
-            ZIndex: =11
+            ZIndex: =9
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -385,7 +385,26 @@ ListMeracun As screen:
             Width: =197
             X: =443
             Y: =34
-            ZIndex: =13
+            ZIndex: =10
+
+        Label1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =87
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =ThisItem.'Kuantiti Semburan'
+            Width: =146
+            X: =266
+            Y: =49
+            ZIndex: =11
 
         Button35 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -411,28 +430,8 @@ ListMeracun As screen:
             RadiusTopRight: =0
             Size: =24
             Text: =""
-            Width: =61
-            X: =578
-            ZIndex: =14
-
-        Label1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =87
-            OnSelect: =Select(Parent)
-            Size: =18
-            Text: =ThisItem.'Kuantiti Semburan'
-            Width: =146
-            X: =266
-            Y: =49
-            ZIndex: =15
+            Width: =639
+            ZIndex: =12
 
     Button22_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -458,7 +457,75 @@ ListMeracun As screen:
         Size: =21
         Text: ="Tambah Baru"
         Width: =202
-        X: =429
-        Y: =308
+        X: =362
+        Y: =370
         ZIndex: =17
+
+    Dropdown2_2 As dropdown:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        ChevronBackground: =RGBA(0, 168, 156, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =RGBA(0, 168, 156, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
+        Items: =Choices('Jadual Siraman'.Kitaran)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 168, 156, 1)
+        Size: =21
+        Width: =232
+        X: =336
+        Y: =271
+        ZIndex: =18
+
+    Label16_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =30
+        Size: =21
+        Text: ="Kitaran"
+        Width: =301
+        X: =339
+        Y: =226
+        ZIndex: =19
+
+    Label19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =36
+        Size: =21
+        Text: ="Plot"
+        Width: =290
+        X: =339
+        Y: =113
+        ZIndex: =20
 
