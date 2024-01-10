@@ -41,7 +41,7 @@ FormSemakan As screen:
         DataSource: ='Semakan Kesihatan'
         Fill: =RGBA(228, 240, 239, 100)
         Height: =847
-        Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+        Visible: =If(varshowform=2||varshowform=-1,true,false)
         Width: =640
         Y: =202
         ZIndex: =11
@@ -1611,6 +1611,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue53_1.Text)
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =20
@@ -1729,6 +1730,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue34.Text)
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =21
@@ -1845,6 +1847,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image6.Image
+            Visible: =If(varshowfields=4 ||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =22
@@ -2009,6 +2012,7 @@ FormSemakan As screen:
             Required: =false
             Update: |-
                 =If(DataCardValue55_1.Selected.Value="Tambah Baru",{Value:TextInput5.Text},DataCardValue55_1.Selected)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =24
@@ -2178,6 +2182,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue51_1.Text)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =25
@@ -2295,6 +2300,7 @@ FormSemakan As screen:
             Required: =false
             Update: |-
                 =If(DataCardValue56_1.Selected.Value="Tambah Baru",{Value:TextInput6.Text},DataCardValue56_1.Selected)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =26
@@ -2467,6 +2473,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue52_1.Text)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =27
@@ -2585,6 +2592,7 @@ FormSemakan As screen:
             Required: =false
             Update: |-
                 =If(DataCardValue50_1.Selected.Value="Tambah Baru",{Value:TextInput8.Text},DataCardValue50_1.Selected)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =28
@@ -2797,6 +2805,7 @@ FormSemakan As screen:
             MaxLength: =DataSourceInfo([@'Semakan Kesihatan'], DataSourceInfo.MaxLength, "field_8")
             Required: =false
             Update: =DataCardValue48_1.Text
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =30
@@ -2912,6 +2921,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image3.Image
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =31
@@ -3038,6 +3048,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image5.Image
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =32
@@ -3165,6 +3176,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue35.Text)
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =33
@@ -3281,6 +3293,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image4.Image
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =34
@@ -4085,7 +4098,7 @@ FormSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); NewForm(Form2);
+        OnSelect: =If(varshowform=1,Set(varshowform,1),Set(varshowform,1)); NewForm(Form2);
         PressedBorderColor: =RGBA(204, 204, 204, 1)
         PressedColor: =RGBA(0, 0, 0, 1)
         PressedFill: =RGBA(230, 230, 230, 1)
@@ -4114,7 +4127,7 @@ FormSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); NewForm(Form2);
+        OnSelect: =If(varshowform=2,Set(varshowform,2),Set(varshowform,2)); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -4139,7 +4152,7 @@ FormSemakan As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =If(varshowfields=1||varshowfields=-1 ,true,false) 
+        Visible: =If(varshowform=1||varshowform=-1 ,true,false) 
         Width: =640
         Y: =230
         ZIndex: =17
