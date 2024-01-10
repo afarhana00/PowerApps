@@ -395,7 +395,7 @@ ListMeracun As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: |
                 =If(
-                    Value('Jenis Semburan)' = "Racun Serangga",
+                    Text(ThisItem.'Jenis Semburan') = "Racun Serangga",
                     true,
                     false
                 )
