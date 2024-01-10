@@ -680,7 +680,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue1.Selected
-            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+            Visible: =If(varshowfields=2,true,false)
             Width: =640
             X: =0
             Y: =7
@@ -799,7 +799,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue30.Selected
-            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+            Visible: =If(varshowfields=2,true,false)
             Width: =640
             X: =0
             Y: =8
@@ -3989,7 +3989,7 @@ FormSemakan As screen:
             Update: |-
                 =If(DataCardValue4_1.Selected.Value="Tambah Baru",
                 {Value:TextInput1.Text}, DataCardValue4_1.Selected)
-            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+            Visible: =If(varshowfields=2,true,false)
             Width: =640
             X: =0
             Y: =9
