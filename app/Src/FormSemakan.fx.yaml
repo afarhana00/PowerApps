@@ -70,6 +70,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=1,Set(varchowfields,0),Set(varshowfields,1))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -93,6 +94,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue32.Text)
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =1
@@ -208,6 +210,7 @@ FormSemakan As screen:
             Height: =76
             Required: =false
             Update: =DataCardValue47_1.SelectedDate
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =2
@@ -316,6 +319,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue26.Selected
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =4
@@ -449,6 +453,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=2,Set(varchowfields,0),Set(varshowfields,2))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -472,6 +477,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue1.Selected
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =6
@@ -590,6 +596,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue30.Selected
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =7
@@ -722,6 +729,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=3,Set(varchowfields,0),Set(varshowfields,3))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -745,6 +753,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue5.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =12
@@ -860,6 +869,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue23.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =13
@@ -975,6 +985,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue25.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =14
@@ -1093,6 +1104,7 @@ FormSemakan As screen:
             MaxLength: =DataSourceInfo([@'Semakan Kesihatan'], DataSourceInfo.MaxLength, "spare2")
             Required: =false
             Update: =DataCardValue27.Text
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =15
@@ -1208,6 +1220,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue28.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =16
@@ -1325,6 +1338,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue29.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =17
@@ -1442,6 +1456,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue31.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =18
@@ -1572,6 +1587,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=4,Set(varchowfields,0),Set(varshowfields,4))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -1968,6 +1984,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=5,Set(varchowfields,0),Set(varshowfields,5))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -2755,6 +2772,7 @@ FormSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
+                OnSelect: =If(varshowfields=6,Set(varchowfields,0),Set(varshowfields,6))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -3391,6 +3409,7 @@ FormSemakan As screen:
             Required: =false
             Update: |-
                 =If(DataCardValue2_1.Selected.Value="Lain-lain",{Value :TextInput1_1.Text},DataCardValue2_1.Selected)
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =3
@@ -3582,6 +3601,7 @@ FormSemakan As screen:
             Update: |-
                 =If(DataCardValue4_1.Selected.Value="Tambah Baru",
                 {Value:TextInput1.Text}, DataCardValue4_1.Selected)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =8
@@ -3753,6 +3773,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue7_1.Selected
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =10
@@ -3872,6 +3893,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue17_1.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =11
