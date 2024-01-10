@@ -13,10 +13,130 @@
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Penuaian Cili'
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =915
+        Height: =937
         Width: =Parent.Width
-        Y: =112
+        Y: =89
         ZIndex: =2
+
+        Kitaran_DataCard6 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Kitaran"
+            Default: =ThisItem.Kitaran
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Kitaran")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue39.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey40 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue39 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronFill: =RGBA(50, 49, 48, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(245, 245, 245, 1)
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                Items: =Choices([@'Penuaian Cili'].Kitaran)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Penuaian Cili'.Kitaran,DataCardValue39.SearchText)
+                SelectionFill: =RGBA(0, 168, 156, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey40.Y + DataCardKey40.Height + 5
+                ZIndex: =2
+
+            ErrorMessage40 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue39.Y + DataCardValue39.Height
+                ZIndex: =3
+
+            StarVisible38 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey40.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey40.Y
+                ZIndex: =4
 
         "'Actual (kg)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -31,7 +151,7 @@
             Update: =Value(DataCardValue22.Text)
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey22 As label:
@@ -147,7 +267,7 @@
             Update: =Value(DataCardValue24.Text)
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =1
 
             DataCardKey24 As label:
@@ -263,7 +383,7 @@
             Update: =Value(DataCardValue20.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey20 As label:
@@ -381,7 +501,7 @@
             Update: =Value(DataCardValue59.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey62 As label:
@@ -499,7 +619,7 @@
             Update: =Value(DataCardValue21.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey21 As label:
@@ -616,7 +736,7 @@
             Update: =Value(DataCardValue70.Text)
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey75 As label:
@@ -732,7 +852,7 @@
             Update: =Value(DataCardValue37.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey37 As label:
@@ -848,7 +968,7 @@
             Update: =Value(DataCardValue56.Text)
             Width: =640
             X: =0
-            Y: =11
+            Y: =12
             ZIndex: =1
 
             DataCardKey59 As label:
@@ -963,7 +1083,7 @@
             Update: =Value(DataCardValue73.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =13
             ZIndex: =1
 
             DataCardKey76 As label:
@@ -1078,7 +1198,7 @@
             Update: =Value(DataCardValue38.Text)
             Width: =640
             X: =0
-            Y: =13
+            Y: =14
             ZIndex: =1
 
             DataCardKey38 As label:
@@ -1193,7 +1313,7 @@
             Update: =Value(DataCardValue57.Text)
             Width: =640
             X: =0
-            Y: =14
+            Y: =15
             ZIndex: =1
 
             DataCardKey60 As label:
@@ -1308,7 +1428,7 @@
             Update: =Value(DataCardValue74.Text)
             Width: =640
             X: =0
-            Y: =15
+            Y: =16
             ZIndex: =1
 
             DataCardKey77 As label:
@@ -1424,7 +1544,7 @@
             Update: =Value(DataCardValue53.Text)
             Width: =640
             X: =0
-            Y: =16
+            Y: =17
             ZIndex: =1
 
             DataCardKey56 As label:
@@ -1540,7 +1660,7 @@
             Update: =Value(DataCardValue58.Text)
             Width: =640
             X: =0
-            Y: =17
+            Y: =18
             ZIndex: =1
 
             DataCardKey61 As label:
@@ -1656,7 +1776,7 @@
             Update: =Value(DataCardValue79.Text)
             Width: =640
             X: =0
-            Y: =18
+            Y: =19
             ZIndex: =1
 
             DataCardKey82 As label:
@@ -1771,7 +1891,7 @@
             Update: =Value(DataCardValue54.Text)
             Width: =640
             X: =0
-            Y: =19
+            Y: =20
             ZIndex: =1
 
             DataCardKey57 As label:
@@ -1886,7 +2006,7 @@
             Update: =Value(DataCardValue55.Text)
             Width: =640
             X: =0
-            Y: =20
+            Y: =21
             ZIndex: =1
 
             DataCardKey58 As label:
@@ -2001,7 +2121,7 @@
             Update: =Value(DataCardValue76.Text)
             Width: =640
             X: =0
-            Y: =21
+            Y: =22
             ZIndex: =1
 
             DataCardKey79 As label:
@@ -2116,7 +2236,7 @@
             Update: =Value(DataCardValue77.Text)
             Width: =640
             X: =0
-            Y: =22
+            Y: =23
             ZIndex: =1
 
             DataCardKey80 As label:
@@ -2471,7 +2591,7 @@
             Update: =DataCardValue16.SelectedDate
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =3
 
             DataCardKey16 As label:
@@ -2582,7 +2702,7 @@
             Update: =DataCardValue17.SelectedDate
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =3
 
             DataCardKey17 As label:
