@@ -10,9 +10,9 @@ ListPenuaian As screen:
         Items: |
             =If(
                 DatePicker2_3.SelectedDate= "01/01/2023" ,
-                'Penuaian Cili',
+                Filter('Penuaian Cili',Kitaran.Value = Dropdown2_3.Selected.Value),
                 Filter(
-                    'Penuaian Cili',
+                    'Penuaian Cili', Kitaran.Value = Dropdown2_3.Selected.Value &&
                     ('Start Date' = DatePicker2_3.SelectedDate ||
                     'Start Date' >= DatePicker2_3.SelectedDate &&
                     'End Date' <= DatePicker3_3.SelectedDate ||

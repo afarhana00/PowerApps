@@ -205,6 +205,125 @@ EditPenuaian As screen:
         Y: =112
         ZIndex: =9
 
+        Kitaran_DataCard7 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Kitaran"
+            Default: =ThisItem.Kitaran
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Kitaran")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue40.Selected
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey42 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =21
+                ZIndex: =1
+
+            DataCardValue40 As combobox:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                ChevronBackground: =RGBA(0, 168, 156, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(50, 49, 48, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(245, 245, 245, 1)
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                Items: =Choices([@'Penuaian Cili'].Kitaran)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 168, 156, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Penuaian Cili'.Kitaran,DataCardValue40.SearchText)
+                SelectionFill: =RGBA(0, 168, 156, 1)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage42 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue40.Y + DataCardValue40.Height
+                ZIndex: =3
+
+            StarVisible40 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey42.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey42.Y
+                ZIndex: =4
+
         "'Actual (kg)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -218,7 +337,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue22_1.Text)
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =1
 
             DataCardKey22_1 As label:
@@ -334,7 +453,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue24_3.Text)
             Width: =640
             X: =0
-            Y: =5
+            Y: =6
             ZIndex: =1
 
             DataCardKey24_3 As label:
@@ -450,7 +569,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue70_1.Text)
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey75_1 As label:
@@ -566,7 +685,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue37_1.Text)
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey37_1 As label:
@@ -682,7 +801,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue56_2.Text)
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey59_1 As label:
@@ -797,7 +916,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue73_1.Text)
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey76_1 As label:
@@ -912,7 +1031,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue38_1.Text)
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey38_1 As label:
@@ -1027,7 +1146,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue57_3.Text)
             Width: =640
             X: =0
-            Y: =11
+            Y: =12
             ZIndex: =1
 
             DataCardKey60_1 As label:
@@ -1142,7 +1261,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue74_1.Text)
             Width: =640
             X: =0
-            Y: =12
+            Y: =13
             ZIndex: =1
 
             DataCardKey77_1 As label:
@@ -1258,7 +1377,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue53_2.Text)
             Width: =640
             X: =0
-            Y: =13
+            Y: =14
             ZIndex: =1
 
             DataCardKey56_2 As label:
@@ -1374,7 +1493,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue58_1.Text)
             Width: =640
             X: =0
-            Y: =14
+            Y: =15
             ZIndex: =1
 
             DataCardKey61_1 As label:
@@ -1490,7 +1609,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue79_1.Text)
             Width: =640
             X: =0
-            Y: =15
+            Y: =16
             ZIndex: =1
 
             DataCardKey82_1 As label:
@@ -1605,7 +1724,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue54_1.Text)
             Width: =640
             X: =0
-            Y: =16
+            Y: =17
             ZIndex: =1
 
             DataCardKey57_3 As label:
@@ -1720,7 +1839,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue55_2.Text)
             Width: =640
             X: =0
-            Y: =17
+            Y: =18
             ZIndex: =1
 
             DataCardKey58_1 As label:
@@ -1835,7 +1954,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue76_1.Text)
             Width: =640
             X: =0
-            Y: =18
+            Y: =19
             ZIndex: =1
 
             DataCardKey79_1 As label:
@@ -1950,7 +2069,7 @@ EditPenuaian As screen:
             Update: =Value(DataCardValue77_1.Text)
             Width: =640
             X: =0
-            Y: =19
+            Y: =20
             ZIndex: =1
 
             DataCardKey80_1 As label:
@@ -2304,7 +2423,7 @@ EditPenuaian As screen:
             Update: =DataCardValue16_1.SelectedDate
             Width: =640
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =3
 
             DataCardKey16_1 As label:
@@ -2416,7 +2535,7 @@ EditPenuaian As screen:
             Update: =DataCardValue17_2.SelectedDate
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =3
 
             DataCardKey17_2 As label:
