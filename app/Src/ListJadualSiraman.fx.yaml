@@ -6,20 +6,30 @@ ListJadualSiraman As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =685
-        Items: |+
+        Items: |-
             =If(
-                Dropdown1.Selected.Value = "Semua Plot" ,
-                 Filter(
-                        'Jadual Siraman',  Kitaran.Value = Dropdown2.Selected.Value &&
-                        (Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate)
-                    ),
+                Dropdown1.Selected.Value = "Semua Plot",
+                Sort(
                     Filter(
-                        'Jadual Siraman',Kitaran.Value = Dropdown2.Selected.Value &&
-                        Plot.Value = Dropdown1.Selected.Value && Tarikh >= DatePicker2_1.SelectedDate && Tarikh <= DatePicker3_1.SelectedDate || IsBlank(Dropdown1.Selected.Value)
-                    )
+                        'Jadual Siraman',
+                        Kitaran.Value = Dropdown2.Selected.Value &&
+                        Tarikh >= DatePicker2_1.SelectedDate &&
+                        Tarikh <= DatePicker3_1.SelectedDate
+                    ),
+                    'Waktu Siraman'.Value,
+                    SortOrder.Ascending
+                ),
+                 Sort(Filter(
+                    'Jadual Siraman',
+                    Kitaran.Value = Dropdown2.Selected.Value &&
+                    Plot.Value = Dropdown1.Selected.Value &&
+                    Tarikh >= DatePicker2_1.SelectedDate &&
+                    Tarikh <= DatePicker3_1.SelectedDate ||
+                    IsBlank(Dropdown1.Selected.Value)
                 )
-            
-            
+            ,'Waktu Siraman'.Value,
+                    SortOrder.Ascending
+                 ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
@@ -429,7 +439,7 @@ ListJadualSiraman As screen:
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
         ChevronDisabledFill: =RGBA(161, 159, 157, 1)
         ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Color: =RGBA(50, 49, 48, 1)
         Default: ="Semua"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -614,8 +624,8 @@ ListJadualSiraman As screen:
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
         ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        ChevronHoverBackground: =RGBA(0, 168, 156, 1)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
         Color: =RGBA(50, 49, 48, 1)
         Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
