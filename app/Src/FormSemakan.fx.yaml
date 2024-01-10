@@ -4472,7 +4472,7 @@ FormSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =If(varshowform=1,Set(varshowform,1),Set(varshowform,1)); NewForm(Form2);
+        OnSelect: =If(varshowform=1,Set(varshowform,1),Set(varshowform,1)); 
         PressedBorderColor: =RGBA(204, 204, 204, 1)
         PressedColor: =RGBA(0, 0, 0, 1)
         PressedFill: =RGBA(230, 230, 230, 1)
