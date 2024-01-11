@@ -299,7 +299,7 @@ ListSemakan As screen:
             HoverFill: =ColorFade(RGBA(0, 168, 156, 0), -20%)
             OnSelect: |
                 =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });EditForm(Form3);
-                Select(Parent);If(varshowfields=2,Set(varshowfields,2),Set(varshowfields,2)); 
+                Select(Parent);If(varshowform=2,Set(varshowform,2),Set(varshowform,2)); 
                 Navigate(EditSemakan);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(0, 0, 0, 0)
