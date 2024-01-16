@@ -165,7 +165,7 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.'Purata Suhu Dalam GH (°C)'<=36,true,false)
+            Visible: =If(ThisItem.'Suhu Dalam GH (°C)'<=36,true,false)
             Width: =86
             Y: =36
             ZIndex: =8
@@ -184,7 +184,7 @@ ListSemakan As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(ThisItem.'Purata Suhu Dalam GH (°C)'<=36,false,true)
+            Visible: =If(ThisItem.'Suhu Dalam GH (°C)'<=36,false,true)
             Width: =85
             Y: =36
             ZIndex: =9
@@ -278,7 +278,7 @@ ListSemakan As screen:
             Height: =56
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =ThisItem.'Purata Suhu Dalam GH (°C)'
+            Text: =ThisItem.'Suhu Dalam GH (°C)'
             Width: =116
             X: =58
             Y: =60

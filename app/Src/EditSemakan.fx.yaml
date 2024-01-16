@@ -1795,7 +1795,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare6"
-            Default: =ThisItem.'Purata Suhu Dalam GH (°C)'
+            Default: =ThisItem.'Suhu Dalam GH (°C)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"spare6")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1913,7 +1913,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare5"
-            Default: =ThisItem.'Purata Suhu Luar GH (°C)'
+            Default: =ThisItem.'Suhu Luar GH (°C)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"spare5")
             Fill: =RGBA(0, 0, 0, 0)
@@ -2345,7 +2345,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(0, 168, 156, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="PertumbuhanCabang"
-            Default: =ThisItem.'Pertumbuhan Cabang'
+            Default: =ThisItem.'Pertumbuhan Cabang 1'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"PertumbuhanCabang")
             Fill: =RGBA(0, 0, 0, 0)
@@ -3881,7 +3881,7 @@ EditSemakan As screen:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Attachment"
-            Default: =ThisItem.Attachment
+            Default: =ThisItem.'Attachment 1'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Attachment")
             Fill: =RGBA(0, 0, 0, 0)

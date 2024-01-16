@@ -217,6 +217,7 @@ ListMeracun As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =144
+        Width: =639
         Y: =475
         ZIndex: =15
 
@@ -393,15 +394,10 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |
-                =If(
-                    Text(ThisItem.'Jenis Semburan') = "Racun Serangga",
-                    true,
-                    false
-                )
+            Visible: =If((ThisItem.'Jenis Semburan'.Value="Racun Serangga"),true,false)
             Width: =84
-            X: =11
-            Y: =42
+            X: =3
+            Y: =24
             ZIndex: =13
 
         bajafoliar As image:
@@ -418,8 +414,10 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If((ThisItem.'Jenis Semburan'.Value="Baja Foliar"),true,false)
             Width: =70
-            X: =319
+            X: =17
+            Y: =36
             ZIndex: =14
 
         racunkulat As image:
@@ -436,9 +434,9 @@ ListMeracun As screen:
             OnSelect: =Select(Parent)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If((ThisItem.'Jenis Semburan'.Value="Racun Kulat"),true,false)
             Width: =91
-            X: =419
-            Y: =8
+            Y: =56
             ZIndex: =15
 
     Button22_2 As button:

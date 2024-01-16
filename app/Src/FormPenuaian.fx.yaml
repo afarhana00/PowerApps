@@ -141,7 +141,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_10"
-            Default: =ThisItem.'Actual (kg)'
+            Default: =ThisItem.'Actual (KG)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_10")
             Fill: =RGBA(0, 0, 0, 0)
@@ -842,7 +842,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_14"
-            Default: =ThisItem.'Berat Buah / Biji A'
+            Default: =ThisItem.field_14
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_14")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1188,7 +1188,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_17"
-            Default: =ThisItem.'Berat Buah / Biji B'
+            Default: =ThisItem.field_17
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_17")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1534,7 +1534,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_20"
-            Default: =ThisItem.'Berat Buah / Biji C'
+            Default: =ThisItem.field_20
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_20")
             Fill: =RGBA(0, 0, 0, 0)
@@ -1881,7 +1881,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_23"
-            Default: =ThisItem.'Berat Buah / Biji R'
+            Default: =ThisItem.field_23
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_23")
             Fill: =RGBA(0, 0, 0, 0)
@@ -2226,7 +2226,7 @@
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_36"
-            Default: =ThisItem.'Purata Berat / Buah'
+            Default: =ThisItem.'Purata Berat / Buah Original'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_36")
             Fill: =RGBA(0, 0, 0, 0)
