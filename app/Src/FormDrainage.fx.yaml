@@ -5,10 +5,9 @@ FormDrainage As screen:
     FormDrain As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Drainage System Data'
-        Height: =770
-        Visible: =If(varshowform=2,true,false)
+        Height: =796
         Width: =640
-        Y: =190
+        Y: =163
         ZIndex: =1
 
         Tarikh_DataCard2 As typedDataCard.dateEditCard:
@@ -980,79 +979,6 @@ FormDrainage As screen:
         Y: =14
         ZIndex: =4
 
-    Button4_9 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowform=1,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =94
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =If(varshowform=1,Set(varshowform,1),Set(varshowform,1)); 
-        PressedBorderColor: =RGBA(204, 204, 204, 1)
-        PressedColor: =RGBA(0, 0, 0, 1)
-        PressedFill: =RGBA(230, 230, 230, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =20
-        Text: ="Plot"
-        Underline: =If(varshowform=1,true,false)
-        Width: =319
-        Y: =93
-        ZIndex: =5
-
-    Button15_7 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowform=2,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =94
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowform=2,Set(varshowform,2),Set(varshowform,2)); NewForm(FormDrain);
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =18
-        Text: ="Drainage System"
-        Underline: =If(varshowform=2,true,false)
-        Width: =321
-        X: =319
-        Y: =93
-        ZIndex: =6
-
-    Rectangle14_3 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(161, 159, 157, 1)
-        Fill: =RGBA(0, 0, 0, 1)
-        FocusedBorderThickness: =4
-        Height: =3
-        HoverFill: =RGBA(0, 0, 0, 1)
-        PressedFill: =RGBA(0, 0, 0, 1)
-        Width: =640
-        Y: =187
-        ZIndex: =7
-
     Button14_1 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1067,7 +993,7 @@ FormDrainage As screen:
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
         OnSelect: |-
             =
-             Navigate(ListJadualSiraman);SubmitForm(Form4);
+             Navigate(ListDrainage);SubmitForm(FormDrain);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -1094,7 +1020,7 @@ FormDrainage As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =Navigate(ListJadualSiraman);
+        OnSelect: =Navigate(ListDrainage);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)

@@ -5,13 +5,16 @@ ListDrainage As screen:
     "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =681
-        Items: ='Drainage System Data'
+        Height: =724
+        Items: |+
+            =Filter( 'Drainage System Data',Masa.Value = Dropdown1_4.Selected.Value&&
+                        (Tarikh >= DatePicker2_4.SelectedDate && Tarikh <= DatePicker3_4.SelectedDate))
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
-        Y: =455
+        Y: =411
         ZIndex: =1
 
         Title4 As label:
@@ -28,7 +31,7 @@ ListDrainage As screen:
             Text: =ThisItem.Masa.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =203
-            X: =57
+            X: =15
             Y: =16
             ZIndex: =2
 
@@ -99,7 +102,7 @@ ListDrainage As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.'EC (IN)'
             Width: =105
-            X: =316
+            X: =282
             Y: =18
             ZIndex: =7
 
@@ -117,7 +120,7 @@ ListDrainage As screen:
             Text: |-
                 ="EC : "
             Width: =63
-            X: =274
+            X: =240
             ZIndex: =8
 
         Label27 As label:
@@ -134,7 +137,7 @@ ListDrainage As screen:
             Text: |-
                 ="pH : "
             Width: =63
-            X: =274
+            X: =240
             Y: =49
             ZIndex: =9
 
@@ -151,7 +154,7 @@ ListDrainage As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.'pH (IN)'
             Width: =64
-            X: =316
+            X: =282
             Y: =50
             ZIndex: =10
 
@@ -169,7 +172,7 @@ ListDrainage As screen:
             Text: |-
                 ="Volume : "
             Width: =91
-            X: =385
+            X: =351
             Y: =21
             ZIndex: =11
 
@@ -186,46 +189,15 @@ ListDrainage As screen:
             OnSelect: =Select(Parent)
             Text: =ThisItem.'Volume (ml/s) (IN)'
             Width: =73
-            X: =476
+            X: =442
             Y: =21
             ZIndex: =12
-
-        Icon14 As icon.DockCheckProperties:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 168, 156, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =53
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.DockCheckProperties
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =37
-            X: =20
-            Y: =21
-            ZIndex: =13
-
-    ButtonCanvas2 As Button:
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =24
-        Height: =49
-        OnSelect: =Navigate(FormDrainage);NewForm(FormDrain);ResetForm(FormDrain);
-        Text: ="Tambah Baru"
-        Width: =171
-        X: =445
-        Y: =355
-        ZIndex: =2
 
     DatePicker2_4 As datepicker:
         BorderColor: =RGBA(0, 168, 156, 1)
         CalendarHeaderFill: =RGBA(16, 110, 190, 1)
         Color: =RGBA(50, 49, 48, 1)
+        DefaultDate: ="01/01/2023"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
@@ -260,8 +232,8 @@ ListDrainage As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =238
-        X: =46
-        Y: =256
+        X: =360
+        Y: =142
         ZIndex: =4
 
     Label21_4 As label:
@@ -294,8 +266,8 @@ ListDrainage As screen:
         Size: =21
         Text: ="Hingga"
         Width: =114
-        X: =45
-        Y: =203
+        X: =346
+        Y: =93
         ZIndex: =6
 
     Dropdown1_4 As dropdown:
@@ -312,12 +284,11 @@ ListDrainage As screen:
         DisabledFill: =RGBA(242, 242, 241, 0)
         Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
-        Height: =69
+        Height: =71
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: |-
-            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Choices('Jadual Meracun'.Plot)}),"DropdownOptions")
+        Items: =Choices([@'Drainage System Data'].Masa)
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -328,61 +299,10 @@ ListDrainage As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =238
-        X: =360
-        Y: =246
+        Width: =346
+        X: =46
+        Y: =257
         ZIndex: =7
-
-    Dropdown2_4 As dropdown:
-        BorderColor: =RGBA(0, 168, 156, 1)
-        ChevronBackground: =RGBA(0, 168, 156, 1)
-        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
-        Color: =RGBA(50, 49, 48, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(245, 245, 245, 1)
-        Font: =Font.'Segoe UI'
-        Height: =67
-        HoverBorderColor: =RGBA(0, 168, 156, 1)
-        HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices('Jadual Siraman'.Kitaran)
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        SelectionColor: =RGBA(50, 49, 48, 1)
-        SelectionFill: =RGBA(0, 168, 156, 1)
-        Size: =21
-        Width: =238
-        X: =360
-        Y: =138
-        ZIndex: =8
-
-    Label16_3 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =38
-        Size: =21
-        Text: ="Kitaran"
-        Width: =228
-        X: =363
-        Y: =93
-        ZIndex: =9
 
     Label19_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -395,21 +315,11 @@ ListDrainage As screen:
         Font: =Font.'Segoe UI'
         Height: =36
         Size: =21
-        Text: ="Plot"
+        Text: ="Masa"
         Width: =228
-        X: =360
-        Y: =210
+        X: =45
+        Y: =221
         ZIndex: =10
-
-    ButtonCanvas3 As Button:
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =24
-        Height: =49
-        Text: ="Semua Rekod"
-        Width: =189
-        X: =225
-        Y: =355
-        ZIndex: =11
 
     Rectangle3_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -461,4 +371,60 @@ ListDrainage As screen:
         X: =19
         Y: =14
         ZIndex: =14
+
+    Button19_4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Reset(DatePicker2_4); Reset(Dropdown1_4);Reset(DatePicker3_4);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Semua Rekod"
+        Width: =202
+        X: =414
+        Y: =257
+        ZIndex: =15
+
+    Button22_4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Navigate(FormDrainage);NewForm(FormDrain);ResetForm(FormDrain);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Tambah Baru"
+        Width: =202
+        X: =414
+        Y: =328
+        ZIndex: =16
 
