@@ -1,16 +1,17 @@
-FormDrainage As screen:
+EditDrainage As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    FormDrain As form:
+    FormDrain_1 As form:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Drainage System Data'
         Height: =796
+        Item: =GalleryDrain.Selected
         Width: =640
         Y: =163
         ZIndex: =1
 
-        Tarikh_DataCard2 As typedDataCard.dateEditCard:
+        Tarikh_DataCard2_3 As typedDataCard.dateEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Tarikh"
@@ -20,13 +21,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue44.SelectedDate
+            Update: =DataCardValue44_1.SelectedDate
             Width: =640
             X: =0
             Y: =0
             ZIndex: =2
 
-            DataCardKey71 As label:
+            DataCardKey71_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -47,7 +48,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue44 As datepicker:
+            DataCardValue44_1 As datepicker:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
@@ -73,7 +74,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage68 As label:
+            ErrorMessage68_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -95,10 +96,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue44.Y + DataCardValue44.Height
+                Y: =DataCardValue44_1.Y + DataCardValue44_1.Height
                 ZIndex: =3
 
-            StarVisible66 As label:
+            StarVisible66_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -109,17 +110,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey71.Height
+                Height: =DataCardKey71_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey71.Y
+                Y: =DataCardKey71_1.Y
                 ZIndex: =4
 
-        Masa_DataCard1 As typedDataCard.comboBoxEditCard:
+        Masa_DataCard1_1 As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Masa"
@@ -129,13 +130,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue45.Selected
+            Update: =DataCardValue45_1.Selected
             Width: =640
             X: =0
             Y: =1
             ZIndex: =2
 
-            DataCardKey72 As label:
+            DataCardKey72_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -156,7 +157,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue45 As combobox:
+            DataCardValue45_1 As combobox:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 ChevronBackground: =RGBA(0, 168, 156, 1)
                 ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -182,7 +183,7 @@ FormDrainage As screen:
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Drainage System Data'.Masa,DataCardValue45.SearchText)
+                SearchItems: =Choices('Drainage System Data'.Masa,DataCardValue45_1.SearchText)
                 SelectionFill: =RGBA(0, 168, 156, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -192,7 +193,7 @@ FormDrainage As screen:
                 Y: =22
                 ZIndex: =2
 
-            ErrorMessage69 As label:
+            ErrorMessage69_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -214,10 +215,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue45.Y + DataCardValue45.Height
+                Y: =DataCardValue45_1.Y + DataCardValue45_1.Height
                 ZIndex: =3
 
-            StarVisible67 As label:
+            StarVisible67_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -228,17 +229,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey72.Height
+                Height: =DataCardKey72_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey72.Y
+                Y: =DataCardKey72_1.Y
                 ZIndex: =4
 
-        "'EC (IN)_DataCard1' As typedDataCard.numberEditCard":
+        "'EC (IN)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="EC_x0028_IN_x0029_"
@@ -248,13 +249,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue46.Text)
+            Update: =Value(DataCardValue46_1.Text)
             Width: =640
             X: =0
             Y: =2
             ZIndex: =2
 
-            DataCardKey73 As label:
+            DataCardKey73_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -275,7 +276,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue46 As text:
+            DataCardValue46_1 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -307,7 +308,7 @@ FormDrainage As screen:
                 Y: =21
                 ZIndex: =2
 
-            ErrorMessage71 As label:
+            ErrorMessage71_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -329,10 +330,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue46.Y + DataCardValue46.Height
+                Y: =DataCardValue46_1.Y + DataCardValue46_1.Height
                 ZIndex: =3
 
-            StarVisible69 As label:
+            StarVisible69_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -343,17 +344,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey73.Height
+                Height: =DataCardKey73_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey73.Y
+                Y: =DataCardKey73_1.Y
                 ZIndex: =4
 
-        "'EC (OUT)_DataCard1' As typedDataCard.numberEditCard":
+        "'EC (OUT)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="EC_x0028_OUT_x0029_"
@@ -363,13 +364,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue50.Text)
+            Update: =Value(DataCardValue50_4.Text)
             Width: =640
             X: =0
             Y: =3
             ZIndex: =2
 
-            DataCardKey74 As label:
+            DataCardKey74_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -390,7 +391,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue50 As text:
+            DataCardValue50_4 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -422,7 +423,7 @@ FormDrainage As screen:
                 Y: =24
                 ZIndex: =2
 
-            ErrorMessage72 As label:
+            ErrorMessage72_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -444,10 +445,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue50.Y + DataCardValue50.Height
+                Y: =DataCardValue50_4.Y + DataCardValue50_4.Height
                 ZIndex: =3
 
-            StarVisible70 As label:
+            StarVisible70_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -458,17 +459,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey74.Height
+                Height: =DataCardKey74_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey74.Y
+                Y: =DataCardKey74_1.Y
                 ZIndex: =4
 
-        "'pH (IN)_DataCard1' As typedDataCard.numberEditCard":
+        "'pH (IN)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="pH_x0028_IN_x0029_"
@@ -478,13 +479,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue60.Text)
+            Update: =Value(DataCardValue60_1.Text)
             Width: =640
             X: =0
             Y: =4
             ZIndex: =2
 
-            DataCardKey78 As label:
+            DataCardKey78_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -505,7 +506,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue60 As text:
+            DataCardValue60_1 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -537,7 +538,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage73 As label:
+            ErrorMessage73_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -559,10 +560,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue60.Y + DataCardValue60.Height
+                Y: =DataCardValue60_1.Y + DataCardValue60_1.Height
                 ZIndex: =3
 
-            StarVisible73 As label:
+            StarVisible73_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -573,17 +574,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey78.Height
+                Height: =DataCardKey78_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey78.Y
+                Y: =DataCardKey78_1.Y
                 ZIndex: =4
 
-        "'pH (OUT)_DataCard1' As typedDataCard.numberEditCard":
+        "'pH (OUT)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="pH_x0028_OUT_x0029_"
@@ -593,13 +594,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue61.Text)
+            Update: =Value(DataCardValue61_1.Text)
             Width: =640
             X: =0
             Y: =5
             ZIndex: =2
 
-            DataCardKey81 As label:
+            DataCardKey81_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -620,7 +621,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue61 As text:
+            DataCardValue61_1 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -652,7 +653,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage74 As label:
+            ErrorMessage74_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -674,10 +675,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue61.Y + DataCardValue61.Height
+                Y: =DataCardValue61_1.Y + DataCardValue61_1.Height
                 ZIndex: =3
 
-            StarVisible74 As label:
+            StarVisible74_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -688,17 +689,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey81.Height
+                Height: =DataCardKey81_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey81.Y
+                Y: =DataCardKey81_1.Y
                 ZIndex: =4
 
-        "'Volume (ml/s) (IN)_DataCard1' As typedDataCard.numberEditCard":
+        "'Volume (ml/s) (IN)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Volume_x0028_ml_x002f_s_x0029__x"
@@ -708,13 +709,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue62.Text)
+            Update: =Value(DataCardValue62_1.Text)
             Width: =640
             X: =0
             Y: =6
             ZIndex: =2
 
-            DataCardKey83 As label:
+            DataCardKey83_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -735,7 +736,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue62 As text:
+            DataCardValue62_1 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -767,7 +768,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage75 As label:
+            ErrorMessage75_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -789,10 +790,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue62.Y + DataCardValue62.Height
+                Y: =DataCardValue62_1.Y + DataCardValue62_1.Height
                 ZIndex: =3
 
-            StarVisible75 As label:
+            StarVisible75_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -803,17 +804,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey83.Height
+                Height: =DataCardKey83_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey83.Y
+                Y: =DataCardKey83_1.Y
                 ZIndex: =4
 
-        "'Volume (ml/s) (OUT)_DataCard1' As typedDataCard.numberEditCard":
+        "'Volume (ml/s) (OUT)_DataCard1_1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Volume_x0028_ml_x002f_s_x0029__x0"
@@ -823,13 +824,13 @@ FormDrainage As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue63.Text)
+            Update: =Value(DataCardValue63_1.Text)
             Width: =640
             X: =0
             Y: =7
             ZIndex: =2
 
-            DataCardKey84 As label:
+            DataCardKey84_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -850,7 +851,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue63 As text:
+            DataCardValue63_1 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -882,7 +883,7 @@ FormDrainage As screen:
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage81 As label:
+            ErrorMessage81_1 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -904,10 +905,10 @@ FormDrainage As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue63.Y + DataCardValue63.Height
+                Y: =DataCardValue63_1.Y + DataCardValue63_1.Height
                 ZIndex: =3
 
-            StarVisible81 As label:
+            StarVisible81_1 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -918,17 +919,17 @@ FormDrainage As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey84.Height
+                Height: =DataCardKey84_1.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey84.Y
+                Y: =DataCardKey84_1.Y
                 ZIndex: =4
 
-    Rectangle3_2 As rectangle:
+    Rectangle3_3 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -941,7 +942,7 @@ FormDrainage As screen:
         Width: =640
         ZIndex: =2
 
-    Label7_5 As label:
+    Label7_6 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -959,7 +960,7 @@ FormDrainage As screen:
         X: =71
         ZIndex: =3
 
-    Icon22_2 As icon.BackArrow:
+    Icon22_3 As icon.BackArrow:
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -970,7 +971,7 @@ FormDrainage As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Penjagaan)
+        OnSelect: =Navigate(ListDrainage)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -978,59 +979,4 @@ FormDrainage As screen:
         X: =19
         Y: =14
         ZIndex: =4
-
-    Button14_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0,168,156,255)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =114
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: |-
-            =
-             Navigate(ListDrainage);SubmitForm(FormDrain);
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =24
-        Text: ="SIMPAN"
-        Width: =342
-        X: =298
-        Y: =1022
-        ZIndex: =8
-
-    Button2_5 As button:
-        BorderColor: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 168, 156, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =114
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =Navigate(ListDrainage);
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =24
-        Text: ="SENARAI"
-        Width: =319
-        Y: =1022
-        ZIndex: =9
 
