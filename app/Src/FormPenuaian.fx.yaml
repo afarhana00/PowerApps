@@ -13,10 +13,32 @@
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Penuaian Cili'
         Fill: =RGBA(228, 240, 239, 1)
-        Height: =937
+        Height: =858
         Width: =Parent.Width
-        Y: =89
+        Y: =167
         ZIndex: =2
+
+        DataCard1 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =61
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            ButtonCanvas1 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =61
+                OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1))
+                Text: ="Tarikh & Plot"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
 
         Kitaran_DataCard6 As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -29,9 +51,10 @@
             Height: =50
             Required: =false
             Update: =DataCardValue39.Selected
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =1
 
             DataCardKey40 As label:
@@ -137,7 +160,29 @@
                 Y: =DataCardKey40.Y
                 ZIndex: =4
 
-        "'Actual (kg)_DataCard1' As typedDataCard.numberEditCard":
+        DataCard2 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =55
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            ButtonCanvas2 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =57
+                OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2))
+                Text: ="Hasil Tuaian"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        "'Actual (KG)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_10"
@@ -148,9 +193,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue22.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =5
+            Y: =7
             ZIndex: =1
 
             DataCardKey22 As label:
@@ -188,11 +234,11 @@
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -201,9 +247,8 @@
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: |
-                    =300
-                X: =322
+                Width: =300
+                X: =325
                 Y: =10
                 ZIndex: =2
 
@@ -264,9 +309,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue24.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =6
+            Y: =8
             ZIndex: =1
 
             DataCardKey24 As label:
@@ -380,9 +426,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue20.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =7
+            Y: =9
             ZIndex: =1
 
             DataCardKey20 As label:
@@ -487,6 +534,124 @@
                 Y: =DataCardKey20.Y
                 ZIndex: =4
 
+        "'Bilangan Buah / Polibeg Actual_DataCard1' As typedDataCard.numberEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="BilanganBuah_x002f_PolibegActual"
+            Default: =ThisItem.'Bilangan Buah / Polibeg Actual'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"BilanganBuah_x002f_PolibegActual")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue21.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey21 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: |-
+                    ="Bilangan Buah /
+                    Polibeg Actual"
+                Width: =232
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21 As text:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+            StarVisible21 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey21.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey21.Y
+                ZIndex: =4
+
         "'Bilangan Buah / Minggu Actual_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -498,9 +663,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue59.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =8
+            Y: =11
             ZIndex: =1
 
             DataCardKey62 As label:
@@ -605,23 +771,24 @@
                 Y: =DataCardKey62.Y
                 ZIndex: =4
 
-        "'Bilangan Buah / Polibeg Actual_DataCard1' As typedDataCard.numberEditCard":
+        "'Jumlah Bilangan Buah_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="BilanganBuah_x002f_PolibegActual"
-            Default: =ThisItem.'Bilangan Buah / Polibeg Actual'
+            DataField: ="Jumlah_x0020_Bilangan_x0020_Buah"
+            Default: =ThisItem.'Jumlah Bilangan Buah'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"BilanganBuah_x002f_PolibegActual")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Jumlah_x0020_Bilangan_x0020_Buah")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue21.Text)
+            Update: =Value(DataCardValue76.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =9
+            Y: =12
             ZIndex: =1
 
-            DataCardKey21 As label:
+            DataCardKey79 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -635,16 +802,14 @@
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: |-
-                    ="Bilangan Buah /
-                    Polibeg Actual"
-                Width: =232
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue21 As text:
+            DataCardValue76 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -658,11 +823,11 @@
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
                 Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =0
@@ -676,7 +841,7 @@
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage21 As label:
+            ErrorMessage79 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -698,10 +863,10 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue21.Y + DataCardValue21.Height
+                Y: =DataCardValue76.Y + DataCardValue76.Height
                 ZIndex: =3
 
-            StarVisible21 As label:
+            StarVisible79 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -712,15 +877,154 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey21.Height
+                Height: =DataCardKey79.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey21.Y
+                Y: =DataCardKey79.Y
                 ZIndex: =4
+
+        "'Purata Berat Buah / Biji_DataCard1' As typedDataCard.numberEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PurataBeratBuah_x002f_Biji"
+            Default: =ThisItem.'Purata Berat Buah / Biji'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"PurataBeratBuah_x002f_Biji")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue78.Text)
+            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =13
+            ZIndex: =1
+
+            DataCardKey93 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: |-
+                    ="Purata Berat
+                    Buah / Biji"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                ZIndex: =1
+
+            DataCardValue78 As text:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage87 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue78.Y + DataCardValue78.Height
+                ZIndex: =3
+
+            StarVisible87 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey93.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey93.Y
+                ZIndex: =4
+
+        DataCard3 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =58
+            Width: =640
+            X: =0
+            Y: =14
+            ZIndex: =1
+
+            ButtonCanvas3 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =58
+                OnSelect: =If(varshowfields=3,Set(varshowfields,0),Set(varshowfields,3))
+                Text: ="Gred A"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
 
         "'Grade A (KG)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -733,9 +1037,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue70.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =10
+            Y: =15
             ZIndex: =1
 
             DataCardKey75 As label:
@@ -838,122 +1143,6 @@
                 Y: =DataCardKey75.Y
                 ZIndex: =4
 
-        "'Berat Buah / Biji A_DataCard1' As typedDataCard.numberEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_14"
-            Default: =ThisItem.field_14
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_14")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue37.Text)
-            Width: =640
-            X: =0
-            Y: =11
-            ZIndex: =1
-
-            DataCardKey37 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue37 As text:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: |
-                    =300
-                X: =322
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage37 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue37.Y + DataCardValue37.Height
-                ZIndex: =3
-
-            StarVisible36 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey37.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey37.Y
-                ZIndex: =4
-
         "'Bilangan Biji / Kilo A_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -965,9 +1154,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue56.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =12
+            Y: =16
             ZIndex: =1
 
             DataCardKey59 As label:
@@ -1069,6 +1259,144 @@
                 Y: =DataCardKey59.Y
                 ZIndex: =4
 
+        "'Harga Gred A_DataCard1' As typedDataCard.numberEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="HargaGredA"
+            Default: =ThisItem.'Harga Gred A'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"HargaGredA")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue64.Text)
+            Visible: =If(varshowfields=3||varshowfields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =17
+            ZIndex: =1
+
+            DataCardKey44 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue64 As text:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage44 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue64.Y + DataCardValue64.Height
+                ZIndex: =3
+
+            StarVisible42 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey44.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey44.Y
+                ZIndex: =4
+
+        DataCard4 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =59
+            Width: =640
+            X: =0
+            Y: =18
+            ZIndex: =1
+
+            ButtonCanvas4 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =58
+                OnSelect: =If(varshowfields=4,Set(varshowfields,0),Set(varshowfields,4))
+                Text: ="Gred B"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
+
         "'Grade B (KG)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1080,9 +1408,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue73.Text)
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =13
+            Y: =19
             ZIndex: =1
 
             DataCardKey76 As label:
@@ -1184,121 +1513,6 @@
                 Y: =DataCardKey76.Y
                 ZIndex: =4
 
-        "'Berat Buah / Biji B_DataCard1' As typedDataCard.numberEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_17"
-            Default: =ThisItem.field_17
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_17")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue38.Text)
-            Width: =640
-            X: =0
-            Y: =14
-            ZIndex: =1
-
-            DataCardKey38 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue38 As text:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =300
-                X: =322
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage38 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue38.Y + DataCardValue38.Height
-                ZIndex: =3
-
-            StarVisible37 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey38.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey38.Y
-                ZIndex: =4
-
         "'Bilangan Biji / Kilo B _DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1310,9 +1524,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue57.Text)
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =15
+            Y: =20
             ZIndex: =1
 
             DataCardKey60 As label:
@@ -1414,6 +1629,144 @@
                 Y: =DataCardKey60.Y
                 ZIndex: =4
 
+        "'Harga Gred B_DataCard1' As typedDataCard.numberEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="HargaGredB"
+            Default: =ThisItem.'Harga Gred B'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"HargaGredB")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue65.Text)
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =21
+            ZIndex: =1
+
+            DataCardKey85 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue65 As text:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(0, 168, 156, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 168, 156, 1)
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage83 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue65.Y + DataCardValue65.Height
+                ZIndex: =3
+
+            StarVisible83 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey85.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey85.Y
+                ZIndex: =4
+
+        DataCard5 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =61
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =1
+
+            ButtonCanvas5 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =60
+                OnSelect: =If(varshowfields=5,Set(varshowfields,0),Set(varshowfields,5))
+                Text: ="Gred C"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
+
         "'Grade C (KG)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1425,9 +1778,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue74.Text)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =16
+            Y: =23
             ZIndex: =1
 
             DataCardKey77 As label:
@@ -1530,122 +1884,6 @@
                 Y: =DataCardKey77.Y
                 ZIndex: =4
 
-        "'Berat Buah / Biji C_DataCard1' As typedDataCard.numberEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_20"
-            Default: =ThisItem.field_20
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_20")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue53.Text)
-            Width: =640
-            X: =0
-            Y: =17
-            ZIndex: =1
-
-            DataCardKey56 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue53 As text:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: |
-                    =300
-                X: =322
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage56 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue53.Y + DataCardValue53.Height
-                ZIndex: =3
-
-            StarVisible56 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey56.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey56.Y
-                ZIndex: =4
-
         "'Bilangan Biji / Kilo C_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1657,9 +1895,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue58.Text)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =18
+            Y: =24
             ZIndex: =1
 
             DataCardKey61 As label:
@@ -1762,6 +2001,144 @@
                 Y: =DataCardKey61.Y
                 ZIndex: =4
 
+        "'Harga Gred C_DataCard1' As typedDataCard.numberEditCard":
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="HargaGredC"
+            Default: =ThisItem.'Harga Gred C'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"HargaGredC")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue66.Text)
+            Visible: =If(varshowfields=5||varshowfields=-1,true,false)
+            Width: =640
+            X: =0
+            Y: =25
+            ZIndex: =1
+
+            DataCardKey86 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =22
+                ZIndex: =1
+
+            DataCardValue66 As text:
+                BorderColor: =RGBA(0, 168, 156, 1)
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
+                Height: =70
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(50, 49, 48, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =300
+                X: =322
+                Y: =11
+                ZIndex: =2
+
+            ErrorMessage84 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue66.Y + DataCardValue66.Height
+                ZIndex: =3
+
+            StarVisible84 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey86.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey86.Y
+                ZIndex: =4
+
+        DataCard6 As typedDataCard.blankCard:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =53
+            Width: =640
+            X: =0
+            Y: =26
+            ZIndex: =1
+
+            ButtonCanvas6 As Button:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =24
+                Height: =53
+                OnSelect: =If(varshowfields=6,Set(varshowfields,0),Set(varshowfields,6))
+                Text: ="Reject"
+                Width: =640
+                X: =0
+                Y: =0
+                ZIndex: =1
+
         "'Reject (KG)_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1773,9 +2150,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue79.Text)
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =19
+            Y: =27
             ZIndex: =1
 
             DataCardKey82 As label:
@@ -1796,7 +2174,7 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue79 As text:
@@ -1877,121 +2255,6 @@
                 Y: =DataCardKey82.Y
                 ZIndex: =4
 
-        "'Berat Buah / Biji R_DataCard1' As typedDataCard.numberEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_23"
-            Default: =ThisItem.field_23
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_23")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue54.Text)
-            Width: =640
-            X: =0
-            Y: =20
-            ZIndex: =1
-
-            DataCardKey57 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue54 As text:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =300
-                X: =325
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage57 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue54.Y + DataCardValue54.Height
-                ZIndex: =3
-
-            StarVisible57 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey57.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey57.Y
-                ZIndex: =4
-
         "'Bilangan Biji / KG R_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -2003,9 +2266,10 @@
             Height: =50
             Required: =false
             Update: =Value(DataCardValue55.Text)
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =21
+            Y: =28
             ZIndex: =1
 
             DataCardKey58 As label:
@@ -2026,7 +2290,7 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue55 As text:
@@ -2057,8 +2321,8 @@
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =300
-                X: =326
-                Y: =26
+                X: =322
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage58 As label:
@@ -2107,23 +2371,24 @@
                 Y: =DataCardKey58.Y
                 ZIndex: =4
 
-        "'Jumlah Bilangan Buah_DataCard1' As typedDataCard.numberEditCard":
+        "'Harga Reject_DataCard1' As typedDataCard.numberEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Jumlah_x0020_Bilangan_x0020_Buah"
-            Default: =ThisItem.'Jumlah Bilangan Buah'
+            DataField: ="HargaReject"
+            Default: =ThisItem.'Harga Reject'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"Jumlah_x0020_Bilangan_x0020_Buah")
+            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"HargaReject")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =Value(DataCardValue76.Text)
+            Update: =Value(DataCardValue67.Text)
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =22
+            Y: =29
             ZIndex: =1
 
-            DataCardKey79 As label:
+            DataCardKey87 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -2141,10 +2406,10 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
-            DataCardValue76 As text:
+            DataCardValue67 As text:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 BorderThickness: =2
                 Color: =RGBA(50, 49, 48, 1)
@@ -2176,7 +2441,7 @@
                 Y: =10
                 ZIndex: =2
 
-            ErrorMessage79 As label:
+            ErrorMessage85 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -2198,10 +2463,10 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue76.Y + DataCardValue76.Height
+                Y: =DataCardValue67.Y + DataCardValue67.Height
                 ZIndex: =3
 
-            StarVisible79 As label:
+            StarVisible85 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -2212,129 +2477,14 @@
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey79.Height
+                Height: =DataCardKey87.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey79.Y
-                ZIndex: =4
-
-        "'Purata Berat / Buah_DataCard1' As typedDataCard.numberEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="field_36"
-            Default: =ThisItem.'Purata Berat / Buah Original'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Penuaian Cili'],DataSourceInfo.DisplayName,"field_36")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Value(DataCardValue77.Text)
-            Width: =640
-            X: =0
-            Y: =23
-            ZIndex: =1
-
-            DataCardKey80 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue77 As text:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Format: =TextFormat.Number
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(50, 49, 48, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =300
-                X: =322
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage80 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue77.Y + DataCardValue77.Height
-                ZIndex: =3
-
-            StarVisible80 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey80.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey80.Y
+                Y: =DataCardKey87.Y
                 ZIndex: =4
 
         "'Plot (Lokasi)_DataCard4' As typedDataCard.comboBoxEditCard":
@@ -2348,9 +2498,10 @@
             Height: =50
             Required: =false
             Update: =DataCardValue8.Selected
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =0
+            Y: =2
             ZIndex: =3
 
             DataCardKey8 As label:
@@ -2408,7 +2559,7 @@
                 Width: |
                     =300
                 X: =322
-                Y: =25
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage8 As label:
@@ -2468,9 +2619,10 @@
             Height: =50
             Required: =false
             Update: =DataCardValue9.Selected
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =1
+            Y: =3
             ZIndex: =3
 
             DataCardKey9 As label:
@@ -2588,9 +2740,10 @@
             Height: =50
             Required: =false
             Update: =DataCardValue16.SelectedDate
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =3
 
             DataCardKey16 As label:
@@ -2699,9 +2852,10 @@
             Height: =50
             Required: =false
             Update: =DataCardValue17.SelectedDate
+            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =3
 
             DataCardKey17 As label:
@@ -2889,4 +3043,30 @@
         X: =30
         Y: =12
         ZIndex: =6
+
+    Toggle2 As toggleSwitch:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FalseFill: =RGBA(96, 94, 92, 1)
+        FalseHoverFill: =RGBA(50, 49, 48, 1)
+        FalseText: =
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        HandleFill: =RGBA(255, 255, 255, 1)
+        Height: =49
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        OnCheck: =Set(varshowfields,-1)
+        OnUncheck: =Set(varshowfields,0)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =21
+        TextPosition: =TextPosition.Left
+        TrueFill: =RGBA(0, 168, 156, 1)
+        TrueHoverFill: =RGBA(0, 168, 156, 1)
+        TrueText: =
+        Width: =154
+        X: =467
+        Y: =103
+        ZIndex: =7
 
