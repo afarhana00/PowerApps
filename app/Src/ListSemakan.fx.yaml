@@ -10,17 +10,19 @@ ListSemakan As screen:
             =
                 If(
                     Dropdown1_1.Selected.Value = "Semua Plot" ,
-                   Sort( Filter(
+                   Sort(Sort( Filter(
                         'Semakan Kesihatan',  Kitaran.Value = Dropdown2_1.Selected.Value &&
                         (Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate)
                     ),'Masa Semakan'.Value,
+                    SortOrder.Ascending),Tarikh,
                     SortOrder.Ascending
                 ),
-                    Sort(Filter(
+                    Sort(Sort(Filter(
                         'Semakan Kesihatan',Kitaran.Value = Dropdown2_1.Selected.Value &&
                         'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value && Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate ||
                           IsBlank(Dropdown1_1.Selected.Value)
                     ),'Masa Semakan'.Value,
+                    SortOrder.Ascending),Tarikh,
                     SortOrder.Ascending
                 )
                 )
