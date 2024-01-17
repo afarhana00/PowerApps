@@ -23,17 +23,18 @@ ListDrainage As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =25
+            Height: =36
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
+            Size: =19
             Text: =ThisItem.Masa.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =203
             X: =15
-            Y: =16
+            Y: =13
             ZIndex: =2
 
         Subtitle4 As label:
@@ -47,13 +48,13 @@ ListDrainage As screen:
             PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
-            Size: =12
+            Size: =19
             Text: |
                 =Text(ThisItem.Tarikh, "[$-en-US]dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
             Width: =Title4.Width
             X: =Title4.X
-            Y: =Title4.Y + Title4.Height
+            Y: =55
             ZIndex: =3
 
         NextArrow5 As icon.ChevronRight:
@@ -67,7 +68,8 @@ ListDrainage As screen:
             PaddingRight: =16
             PaddingTop: =16
             Tooltip: ="View item details"
-            Width: =640
+            Width: =145
+            X: =494
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
@@ -101,9 +103,10 @@ ListDrainage As screen:
             Font: =Font.'Segoe UI'
             Height: =25
             OnSelect: =Select(Parent)
+            Size: =19
             Text: =ThisItem.'EC (IN)'
             Width: =105
-            X: =282
+            X: =308
             Y: =18
             ZIndex: =7
 
@@ -116,12 +119,14 @@ ListDrainage As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =62
+            Height: =44
             OnSelect: =Select(Parent)
+            Size: =19
             Text: |-
                 ="EC : "
             Width: =63
-            X: =240
+            X: =247
+            Y: =5
             ZIndex: =8
 
         Label27 As label:
@@ -133,12 +138,13 @@ ListDrainage As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =28
+            Height: =30
             OnSelect: =Select(Parent)
+            Size: =19
             Text: |-
                 ="pH : "
-            Width: =63
-            X: =240
+            Width: =61
+            X: =247
             Y: =49
             ZIndex: =9
 
@@ -153,10 +159,11 @@ ListDrainage As screen:
             Font: =Font.'Segoe UI'
             Height: =26
             OnSelect: =Select(Parent)
+            Size: =19
             Text: =ThisItem.'pH (IN)'
             Width: =64
-            X: =282
-            Y: =50
+            X: =308
+            Y: =53
             ZIndex: =10
 
         Label30 As label:
@@ -168,12 +175,13 @@ ListDrainage As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =23
+            Height: =32
             OnSelect: =Select(Parent)
+            Size: =19
             Text: |-
                 ="Volume : "
-            Width: =91
-            X: =351
+            Width: =117
+            X: =413
             Y: =21
             ZIndex: =11
 
@@ -188,10 +196,11 @@ ListDrainage As screen:
             Font: =Font.'Segoe UI'
             Height: =23
             OnSelect: =Select(Parent)
+            Size: =19
             Text: =ThisItem.'Volume (ml/s) (IN)'
             Width: =73
-            X: =442
-            Y: =21
+            X: =530
+            Y: =26
             ZIndex: =12
 
     DatePicker2_4 As datepicker:
@@ -398,7 +407,7 @@ ListDrainage As screen:
         Text: ="Semua Rekod"
         Width: =202
         X: =52
-        Y: =325
+        Y: =326
         ZIndex: =15
 
     Button22_4 As button:
