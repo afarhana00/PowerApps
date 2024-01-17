@@ -5,7 +5,7 @@ ListJadualSiraman As screen:
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Height: =685
+        Height: =710
         Items: |-
             =If(
                 Dropdown1.Selected.Value = "Semua Plot",
@@ -35,7 +35,7 @@ ListJadualSiraman As screen:
         OnSelect: =EditForm(Form4);Navigate(EditJadualSiraman); 
         TemplatePadding: =0
         TemplateSize: =116
-        Y: =447
+        Y: =421
         ZIndex: =1
 
         plot_1 As label:
@@ -168,6 +168,7 @@ ListJadualSiraman As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
             Height: =30
             OnSelect: =Select(Parent)
             Size: =19
