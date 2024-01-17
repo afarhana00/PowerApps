@@ -2260,6 +2260,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image15.Image
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =24
@@ -2387,6 +2388,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image16.Image
+            Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =25
@@ -4050,6 +4052,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image12.Image
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =38
@@ -4177,6 +4180,7 @@ FormSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image13.Image
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =39
@@ -4303,6 +4307,7 @@ FormSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
+            Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
             Y: =40

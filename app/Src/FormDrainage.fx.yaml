@@ -44,7 +44,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue44 As datepicker:
@@ -63,13 +63,13 @@ FormDrainage As screen:
                 IconBackground: =RGBA(0, 156, 168, 1)
                 IsEditable: =true
                 PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 10, 0)
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =21
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =10
                 ZIndex: =2
 
@@ -153,7 +153,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =33
                 ZIndex: =1
 
             DataCardValue45 As combobox:
@@ -177,7 +177,7 @@ FormDrainage As screen:
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(245, 245, 245, 1)
                 Items: =Choices([@'Drainage System Data'].Masa)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 10, 0)
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -187,8 +187,8 @@ FormDrainage As screen:
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =356
+                X: =264
                 Y: =22
                 ZIndex: =2
 
@@ -272,7 +272,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =32
                 ZIndex: =1
 
             DataCardValue46 As text:
@@ -292,7 +292,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -302,8 +302,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =21
                 ZIndex: =2
 
@@ -387,7 +387,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =35
                 ZIndex: =1
 
             DataCardValue50 As text:
@@ -407,7 +407,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(228, 240, 239, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(228, 240, 239, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -417,8 +417,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =24
                 ZIndex: =2
 
@@ -502,7 +502,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue60 As text:
@@ -522,7 +522,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -532,8 +532,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =263
                 Y: =10
                 ZIndex: =2
 
@@ -617,7 +617,7 @@ FormDrainage As screen:
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =21
                 ZIndex: =1
 
             DataCardValue61 As text:
@@ -637,7 +637,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -647,8 +647,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =10
                 ZIndex: =2
 
@@ -728,11 +728,13 @@ FormDrainage As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: |-
+                    ="Volume (ml/s)
+                    (IN)"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =2
                 ZIndex: =1
 
             DataCardValue62 As text:
@@ -752,7 +754,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -762,8 +764,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =10
                 ZIndex: =2
 
@@ -843,11 +845,13 @@ FormDrainage As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: |-
+                    ="Volume (ml/s)
+                    (OUT)"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =2
                 ZIndex: =1
 
             DataCardValue63 As text:
@@ -867,7 +871,7 @@ FormDrainage As screen:
                 HoverBorderColor: =RGBA(0, 168, 156, 1)
                 HoverColor: =RGBA(50, 49, 48, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
-                PaddingLeft: =5
+                PaddingLeft: =10
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(50, 49, 48, 1)
                 PressedFill: =RGBA(255, 255, 255, 1)
@@ -877,8 +881,8 @@ FormDrainage As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =311
-                X: =310
+                Width: =357
+                X: =264
                 Y: =10
                 ZIndex: =2
 

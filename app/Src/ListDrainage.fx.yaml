@@ -6,7 +6,7 @@ ListDrainage As screen:
         BorderColor: =RGBA(0, 168, 156, 1)
         BorderThickness: =2
         DelayItemLoading: =true
-        Height: =676
+        Height: =678
         Items: |+
             =Filter( 'Drainage System Data',Masa.Value = Dropdown1_4.Selected.Value&&
                         (Tarikh >= DatePicker2_4.SelectedDate && Tarikh <= DatePicker3_4.SelectedDate))
