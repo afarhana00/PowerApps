@@ -23,7 +23,6 @@ ListDrainage As screen:
             DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =36
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =12
@@ -32,7 +31,7 @@ ListDrainage As screen:
             Size: =19
             Text: =ThisItem.Masa.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =203
+            Width: =267
             X: =15
             Y: =13
             ZIndex: =2
@@ -68,8 +67,8 @@ ListDrainage As screen:
             PaddingRight: =16
             PaddingTop: =16
             Tooltip: ="View item details"
-            Width: =145
-            X: =494
+            Width: =376
+            X: =262
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
@@ -107,8 +106,8 @@ ListDrainage As screen:
             Size: =19
             Text: =ThisItem.'EC (IN)'
             Width: =105
-            X: =308
-            Y: =18
+            X: =353
+            Y: =14
             ZIndex: =7
 
         Label18 As label:
@@ -127,7 +126,7 @@ ListDrainage As screen:
             Text: |-
                 ="EC : "
             Width: =63
-            X: =247
+            X: =292
             Y: =5
             ZIndex: =8
 
@@ -147,8 +146,8 @@ ListDrainage As screen:
             Text: |-
                 ="pH : "
             Width: =61
-            X: =247
-            Y: =49
+            X: =292
+            Y: =47
             ZIndex: =9
 
         Label28 As label:
@@ -166,8 +165,8 @@ ListDrainage As screen:
             Size: =19
             Text: =ThisItem.'pH (IN)'
             Width: =64
-            X: =308
-            Y: =53
+            X: =353
+            Y: =49
             ZIndex: =10
 
         Label30 As label:
