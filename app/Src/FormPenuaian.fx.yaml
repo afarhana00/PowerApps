@@ -33,6 +33,7 @@
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =61
                 OnSelect: =If(varshowfields=1,Set(varshowfields,0),Set(varshowfields,1))
@@ -176,6 +177,7 @@
             ButtonCanvas2 As Button:
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =57
                 OnSelect: =If(varshowfields=2,Set(varshowfields,0),Set(varshowfields,2))
@@ -1021,6 +1023,7 @@
             ButtonCanvas3 As Button:
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =58
                 OnSelect: =If(varshowfields=3,Set(varshowfields,0),Set(varshowfields,3))
@@ -1393,6 +1396,7 @@
             ButtonCanvas4 As Button:
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =58
                 OnSelect: =If(varshowfields=4,Set(varshowfields,0),Set(varshowfields,4))
@@ -1764,6 +1768,7 @@
             ButtonCanvas5 As Button:
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =60
                 OnSelect: =If(varshowfields=5,Set(varshowfields,0),Set(varshowfields,5))
@@ -2137,6 +2142,7 @@
             ButtonCanvas6 As Button:
                 BasePaletteColor: =RGBA(0, 168, 156, 1)
                 DisplayMode: =DisplayMode.Edit
+                FontColor: =
                 FontSize: =24
                 Height: =53
                 OnSelect: =If(varshowfields=6,Set(varshowfields,0),Set(varshowfields,6))

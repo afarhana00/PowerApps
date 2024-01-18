@@ -2,7 +2,40 @@ Penjagaan As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Button9 As button:
+    Rectangle2_3 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(217, 217, 216, 1)
+        FocusedBorderThickness: =4
+        Height: =109
+        HoverFill: =RGBA(217, 217, 216, 1)
+        PressedFill: =RGBA(217, 217, 216, 1)
+        Width: =640
+        Y: =1
+        ZIndex: =1
+
+    Icon2 As icon.Home:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(0, 168, 156, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(0, 168, 156, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(ScreenTitle)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =552
+        Y: =26
+        ZIndex: =2
+
+    Button9_3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -27,10 +60,10 @@ Penjagaan As screen:
         Text: ="Jadual Siraman"
         Width: =380
         X: =142
-        Y: =447
-        ZIndex: =1
+        Y: =467
+        ZIndex: =3
 
-    Button10 As button:
+    Button10_4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -55,10 +88,10 @@ Penjagaan As screen:
         Text: ="Semakan Kesihatan"
         Width: =380
         X: =142
-        Y: =251
-        ZIndex: =2
+        Y: =271
+        ZIndex: =4
 
-    Button11 As button:
+    Button11_5 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -83,23 +116,10 @@ Penjagaan As screen:
         Text: ="Jadual Meracun"
         Width: =380
         X: =142
-        Y: =654
-        ZIndex: =3
+        Y: =674
+        ZIndex: =5
 
-    Rectangle2 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(161, 159, 157, 1)
-        Fill: =RGBA(217, 217, 216, 1)
-        FocusedBorderThickness: =4
-        Height: =108
-        HoverFill: =RGBA(217, 217, 216, 1)
-        PressedFill: =RGBA(217, 217, 216, 1)
-        Width: =640
-        ZIndex: =4
-
-    Image2 As image:
+    Image2_3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -113,29 +133,11 @@ Penjagaan As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =140
-        X: =26
-        ZIndex: =5
-
-    Icon2 As icon.Home:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(0, 168, 156, 1)
-        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-        DisabledColor: =RGBA(225, 223, 221, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(0, 168, 156, 1)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Home
-        OnSelect: =Navigate(ScreenTitle)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =552
-        Y: =26
+        X: =19
+        Y: =2
         ZIndex: =6
 
-    Label9 As label:
+    Label9_3 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -146,15 +148,15 @@ Penjagaan As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =78
+        Height: =84
         Size: =25
         Text: ="Penjagaan Dan Penanaman"
         Width: =297
-        X: =210
-        Y: =19
+        X: =207
+        Y: =16
         ZIndex: =7
 
-    Rectangle12 As rectangle:
+    Rectangle12_3 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -165,10 +167,10 @@ Penjagaan As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =640
-        Y: =108
+        Y: =107
         ZIndex: =8
 
-    Button11_2 As button:
+    Button11_6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -193,6 +195,6 @@ Penjagaan As screen:
         Text: ="Drainage System Data"
         Width: =380
         X: =142
-        Y: =874
+        Y: =894
         ZIndex: =9
 

@@ -1,0 +1,341 @@
+ListPlot As screen:
+    Fill: =RGBA(228, 240, 239, 1)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Rectangle4_1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(0,168,156,255)
+        FocusedBorderThickness: =4
+        Height: =108
+        HoverFill: =RGBA(0, 168, 156, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        Width: =640
+        ZIndex: =1
+
+    Label2_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =91
+        Size: =30
+        Text: ="Senarai Plot"
+        Width: =513
+        X: =115
+        Y: =8
+        ZIndex: =2
+
+    Icon1_1 As icon.BackArrow:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =61
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Semaian); NewForm(Form2);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =74
+        X: =26
+        Y: =23
+        ZIndex: =3
+
+    DatePicker2_5 As datepicker:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        CalendarHeaderFill: =RGBA(16, 110, 190, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
+        Height: =70
+        HoverDateFill: =RGBA(184, 187, 184, 1)
+        IconBackground: =RGBA(0, 168, 156, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(0, 120, 212, 1)
+        Size: =21
+        Width: =242
+        X: =58
+        Y: =151
+        ZIndex: =4
+
+    Button19_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Reset(DatePicker2_5);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Semua Rekod"
+        Width: =202
+        X: =385
+        Y: =280
+        ZIndex: =5
+
+    DatePicker3_5 As datepicker:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        CalendarHeaderFill: =RGBA(16, 110, 190, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Format: ="dd/mm/yyyy"
+        Height: =70
+        HoverDateFill: =RGBA(184, 187, 184, 1)
+        IconBackground: =RGBA(0, 168, 156, 1)
+        PaddingTop: =5
+        SelectedDateFill: =RGBA(0, 120, 212, 1)
+        Size: =21
+        Width: =242
+        X: =345
+        Y: =155
+        ZIndex: =6
+
+    Label21_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =41
+        Size: =21
+        Text: ="Dari"
+        Width: =159
+        X: =58
+        Y: =110
+        ZIndex: =7
+
+    Label22_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =45
+        Size: =21
+        Text: ="Hingga"
+        Width: =141
+        X: =345
+        Y: =110
+        ZIndex: =8
+
+    Button22_5 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 168, 156, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 168, 156, 1)
+        OnSelect: =Navigate(FormSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =21
+        Text: ="Tambah Baru"
+        Width: =202
+        X: =385
+        Y: =378
+        ZIndex: =10
+
+    Dropdown2_4 As dropdown:
+        BorderColor: =RGBA(0, 168, 156, 1)
+        ChevronBackground: =RGBA(0, 168, 156, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(245, 245, 245, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =RGBA(0, 168, 156, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
+        Items: =Choices('Jadual Siraman'.Kitaran)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        SelectionColor: =RGBA(50, 49, 48, 1)
+        SelectionFill: =RGBA(0, 168, 156, 1)
+        Size: =21
+        Width: =242
+        X: =60
+        Y: =272
+        ZIndex: =11
+
+    Label16_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =35
+        Size: =21
+        Text: ="Kitaran"
+        Width: =191
+        X: =60
+        Y: =231
+        ZIndex: =13
+
+    "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(245, 245, 245, 1)
+        DelayItemLoading: =true
+        Height: =668
+        Items: =Plot
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Y: =467
+        ZIndex: =14
+
+        Title2 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle2 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.PlotId
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title2.Width
+            X: =Title2.X
+            Y: =Title2.Y + Title2.Height
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle16 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 168, 156, 1)
+            Height: =Parent.TemplateHeight - Separator5.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Label32 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =54
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Jenis Pokok'
+            Width: =112
+            X: =243
+            Y: =28
+            ZIndex: =7
+

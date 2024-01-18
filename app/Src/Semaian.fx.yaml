@@ -1,0 +1,142 @@
+Semaian As screen:
+    Fill: =RGBA(228, 240, 239, 1)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Button10_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0,168,156,255)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =129
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
+        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(ListSemakan);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="Semakan Kesihatan"
+        Width: =380
+        X: =130
+        Y: =584
+        ZIndex: =2
+
+    Rectangle2_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(217, 217, 216, 1)
+        FocusedBorderThickness: =4
+        Height: =108
+        HoverFill: =RGBA(217, 217, 216, 1)
+        PressedFill: =RGBA(217, 217, 216, 1)
+        Width: =640
+        ZIndex: =4
+
+    Image2_2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =108
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='TDM_Group-Main-Logo-Retina'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =140
+        X: =26
+        ZIndex: =5
+
+    Icon2_2 As icon.Home:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(0, 168, 156, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(0, 168, 156, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(ScreenTitle)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =552
+        Y: =26
+        ZIndex: =6
+
+    Label9_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 168, 156, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =78
+        Size: =25
+        Text: ="Penyemaian Dan Tapak Semaian"
+        Width: =297
+        X: =210
+        Y: =19
+        ZIndex: =7
+
+    Rectangle12_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =3
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =640
+        Y: =108
+        ZIndex: =8
+
+    Button10_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0,168,156,255)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =129
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
+        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(ListPlot);
+        PressedBorderColor: =RGBA(0, 168, 156, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 168, 156, 1)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =24
+        Text: ="Senarai Plot"
+        Width: =380
+        X: =130
+        Y: =334
+        ZIndex: =9
+
