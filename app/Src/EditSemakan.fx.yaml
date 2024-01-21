@@ -261,7 +261,7 @@ EditSemakan As screen:
         Fill: =RGBA(228, 240, 239, 100)
         Height: =793
         Item: =Gallery1.Selected
-        Visible: =If(varshowform=2||varshowform=-1,true,false)
+        Visible: =If(varshowform=2||varshowform=-1,true,false) && If(deleteMode=true,false,true)
         Width: =640
         Y: =252
         ZIndex: =14
@@ -502,6 +502,7 @@ EditSemakan As screen:
                 BorderColor: =RGBA(0, 168, 156, 1)
                 CalendarHeaderFill: =RGBA(16, 110, 190, 1)
                 Color: =RGBA(50, 49, 48, 1)
+                DefaultDate: =ThisItem.Tarikh
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -4619,10 +4620,7 @@ EditSemakan As screen:
                 ChevronHoverFill: =RGBA(50, 49, 48, 1)
                 Color: =RGBA(50, 49, 48, 1)
                 DefaultSelectedItems: |
-                    =With(
-                        {_hr: Text(Hour(Now()), "00"), _min: Text(Minute(Now()), "00")},
-                        {Value: Text(_hr & _min, "[$-en-US]hhmm")}
-                    )
+                    =ThisItem.'Masa Semakan'
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
@@ -5212,7 +5210,7 @@ EditSemakan As screen:
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =If(varshowform=1||varshowform=-1 ,true,false) 
+        Visible: =If(varshowform=1||varshowform=-1 ,true,false) && If(deleteMode=true,false,true)
         Width: =640
         Y: =222
         ZIndex: =16
