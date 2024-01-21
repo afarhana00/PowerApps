@@ -573,25 +573,6 @@ ListJadualSiraman As screen:
         Y: =216
         ZIndex: =17
 
-    "'tiada data ditemui' As label":
-        Align: =Align.Center
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        Fill: =RGBA(2, 201, 191, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =21
-        Text: ="Tiada Data Ditemui"
-        Visible: =If(IsBlank(Gallery2),true,false)
-        Width: =560
-        X: =51
-        Y: =459
-        ZIndex: =18
-
     Button22_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
