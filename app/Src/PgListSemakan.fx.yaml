@@ -302,7 +302,7 @@ PgListSemakan As screen:
             OnSelect: |
                 =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true });EditForm(Form3);
                 Select(Parent);If(varshowform=2,Set(varshowform,2),Set(varshowform,2)); 
-                Navigate(EditSemakan);
+                Navigate(PgEditSemakan);
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
