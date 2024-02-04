@@ -1,4 +1,4 @@
-Semaian As screen:
+PgSemaian As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
@@ -15,7 +15,7 @@ Semaian As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
-        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(ListSemakan);
+        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(PgListSemakan);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -71,7 +71,7 @@ Semaian As screen:
         HoverColor: =RGBA(0, 168, 156, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Home
-        OnSelect: =Navigate(ScreenTitle)
+        OnSelect: =Navigate(Homepage)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -98,7 +98,7 @@ Semaian As screen:
         Y: =19
         ZIndex: =7
 
-    Rectangle12_2 As rectangle:
+    BtnSemakan2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -112,7 +112,7 @@ Semaian As screen:
         Y: =108
         ZIndex: =8
 
-    Button10_3 As button:
+    BtnPlot As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)

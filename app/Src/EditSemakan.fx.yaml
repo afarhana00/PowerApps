@@ -17,7 +17,7 @@ EditSemakan As screen:
         OnSelect: |
             =UpdateContext({ selectedRecord: Gallery1.Selected, editMode: true }); SubmitForm(Form3);
             Notify("Data anda telah berjaya disimpan",NotificationType.Success);
-            Navigate(ListSemakan,ScreenTransition.Fade);
+            Navigate(PgListSemakan,ScreenTransition.Fade);
         PressedBorderColor: =RGBA(54, 176, 75, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(54, 176, 75, 1)
@@ -82,7 +82,7 @@ EditSemakan As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(ListSemakan);
+        OnSelect: =Navigate(PgListSemakan);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(0, 156, 168, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -212,7 +212,7 @@ EditSemakan As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(184, 0, 0, 1)
             OnSelect: |-
-                =Remove([@'Semakan Kesihatan'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(ListSemakan);
+                =Remove([@'Semakan Kesihatan'], selectedRecord); If(IsEmpty(Errors([@'Semakan Kesihatan'], selectedRecord)), UpdateContext( { CurrentItem: First([@'Semakan Kesihatan']), itemSelected: false, editMode: false, newMode: false, deleteMode: false }));Navigate(PgListSemakan);
             PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(184, 0, 0, 1)

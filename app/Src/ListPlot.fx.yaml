@@ -46,7 +46,7 @@ ListPlot As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Semaian); NewForm(Form2);
+        OnSelect: =Navigate(PgSemaian); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -172,7 +172,7 @@ ListPlot As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Navigate(FormSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
+        OnSelect: =Navigate(PgEditSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)

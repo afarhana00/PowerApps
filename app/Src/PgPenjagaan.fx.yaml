@@ -1,8 +1,8 @@
-Penjagaan As screen:
+PgPenjagaan As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Rectangle2_3 As rectangle:
+    TitleBg2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -27,7 +27,7 @@ Penjagaan As screen:
         HoverColor: =RGBA(0, 168, 156, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Home
-        OnSelect: =Navigate(ScreenTitle)
+        OnSelect: =Navigate(Homepage)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -35,7 +35,7 @@ Penjagaan As screen:
         Y: =26
         ZIndex: =2
 
-    Button9_3 As button:
+    BtnSiraman As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -63,7 +63,7 @@ Penjagaan As screen:
         Y: =467
         ZIndex: =3
 
-    Button10_4 As button:
+    BtnSemakan As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -76,7 +76,7 @@ Penjagaan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
-        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(ListSemakan);
+        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(PgListSemakan);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -91,7 +91,7 @@ Penjagaan As screen:
         Y: =271
         ZIndex: =4
 
-    Button11_5 As button:
+    BtnMeracun As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -156,7 +156,7 @@ Penjagaan As screen:
         Y: =16
         ZIndex: =7
 
-    Rectangle12_3 As rectangle:
+    TitleLine As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -170,7 +170,7 @@ Penjagaan As screen:
         Y: =107
         ZIndex: =8
 
-    Button11_6 As button:
+    BtnDrainage As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)

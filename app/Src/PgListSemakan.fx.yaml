@@ -1,4 +1,4 @@
-ListSemakan As screen:
+PgListSemakan As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
@@ -9,18 +9,18 @@ ListSemakan As screen:
         Items: |+
             =
                 If(
-                    Dropdown1_1.Selected.Value = "Semua Plot" ,
+                    DdPlot.Selected.Value = "Semua Plot" ,
                    Sort(Sort( Filter(
-                        'Semakan Kesihatan',  Kitaran.Value = Dropdown2_1.Selected.Value &&
-                        (Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate)
+                        'Semakan Kesihatan',  Status.Value = DdStatus.Selected.Value &&
+                        (Tarikh >= DdDari.SelectedDate && Tarikh <= DdHingga.SelectedDate)
                     ),'Masa Semakan'.Value,
                     SortOrder.Ascending),Tarikh,
                     SortOrder.Ascending
                 ),
                     Sort(Sort(Filter(
-                        'Semakan Kesihatan',Kitaran.Value = Dropdown2_1.Selected.Value &&
-                        'Plot (Lokasi)'.Value = Dropdown1_1.Selected.Value && Tarikh >= DatePicker2.SelectedDate && Tarikh <= DatePicker3.SelectedDate ||
-                          IsBlank(Dropdown1_1.Selected.Value)
+                        'Semakan Kesihatan',Kitaran.Value = DdStatus.Selected.Value &&
+                        'Plot (Lokasi)'.Value = DdPlot.Selected.Value && Tarikh >= DdDari.SelectedDate && Tarikh <= DdHingga.SelectedDate ||
+                          IsBlank(DdPlot.Selected.Value)
                     ),'Masa Semakan'.Value,
                     SortOrder.Ascending),Tarikh,
                     SortOrder.Ascending
@@ -359,7 +359,7 @@ ListSemakan As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(Penjagaan); NewForm(Form2);
+        OnSelect: =Navigate(PgPenjagaan); NewForm(Form2);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -368,7 +368,7 @@ ListSemakan As screen:
         Y: =23
         ZIndex: =5
 
-    DatePicker2 As datepicker:
+    DdDari As datepicker:
         BorderColor: =RGBA(0, 168, 156, 1)
         CalendarHeaderFill: =RGBA(16, 110, 190, 1)
         Color: =RGBA(50, 49, 48, 1)
@@ -389,35 +389,7 @@ ListSemakan As screen:
         Y: =151
         ZIndex: =7
 
-    Button19 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 168, 156, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =62
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Reset(DatePicker2);Reset(Dropdown1_1);
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
-        Size: =21
-        Text: ="Semua Rekod"
-        Width: =202
-        X: =100
-        Y: =378
-        ZIndex: =8
-
-    DatePicker3 As datepicker:
+    DdHingga As datepicker:
         BorderColor: =RGBA(0, 168, 156, 1)
         CalendarHeaderFill: =RGBA(16, 110, 190, 1)
         Color: =RGBA(50, 49, 48, 1)
@@ -434,11 +406,11 @@ ListSemakan As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =242
-        X: =58
-        Y: =282
+        X: =346
+        Y: =147
         ZIndex: =9
 
-    Label21 As label:
+    LblDari As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -455,7 +427,7 @@ ListSemakan As screen:
         Y: =110
         ZIndex: =10
 
-    Label22 As label:
+    LblHingga As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -468,11 +440,11 @@ ListSemakan As screen:
         Size: =21
         Text: ="Hingga"
         Width: =141
-        X: =58
-        Y: =227
+        X: =340
+        Y: =108
         ZIndex: =11
 
-    Dropdown1_1 As dropdown:
+    DdPlot As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -526,7 +498,7 @@ ListSemakan As screen:
         Y: =504
         ZIndex: =13
 
-    Button22 As button:
+    BtnTambahBaru As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -539,7 +511,7 @@ ListSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Navigate(FormSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
+        OnSelect: =Navigate(PgEditSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -550,11 +522,11 @@ ListSemakan As screen:
         Size: =21
         Text: ="Tambah Baru"
         Width: =202
-        X: =385
-        Y: =378
+        X: =60
+        Y: =383
         ZIndex: =14
 
-    Dropdown2_1 As dropdown:
+    DdStatus As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -562,7 +534,7 @@ ListSemakan As screen:
         ChevronHoverBackground: =RGBA(245, 245, 245, 1)
         ChevronHoverFill: =RGBA(50, 49, 48, 1)
         Color: =RGBA(50, 49, 48, 1)
-        Default: =
+        Default: ="Dalam Perancangan"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(161, 159, 157, 1)
         DisabledFill: =RGBA(242, 242, 241, 0)
@@ -572,7 +544,7 @@ ListSemakan As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices('Jadual Siraman'.Kitaran)
+        Items: =Choices('Semakan Kesihatan'.Status)
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -584,11 +556,11 @@ ListSemakan As screen:
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
         Width: =242
-        X: =345
-        Y: =151
+        X: =60
+        Y: =280
         ZIndex: =15
 
-    Label15 As label:
+    LblPlot As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -605,7 +577,7 @@ ListSemakan As screen:
         Y: =233
         ZIndex: =16
 
-    Label16 As label:
+    LblStatus As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -616,9 +588,9 @@ ListSemakan As screen:
         Font: =Font.'Segoe UI'
         Height: =29
         Size: =21
-        Text: ="Kitaran"
+        Text: ="Status"
         Width: =191
-        X: =345
-        Y: =116
+        X: =58
+        Y: =236
         ZIndex: =17
 

@@ -1,4 +1,4 @@
-FormSemakan As screen:
+PgEditSemakan As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
@@ -27,7 +27,7 @@ FormSemakan As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.BackArrow
-        OnSelect: =Navigate(ListSemakan);ResetForm(Form2);
+        OnSelect: =Navigate(PgListSemakan);ResetForm(Form2);
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -4969,7 +4969,7 @@ FormSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =SubmitForm(Form2); Navigate(ListSemakan); 
+        OnSelect: =SubmitForm(Form2); Navigate(PgListSemakan); 
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -4996,7 +4996,7 @@ FormSemakan As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(17,240,191,100), -20%)
-        OnSelect: =Navigate(ListSemakan);
+        OnSelect: =Navigate(PgListSemakan);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
@@ -5087,7 +5087,7 @@ FormSemakan As screen:
         Y: =108
         ZIndex: =16
 
-    Container2_2 As groupContainer.verticalAutoLayoutContainer:
+    PGS_Container As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =843
         LayoutDirection: =LayoutDirection.Vertical
@@ -5102,6 +5102,7 @@ FormSemakan As screen:
         ZIndex: =17
 
         divPlot_2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
@@ -5173,6 +5174,7 @@ FormSemakan As screen:
                 ZIndex: =2
 
         divHari_2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
@@ -5250,6 +5252,7 @@ FormSemakan As screen:
                 ZIndex: =2
 
         divTreeType_2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
@@ -5324,6 +5327,7 @@ FormSemakan As screen:
                 ZIndex: =2
 
         divVariance_2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
@@ -5398,6 +5402,7 @@ FormSemakan As screen:
                 ZIndex: =2
 
         divStage_2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
@@ -5473,6 +5478,7 @@ FormSemakan As screen:
                 ZIndex: =2
 
         divHari_6 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =100
