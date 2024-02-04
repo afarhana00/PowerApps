@@ -200,7 +200,6 @@ PgEditSemakan As screen:
         Fill: =RGBA(228, 240, 239, 100)
         Height: =945
         Item: =Gallery1.Selected
-        Visible: =If(varshowform=2||varshowform=-1,true,false) && If(deleteMode=true,false,true)
         Width: =640
         Y: =100
         ZIndex: =14
