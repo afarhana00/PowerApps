@@ -172,7 +172,7 @@ ListPlot As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =Navigate(PgEditSemakan);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
+        OnSelect: =Navigate(PgEditSemakan_old);NewForm(Form2);If(varshowform=2,Set(varshowform,2),Set(varshowform,2));
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
