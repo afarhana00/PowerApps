@@ -40,10 +40,9 @@ PgEditSemakan As screen:
         BorderColor: =RGBA(245, 245, 245, 1)
         DataSource: ='Semakan Kesihatan'
         Fill: =RGBA(228, 240, 239, 100)
-        Height: =763
-        Visible: =If(varshowform=2||varshowform=-1,true,false)
+        Height: =923
         Width: =640
-        Y: =285
+        Y: =125
         ZIndex: =11
 
         "'tarikh/masa' As typedDataCard.blankCard":
@@ -669,125 +668,6 @@ PgEditSemakan As screen:
                 Y: =6
                 ZIndex: =3
 
-        "'Plot (Lokasi)_DataCard1' As typedDataCard.comboBoxEditCard":
-            BorderColor: =RGBA(245, 245, 245, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Plot_x0028_Lokasi_x0029_"
-            Default: =ThisItem.'Plot (Lokasi)'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Semakan Kesihatan'],DataSourceInfo.DisplayName,"Plot_x0028_Lokasi_x0029_")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue1.Selected
-            Visible: =If(varshowfields=2||varshowfields=-1,true,false)
-            Width: =640
-            X: =0
-            Y: =7
-            ZIndex: =1
-
-            DataCardKey1 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue1 As combobox:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(194, 237, 234, 1)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DefaultSelectedItems: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayFields: =["Value"]
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(194, 237, 234, 1)
-                Items: =Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.View, 10, 0)
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SearchFields: =["Value"]
-                SearchItems: =Search(Filter(Choices([@'Semakan Kesihatan'].'Plot (Lokasi)'),Value = ddPlotId_6.Selected.PlotId),DataCardValue1.SearchText,"Value")
-                SelectionFill: =RGBA(0, 168, 156, 1)
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =326
-                X: =272
-                ZIndex: =2
-
-            ErrorMessage1 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
-                ZIndex: =3
-
-            StarVisible1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey1.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey1.Y
-                ZIndex: =4
-
         "'Baris Pokok_DataCard1' As typedDataCard.comboBoxEditCard":
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
@@ -802,7 +682,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=2||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =8
+            Y: =7
             ZIndex: =1
 
             DataCardKey30 As label:
@@ -916,7 +796,7 @@ PgEditSemakan As screen:
             Height: =53
             Width: =640
             X: =0
-            Y: =10
+            Y: =8
             ZIndex: =1
 
             Button25 As button:
@@ -1000,7 +880,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =13
+            Y: =10
             ZIndex: =1
 
             DataCardKey5 As label:
@@ -1116,7 +996,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =14
+            Y: =11
             ZIndex: =1
 
             DataCardKey26 As label:
@@ -1232,7 +1112,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =15
+            Y: =12
             ZIndex: =1
 
             DataCardKey27 As label:
@@ -1351,7 +1231,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =16
+            Y: =13
             ZIndex: =1
 
             DataCardKey29 As label:
@@ -1467,7 +1347,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =17
+            Y: =14
             ZIndex: =1
 
             DataCardKey31 As label:
@@ -1585,7 +1465,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =18
+            Y: =15
             ZIndex: =1
 
             DataCardKey32 As label:
@@ -1703,7 +1583,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =19
+            Y: =16
             ZIndex: =1
 
             DataCardKey33 As label:
@@ -1815,7 +1695,7 @@ PgEditSemakan As screen:
             Height: =51
             Width: =640
             X: =0
-            Y: =20
+            Y: =17
             ZIndex: =1
 
             Button26 As button:
@@ -1899,7 +1779,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =21
+            Y: =20
             ZIndex: =1
 
             DataCardKey53_1 As label:
@@ -2017,7 +1897,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =22
+            Y: =21
             ZIndex: =1
 
             DataCardKey34 As label:
@@ -2135,7 +2015,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=4 ||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =23
+            Y: =22
             ZIndex: =1
 
             DataCardKey47 As label:
@@ -2263,7 +2143,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =24
+            Y: =23
             ZIndex: =1
 
             DataCardKey53 As label:
@@ -2391,7 +2271,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=4||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =25
+            Y: =24
             ZIndex: =1
 
             DataCardKey63 As label:
@@ -2513,7 +2393,7 @@ PgEditSemakan As screen:
             Height: =48
             Width: =640
             X: =0
-            Y: =26
+            Y: =25
             ZIndex: =1
 
             Button27 As button:
@@ -2598,7 +2478,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =27
+            Y: =26
             ZIndex: =1
 
             DataCardKey55_1 As label:
@@ -2772,7 +2652,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =28
+            Y: =27
             ZIndex: =1
 
             DataCardKey51_1 As label:
@@ -2890,7 +2770,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =29
+            Y: =28
             ZIndex: =1
 
             DataCardKey56_1 As label:
@@ -3065,7 +2945,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =30
+            Y: =29
             ZIndex: =1
 
             DataCardKey52_1 As label:
@@ -3183,7 +3063,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=5||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =31
+            Y: =30
             ZIndex: =1
 
             DataCardKey50_1 As label:
@@ -3353,7 +3233,7 @@ PgEditSemakan As screen:
             Height: =75
             Width: =640
             X: =0
-            Y: =32
+            Y: =31
             ZIndex: =1
 
             Button28 As button:
@@ -3438,7 +3318,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =33
+            Y: =32
             ZIndex: =1
 
             DataCardKey48_1 As label:
@@ -3554,7 +3434,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =34
+            Y: =33
             ZIndex: =1
 
             DataCardKey41 As label:
@@ -3682,7 +3562,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =35
+            Y: =34
             ZIndex: =1
 
             DataCardKey43 As label:
@@ -3810,7 +3690,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =36
+            Y: =35
             ZIndex: =1
 
             DataCardKey35 As label:
@@ -3927,7 +3807,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =37
+            Y: =36
             ZIndex: =1
 
             DataCardKey45 As label:
@@ -4055,7 +3935,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =38
+            Y: =37
             ZIndex: =1
 
             DataCardKey46 As label:
@@ -4183,7 +4063,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =39
+            Y: =38
             ZIndex: =1
 
             DataCardKey48 As label:
@@ -4310,7 +4190,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=6||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =40
+            Y: =39
             ZIndex: =1
 
             DataCardKey64 As label:
@@ -4734,7 +4614,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =11
+            Y: =18
             ZIndex: =12
 
             DataCardKey7_1 As label:
@@ -4854,7 +4734,7 @@ PgEditSemakan As screen:
             Visible: =If(varshowfields=3||varshowfields=-1,true,false)
             Width: =640
             X: =0
-            Y: =12
+            Y: =19
             ZIndex: =12
 
             DataCardKey17_1 As label:
@@ -5027,548 +4907,6 @@ PgEditSemakan As screen:
         Width: =492
         X: =107
         ZIndex: =14
-
-    Button4_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowform=1,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =94
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(0, 168, 156, 1)
-        OnSelect: =If(varshowform=1,Set(varshowform,1),Set(varshowform,1)); 
-        PressedBorderColor: =RGBA(204, 204, 204, 1)
-        PressedColor: =RGBA(0, 0, 0, 1)
-        PressedFill: =RGBA(230, 230, 230, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =20
-        Text: ="Plot"
-        Underline: =If(varshowform=1,true,false)
-        Width: =319
-        Y: =108
-        ZIndex: =15
-
-    Button15_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =If(varshowform=2,RGBA(228, 240, 239, 1),RGBA(220,220,220,1))
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =94
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(56, 168, 156, 1), -20%)
-        OnSelect: =If(varshowform=2,Set(varshowform,2),Set(varshowform,2)); NewForm(Form2);
-        PressedBorderColor: =RGBA(0, 168, 156, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 168, 156, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =18
-        Text: ="Semakan Kesihatan"
-        Underline: =If(varshowform=2,true,false)
-        Width: =321
-        X: =319
-        Y: =108
-        ZIndex: =16
-
-    PGS_Container As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =843
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Visible: =If(varshowform=1||varshowform=-1 ,true,false) 
-        Width: =640
-        Y: =202
-        ZIndex: =17
-
-        divPlot_2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =20
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =4
-
-            Label14_10 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="Plot"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlotId_6 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(0, 168, 156, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Plot
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(0, 168, 156, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 168, 156, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-        divHari_2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =15
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =5
-
-            Label14_11 As label:
-                AlignInContainer: =AlignInContainer.Stretch
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="HST (Hari)"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlantType_4 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: |-
-                    =ForAll(Filter(Plot,PlotId=ddPlotId_6.Selected.PlotId),{PlotId:Round('HST (Hari)',2)})
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                OnSelect: =
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 168, 156, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-        divTreeType_2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =20
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =6
-
-            Label14_12 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="Jenis Pokok"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlantType_5 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Plot, PlotId = ddPlotId_6.Selected.PlotId)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingRight: =20
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 168, 156, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-        divVariance_2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =20
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =7
-
-            Label14_13 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="Varian Pokok"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlotId_7 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: =Filter(Plot, PlotId = ddPlotId_6.Selected.PlotId)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingRight: =20
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-        divStage_2 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =20
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =8
-
-            Label14_14 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="Tahap Plot"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlotId_8 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: |
-                    =Filter(Plot, PlotId = ddPlotId_6.Selected.PlotId)
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingRight: =20
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-        divHari_6 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.Light
-            FillPortions: =0
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            PaddingTop: =15
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            ZIndex: =9
-
-            Label14_30 As label:
-                AlignInContainer: =AlignInContainer.Stretch
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =0.4
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                PaddingLeft: =20
-                PaddingTop: =20
-                Size: =21
-                Text: ="HSS (Hari)"
-                Width: =0.2
-                X: =32
-                Y: =125
-                ZIndex: =1
-
-            ddPlantType_12 As dropdown:
-                BorderColor: =RGBA(0, 168, 156, 1)
-                ChevronBackground: =RGBA(0, 168, 156, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(50, 49, 48, 1)
-                ChevronHoverBackground: =RGBA(0, 168, 156, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(50, 49, 48, 1)
-                Default: =
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(245, 245, 245, 1)
-                FillPortions: =0.6
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                Items: |-
-                    =ForAll(Filter(Plot,PlotId=ddPlotId_6.Selected.PlotId),{PlotId:Round('HSS (Hari)',2)})
-                LayoutMinHeight: =70
-                LayoutMinWidth: =0
-                OnSelect: =
-                PaddingBottom: =5
-                PaddingLeft: =12
-                PaddingRight: =20
-                PaddingTop: =20
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 168, 156, 1)
-                SelectionColor: =RGBA(50, 49, 48, 1)
-                SelectionFill: =RGBA(0, 120, 212, 1)
-                Size: =21
-                Width: =0.8
-                X: =17
-                Y: =335
-                ZIndex: =2
-
-    Rectangle14 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(161, 159, 157, 1)
-        Fill: =RGBA(0, 0, 0, 1)
-        FocusedBorderThickness: =4
-        Height: =3
-        HoverFill: =RGBA(0, 0, 0, 1)
-        PressedFill: =RGBA(0, 0, 0, 1)
-        Width: =640
-        Y: =202
-        ZIndex: =18
 
     Toggle1 As toggleSwitch:
         BorderColor: =RGBA(0, 0, 0, 0)
