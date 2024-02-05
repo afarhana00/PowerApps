@@ -108,7 +108,7 @@ PgEditSemakan As screen:
         Y: =12
         ZIndex: =9
 
-    Container1 As groupContainer.manualLayoutContainer:
+    PopupConfirm As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =635
         RadiusBottomLeft: =4
@@ -204,7 +204,7 @@ PgEditSemakan As screen:
         Y: =100
         ZIndex: =14
 
-        "'tarikh/masa_1' As typedDataCard.blankCard":
+        SectTarikhMasa As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -635,7 +635,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey6_1.Y
                 ZIndex: =4
 
-        lokasitanaman_1 As typedDataCard.blankCard:
+        SectLokasi As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -951,7 +951,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey30_3.Y
                 ZIndex: =4
 
-        persekitaran_1 As typedDataCard.blankCard:
+        SectPersekitaran As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -1850,7 +1850,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey33_1.Y
                 ZIndex: =4
 
-        pertumbuhan_1 As typedDataCard.blankCard:
+        SectPertumbuhan As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -2548,7 +2548,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey68.Y
                 ZIndex: =5
 
-        "'kawalanpenyakit/perosak_1' As typedDataCard.blankCard":
+        SectKawalanPenyakit As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -3388,7 +3388,7 @@ PgEditSemakan As screen:
                 Y: =10
                 ZIndex: =6
 
-        tindakan_1 As typedDataCard.blankCard:
+        SectTindakan As typedDataCard.blankCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
