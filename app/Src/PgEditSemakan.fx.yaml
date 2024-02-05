@@ -283,7 +283,7 @@ PgEditSemakan As screen:
                 Y: =5
                 ZIndex: =3
 
-        "'Tarikh _DataCard1_2' As typedDataCard.dateEditCard":
+        DcTarikh As typedDataCard.dateEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_16"
@@ -393,7 +393,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey47_2.Y
                 ZIndex: =4
 
-        Status_DataCard4_1 As typedDataCard.comboBoxEditCard:
+        DcStatus As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="spare9"
@@ -514,7 +514,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey28_3.Y
                 ZIndex: =4
 
-        Kitaran_DataCard1_1 As typedDataCard.comboBoxEditCard:
+        DcKitaran As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Kitaran"
@@ -525,7 +525,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue6_1.Selected
-            Visible: =If(varshowfields=1||varshowfields=-1,true,false)
+            Visible: =true
             Width: =640
             X: =0
             Y: =4
@@ -4513,7 +4513,7 @@ PgEditSemakan As screen:
                 Y: =9
                 ZIndex: =2
 
-        "'Masa Semakan_DataCard1_2' As typedDataCard.comboBoxEditCard":
+        DcMasaSemakan As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_1"
@@ -4701,7 +4701,7 @@ PgEditSemakan As screen:
                 Y: =40
                 ZIndex: =7
 
-        IDPokok_DataCard1_2 As typedDataCard.comboBoxEditCard:
+        DcIDPokok As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_3"
@@ -4875,7 +4875,7 @@ PgEditSemakan As screen:
                 Y: =16
                 ZIndex: =6
 
-        Cuaca_DataCard1_2 As typedDataCard.comboBoxEditCard:
+        DcCuaca As typedDataCard.comboBoxEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_5"
@@ -4995,7 +4995,7 @@ PgEditSemakan As screen:
                 Y: =DataCardKey7_2.Y
                 ZIndex: =4
 
-        "'Kelembapan Tanah_DataCard1_2' As typedDataCard.numberEditCard":
+        DcKelembapanTanah As typedDataCard.numberEditCard:
             BorderColor: =RGBA(245, 245, 245, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="field_7"
