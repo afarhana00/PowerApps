@@ -1,6 +1,7 @@
 PgEditSemakan As screen:
     Fill: =RGBA(228, 240, 239, 1)
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(varshowfields,1)
 
     Button18 As button:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -200,6 +201,7 @@ PgEditSemakan As screen:
         Fill: =RGBA(228, 240, 239, 100)
         Height: =945
         Item: =Gallery1.Selected
+        OnSuccess: =Set(varshowfields,1)
         Width: =640
         Y: =100
         ZIndex: =14
@@ -3369,7 +3371,7 @@ PgEditSemakan As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(0, 168, 156, 1)
-                OnSelect: =If(varshowfields=6,Set(varshowfields,0),Set(varshowfields,6))
+                OnSelect: =If(varshowfields=7,Set(varshowfields,0),Set(varshowfields,7))
                 PressedBorderColor: =RGBA(0, 168, 156, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 168, 156, 1)
@@ -3435,7 +3437,7 @@ PgEditSemakan As screen:
             MaxLength: =DataSourceInfo([@'Semakan Kesihatan'], DataSourceInfo.MaxLength, "field_8")
             Required: =false
             Update: =DataCardValue48_3.Text
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =32
@@ -3551,7 +3553,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image3_1.Image
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =33
@@ -3679,7 +3681,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image5_1.Image
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =34
@@ -3807,7 +3809,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue35_1.Text)
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =35
@@ -3924,7 +3926,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image4_1.Image
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =36
@@ -4052,7 +4054,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image17.Image
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =37
@@ -4180,7 +4182,7 @@ PgEditSemakan As screen:
             Height: =50
             Required: =false
             Update: =Image18.Image
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =38
@@ -4307,7 +4309,7 @@ PgEditSemakan As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =41
             Required: =false
-            Visible: =true
+            Visible: =If(varshowfields=7,true,false)
             Width: =640
             X: =0
             Y: =39
