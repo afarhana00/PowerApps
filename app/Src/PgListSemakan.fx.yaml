@@ -492,7 +492,7 @@ PgListSemakan As screen:
         Size: =21
         Text: ="Tiada Data Ditemui"
         Visible: |
-            =If(IsBlank(Gallery1), false, false, true)
+            =If(IsBlank(Gallery1.Selected), false, false, true)
         Width: =560
         X: =40
         Y: =504
