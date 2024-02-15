@@ -125,7 +125,7 @@ PgSemaian As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 168, 156 ,1), -20%)
-        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(ListPlot);
+        OnSelect: =NewForm(Form2); ResetForm(Form2); If(varshowfields=1,Set(varshowfields,1),Set(varshowfields,1)); Navigate(PgSenaraiPlot);
         PressedBorderColor: =RGBA(0, 168, 156, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 168, 156, 1)
