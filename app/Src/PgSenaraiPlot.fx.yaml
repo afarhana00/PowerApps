@@ -77,13 +77,13 @@ PgSenaraiPlot As screen:
         RadiusTopLeft: =30
         RadiusTopRight: =30
         Size: =21
-        Text: ="Tambah Baru2"
+        Text: ="Tambah Baru"
         Width: =202
         X: =385
         Y: =378
         ZIndex: =10
 
-    Dropdown2_4 As dropdown:
+    dd_Status As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -101,7 +101,8 @@ PgSenaraiPlot As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Choices(Plot.Status)
+        Items: |
+            =Ungroup(Table({DropdownOptions:["Semua Status"]},{DropdownOptions:Choices(Plot.Status)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -112,9 +113,9 @@ PgSenaraiPlot As screen:
         SelectionColor: =RGBA(50, 49, 48, 1)
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
-        Width: =268
-        X: =26
-        Y: =151
+        Width: =275
+        X: =336
+        Y: =148
         ZIndex: =11
 
     Label16_3 As label:
@@ -130,14 +131,14 @@ PgSenaraiPlot As screen:
         Size: =21
         Text: ="Status"
         Width: =191
-        X: =26
+        X: =336
         Y: =108
         ZIndex: =13
 
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
-        Items: =Filter( Plot,Kitaran.Value= Dropdown2_4.Selected.Value)
+        Items: =Filter( Plot,Status.Value= dd_Status.Selected.Value)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -160,7 +161,7 @@ PgSenaraiPlot As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 173
             X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle.Size * 1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + lblTanaman.Size * 1.8)) / 2
             ZIndex: =2
 
         NextArrow2 As icon.ChevronRight:
@@ -197,7 +198,7 @@ PgSenaraiPlot As screen:
             Width: =4
             ZIndex: =6
 
-        Label9 As label:
+        lblPlot As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -215,7 +216,7 @@ PgSenaraiPlot As screen:
             Y: =22
             ZIndex: =7
 
-        Subtitle As label:
+        lblTanaman As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -250,7 +251,7 @@ PgSenaraiPlot As screen:
         Y: =242
         ZIndex: =15
 
-    Dropdown2_5 As dropdown:
+    dd_Plot As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -269,7 +270,7 @@ PgSenaraiPlot As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |
-            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Distinct(Plot, 'PlotId')}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Distinct(Plot, PlotId)}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -298,11 +299,11 @@ PgSenaraiPlot As screen:
         Size: =21
         Text: ="Tanaman"
         Width: =191
-        X: =336
-        Y: =112
+        X: =26
+        Y: =113
         ZIndex: =17
 
-    Dropdown2_6 As dropdown:
+    dd_Tanaman As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -320,7 +321,8 @@ PgSenaraiPlot As screen:
         HoverBorderColor: =RGBA(0, 168, 156, 1)
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
-        Items: =Distinct(Plot, 'Jenis Pokok')
+        Items: |
+            =Ungroup(Table({DropdownOptions:["Semua Tanaman"]},{DropdownOptions:Distinct(Plot, 'Jenis Pokok')}),"DropdownOptions")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -332,8 +334,8 @@ PgSenaraiPlot As screen:
         SelectionFill: =RGBA(0, 168, 156, 1)
         Size: =21
         Width: =268
-        X: =343
-        Y: =151
+        X: =26
+        Y: =148
         ZIndex: =18
 
     Label21_6 As label:
@@ -353,7 +355,7 @@ PgSenaraiPlot As screen:
         Y: =242
         ZIndex: =19
 
-    Dropdown2_7 As dropdown:
+    dd_Kitaran As dropdown:
         BorderColor: =RGBA(0, 168, 156, 1)
         ChevronBackground: =RGBA(0, 168, 156, 1)
         ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
