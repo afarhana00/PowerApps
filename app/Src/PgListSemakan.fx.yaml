@@ -7,8 +7,7 @@ PgListSemakan As screen:
         DelayItemLoading: =true
         Height: =656
         Items: |+
-            =
-                If(
+            =    If(
                     DdPlot.Selected.Value = "Semua Plot" ,
                    Sort(Sort( Filter(
                         'Semakan Kesihatan',  Status.Value = DdStatus.Selected.Value &&

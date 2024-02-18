@@ -374,7 +374,7 @@ PgSenaraiPlot As screen:
         HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(245, 245, 245, 1)
         Items: |+
-            =Ungroup(Table({DropdownOptions:["Semua Plot"]},{DropdownOptions:Choices(Plot.Kitaran)}),"DropdownOptions")
+            =Ungroup(Table({DropdownOptions:["Semua Kitaran"]},{DropdownOptions:Choices(Plot.Kitaran)}),"DropdownOptions")
             
         PaddingBottom: =5
         PaddingLeft: =12
